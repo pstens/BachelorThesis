@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{lipsum}
 
 
 \setlength{\bibsep}{2pt}
@@ -26,7 +27,7 @@
 
 
 \begin{document}
-\renewcommand{\refname}{Literature}
+\renewcommand{\refname}{Literatur}
 
 % Title page
 \begin{titlepage}
@@ -52,7 +53,7 @@
 \end{titlepage}
 
 \section{Motivation}
-Die Aufmaßerfassung ist ein ganz entscheidender Teil der Gerüstebau-Industrie. 
+Die Aufmaßerfassung ist ein ganz entscheidender Teil der Gerüstbau-Industrie. 
 Hierbei werden ersten Kosten für benötigte Materialen überschlagen, und dem Kunden anschließend ein Kostenvoranschlag gemacht. \\ 
 Der bisherige Ablauf der Aufmaßerfassung sieht dabei wie folgt aus:
 \begin{enumerate}
@@ -63,7 +64,29 @@ Der bisherige Ablauf der Aufmaßerfassung sieht dabei wie folgt aus:
 	\item Gibt die Daten zur Eintragung ins System an die Sekretärin weiter
 \end{enumerate}
 
-Diese Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwenig herausgestellt.
-Durch zu grobe Schätzungen, aber auch die hohe Gedächtnisbelastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Kosten, die man vermeiden hätte können. 
-Genau hier soll das Smartphone ins Spiel kommen bla bla bleh
+
+Dieses Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwendig herausgestellt.
+Durch zu grobe Schätzungen, aber auch die hohe Gedächtnis Belastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Kosten, die man leicht hätte vermeiden können.
+Genau diese Problematik soll durch die Entwicklung einer Applikation für Android-Endgeräte gelöst werden. 
+
+Dabei soll die Software dem Benutzer es ermöglichen, bereits beim Kunden Bilder von der Baustelle zu machen, diese mit Hilfe von verschiedenen geometrischen Figuren zu bearbeiten, und anschließend die gewünschten Maße an die Figuren zu schreiben. 
+Die bearbeiteten Bilder sollen anschließend an eine API gesendet werden, welche anhand der eingebenden Maße direkt berechnet, wie viele Materialen benötigt werden und vor allem, wie hoch die ungefähren Kosten seien werden.
+
+Für die Umsetzung einer solchen Software-Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf die Wechselwirkung zwischen Endnutzer und Smartphone, als auch auf die robuste Implementation einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen: 
+\\
+\begin{itemize}
+	\item Wie schaffen wir eine Bearbeitungsumgebung auf dem Smartphone, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
+	\item Auf welche Weise ermöglichen wir eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
+	\item Gibt es spezielle äußerliche Einflüsse, die erfüllt sein müssen, um ein gutes Ergebnis zu garantieren (Belichtung, Aufnahmewinkel)?
+\end{itemize}
+\newpage
+
+\section{Umsetzung}
+\lipsum[1-2]
+
+\section{Umriss der Kapitel}
+\lipsum[1]
+
+\section{Zeitplanung}
+\lipsum[1-3]
 \end{document}
