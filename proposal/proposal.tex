@@ -16,6 +16,9 @@
 
 % Macros
 \newcommand{\figwidth}{\columnwidth*3/4}
+\newcommand{\Vero}{\textsc{VERO Scaffolding EOOD Niederlassung Deutschland}}
+\newcommand{\vero}{\textsc{VERO}}
+
 
 
 % Header and footer
@@ -23,9 +26,7 @@
 \fancyhf{}
 \rhead{Patrick Stens}
 \lhead{Bachelor-Thesis Proposal}
-\rfoot{Page \thepage\ of \pageref{LastPage}}
-
-
+\rfoot{Seite \thepage\ von \pageref{LastPage}}
 \begin{document}
 \renewcommand{\refname}{Literatur}
 
@@ -41,9 +42,14 @@
 	{\huge\bfseries Mobile Bildbearbeitung als Ansatz für die effiziente Aufmaßerfassung im Gerüstbau\par}
 	\vspace{2cm}
 
-	{\large VERO Scaffolding EOOD Niederlassung Deutschland\par}
+	{\large \par}
 
 	{\Large Patrick Stens\par}
+
+	\vfill
+
+	Angeboten von\par
+	\Vero
 
 	\vfill
 
@@ -53,15 +59,17 @@
 \end{titlepage}
 
 \section*{Motivation}
-Die Aufmaßerfassung ist ein ganz entscheidender Teil der Gerüstbau-Industrie. \\
-Hierbei werden erste Kosten für benötigte Materialen überschlagen, und dem Kunden anschließend ein Kostenvoranschlag gemacht. \\ 
-Der bisherige Ablauf der Aufmaßerfassung sieht dabei wie folgt aus:
+Die Aufmaßerfassung ist ein großer Bestandteil der Gerüstbau-Industrie. \\
+Hierbei werden die Maße der benötigten Gerüste abgeschätzt und mit Hilfe dieser die Kosten für benötigte Materialen überschlagen. \\
+Im besten Fall kann der Monteur anhand dieser Daten dem Kunden bereits ein ersten Kostenvoranschlag machen. \\
+Der bisherige Ablauf einer solchen Aufmaßerfassung sieht dabei für den Monteur in etwa wie folgt aus:
 \begin{enumerate}
-	\item Monteur fährt zum Arbeitsauftrag 
-	\item Berechnet die ungefähren Maße
-	\item Schreibt sich die Maße im besten Falle auf
-	\item Fährt zurück ins Büro
-	\item Gibt die Daten zur Eintragung ins System an die Sekretärin weiter
+	\item Fahrt zum Kunden
+	\item Abschätzen der ungefähren Maße
+	\item Überschlagen der anfallenden Kosten
+	\item Aufschreiben der gesammelten Daten (im besten Fall)
+	\item Rückfahrt ins Büro
+	\item Eintragen der Daten ins System
 \end{enumerate}
 
 
@@ -69,15 +77,16 @@ Dieses Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwendi
 Durch zu grobe Schätzungen, aber auch die hohe Gedächtnisbelastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Kosten, die man leicht hätte vermeiden können.
 Genau diese Problematik soll durch die Entwicklung einer Applikation für Android-Endgeräte gelöst werden. \\
 
-Dabei soll die Software dem Benutzer es ermöglichen, bereits beim Kunden Bilder von der Baustelle zu machen, diese mit Hilfe von verschiedenen geometrischen Figuren zu bearbeiten, und anschließend die gewünschten Maße an die Figuren zu schreiben. 
-Die bearbeiteten Bilder sollen anschließend an eine API gesendet werden, welche anhand der eingebenden Maße direkt berechnet, wie viele Materialen benötigt werden und vor allem, wie hoch die ungefähren Kosten seien werden.\\
+Dabei soll die Software dem Benutzer es ermöglichen, bereits beim Kunden Bilder von der Baustelle zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen direkt zu hinterlegen.
+Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine \textit{API} zu senden, welche anhand der eingebenden Maße direkt berechnet, wie viele Materialen benötigt werden und vor allem, wie hoch die ungefähren Kosten seien werden.\\
 
 Für die Umsetzung einer solchen Software-Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf die Wechselwirkung zwischen Endnutzer und Smartphone, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen: \\
 
 \begin{itemize}
-	\item Wie schaffen wir eine Bearbeitungsumgebung auf dem Smartphone, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
-	\item Auf welche Weise ermöglichen wir eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
+	\item Wie setzt man eine Bearbeitungsumgebung auf dem Smartphone um, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
+	\item Auf welche Weise ermöglicht man eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
 	\item Gibt es spezielle äußerliche Einflüsse, die erfüllt sein müssen, um ein gutes Ergebnis zu garantieren (Belichtung, Aufnahmewinkel)?
+	\item Wo liegen die Grenzen der mobilen Aufmaßerfassung?
 \end{itemize}
 
 \newpage
@@ -85,27 +94,28 @@ Für die Umsetzung einer solchen Software-Lösung stellen sich für den Entwickl
 \section*{Ziele}
 Das Hauptziel des vorgeschlagenen Themas sollte es sein, eine effiziente und robuste Software-Lösung in Form einer Android-Applikation für die Aufmaßerfassung im Gerüstbau zu erstellen. 
 Die Applikation sollte dem Benutzer unnötigen Arbeitsaufwand abnehmen, und die Erfassung der notwendigen Daten effizient mittels einer entsprechenden Oberfläche möglich machen.
-Hierzu sollte die Benutzeroberfläche intuitiv verständlich, gleichzeitig aber auch so komplex gestaltet werden, dass keine lange Einarbeitungszeit von Nöten ist.
+Hierzu sollte die Benutzeroberfläche intuitiv verständlich, gleichzeitig aber auch so komplex gestaltet werden, dass keine lange Einarbeitungszeit von Nöten ist, die gewünschte Funktionalität jedoch nicht eingeschränkt wird.
 
 \section*{Umsetzung}
 Ein Hauptteil der Bachelor-Arbeit wird es sein, einen ersten Prototypen für die mobile Aufmaßerfassung zu implementieren.
-Hierzu können originale Fotos von Baustellen genutzt werden, die von der Firma \textsc{VERO} bereitgestellt werden.
-Des Weiteren stellt \textsc{VERO} die Android-Applikation \textit{BauBuddy}, sowie die dazugehörige \textit{API} zur Verfügung, um den Prototypen bereits in ein bestehendes Software-System einzubinden.
+Hierzu können originale Fotos von Baustellen genutzt werden, die von der Firma \vero  bereitgestellt werden.
+Des Weiteren steht die Android-Applikation \textit{BauBuddy}, sowie die dazugehörige \textit{API} zur Verfügung, um den Prototypen bereits in ein bestehendes Software-System einbinden und testen zu können. \\
 Diese erste Prototyp-Implementierung sollte es dem Benutzer ermöglichen, ausgewählte Fotos mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, Informationen zu hinterlegen, und abschließend wieder abzuspeichern.
 Sobald ein erster Prototyp entwickelt ist, wird sich ein weiterer Teil der Arbeit damit beschäftigen, die Bearbeitungsumgebung so benutzerfreundlich und intuitiv wie möglich zu gestalten.
-Zu jeder Zeit ergibt sich die Möglichkeit, den Prototypen bereits im Arbeitsalltag der Gerüstbauer der Firma \textsc{VERO} auszutesten, um mögliche Schwachstellen frühzeitig erkennen und verbessern zu können.
-Zusätzlich könnte man zwei verschiedene Gruppen von Gerüstbauern bei der Aufmaßerfassung testen - mit der Applikation und ohne - und anschließend auswerten, wie groß der Einfluss der mobilen Lösung auf die Effizienz und Produktivität ist.
+Zu jeder Zeit ergibt sich die Möglichkeit, den Prototypen bereits im Arbeitsalltag der Monteure der Firma \vero auszutesten, um mögliche Schwachstellen frühzeitig erkennen und verbessern zu können.
+Zusätzlich bietet sich die Option, bereits eineiige Monteure mit der Applikation auszustatten, um anschließend auswerten zu können, wie groß der Einfluss der mobilen Lösung auf die Effizienz und Produktivität ist.
 
 \section*{Umriss der Kapitel}
 \begin{itemize}
-	\item Einleitung und Hintergrund
+	\item Einleitung und Hintergrund der Aufmaßerfassung im Gerüstbau
 	\item Auswertung der bisherigen Problematik bei der Aufmaßerfassung
 	\item Implementierung eines ersten Prototyps
 	\item Einsatz im Hinblick auf Funktionalität und Benutzerfreundlichkeit
-	\item Gestaltung einer intuitiven Benutzeroberfläche
+	\item Auswertung der gesammelten Eindrücke
+	\item Verbesserung gefundener Schwachstellen
 	\item Probleme und Grenzen der mobilen Aufmaßerfassung
 	\item A/B-Test
-	\item Auswertung des Tests in Hinblick auf die Effizienz/Kosten
+	\item Auswertung des Tests in Hinblick auf Effizienz/Kosten
 \end{itemize}
 
 \newpage
@@ -116,10 +126,10 @@ Zusätzlich könnte man zwei verschiedene Gruppen von Gerüstbauern bei der Aufm
 		\begin{itemize}
 			\item Bestimme Werkzeuge und Methoden für die mobile Bildbearbeitung
 			\item Implementiere ersten Prototyp
+			\item Gestalte eine intuitive Benutzeroberfläche 
 			\item Teste Prototyp in der Firma
 			\item Werte Testergebnisse aus
 			\item Verbessere Prototyp mit Hilfe der Ergebnisse
-			\item Gestalte eine intuitive Benutzeroberfläche 
 		\end{itemize}
 	\item[\textbf{14.02.2018}] Abschließen der Implementierung
 		\begin{itemize}
@@ -127,6 +137,6 @@ Zusätzlich könnte man zwei verschiedene Gruppen von Gerüstbauern bei der Aufm
 			\item Durchführung eines A/B-Tests
 			\item Auswerten des Tests und Ergebnisse veranschaulichen
 		\end{itemize}
-	\item[\textbf{31.03.2018}] Fertigstellen der Thesis
+	\item[\textbf{31.03.2018}] Fertigstellung der Thesis
 \end{itemize}
 \end{document}
