@@ -59,51 +59,50 @@
 \end{titlepage}
 
 \section*{Motivation}
-Die Aufmaßerfassung ist ein großer Bestandteil der Gerüstbau-Industrie. \\
-Hierbei werden die Maße der benötigten Gerüste abgeschätzt und mit Hilfe dieser die Kosten für benötigte Materialen überschlagen. \\
-Im besten Fall kann der Monteur anhand dieser Daten dem Kunden bereits ein ersten Kostenvoranschlag machen. \\
+Die Aufmaßerfassung ist ein wichtiger Bestandteil als Vorbereitung zur Rechnungslegung im Handwerk, insbesondere im Gerüstbau. \\
+Hierbei werden die Maße (Länge, Breite und Höhe) der bereitgestellten Gerüste, idealerweise abgemessen, meistens jedoch abgeschätzt und später im Büro mit einer Preisliste nach Gerüsttyp (Fassadengerüst, Raumgerüst, Hängegerüst, ...) abgerechnet. \\
 Der bisherige Ablauf einer solchen Aufmaßerfassung sieht dabei für den Monteur in etwa wie folgt aus:
 \begin{enumerate}
 	\item Fahrt zum Kunden
-	\item Abschätzen der ungefähren Maße
-	\item Überschlagen der anfallenden Kosten
-	\item Aufschreiben der gesammelten Daten (im besten Fall)
+	\item Erstellen des Aufmaßes
+	\item Aufschreiben der gesammelten Daten auf Papier
+	\item Abnahme vom Kunden
 	\item Rückfahrt ins Büro
 	\item Eintragen der Daten ins System
+	\item Rechnungsstellung
 \end{enumerate}
 
 
-Dieses Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwendig herausgestellt.
-Durch zu grobe Schätzungen, aber auch die hohe Gedächtnisbelastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Kosten, die man leicht hätte vermeiden können.
+Dieses Verfahren hat sich als fehleranfällig und zeitaufwändig herausgestellt.
+Durch zu grobe Schätzungen, aber auch die hohe Gedächtnisbelastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch effizientere Informationsverarbeitung vor Ort auf der Baustellen vermeiden lassen.
 Genau diese Problematik soll durch die Entwicklung einer Applikation für Android-Endgeräte gelöst werden. \\
 
-Dabei soll die Software dem Benutzer es ermöglichen, bereits beim Kunden Bilder von der Baustelle zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen direkt zu hinterlegen.
-Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine \textit{API} zu senden, welche anhand der eingebenden Maße direkt berechnet, wie viele Materialen benötigt werden und vor allem, wie hoch die ungefähren Kosten seien werden.\\
+Dabei soll die Software dem Benutzer es ermöglichen, bereits auf der Baustelle Bilder zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen (Maße und Gerüstart) direkt zu hinterlegen.
+Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine \textit{API} zu senden, welche anhand der eingebenden Maße und Gerüstarten direkt eine Aufmaß zur Freigabe für den Kunden generiert.\\
 
-Für die Umsetzung einer solchen Software-Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf die Wechselwirkung zwischen Endnutzer und Smartphone, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen: \\
+Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf die Wechselwirkung zwischen Benutzer und Smartphone oder Tablet, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen: \\
 
 \begin{itemize}
-	\item Wie setzt man eine Bearbeitungsumgebung auf dem Smartphone um, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
+	\item Wie setzt man eine Bearbeitungsumgebung auf dem Smartphone oder Tablet um, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
 	\item Auf welche Weise ermöglicht man eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
 	\item Gibt es spezielle äußerliche Einflüsse, die erfüllt sein müssen, um ein gutes Ergebnis zu garantieren (Belichtung, Aufnahmewinkel)?
 	\item Wo liegen die Grenzen der mobilen Aufmaßerfassung?
+	\item Wie lassen sich Meta-Informationen zum Bild (z.B. Beschriftung von Linien) für eine API oder nachgelagerte Dienste aufbereiten.
 \end{itemize}
-
-\newpage
 
 \section*{Ziele}
 Das Hauptziel des vorgeschlagenen Themas sollte es sein, eine effiziente und robuste Software-Lösung in Form einer Android-Applikation für die Aufmaßerfassung im Gerüstbau zu erstellen. 
 Die Applikation sollte dem Benutzer unnötigen Arbeitsaufwand abnehmen, und die Erfassung der notwendigen Daten effizient mittels einer entsprechenden Oberfläche möglich machen.
-Hierzu sollte die Benutzeroberfläche intuitiv verständlich, gleichzeitig aber auch so komplex gestaltet werden, dass keine lange Einarbeitungszeit von Nöten ist, die gewünschte Funktionalität jedoch nicht eingeschränkt wird.
+Hierzu sollte die Benutzeroberfläche intuitiv verständlich, gleichzeitig aber auch so komplex gestaltet werden, dass auf der einen Seite keine lange Einarbeitungszeit von Nöten ist, auf der anderen Seite aber die gewünschte Funktionalität jedoch nicht eingeschränkt wird.
 
 \section*{Umsetzung}
 Ein Hauptteil der Bachelor-Arbeit wird es sein, einen ersten Prototypen für die mobile Aufmaßerfassung zu implementieren.
-Hierzu können originale Fotos von Baustellen genutzt werden, die von der Firma \vero  bereitgestellt werden.
+Hierzu können originale Fotos von Baustellen genutzt werden, die von der Firma \vero{} bereitgestellt werden.
 Des Weiteren steht die Android-Applikation \textit{BauBuddy}, sowie die dazugehörige \textit{API} zur Verfügung, um den Prototypen bereits in ein bestehendes Software-System einbinden und testen zu können. \\
-Diese erste Prototyp-Implementierung sollte es dem Benutzer ermöglichen, ausgewählte Fotos mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, Informationen zu hinterlegen, und abschließend wieder abzuspeichern.
+Diese erste Prototyp-Implementierung sollte es dem Benutzer ermöglichen, ausgewählte Fotos mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, Informationen zu hinterlegen und abschließend wieder abzuspeichern.
 Sobald ein erster Prototyp entwickelt ist, wird sich ein weiterer Teil der Arbeit damit beschäftigen, die Bearbeitungsumgebung so benutzerfreundlich und intuitiv wie möglich zu gestalten.
-Zu jeder Zeit ergibt sich die Möglichkeit, den Prototypen bereits im Arbeitsalltag der Monteure der Firma \vero auszutesten, um mögliche Schwachstellen frühzeitig erkennen und verbessern zu können.
-Zusätzlich bietet sich die Option, bereits eineiige Monteure mit der Applikation auszustatten, um anschließend auswerten zu können, wie groß der Einfluss der mobilen Lösung auf die Effizienz und Produktivität ist.
+Zu jeder Zeit ergibt sich die Möglichkeit, den Prototypen bereits im Arbeitsalltag der Monteure der Firma \vero{} auszutesten, um mögliche Schwachstellen frühzeitig erkennen und verbessern zu können.
+Zusätzlich bietet sich die Option, bereits einige Monteure mit der Applikation auszustatten, um anschließend auswerten zu können, wie groß der Einfluss der mobilen Lösung auf die Effizienz ist.
 
 \section*{Umriss der Kapitel}
 \begin{itemize}
@@ -118,7 +117,6 @@ Zusätzlich bietet sich die Option, bereits eineiige Monteure mit der Applikatio
 	\item Auswertung des Tests in Hinblick auf Effizienz/Kosten
 \end{itemize}
 
-\newpage
 \section*{Zeitplanung}
 \begin{itemize}
 	\item[\textbf{01.11.2017}] Literatur und Recherche
