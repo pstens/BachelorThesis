@@ -1,3 +1,6 @@
 [submodule "CanvasView"]
 	path = CanvasView
 	url = git@github.com:pstens/CanvasView.git
+[submodule "MeasureImageView"]
+	path = MeasureImageView
+	url = git@gitlab.com:pstens/MeasureImageView.git
