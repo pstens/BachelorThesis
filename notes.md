@@ -24,3 +24,10 @@
   - 
   
 
+
+  ## Usability
+  - threshold für diverse touch aktionen sehr wichtig, da nur wenig Platz verfügbar (rausfinden durch tests?)
+  - undo/redo essentiell, da Fehler toleriert, und nicht bestraft werden sollen (Minimierung der Gedächtnisbelastung, da man nicht alles von vorne malen muss)
+  - Lupe für Bereich unter Finger, da man sonst nicht sieht, wo man gerade malt (widerspricht WHAT YOU SEE IS WHAT YOU GET)
+  - Intuitive Icon für diverse Aktionen (redo, undo, color, delete) um Applikation intuitiv benutzbar zu machen
+  - Schwierigere Aktionen (add label, resize point) durch geführtes Overlay beim ersten Start verdeutlichen
