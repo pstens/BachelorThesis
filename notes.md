@@ -32,3 +32,5 @@
   - Intuitive Icon für diverse Aktionen (redo, undo, color, delete) um Applikation intuitiv benutzbar zu machen
   - Schwierigere Aktionen (add label, resize point) durch geführtes Overlay beim ersten Start verdeutlichen
   - alle configuration changes sollten supported werden, damit der Nutzer das Gerät auch kippen kann
+  - welche Kombination von modes is am besten für den User? (Dragging & Drawing gleichzeitig, oder getrennt?!)
+
