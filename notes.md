@@ -21,17 +21,16 @@
     Gerüstbekleidungen -> Hierbei gelten die Gerüstaußenkanten als Aufmaßgrundlage
     - eingerüstete Fläche = die zu bearbeitenden Flächen und diese, die dafür notwendig sind (119/120)
   - Unterscheidung nach Voll- und Teileinrüstung (121 2)
-  - 
   
 
-
-  ## Usability
-  - threshold für diverse touch aktionen sehr wichtig, da nur wenig Platz verfügbar (rausfinden durch tests?)
-  - undo/redo essentiell, da Fehler toleriert, und nicht bestraft werden sollen (Minimierung der Gedächtnisbelastung, da man nicht alles von vorne malen muss)
-  - Lupe für Bereich unter Finger, da man sonst nicht sieht, wo man gerade malt (widerspricht WHAT YOU SEE IS WHAT YOU GET)
-  - Intuitive Icon für diverse Aktionen (redo, undo, color, delete) um Applikation intuitiv benutzbar zu machen
-  - Schwierigere Aktionen (add label, resize point) durch geführtes Overlay beim ersten Start verdeutlichen
-  - alle configuration changes sollten supported werden, damit der Nutzer das Gerät auch kippen kann
-  - welche Kombination von modes is am besten für den User? (Dragging & Drawing gleichzeitig, oder getrennt?!)
-  - Cropping & Resizing beim Importieren/Foto machen sollte dem Benutzer helfen, bereits vorher den gewünschten Bereich auszuwählen
+### Usability
+  
+- threshold für diverse touch aktionen sehr wichtig, da nur wenig Platz verfügbar (rausfinden durch tests?)
+- undo/redo essentiell, da Fehler toleriert, und nicht bestraft werden sollen (Minimierung der Gedächtnisbelastung, da man nicht alles von vorne malen muss)
+- Lupe für Bereich unter Finger, da man sonst nicht sieht, wo man gerade malt (widerspricht WHAT YOU SEE IS WHAT YOU GET)
+- Intuitive Icon für diverse Aktionen (redo, undo, color, delete) um Applikation intuitiv benutzbar zu machen
+- Schwierigere Aktionen (add label, resize point) durch geführtes Overlay beim ersten Start verdeutlichen
+- alle configuration changes sollten supported werden, damit der Nutzer das Gerät auch kippen kann
+- welche Kombination von modes is am besten für den User? (Dragging & Drawing gleichzeitig, oder getrennt?!)
+- Cropping & Resizing beim Importieren/Foto machen sollte dem Benutzer helfen, bereits vorher den gewünschten Bereich auszuwählen
 
