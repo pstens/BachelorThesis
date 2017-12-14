@@ -33,4 +33,5 @@
   - Schwierigere Aktionen (add label, resize point) durch geführtes Overlay beim ersten Start verdeutlichen
   - alle configuration changes sollten supported werden, damit der Nutzer das Gerät auch kippen kann
   - welche Kombination von modes is am besten für den User? (Dragging & Drawing gleichzeitig, oder getrennt?!)
+  - Cropping & Resizing beim Importieren/Foto machen sollte dem Benutzer helfen, bereits vorher den gewünschten Bereich auszuwählen
 
