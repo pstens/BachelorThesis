@@ -33,4 +33,12 @@
 - alle configuration changes sollten supported werden, damit der Nutzer das Gerät auch kippen kann
 - welche Kombination von modes is am besten für den User? (Dragging & Drawing gleichzeitig, oder getrennt?!)
 - Cropping & Resizing beim Importieren/Foto machen sollte dem Benutzer helfen, bereits vorher den gewünschten Bereich auszuwählen
+- Statebar am unteren Rand der App, um zwischen Modi zu wechseln und den aktiven Modus zu sehen
+
+
+### Feedback
+
+18.12
+- threshold fürs resizing muss aufjedenfall noch größer
+- aktiver state nicht erkennbar -> muss gemerkt werden, da keine interaktiven Bilder
 
