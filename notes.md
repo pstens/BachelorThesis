@@ -41,4 +41,5 @@
 18.12
 - threshold fürs resizing muss aufjedenfall noch größer
 - aktiver state nicht erkennbar -> muss gemerkt werden, da keine interaktiven Bilder
+- text besser direkt auf die Kanten, und nicht daneben, weil sonst schwer zuordbar
 
