@@ -34,6 +34,7 @@
 - welche Kombination von modes is am besten für den User? (Dragging & Drawing gleichzeitig, oder getrennt?!)
 - Cropping & Resizing beim Importieren/Foto machen sollte dem Benutzer helfen, bereits vorher den gewünschten Bereich auszuwählen
 - Statebar am unteren Rand der App, um zwischen Modi zu wechseln und den aktiven Modus zu sehen
+- Delete button in toolbar anstatt ans shape, weil sonst unabsichtliches löschen beim resizen
 
 
 ### Feedback
