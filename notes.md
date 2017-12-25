@@ -35,6 +35,7 @@
 - Cropping & Resizing beim Importieren/Foto machen sollte dem Benutzer helfen, bereits vorher den gewünschten Bereich auszuwählen
 - Statebar am unteren Rand der App, um zwischen Modi zu wechseln und den aktiven Modus zu sehen
 - Delete button in toolbar anstatt ans shape, weil sonst unabsichtliches löschen beim resizen
+- Statusbar wechselt icon position -> sehr verwirrend und schwer erlernbar für User, da kein Muster
 
 
 ### Feedback
