@@ -45,3 +45,13 @@
 - aktiver state nicht erkennbar -> muss gemerkt werden, da keine interaktiven Bilder
 - text besser direkt auf die Kanten, und nicht daneben, weil sonst schwer zuordbar
 
+
+
+### Meeting 
+
+28.12
+- statusbar ist nicht selbsterklärend genug, da keine universell gebräuchlichen Icons benutzt -> labels + neue Icons
+- verschiedene Modi sind nur teilweise ersichtlich (Line & square als verschieden Modi, obwohl beides zum Malen) -> neuer "Draw"-Modus
+- Disketten-Icon -> Checkmark  (Material Guidelines -> Text "Speichern" besser ausschreiben ?)
+- Pinsel-Icon für drawing mode vielleicht zu irreführend, da kein "free-draw" möglich -> lieber ruler icon?
+
