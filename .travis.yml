@@ -6,6 +6,7 @@ cache:
     - $HOME/.texlive
 before_script:
   mkdir _build
+  cd proposal
 script:
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build ./proposal/proposal.tex
 # Compile twice to fix possible references
