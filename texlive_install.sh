@@ -32,20 +32,13 @@ tlmgr install xkeyval
 tlmgr install collection-latex
 
 # Install babel languages
-tlmgr install collection-langeuropean
+tlmgr install texlive-babel-german
 
 # Index of packages: http://ctan.mirrors.hoobly.com/systems/texlive/tlnet/archive/
 # Other contrib packages: done as a block to avoid multiple calls to tlmgr
 # pgf includes tikz
 tlmgr install   \
-  url           \
   times         \
-  numbers       \
-  sort          \
-  compress      \
-  ngerman       \
-  graphicx      \
-  fancyhdr      \
   lastpage      \
   lipsum        \
   imakeidx
