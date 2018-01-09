@@ -30,6 +30,7 @@ tlmgr install xkeyval
 
 # A kind of minimum set of packages needed
 tlmgr install collection-latex
+tlmgr install collection-fontsrecommended
 
 # Install babel languages
 tlmgr install babel-german
@@ -48,8 +49,7 @@ tlmgr install   \
   amsthm        \
   mathtools     \
   setspace      \
-  koma-script   \
-  collection-fontsrecommnended
+  koma-script
 
 # Keep no backups (not required, simply makes cache bigger)
 tlmgr option -- autobackup 0
