@@ -46,7 +46,10 @@ tlmgr install   \
   amsfonts      \
   amssymb       \
   amsthm        \
-  mathtools
+  mathtools     \
+  setspace      \
+  koma-script   \
+  collection-fontsrecommnended
 
 # Keep no backups (not required, simply makes cache bigger)
 tlmgr option -- autobackup 0
