@@ -41,7 +41,12 @@ tlmgr install   \
   times         \
   lastpage      \
   lipsum        \
-  imakeidx
+  imakeidx      \
+  amsmath       \
+  amsfonts      \
+  amssymb       \
+  amsthm        \
+  mathtools
 
 # Keep no backups (not required, simply makes cache bigger)
 tlmgr option -- autobackup 0
