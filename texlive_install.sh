@@ -50,6 +50,7 @@ tlmgr install   \
   mathtools     \
   setspace      \
   todonotes      \
+  xcolor      \
   koma-script
 
 # Keep no backups (not required, simply makes cache bigger)
