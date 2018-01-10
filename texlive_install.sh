@@ -49,6 +49,7 @@ tlmgr install   \
   amsthm        \
   mathtools     \
   setspace      \
+  todonotes      \
   koma-script
 
 # Keep no backups (not required, simply makes cache bigger)
