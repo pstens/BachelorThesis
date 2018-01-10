@@ -48,9 +48,13 @@ tlmgr install   \
   amssymb       \
   amsthm        \
   mathtools     \
+  xcolor        \
+  tikz          \
+  ifthen        \
+  xkeyval       \
+  calc          \
   setspace      \
-  todonotes      \
-  xcolor      \
+  todonotes     \
   koma-script
 
 # Keep no backups (not required, simply makes cache bigger)
