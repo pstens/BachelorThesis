@@ -1,5 +1,5 @@
 \chapter{Einleitung}
-\todo{brauche ich hier ne section?}
+\section{Motivation}
 ``Digitalisierung des Handwerks'' - Das ist der Titel einer im Jahr 2017 ausgeführten Studie vom Branchenverband \textit{Bitkom}. 
 Diese Studie besagt, dass 69\% der 509 befragten Handwerksbetriebe die Digitalisierung als Chance für einen positive Umschwung sehen. 
 Dabei stehen aus Sicht der Handwerker die Vorteile von ``optimaler Lagerung und Logistik'' (91\%), ``Zeitersparnis'' (81\%) und ``flexibler Arbeitsorganisation'' (78\%) im Vordergrund (Bitkom e.V., 2017). \\
@@ -12,7 +12,7 @@ Die entwickelte Software-Lösung wird einerseits von den Monteuren zur Arbeitsze
 
 \todo{bilder von app}
 
-\section{Motivation}
+\section{Problematik}
 
 Die Aufmaßerfassung ist ein wichtiger Bestandteil als Vorbereitung zur Rechnungslegung im Handwerk, insbesondere im Gerüstbau. Hierbei werden die Maße (Länge, Breite und Höhe) der bereitgestellten Gerüste, idealerweise abgemessen, meistens jedoch abgeschätzt und später im Büro mit einer Preisliste nach Gerüsttyp (Fassadengerüst, Raumgerüst, Hängegerüst, ...) abgerechnet. \\
 
@@ -37,7 +37,7 @@ Genau diese Problematik soll durch die Entwicklung einer mobilen Applikation fü
 
 Dabei soll die Software dem Benutzer es ermöglichen, bereits auf der Baustelle Bilder zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen (Maße und Gerüsttyp) direkt zu hinterlegen.
 
-Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine \td{API} zu senden, welche anhand der eingebenden Maße und Gerüsttypen direkt ein Aufmaß zur Freigabe für den Kunden generiert.
+Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine API zu senden, welche anhand der eingebenden Maße und Gerüsttypen direkt ein Aufmaß zur Freigabe für den Kunden generiert.
 
 Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf eine positive Benutzererfahrung, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen:
 
@@ -46,10 +46,20 @@ Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler versch
 	\item Auf welche Weise ermöglicht man eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
 	\item Gibt es spezielle äußerliche Einflüsse, die zu beachten sind, um konstant gute Ergebnisse zu garantieren (Lichtverhältnisse, Aufnahmewinkel)?
 	\item Wo liegen eventuelle Grenzen der mobilen Aufmaßerfassung?
-	\item Wie lassen sich Meta-Informationen zum Bild (z.B. Beschriftungen von Linien) für eine \td{API} oder nachgelagerte Dienste aufbereiten?
+	\item Wie lassen sich Meta-Informationen zum Bild (z.B. Beschriftungen von Linien) für eine API oder nachgelagerte Dienste aufbereiten?
+	\todo{API definition} 
 \end{itemize}
 
 \section{Umfeld}
-\todo{über vero schreiben}
+\todo{vero als teil der kleinen Unternehmen aus der Gerüstbaubranche}
+\todo{über app und systemarchitektur}
 
 \section{Aufbau der Arbeit}
+\begin{enumerate}
+	\item Zuerst Evaluation bereits vorhandener Lösungsalternativen
+	\item Konzeption einer eigenen Software-Lösung anhand Ergebnisse und Theorie
+	\item Iterative Evaluierung im Hinblick auf Funktionalität und Usability erster Prototypen
+	\item Probleme und Grenzen die sich aus 3. ergeben
+	\item Auswertung Aufmaßerfassung mit/ohne App in Hinblick auf Effizienz und Kosten
+	\item Fazit
+\end{enumerate}
