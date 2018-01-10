@@ -1,4 +1,55 @@
 \chapter{Einleitung}
+\todo{brauche ich hier ne section?}
+``Digitalisierung des Handwerks'' - Das ist der Titel einer im Jahr 2017 ausgeführten Studie vom Branchenverband \textit{Bitkom}. 
+Diese Studie besagt, dass 69\% der 509 befragten Handwerksbetriebe die Digitalisierung als Chance für einen positive Umschwung sehen. 
+Dabei stehen aus Sicht der Handwerker die Vorteile von ``optimaler Lagerung und Logistik'' (91\%), ``Zeitersparnis'' (81\%) und ``flexibler Arbeitsorganisation'' (78\%) im Vordergrund (Bitkom e.V., 2017). \\
+
+Im November 2017 wurde passend dazu ein zweitägiges Groß-Seminar unter dem Titel ``Gerüstbau 4.0: Was bedeutet der digitale Wandel für den eigenen Betrieb?'' in Hannover vom Güterschutzverband Stahlgerüstbau e.V. veranstaltet. 
+Mit Vorträgen zu Themen wie ``Geschäftsprozesse im Gerüstbau-Handwerk'', ``Virtuelle Projekträume und Cloudlösungen'' und ``Mobile Datenverwaltung'' wurden die Teilnehmenden über den digitalen Wandel informiert (Güteschutzverband Stahlgerüstbau e.V., kein Datum). \\
+
+Der Gerüstbau-Dienstleister Fa. VERO Scaffolding EOOD Niederlassung Deutschland aus Paderborn (nachfolgend: \textsc{VERO}) kann nach der Einführung und Benutzung einer selbst entwickelten Android-Applikation im Mai 2014 die genannten Vorteile teilweise verzeichnen.
+Die entwickelte Software-Lösung wird einerseits von den Monteuren zur Arbeitszeiterfassung, Einsicht von Auftragsinformationen, Baustellendokumentation mit Fotos und Text genutzt. Auf der anderen Seite nutzt die Geschäftsleitung bzw. Bauleitung vermehrt die administrativen Funktionen der App, wie die Verwaltung und Pflege von Kunden-, Projekt-, und Auftragsinformationen. \\
+
+\todo{bilder von app}
+
 \section{Motivation}
+
+Die Aufmaßerfassung ist ein wichtiger Bestandteil als Vorbereitung zur Rechnungslegung im Handwerk, insbesondere im Gerüstbau. Hierbei werden die Maße (Länge, Breite und Höhe) der bereitgestellten Gerüste, idealerweise abgemessen, meistens jedoch abgeschätzt und später im Büro mit einer Preisliste nach Gerüsttyp (Fassadengerüst, Raumgerüst, Hängegerüst, ...) abgerechnet. \\
+
+Der bisherige Ablauf einer solchen Aufmaßerfassung sieht dabei für den Monteur in etwa wie folgt aus:
+
+\begin{enumerate}
+	\item Fahrt zum Kunden
+	\item Erstellen des Aufmaßes
+	\item Aufschreiben der gesammelten Daten auf Papier
+	\item Abnahme vom Kunden
+	\item Rückfahrt ins Büro
+	\item Eintragen der Daten ins System
+	\item Rechnungsstellung
+\end{enumerate}
+\todo{zu 3 eventuell Bild von Seppel}
+
+Dieses Verfahren hat sich in der Vergangenheit als fehleranfällig und zeitaufwändig herausgestellt. Durch zu grobe Schätzungen, aber auch die hohe Gedächtnisbelastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch effizientere Informationsverarbeitung vor Ort auf der Baustellen vermeiden lassen. 
+
+\todo{Use real paragraphs or indents?}
+
+Genau diese Problematik soll durch die Entwicklung einer mobilen Applikation für Android-Endgeräte gelöst werden.
+
+Dabei soll die Software dem Benutzer es ermöglichen, bereits auf der Baustelle Bilder zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen (Maße und Gerüsttyp) direkt zu hinterlegen.
+
+Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine \td{API} zu senden, welche anhand der eingebenden Maße und Gerüsttypen direkt ein Aufmaß zur Freigabe für den Kunden generiert.
+
+Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf eine positive Benutzererfahrung, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen:
+
+\begin{itemize}
+	\item Wie setzt man eine Bearbeitungsumgebung auf dem Smartphone oder Tablet um, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
+	\item Auf welche Weise ermöglicht man eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
+	\item Gibt es spezielle äußerliche Einflüsse, die zu beachten sind, um konstant gute Ergebnisse zu garantieren (Lichtverhältnisse, Aufnahmewinkel)?
+	\item Wo liegen eventuelle Grenzen der mobilen Aufmaßerfassung?
+	\item Wie lassen sich Meta-Informationen zum Bild (z.B. Beschriftungen von Linien) für eine \td{API} oder nachgelagerte Dienste aufbereiten?
+\end{itemize}
+
 \section{Umfeld}
+\todo{über vero schreiben}
+
 \section{Aufbau der Arbeit}
