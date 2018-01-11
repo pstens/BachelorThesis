@@ -3,7 +3,7 @@ dist: trusty
 notifications:
   email: false
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german lmodern latex-xcolor texlive-pictures
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german lmodern latex-xcolor pgf
 before_script:
 - mkdir _build
 - mkdir _build/chapters
