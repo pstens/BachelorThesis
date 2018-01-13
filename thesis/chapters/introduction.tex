@@ -51,8 +51,20 @@ Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler versch
 \end{itemize}
 
 \section{Umfeld}
-\todo{vero als teil der kleinen Unternehmen aus der Gerüstbaubranche}
-\todo{über app und systemarchitektur}
+Nach der Handwerkszählung aus dem Jahr 2015 sind 13\% (75.264) aller Handwerksunternehmen dem Bauhauptgewerbe zuzuordnen. Zu diesem Gewerbe zählt auch die Gerüstbaubranche, welche laut einer Statistik des Statistischen Bundesamtes im Jahr 2016 überwiegend von vielen kleinen Unternehmen dominiert wird (88,03\% der Unternehmen mit bis zu 20 Angestellten). 9,28\% der Unternehmen verzeichnen zwischen 21 und 50 Beschäftigte, und nur 2,69\% der Unternehmen verzeichnen über 50 Beschäftigte. (Statistisches Bundesamt, 2017) \\
+
+Zu einem der kleineren Unternehmen gehört auch die Fa. VERO Scaffolding EOOD Niederlassung Deutschland in Paderborn mit 14 Beschäftigten, welche im Folgenden weiter vorgestellt wird.
+
+\subsection{Unternehmen}
+Das heutige Unternehmen VERO Scaffolding EOOD Niederlassung Deutschland geht aus im Jahr 1999 in Paderborn gegründeten VERO Gerüstbau GmbH hervor. 
+Seit 2013 ist die VERO Gerüstbau GmbH die deutsche Niederlassung der bulgarischen VERO Scaffolding EOOD, ansässig in Stara Zagora. Der Standort in Bulgarien fokussiert sich hauptsächlich auf mehrjährige Großprojekte, wohingegen es in der deutschen Niederlassung in Paderborn viele kleinere Projekte für Kommunen, Automobilzulieferer, aber auch, wenn eher selten, private Haushalte handelt.
+Die Belegschaft besteht aus zehn Monteuren, einem Auszubildenden, einer Bürofachkraft und zwei Geschäftsführern. Die Monteure sind zwischen 19 und 55 Jahren alt und erledigen in zwei bis vier Kolonnen bis zu vier Arbeitsaufträge am Tag.
+
+\subsection{Android-App und Systemarchitektur}
+Im Oktober 2013 begann der Entwicklungsstart einer Android-Applikation als mobile Software-Lösung für grundlegende Aufgaben der Monteure wie das Buchen von Arbeitszeiten, Ansehen von Arbeitsaufträgen und das Verfassen von schriftlichen Baudokumentationen. Die Applikation kommuniziert zur Synchronisation der getätigten Aktionen mit einer Server-Schnittstelle (REST-API) \todo{REST erklären}. Diese API ist wiederum an eine SQL-Datenbank, ein Dateisystem und externe Dienste gekoppelt, die es dem Unternehmen ermöglichen, die gesammelten Daten auch noch zu einem späteren Zeitpunkt anzupassen. \\
+
+Zum jetzigen Stand (Januar 2018) ist die App um viele Funktionen erweitert. So gibt es nun beispielsweise die Möglichkeit neue Kunden, Projekte und Arbeitsaufträge direkt aus der App zu erstellen, aber auch eine Funktion, um seine Arbeit mit Fotos zu dokumentieren. 
+\todo{eventuell ausführlicher beschreiben und fotos?}
 
 \section{Aufbau der Arbeit}
 \begin{enumerate}
