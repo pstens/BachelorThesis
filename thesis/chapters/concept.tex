@@ -1,48 +1,50 @@
 \chapter{Konzeption}
 
- \section{Bewertungskriterien}
+\section{Bewertungskriterien}
  
  Im folgenden Kapitel werden drei Lösungsalternativen zur mobilen Aufmaßerfassung aus dem Google Play-Store anhand der erweiterteten Nielsen-Heuristiken \todo{ref} bewertet und verglichen.
 Hierzu werden die Heuristiken zunächst kurz vorgestellt, und anschließend iterativ auf die Apps angewendet. Die für den Einsatzbereich des Gerüstbaus am Wichtigsten Kriterien werden abschließend in einer vergleichenden Tabelle zusammengetragen, um einen guten Überblick über die Testergebnisse zu schaffen. \\
 
  Diese drei ausgewählten Apps waren bei der Suchanfrange nach ``Aufmaßerfassung'' im Play-Store die am best bewerteten (Stand Januar 2018)
  \todo{Bild vom play-store} \\
+ 
+ 
  \subsection{Erweiterte Nielsen-Heuristiken}
-1990 entwickeln Rolf Molich und Jakob Nielsen neun Usability-Heuristiken, die auf einer Grundlage von allgemein anerkannten Prinzipien beruhen. 4 Jahre später ergänzt Nielsen diese um einen zehnten Punkt: 
+ Nach \citeauthor{Nielsen:1994:UIM} gibt es 10 Heuristiken, die auf einer Grundlage von allgemein anerkannten Prinzipien beruhen, und sich zur Evaluation von Usability-Problemen gut eignen \citep[Seite.~25--62]{Nielsen:1994:UIM}: 
 
 \begin{enumerate}
-	\item \label{1} Sichtbarkeit des Systemzustands
-	\item \label{2} Übereinstimmung zwischen System und realer Welt
-	\item \label{3} Benutzerkontrolle und -freiheit
-	\item \label{4} Konsistenz und Standards
-	\item \label{5} Fehlervorbeugung
-	\item \label{6} Wiedererkennung statt Erinnern
-	\item \label{7} Flexibilität und Effizienz der Benutzung
-	\item \label{8} Ästhetisches und minimalistisches Design
-	\item \label{9} Erkennbarkeit, Diagnose und Erholung von Fehlern
-	\item \label{10} Hilfe und Dokumentation
+	\item \label{itm:1} Sichtbarkeit des Systemzustands
+	\item \label{itm:2} Übereinstimmung zwischen System und realer Welt
+	\item \label{itm:3} Benutzerkontrolle und -freiheit
+	\item \label{itm:4} Konsistenz und Standards
+	\item \label{itm:5} Fehlervorbeugung
+	\item \label{itm:6} Wiedererkennung statt Erinnern
+	\item \label{itm:7} Flexibilität und Effizienz der Benutzung
+	\item \label{itm:8} Ästhetisches und minimalistisches Design
+	\item \label{itm:9} Erkennbarkeit, Diagnose und Erholung von Fehlern
+	\item \label{itm:10} Hilfe und Dokumentation
 \end{enumerate} 
 
 Zur Bewertung mobiler Endgeräte reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass weitere 8 Heuristiken, die speziell für mobile Geräte ausgelegt sind, hizugezogen werden \todo{ref auf ue, 239}
 
 \begin{enumerate}
 	\setcounter{enumi}{10}
-	\item \label{11} Adäquater Umgang mit Unterbrechungen
-	\item \label{12} Fokussieren der Informationen
-	\item \label{13} ``Joy of Use''
-	\item \label{14} ``Don't lie to the user''
-	\item \label{15} Unterstützung verschiedener Bildschirmorientierungen
-	\item \label{16} Ergonomische Gestaltung der physischen Interaktion
-	\item \label{17} Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit
-	\item \label{18} Schützen der Privatsphäre
+	\item \label{itm:11} Adäquater Umgang mit Unterbrechungen
+	\item \label{itm:12} Fokussieren der Informationen
+	\item \label{itm:13} ``Joy of Use''
+	\item \label{itm:14} ``Don't lie to the user''
+	\item \label{itm:15} Unterstützung verschiedener Bildschirmorientierungen
+	\item \label{itm:16} Ergonomische Gestaltung der physischen Interaktion
+	\item \label{itm:17} Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit
+	\item \label{itm:18} Schützen der Privatsphäre
 \end{enumerate}
 
 \subsection{Weitere Kriterien}
 Zusätzlich werden die Lösungs-Alternativen mit 2 weiteren Kriterien bewertet, die für die Benutzung zur mobilen Aufmaßerfassung im Gerüstbau wichtig sind:
 
 \begin{itemize}
-	\item Integration der Software-Lösung in die bereits vorhandene App der Fa. VERO
-	\item Export des Bildes und der Metadaten zur Weiterverarbeitung in einem nachgeschalteten Dienst (API)
+	\item \label{itm:integration} Integration der Software-Lösung in die bereits vorhandene App der Fa. VERO
+	\item \label{itm:export} Export des Bildes und der Metadaten zur Weiterverarbeitung in einem nachgeschalteten Dienst (API)
 	\todo{mehr Kriterien raussuchen}
 \end{itemize}
 
@@ -112,7 +114,66 @@ Negativ fällt auch in dieser Alternative die fehlerhafte Gesten-Unterstützung 
 	\label{fig:borientation}
 \end{figure}
 
+\subsection{Measures \& Sketch}
+
+\textsc{Measures \& Sketch} von HERSTELLER, VERSION, RANKING \\
+
+\begin{wrapfigure}{R}{0.4\textwidth}
+	\includegraphics[keepaspectratio, width=0.4\textwidth]{measure_sketch/help}
+	\caption{Hilfe-Overlay}
+	\label{fig:mshelp}
+\end{wrapfigure}
+
+Auch diese App bedient sich eines Hilfe-Overlays beim ersten Start, überfordert den Benutzer jedoch mit zu viel Text. So erfüllt dieses Tooltip ihre Funktion als Hilfestellung nicht, sondern überfordert den Nutzer mit Text. Alternativ bietet sich auch bei dieser App wie in \autoref{fig:pmhelp} mit Icons zu arbeiten, sodass die Gedächtnisbelastung minimiert wird. \\
+
+Die App kann als negativ-Beispiel bezüglich der Nielsen-Heuristiken betrachtet werden. Es gibt weder Undo- oder Redo-Button, noch wird in irgendeiner Weise hervorgehoben, welche Form aktuell ausgewählt ist. Dies führte beim Löschen oft zu Überraschungen. \\
+
+ Außerdem unterstützt die App keinerlei Gesten zur Navigation im Bild. So lässt sich der abgebildete Bereich des Bildes weder zoomen, noch kann der Benutzer das Bild rotieren oder verschieben. Um Formen zu zeichnen bedient sich die App eine für den Benutzer unnatürliche Geste, denn hierzu muss der Nutzer gleichzeitig mit zwei Fingern die Form in die beiden gewünschten Richtungen ``aufziehen''. So fühlt sich der Zeichen-Prozess nicht nur unnatürlich an, sondern ist in der Größe der Form durch die Spannweite der Finger des Benutzers beschränkt. \\
+ 
+ Zusätzlich schließt dies die Benutzung der App mit einer Hand aus, was Nielsen~\ref{16} klar widerspricht. Als Bildschirmausrichtung wird nur der Portrait-Modus unterstützt, was gerade die Bearbeitung von im Landscape aufgenommenen Bildern zu einer Herausforderung macht. \\
+
 \section{Bewertung der Lösungsalternativen}
+
+\begin{sidewaystable}[ht]
+	\centering
+	\caption{Vergleich der Lösungsalternativen}
+	\vspace*{10px}
+	\label{tab:nielsen}
+	\begin{tabular}{r|l|c|c|c|}
+	\cline{2-5}
+    	        				    &								& Photo Measures 	& Measuring Master 	& Measure \& Sketch \\ \cline{2-5} 
+	Nach \cite{Nielsen:1994:UIM}	& \autoref{itm:1}				&       \po 		&    \po 			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:2} 				&       \po  		&    \po  			&       \po		    \\ \cline{2-5}
+    	             				& \autoref{itm:3} 				&       \xmark 		&    \po			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:4} 				&       \po  		&    \po			&       \xmark      \\ \cline{2-5}
+    	            				& \autoref{itm:5} 				&       \po  		&    \xmark			&       \xmark      \\ \cline{2-5} 
+    	            				& \autoref{itm:6} 				&       \xmark 		&    \po  			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:7} 				&       \po  		&    \xmark			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:8} 				&       \nl  		&    \po  			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:9} 				&       \po   		&    \po  			&       \nl	        \\ \cline{2-5} 
+    	            				& \autoref{itm:10} 				&       \po  		&    \po 			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:11} 				&       \po   		&    \po 			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:12} 				&       \po   		&    \po 			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:13}			 	&       \xmark  	&    \xmark			&       \xmark      \\ \cline{2-5} 
+    	            				& \autoref{itm:14} 				&       \po   		&    \po  			&       \po		    \\ \cline{2-5}
+    	            				& \autoref{itm:15} 				&       \po   		&    \xmark			&       \xmark  	\\ \cline{2-5}   
+    	            				& \autoref{itm:16} 				&       \po   		&    \po  			&       \xmark      \\ \cline{2-5} 
+    	             				& \autoref{itm:17} 				&       \po  		&    \po  			&       \xmark		\\ \cline{2-5} 
+    	             				& \autoref{itm:18} 				&       \nl  		&    \nl 			&       \nl		    \\ \cline{2-5} 
+	Eigene Kriterien 				& \autoref{itm:integration}		&      	\xmark		&    \xmark			&       \xmark      \\ \cline{2-5}
+	    	         				& \autoref{itm:export}   		&      	\xmark		&    \xmark			&       \xmark      \\ \cline{2-5}
+
+	    	             
+	\end{tabular}
+	\\
+	\vspace*{10px}
+	\begin{tabular}{l}
+		\po~wird erfüllt \\
+		\nl~wurde nicht berücksichtigt \\
+		\xmark~wird nicht erfüllt
+	\end{tabular}
+\end{sidewaystable}
+
 \section{Vorgehensweise bei Implementierung eigener Software-Lösung}
   \subsection{Iterativer Entwicklungsprozess}
     3 Iterationen jeweils Mitte Dezember, Januar und Februar \\
@@ -129,3 +190,4 @@ Negativ fällt auch in dieser Alternative die fehlerhafte Gesten-Unterstützung 
 
 
   
+1
