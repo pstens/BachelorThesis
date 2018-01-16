@@ -130,10 +130,11 @@ Die App kann als negativ-Beispiel bezüglich der Nielsen-Heuristiken betrachtet 
 
  Außerdem unterstützt die App keinerlei Gesten zur Navigation im Bild. So lässt sich der abgebildete Bereich des Bildes weder zoomen, noch kann der Benutzer das Bild rotieren oder verschieben. Um Formen zu zeichnen bedient sich die App eine für den Benutzer unnatürliche Geste, denn hierzu muss der Nutzer gleichzeitig mit zwei Fingern die Form in die beiden gewünschten Richtungen ``aufziehen''. So fühlt sich der Zeichen-Prozess nicht nur unnatürlich an, sondern ist in der Größe der Form durch die Spannweite der Finger des Benutzers beschränkt. \\
  
- Zusätzlich schließt dies die Benutzung der App mit einer Hand aus, was Nielsen~\ref{16} klar widerspricht. Als Bildschirmausrichtung wird nur der Portrait-Modus unterstützt, was gerade die Bearbeitung von im Landscape aufgenommenen Bildern zu einer Herausforderung macht. \\
+ Zusätzlich schließt dies die Benutzung der App mit einer Hand aus, was Nielsen~\autoref{itm:16} klar widerspricht. Als Bildschirmausrichtung wird nur der Portrait-Modus unterstützt, was gerade die Bearbeitung von im Landscape aufgenommenen Bildern zu einer Herausforderung macht. \\
 
 \section{Bewertung der Lösungsalternativen}
 
+\todo{Punkte auf Konsistenz überprüfen}
 \begin{sidewaystable}[ht]
 	\centering
 	\caption{Vergleich der Lösungsalternativen}
@@ -174,14 +175,58 @@ Die App kann als negativ-Beispiel bezüglich der Nielsen-Heuristiken betrachtet 
 	\end{tabular}
 \end{sidewaystable}
 
+\clearpage
 \section{Vorgehensweise bei Implementierung eigener Software-Lösung}
+
+\todo{vielleicht eigene sections?}
+\subsection{Human-Centered Design Process}
+\citeauthor{Norman:2013} beschreibt in seinem Buch ``The Design of Everyday Things: Revised and Expanded Version'' zur Vorgehensweise bei der Lösung von Usability-Problemen unteranderem den ``Human-Centered Design Process'' \citep[Seiten 221--230]{Norman:2013}. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio]{hcp}
+	\caption{The Human-Centered Design Process}
+	\label{fig:hcp}
+\end{figure}
+
+In \autoref{fig:hcp} sieht man die vier verschiedenen Phasen des Zyklus:
+\begin{enumerate}
+	\item Beobachtung (Observation) \label{itm:observation}
+	\item Ideenfindung (Idea Generation) \label{itm:idea}
+	\item Prototypenentwicklung (Prototyping) \label{itm:prototyping}
+	\item Testen (Testing) \label{itm:testing}
+\end{enumerate}
+
+Eingangs werden in der Beobachtungs-Phase (Observation) Test-Personen ausgesucht, die möglichst nah an die wirklichen Ziel-Bedingungen kommen  und bei ihrer alltäglichen Arbeit beobachtet. Dies steigert die Wahrscheinlichkeit am Ende der Beobachtung möglichst aussagekräftige Einblicke in eventuelle Probleme dieser Zielgruppe zu bekommen. 
+
+Anschließend werden in der Ideenfindungs-Phase (Idea Geneartion) möglichst viele Ideen zur Lösung der Probleme aus Phase 1 herausgearbeitet, welche in der dritten Phase (Prototyping)  in Form eines Mock-ups oder ersten Prototypen versucht gelöscht zu werden.
+
+Um den ersten Durchgang des Zyklus abzuschließen bekommt in der vierten Phase (Testing) eine ausgewählte Menge an Test-Personen die Ergebnisse aus der Prototypenentwicklung vorgelegt. So können bis dahin unerkannte oder sogar neu erstandene Probleme gefunden werden, welche in die nächste Iteration des Design-Prozesses einfließen.
+
+ Das Ziel ist es, den Prozess so lange zu wiederholen, bis sich optimaler-weise keine Usability-Probleme mehr aufzeigen.  \\
+ 
+ \subsection{Die 8 Goldenen Regeln von Shneiderman}
+ 
+\citeauthor{Shneiderman:2004} definieren in ihrem Buch ``Designing the User Interface: Strategies for Effective Human-Computer Interaction'' die sogenannten ``8 Goldenen Regeln des Interface Designs''.  Die acht Regeln lauten wie folgt:
+
+\begin{enumerate}
+	\item Bemühe Dich um Konsistenz (``Strive for consistency'')
+	\item Erlaube erfahrenen Benutzern die Nutzung von Abkürzungen (``Enable fequent users to use shortcuts'')
+	\item Biete informative Rückkopplung (``Offer informative feedback'')
+	\item Biete ein klares Ende von Teildialogen an (``Design dialogs to yield closure'')
+	\item Biete Fehlervermeidung und einfache Fehlerbehandlung an (``Offer error protection and simple error handling'')
+	\item Erlaube eine einfach Rücknahme von Aktionen (``Permit easy reversal of actions'')
+	\item Gib dem Benutzer die Kontrolle (``Support internal locus of control'')
+	\item Minimiere Gedächtnisbelastung (``Reduce short-memory load'')
+\end{enumerate} 
+
+
   \subsection{Iterativer Entwicklungsprozess}
     3 Iterationen jeweils Mitte Dezember, Januar und Februar \\
     Feedback in Form von Gitlab-Issues und Beobachten von Testpersonen (Usability-Experimente) \\
     1. Iteration (Dezember): App mit floating buttons (screenshots vorher-nachher)
     2. Iteration (Januar): App mit status bar (screenshots vorher-nachher)
     3. Iteration (Februar): App mit Help-Overlay \& verbesserter Statusbar (screenshots vorher-nachher)
-  \subsection{8 Goldenen Regeln von Shneidman}
   \subsection{DIN und ISO-Normen}
   \subsection{Material Design-Guidelines}
   \subsection{ABC-Modell}
