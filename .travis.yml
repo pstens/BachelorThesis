@@ -3,7 +3,7 @@ dist: trusty
 notifications:
   email: false
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german lmodern latex-xcolor pgf
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german lmodern latex-xcolor pgf texlive-bibtex-extra
 before_script:
 - mkdir _build
 - mkdir _build/chapters
@@ -13,7 +13,9 @@ script:
 
 - cd ../thesis
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory ../_build thesis.tex
+  bibtex thesis
   # compile twice to fix poosible reference issues
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory ../_build thesis.tex
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory ../_build thesis.tex
 - cd ..
 deploy:
