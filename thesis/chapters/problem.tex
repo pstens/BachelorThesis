@@ -1,5 +1,62 @@
 \chapter{Auswertung der Problematik}
-\todo{Text aus Einleitung hier hin?} 
-\section{Erkennen des Problems}
-\section{Analysieren des Problems}
+Wie in \autoref{subsec:motivation} bereits beschrieben, liegt der Fokus dieser Arbeit auf der Problematik der Aufmaßerfassung im Gerüstbau.
+Der Prozess der Aufmaßerfassung hat sich im Laufe der Zeit als fehleranfällig und aufwändig charakterisiert.
+Wie genau dieser Prozess aussieht, und was ihn so fehleranfällig macht, wird im Folgenden am Beispiel der Fa. \emph{VERO} herausgestellt.
+Außerdem wird anschließend noch ein optimierter Prozess vorgestellt, der im Verlauf dieser Arbeit mit Hilfe eines IT-Artefakts in Form einer mobilen Applikation für Android-Geräte umgesetzt werden soll. \\
+
+\section{Analyse der Problematik}\label{sec:problem}
+In diesem Kaptiel die bisherige Problematik, welche sich im Laufe der Zeit bei der Aufmaßerfassung im Gerüstbau gezeigt hat, analysiert.
+Dazu wird zuerst der typische Ablauf der Aufmaßerfassung beschrieben, und anschließend potentielle Fehlerquellen evaluiert. \\
+Der bisherige Ablauf sieht für einen Monteur bei der Fa. \emph{VERO} wie folgt aus:
+
+\begin{enumerate}
+	\item Fahrt zum Kunden
+	\item Erstellen des Aufmaßes
+  \item Aufschreiben der gesammelten Daten auf Papier
+	\item Abnahme vom Kunden
+	\item Rückfahrt ins Büro
+	\item Eintragen der Daten ins System
+	\item Rechnungsstellung
+\end{enumerate}
+\todo{zu 3 Bild von Seppel und Text von VOB/C}
+
+Dieses Verfahren hat sich in der Vergangenheit als fehleranfällig und zeitaufwändig herausgestellt. 
+Durch zu grobe Schätzungen, aber auch die hohe kognitive Belastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch effizientere Informationsverarbeitung vor Ort auf den Baustellen vermeiden lassen. \\
+
+Gerade die Punkte 3-6 des bisherigen Ablaufes haben sich als potentielle Fehlerquellen identifizieren lassen.
+So sind die auf Papier gesammelten Daten im Nachhinein oft nur vom ursprünglichen Ersteller zu verstehen, oder gehen noch bevor sie im Büro ins System eingetragenwerden verloren.
+Zudem kommt es bei der Nachbearbeitung der Informationen auch häufig dazu, dass wichtige Informationen die vor Ort beim Kunden abgesprochen worden sind, in Vergessenheit geraten \todo{Hier noch ein bisschen genauer auf die Punkte eingehen} \\
+
+Genau diese Problematik soll durch die Entwicklung einer mobilen Applikation für Android-Endgeräte gelöst werden.
+Wie genau ein solcher optimierte Prozess für den Monteur dabei aussehen kann, wird im folgenden Kapitel weiter ausgeführt.
+
 \section{Optimierter Prozess}
+Wie in \autoref{sec:problem} beschrieben, liegen die größten Fehlerquellen in der hohen kognitiven Belastung der Monteure gepaart mit dem verspäteten Eintragen der gesammelten Informationen ins System erst bei Rückkehr ins Büro. \\
+
+Durch die Entwicklung der Android-Applikation sollen genau diese Fehlerquellen minimiert, und die Effizienz der Monteure gesteigert werden.
+Dabei soll die Software dem Benutzer es ermöglichen, bereits auf der Baustelle Bilder zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen (Maße und Gerüsttyp) direkt zu hinterlegen. \\
+
+Weiterführend soll die Möglichkeit bestehen, die bearbeiteten Bilder an eine API \todo{def} zu senden, welche anhand der eingegebenen Maße und Gerüsttypen direkt ein Aufmaß zur Freigabe für den Kunden generiert.
+Ein optimierter Prozess könnte dann beispielsweise wie folgt aussehen:
+
+\begin{enumerate}
+	\item Fahrt zum Kunden
+	\item Fotografieren des zu bemaßenden Objekts
+  \item Erstellen der Aufmaße direkt in der Applikation
+	\item Senden des erstellen Aufmaßes an die API
+	\item Abnahme der zurückgelifierten Daten vom Kunden
+	\item Rechnungsstellung
+\end{enumerate} 
+
+Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf eine positive Benutzererfahrung, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen:
+
+\begin{itemize}
+	\item Wie setzt man eine Bearbeitungsumgebung auf dem Smartphone oder Tablet um, die dem Benutzer intuitiv alle möglichen Bearbeitungsoptionen aufzeigt, das Bild dennoch zu jeder Zeit gut erkennbar bleibt?
+	\item Auf welche Weise ermöglicht man eine effiziente und zuverlässige Bearbeitungsmethode der aufgenommenen Bilder?
+	\item Gibt es spezielle äußerliche Einflüsse, die zu beachten sind, um konstant gute Ergebnisse zu garantieren (Lichtverhältnisse, Aufnahmewinkel)?
+	\item Wo liegen eventuelle Grenzen der mobilen Aufmaßerfassung?
+	\item Wie lassen sich Meta-Informationen zum Bild (z.B. Beschriftungen von Linien) für eine API oder nachgelagerte Dienste aufbereiten?
+	\todo{API definition} 
+\end{itemize}
+
+Wie genau diese Fragen theoretisch und praktisch in Form einer Android-Applikation umgesetzt werden können, wird im nachfolgenden Kapitel weiter ausgeführt. 
