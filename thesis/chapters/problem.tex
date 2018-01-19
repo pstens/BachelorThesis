@@ -1,37 +1,37 @@
 \chapter{Auswertung der Problematik}
-Wie in \autoref{subsec:motivation} bereits beschrieben, liegt der Fokus dieser Arbeit auf der Problematik der Aufmaßerfassung im Gerüstbau.
-Der Prozess der Aufmaßerfassung hat sich im Laufe der Zeit als fehleranfällig und aufwändig charakterisiert.
-Wie genau dieser Prozess aussieht, und was ihn so fehleranfällig macht, wird im Folgenden am Beispiel der Fa. \emph{VERO} herausgestellt.
-Außerdem wird anschließend noch ein optimierter Prozess vorgestellt, der im Verlauf dieser Arbeit mit Hilfe eines IT-Artefakts in Form einer mobilen Applikation für Android-Geräte umgesetzt werden soll. \\
+Wie in \autoref{subsec:motivation} bereits beschrieben, liegt der Fokus dieser Arbeit auf der Problematik der Aufmaßerfassung im Gerüstbau. \todo{anderer wortlaut}
+Der Prozess der Aufmaßerfassung hat sich im Laufe der Zeit als fehleranfällig und aufwändig herauskristallisiert.
+Wie genau dieser Prozess aussieht, und was ihn so fehleranfällig macht, wird im Folgenden am Beispiel der Fa. \emph{VERO} illustriert.
+Abschließend wird ein möglicher optimierter Prozess vorgestellt, der im Verlauf dieser Arbeit mit Hilfe eines IT-Artefakts in Form einer mobilen Applikation für Android-Geräte umgesetzt werden soll. \\
 
 \section{Analyse der Problematik}\label{sec:problem}
-In diesem Kaptiel die bisherige Problematik, welche sich im Laufe der Zeit bei der Aufmaßerfassung im Gerüstbau gezeigt hat, analysiert.
-Dazu wird zuerst der typische Ablauf der Aufmaßerfassung beschrieben, und anschließend potentielle Fehlerquellen evaluiert. \\
-Der bisherige Ablauf sieht für einen Monteur bei der Fa. \emph{VERO} wie folgt aus:
+In diesem Kapitel wird der charakteristische Vorgang der Aufmaßerfassung im Gerüstbau zunächst beschrieben und anschließend werden \todo{anderes wort} potentielle Fehlerquellen, die sich in der Vergangenheit gezeigt haben, evaluiert. \\
+Der bisherige Ablauf sieht dabei für einen Monteur der Fa. \emph{VERO} wie folgt aus:
 
 \begin{enumerate}
 	\item Fahrt zum Kunden
 	\item Erstellen des Aufmaßes
-  \item Aufschreiben der gesammelten Daten auf Papier
+  \item Aufschreiben der gesammelten Daten auf Papier \label{itm:paper}
 	\item Abnahme vom Kunden
 	\item Rückfahrt ins Büro
-	\item Eintragen der Daten ins System
+  \item Eintragen der Daten ins System \label{itm:system}
 	\item Rechnungsstellung
 \end{enumerate}
 \todo{zu 3 Bild von Seppel und Text von VOB/C}
 
-Dieses Verfahren hat sich in der Vergangenheit als fehleranfällig und zeitaufwändig herausgestellt. 
-Durch zu grobe Schätzungen, aber auch die hohe kognitive Belastung der Monteure kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch effizientere Informationsverarbeitung vor Ort auf den Baustellen vermeiden lassen. \\
+\noindent
+Dieses Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwändig herausgestellt. 
+Durch zu grobe Schätzungen, aber auch die hohe kognitive Belastung der Monteure, kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch effizientere Informationsverarbeitung vor Ort auf den Baustellen vermeiden lassen. \\
 
-Gerade die Punkte 3-6 des bisherigen Ablaufes haben sich als potentielle Fehlerquellen identifizieren lassen.
+Gerade die Aufgaben in \autoref{itm:paper} bis \autoref{itm:system} des bisherigen Ablaufes haben sich als potentielle Fehlerquellen identifizieren lassen.
 So sind die auf Papier gesammelten Daten im Nachhinein oft nur vom ursprünglichen Ersteller zu verstehen, oder gehen noch bevor sie im Büro ins System eingetragenwerden verloren.
-Zudem kommt es bei der Nachbearbeitung der Informationen auch häufig dazu, dass wichtige Informationen die vor Ort beim Kunden abgesprochen worden sind, in Vergessenheit geraten \todo{Hier noch ein bisschen genauer auf die Punkte eingehen} \\
+Zudem kommt es bei der Nachbearbeitung der Informationen auch häufig dazu, dass wichtige Informationen, die vor Ort beim Kunden abgesprochen worden sind, in Vergessenheit geraten \todo{Hier noch ein bisschen genauer auf die Punkte eingehen} \\
 
 Genau diese Problematik soll durch die Entwicklung einer mobilen Applikation für Android-Endgeräte gelöst werden.
-Wie genau ein solcher optimierte Prozess für den Monteur dabei aussehen kann, wird im folgenden Kapitel weiter ausgeführt.
+Wie genau ein solcher optimierte Prozess für den Monteur dabei aussehen kann, wird im nächsten Kapitel weiter ausgeführt.
 
 \section{Optimierter Prozess}
-Wie in \autoref{sec:problem} beschrieben, liegen die größten Fehlerquellen in der hohen kognitiven Belastung der Monteure gepaart mit dem verspäteten Eintragen der gesammelten Informationen ins System erst bei Rückkehr ins Büro. \\
+Die in \autoref{sec:problem} identifizierten Fehlerquelen ergeben sich durch die hohe kognitive Belastung der Monteure gepaart mit dem verspäteten Eintragen der gesammelten Informationen ins System erst bei Rückkehr ins Büro. \\
 
 Durch die Entwicklung der Android-Applikation sollen genau diese Fehlerquellen minimiert, und die Effizienz der Monteure gesteigert werden.
 Dabei soll die Software dem Benutzer es ermöglichen, bereits auf der Baustelle Bilder zu machen, diese mit Hilfe von verschiedenen geometrischen Formen zu bearbeiten, und anschließend die gewünschten Informationen (Maße und Gerüsttyp) direkt zu hinterlegen. \\
@@ -46,6 +46,7 @@ Ein optimierter Prozess könnte dann beispielsweise wie folgt aussehen:
 	\item Rechnungsstellung
 \end{enumerate} 
 
+\noindent
 Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler verschiedene Fragen, die sich sowohl auf eine positive Benutzererfahrung, als auch auf die robuste Implementierung einer Bearbeitungsumgebung für die aufgenommen Bilder beziehen:
 
 \begin{itemize}
@@ -57,4 +58,5 @@ Für die Umsetzung einer solchen Lösung stellen sich für den Entwickler versch
 	\todo{API definition} 
 \end{itemize}
 
-Wie genau diese Fragen theoretisch und praktisch in Form einer Android-Applikation umgesetzt werden können, wird im nachfolgenden Kapitel weiter ausgeführt. 
+\noindent
+Wie genau diese Fragen theoretisch, aber auch praktisch in Form einer Android-Applikation umgesetzt werden können, wird im nachfolgenden Kapitel weiter ausgeführt. 
