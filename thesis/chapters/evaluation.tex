@@ -108,6 +108,31 @@ Zudem lassen sich annotierte Bilder in der App speichern und zu einem späteren 
 
 \subsubsection{Evaluation}
 
+Die App zeigt in einer Art Statusleiste am unteren Rand des Bildschirms den aktuellen Modus an, und gibt über einen auffordernden Text am oberen Bildschirmrand dem Nutzer eine Hilfestellung, was er im gerade ausgewählten Modus machen kann. \todo{screens} Hiermit deckt die App Nielsen \ref{itm:1} und \ref{itm:10} ausreichend ab. \\
+
+Des Weiteren benutzt auch diese App universell verständliche Icons, um die wichtigsten Aktionen wiedererkennbar zu machen. So hat beispielsweise das Mülleimer-Icon in jedem Modus die Löschfunktion. \\
+
+Im Gegensatz zu \textsc{Photo Measures} bietet diese App dem Benutzer die Möglichkeit seine Aktionen rückgängig zu machen, oder sie zu wiederholen. Dies ist ein deutlicher Vorteil seitens der Usability, da Fehler nicht so hart bestraft werden, als wenn keine Undo/Redo-Button vorhanden wären. \\
+
+Fehler werden hier durch das Deaktivieren von Buttons, die im aktuellen Systemzustand nicht benutzbar sind, präventiv verhindert. Das Löschen von Formen ist beispielsweise nur dann möglich, wenn zuvor eine Form ausgewählt wurde.
+
+Negativ fällt auch in dieser Alternative die fehlerhafte Gesten-Unterstützung auf. So sorgen Zoom-Gesten per Doppel-Tap zum unabsichtlichen Zeichnen einer Form, welche im Nachhinein wieder gelöscht werden muss. Außerdem verletzt die App Nielsen~\ref{itm:15}, da Änderungen in der Bildschirmausrichtung dafür sorgen, dass das Bild nicht wie erwartet seine Ursprungsausrichtung beibehält, sonder auch rotiert wird. 
+
+\begin{figure}[h]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[keepaspectratio, width=0.9\linewidth]{bosch/portrait}
+		\caption{App im Portrait-Modus}
+		\label{fig:bportait}	
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[keepaspectratio, height=0.7\linewidth]{bosch/landscape}
+		\caption{App im Landscape-Modus}
+		\label{fig:blandscape}	
+	\end{subfigure}
+	\caption{Bildschirmrotation Bosch-App}
+	\label{fig:borientation}
+\end{figure}
 
 \subsection{Measure \& Sketch von SameBits}
 2 Vorstellen mit Bilder + Evaluation der wichtigsten Punkte
