@@ -1,42 +1,41 @@
 \chapter{Evaluation vorhandener Lösungsalternativen}
-Im folgenden Kapitel werden drei verschiedene Lösungsalternativen zur Aufmaßerfassung vorgestellt und bewertet.
-Hierzu werden zunächst die Bewertungskriterien vorgestellt und gewichtet.
-Anschließend werden die ausgewählten Apps iterativ vorgestellt und mit Hilfe der Kriterien evaluiert.
-\todo{apps hier schon benennen?}
+Im folgenden Kapitel werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und bewertet. Hierzu werden die benutzten Bewertungskriterien zunächst vorgestellt, und anschließend iterativ auf die ausgewählten Apps angewandt.
 
 \section{Bewertungskriterien}
 Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine ausgewählte Menge selbst aufgestellter Kriterien benutzt.
-Da sich die erweiterten Nielsen-Heuristiken aus einer Menge von 18 Kriterien zusammensetzen und nicht jede einzelene für die Bewertung der Lösungsalternativen gleich relevant ist, werden diese jeweils mit einem Bewertungsschema (A, B, C) so gewichtet, dass für die Evaluation der Apps nur für uns relevante Kriterien berücksichtig werden. \\
+Da sich die erweiterten Nielsen-Heuristiken aus 18 Kriterien zusammensetzen und nicht jede einzelne für die Bewertung der Lösungsalternativen gleich relevant ist bzw. sich nur bedingt anwenden lässt, werden die Kriterien klassifiziert (R = relevant, I = irrelavant).
+Für die Evaluation der Apps werden anschließend nur Kriterien, die für eine mobile Android-Applikation zur Aufmaßerfassung im Gerüstbau relevant sind, benutzt.
+\todo{Gewichtung überarbeiten}
 
 \subsection{Die erweiterten Nielsen-Heuristiken}\label{subsec:nielsen}
- Nach \citeauthor{Nielsen94} gibt es zehn Heuristiken, die auf einer Grundlage von allgemein anerkannten Prinzipien beruhen, und sich zur Evaluation von Usability-Problemen besonders gut eignen \citep[Seite.~25--62]{Nielsen94}: 
+ Nach \citeauthor{Nielsen94} gibt es zehn Heuristiken, die auf einer Grundlage von allgemein anerkannten Prinzipien beruhen, und sich zur Evaluation von Usability-Problemen besonders gut eignen \citep[Seiten 25--62]{Nielsen94}: 
 
 \begin{enumerate}
-    \di{Sichtbarkeit des Systems}{N1}{Angemessene Rückmeldung in einem vernünftigen zeitlichen Rahmen}
-    \di{Übereinstimmung zwischen System und realer Welt}{N2}{Sprache des Benutzers, natürliche und logische Reihenfolge}
-    \di{Benutzerkontrolle und -freiheit}{N3}{Undo und Redo}
-    \di{Konsistenz und Standards}{N4}{Konsistente Nutzung und Beachtung der Plattform-Konventionen}
-    \di{Fehlervorbeugung}{N5}{Vermeide Situationen in denen Fehler entstehen können}
-    \di{Wiedererkennung statt Erinnern}{N6}{Objekte, Optionen und Aktionen sollen sichtbar sein}
-    \di{Flexibilität und Effizienz der Benutzung}{N7}{Häufige Aktionen anpassbar, Experten schnellere Bedienung erlauben}
-    \di{Ästethisches und minimalistisches Design}{N8}{Keine irrelevanten Informationen}
-    \di{Erkennbarkeit, Diagnose und Erholung von Fehlern}{N9}{Verständliche Fehlermeldungen}
-    \di{Hilfe und Dokumentation}{N10}{Leicht zu finden, abgestimmt auf Aufgabe, konkrete Schritte zur Lösung}
+    \di{Sichtbarkeit des Systemzustandes (R)}{N1}{Angemessene Rückmeldung in einem vernünftigen zeitlichen Rahmen}
+    \di{Übereinstimmung zwischen System und realer Welt (I)}{N2}{Sprache des Benutzers, natürliche und logische Reihenfolge}
+    \di{Benutzerkontrolle und -freiheit (R)}{N3}{Undo und Redo}
+    \di{Konsistenz und Standards (R)}{N4}{Konsistente Nutzung und Beachtung der Plattform-Konventionen}
+    \di{Fehlervorbeugung (R)}{N5}{Vermeide Situationen in denen Fehler entstehen können}
+    \di{Wiedererkennung statt Erinnern (R)}{N6}{Objekte, Optionen und Aktionen sollen sichtbar sein}
+    \di{Flexibilität und Effizienz der Benutzung (R)}{N7}{Häufige Aktionen anpassbar, Experten schnellere Bedienung erlauben}
+    \di{Ästethisches und minimalistisches Design (R)}{N8}{Keine irrelevanten Informationen}
+    \di{Erkennbarkeit, Diagnose und Erholung von Fehlern (I)}{N9}{Verständliche Fehlermeldungen}
+    \di{Hilfe und Dokumentation (1)}{N10}{Leicht zu finden, abgestimmt auf Aufgabe, konkrete Schritte zur Lösung}
 \end{enumerate} 
 
 \noindent
-Zur Bewertung mobiler Endgeräte reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass weitere acht Heuristiken, die speziell für mobile Geräte ausgelegt sind, hizugezogen werden \todo{ref auf ue, 239}:
+Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass weitere acht Heuristiken, die speziell für mobile Geräte ausgelegt sind, hizugezogen werden \todo{ref auf ue, 239}:
 
 \begin{enumerate}
 	  \setcounter{enumi}{10}
-    \di{Adäquater Umgang mit Unterbrechnungen}{N11}{Kein Verlust von Informationen bei Unterbrechung der Aktivität}
-    \di{Fokussieren der Informationen}{N12}{Hervorheben der wichtigen Informationen, um schnelles Scannen zu erlauben}
-    \di{``Joy of Use''}{N13}{Positives Nutzungserlebnis bei Bedienung/Verwendung}
-    \di{``Don't lie to the user''}{N14}{Keine falschen oder ungültigen Zahlen, Fakten bzw. Nachrichten}
-    \di{Unterstützung verschiedener Bildschirmausrichtungen}{N15}{Keine Verwirrung bei verschiedenen Ausrichtungen des Bildschirms}
-    \di{Ergonomische Gestaltung der physischen Interatkion}{N16}{Kein unabsichtliches Auslösen von Funktionen}
-    \di{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit}{N17}{Einfache Navigations- und Eingabetechniken bei einhändiger Benutzung}
-    \di{Stelle Privatheit sicher}{N18}{Vermeide den Verlust/Diebstahl von privaten Daten z.b. durch Passwörter}
+    \di{Adäquater Umgang mit Unterbrechnungen (R)}{N11}{Kein Verlust von Informationen bei Unterbrechung der Aktivität}
+    \di{Fokussieren der Informationen (I)}{N12}{Hervorheben der wichtigen Informationen, um schnelles Scannen zu erlauben}
+    \di{``Joy of Use'' (R)}{N13}{Positives Nutzungserlebnis bei Bedienung/Verwendung}
+    \di{``Don't lie to the user'' (I)}{N14}{Keine falschen oder ungültigen Zahlen, Fakten bzw. Nachrichten}
+    \di{Unterstützung verschiedener Bildschirmausrichtungen (R)}{N15}{Keine Verwirrung bei verschiedenen Ausrichtungen des Bildschirms}
+    \di{Ergonomische Gestaltung der physischen Interatkion (Rj}{N16}{Kein unabsichtliches Auslösen von Funktionen}
+    \di{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit (R)}{N17}{Einfache Navigations- und Eingabetechniken bei einhändiger Benutzung}
+    \di{Stelle Privatheit sicher (R)}{N18}{Vermeide den Verlust/Diebstahl von privaten Daten z.b. durch Passwörter}
 \end{enumerate}
 
 \subsection{Weitere Kriterien}
@@ -49,11 +48,21 @@ Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellen Heuristiken werden n
 \end{itemize}
 
 \section{Vorstellung und Evalutation ausgewählter Apps}
-Als Lösungsalternativen stehen die drei Android-Applikationen \emph{Measuring Master}, \emph{Measures \& Sketch} und \emph{Photo Measure} zur Verfügung.
+Als Lösungsalternativen wurden drei Android-Applikationen, die unter dem Suchbegriff ``Aufmaße'' im Google Play-Store verfügbar sind, ausgewählt.
+Hierbei handelt es sich um folgende drei Apps:
 
-Bosch über 80 Standorte in Deutschland, und 14.5 Mrd. Euro Jahresumsatz \\
-Photo Measures gute Bewertung mit 4/5 Sternen bei 10k-50k Downloads \\
-Measure \& Sketch mit rund 100k-500k Downloads sehr populär \\
+\begin{itemize}
+  \item \mm{} - Bosch GmbH
+  \item \ms{} - SameBits
+  \item \pm{} - Blue Big Pixel Inc.
+\end{itemize}
+
+\noindent
+\todo{Quellen} 
+Es wurden gerade diese Apps zur Evalutation ausgewählt, da sie verschiedene Auswahlkriterien verschienden stark ausfüllen.
+So stammt die App \mm{} von einem großen Unternehmen mit mehr als 80 Standorten in Deutschland, und einem Jahresumsatz von 14,5 Mrd. Euro. \\
+\ms{} wurde gewählt, da sie mit 100.000 bis 500.000 Installationen eine der populärsten Apps unter dem Suchbegriff ``Aufmaße '' ist. \\
+Im Gegensatz dazu verzeichnet \pm{} bei einem Zehntel der Installation eine durschnittliche Bewertung von 4,3 von 5 Sternen im Google Play-Store, was sie damit zu einer der beliebtesten Apps unter dem Suchbegriff ``Aufmaße'' macht.
 
 \input{chapters/evaluation/measuring_master}
 \input{chapters/evaluation/measure_sketch}
