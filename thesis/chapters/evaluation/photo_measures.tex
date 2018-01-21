@@ -7,18 +7,41 @@ Im Gegensatz zu den anderen Apps ist diese jedoch nicht kostenlos erhältlich, s
 Die Beschreibung im Play-Store selbst lautet wie folgt \todo{cite aus playstore}:
 
 \begin{quote}
-  ``Photo Measures is the best and easiest way to save measures on your own photos on Android.
-  [...] Whenever you need to save dimensions, sizes, angles or write down a detail you need to remember, Photo Measures will help you to be more efficient and more accurate.''
+  ``Photo Measures is the best and easiest way to save measures on your own photos on Android.''
 \end{quote}
 
-\subsubsection{Evaluation}
-\begin{wrapfigure}{R}{0.4\textwidth}
-	\centering
-	\includegraphics[keepaspectratio, width=0.4\textwidth]{photo_measures/help}
-	\caption{Initialer Start}	
-	\label{fig:pmhelp}
-\end{wrapfigure}
+\noindent
+Beim ersten Start der App wird der Nutzer über eine Textbox, welche auf ein Plus-Symbol (siehe \autoref{fig:pmmenu}) mit der Unterschrift ``New'' zeigt, auf die möglichen Aktionen hingewiesen, die er in diesem Appzustand ausführen kann.
 
+\begin{figure}[h]
+  \centering
+	\begin{subfigure}[t]{0.4\textwidth}
+		\includegraphics[keepaspectratio, width=\textwidth]{photo_measures/menu}
+		\caption{Startbildschirm}
+		\label{fig:pmmenu}	
+	\end{subfigure}
+	\begin{subfigure}[t]{0.4\textwidth}
+		\includegraphics[keepaspectratio, width=\textwidth]{photo_measures/help}
+		\caption{Hilfe-Overlay beim initialen Start der Aufmaß-Funktion} 
+		\label{fig:pmhelp}	
+	\end{subfigure}
+  \caption{Measure \& Sketch beim Start der App und in der Aufmaß-Funktion}
+\end{figure}
+
+\noindent
+Durch einen Klick auf das beschriebene Plus-Symbol öffnet sich ein Dialog, der den Benutzer auffordert, ein Bild auszuwählen.
+Hierzu kann der Benutzer das Bild direkt aus der Galerie importieren, oder ein Neues mit der Kamera aufnehmen. \\
+Anschließend wechselt die App in eine andere Benutzeroberfläche, in der das ausgewählte Bild und eine Statusleiste am unteren Rand des Bildschirms zu sehen sind (\autoref{fig:pmhelp}).
+Wenn der Benutzer diese Oberfläche zum ersten Mal öffnet, zeigt die App außerdem ein Hilfe-Overlay, welches dem Benutzer darüber informiert, wie Formen in das Bild eingezeichnet werden können.  \\
+
+Zudem werden nur die Funktionen, die zum jeweiligen Systemzustand ausführbar sind (z.B. Farbe ändern nur wenn Form ausgewählt), in der Statusleiste am unteren Bildschirmrand angezeigt.
+Die Statusleiste bietet, wenn keine Form ausgewählt ist, die Möglichkeit zwischen drei verschienden Formen (Linie, Winkel, Freitext) zu wählen, die gewünschte Größe einzustellen, oder das Bild schrittweise um 90 Grad im Uhrzeigersinn zu drehen.
+Wenn eine Form ausgewählt ist, kann diese über die Statusleite im Nachhinein beschriftet, gefärbt oder gelöscht werden. \\
+
+Auch in dieser App lassen sich gespeicherte Bilder zu einem späteren Zeitpunkt weiter bearbeiten.
+Außerdem können mehrere Bilder gleichzeitig zusammen in einer \emph{PDF} oder als jeweils als einzelnes Bild geteilt werden.
+
+\subsubsection{Evaluation}
 Die App zeigt beim ersten Start ein helfendes Overlay, welches dem Nutzer genau erklärt, wie die App zu benutzen ist. Dieser Punkt fällt nach Nielsen unter \ref{itm:10} (Siehe Abbildung\ref{fig:pmhelp}) \\
  
 Aktionen sind nur dann verfügbar, wenn sie benutzbar sind. Somit werden Fehler vorgebeugt, und der Benutzer weiß zu jeder Zeit, in welchem Systemzustand er sich befindet. Dies korrespondiert zu den Heuristiken~\ref{itm:1} und \ref{itm:5}. \todo{2 bilder mit bottom-bars} \\
