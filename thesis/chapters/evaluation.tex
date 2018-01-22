@@ -3,8 +3,8 @@ Im folgenden Kapitel werden drei Lösungsalternativen aus dem Google Play-Store 
 
 \section{Bewertungskriterien}
 Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine ausgewählte Menge selbst aufgestellter Kriterien benutzt.
-Da sich die erweiterten Nielsen-Heuristiken aus 18 Kriterien zusammensetzen und nicht jede einzelne für die Bewertung der Lösungsalternativen gleich relevant ist bzw. sich nur bedingt anwenden lässt, werden die Kriterien klassifiziert (R = relevant, I = irrelavant).
-Für die Evaluation der Apps werden anschließend nur Kriterien, die für eine mobile Android-Applikation zur Aufmaßerfassung im Gerüstbau relevant sind, benutzt.
+Da sich die erweiterten Nielsen-Heuristiken aus 18 Kriterien zusammensetzen und nicht jede einzelne für die Bewertung der Lösungsalternativen hinsichtlich des Einsatzbereichs gleich relevant ist bzw. sich nur bedingt anwenden lässt, werden die Kriterien klassifiziert (R = relevant, I = irrelavant).
+Für die Evaluation der Apps werden anschließend nur Kriterien, die als relevant gewichtet wurden, benutzt.
 \todo{Gewichtung überarbeiten}
 
 \subsection{Die erweiterten Nielsen-Heuristiken}\label{subsec:nielsen}
@@ -47,7 +47,7 @@ Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellen Heuristiken werden n
     \todo{mehr Kriterien raussuchen}
 \end{itemize}
 
-\section{Vorstellung und Evalutation ausgewählter Apps}
+\section{Vorstellung und Evalutation ausgewählter Apps}\label{sec:evaluation}
 Als Lösungsalternativen wurden drei Android-Applikationen, die unter dem Suchbegriff ``Aufmaße'' im Google Play-Store verfügbar sind, ausgewählt.
 Hierbei handelt es sich um folgende drei Apps:
 
@@ -69,4 +69,12 @@ Im Gegensatz dazu verzeichnet \pm{} bei einem Zehntel der Installation eine durs
 \input{chapters/evaluation/photo_measures}
 
 \section{Auswertung der Evaluationsergebnisse}
-Fazit und Überleitung zur Konzeption eigener App
+Wie sich in \autoref{sec:evaluation} gezeigt hat, haben zwei der drei evaluierten Apps die Usability-Heuristiken nach Nielsen vergleichweise gut umgesetzt.
+Besonders aufgefallen ist, dass alle drei Apps eine Art Zoom-Linse verweden, die während des Zeichnens von Formen im oberen Bereich des Bildschirm angezeigt wird, und das Bild im Bereich der aktuellen Touchposition, welches so nicht sichtbar ist, da es vom Finger verdeckt wird, vergrößert darstellt. \\
+
+Zudem sticht heraus, dass alle Apps Probleme mit der Gesten-Unterstützung haben, da sie entweder gar nicht (\todo{ref auf measure sketch}) oder fehlerhaft (\todo{ref andere beiden}) umgesetzt wurde. \\
+
+Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in eine bereits bestehende Systemarchitektur bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. \\
+
+Diese Ergebnisse werden im nachfolgenden Kapitel auf die Konzeption der eigenen Android-Applikation angewandt.
+\todo{ein bisschen ausbauen}

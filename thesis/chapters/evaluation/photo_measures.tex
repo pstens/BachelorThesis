@@ -16,16 +16,16 @@ Beim ersten Start der App wird der Nutzer über eine Textbox, welche auf ein Plu
 
 \begin{figure}[h]
   \centering
-	\begin{subfigure}[t]{0.4\textwidth}
-		\includegraphics[keepaspectratio, width=\textwidth]{photo_measures/menu}
-		\caption{Startbildschirm}
-		\label{fig:pmmenu}	
-	\end{subfigure}
-	\begin{subfigure}[t]{0.4\textwidth}
-		\includegraphics[keepaspectratio, width=\textwidth]{photo_measures/help}
-		\caption{Hilfe-Overlay beim initialen Start der Aufmaß-Funktion} 
-		\label{fig:pmhelp}	
-	\end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{photo_measures/menu}
+    \caption{Startbildschirm}
+    \label{fig:pmmenu}	
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{photo_measures/help}
+    \caption{Hilfe-Overlay beim initialen Start der Aufmaß-Funktion} 
+    \label{fig:pmhelp}	
+  \end{subfigure}
   \caption{\pm{} beim Start der App und in der Aufmaß-Funktion}
 \end{figure}
 
@@ -43,17 +43,41 @@ Auch in dieser App lassen sich gespeicherte Bilder zu einem späteren Zeitpunkt 
 Außerdem können mehrere Bilder gleichzeitig zusammen in einer \emph{PDF} oder als jeweils einzelnes Bild geteilt werden.
 
 \subsubsection{Evaluation}
-Die App zeigt beim ersten Start ein helfendes Overlay, welches dem Nutzer genau erklärt, wie die App zu benutzen ist. Dieser Punkt fällt nach Nielsen unter \ref{itm:10} (Siehe Abbildung\ref{fig:pmhelp}) \\
- 
-Aktionen sind nur dann verfügbar, wenn sie benutzbar sind. Somit werden Fehler vorgebeugt, und der Benutzer weiß zu jeder Zeit, in welchem Systemzustand er sich befindet. Dies korrespondiert zu den Heuristiken~\ref{itm:1} und \ref{itm:5}. \todo{2 bilder mit bottom-bars} \\
 
-Die App bedient sich einer Reihe universell bekannter Icons, sodass intuitiv erkennbar ist, welche Aktion sich hinter welchem Button verbirgt, ohne groß darüber nachdenken zu müssen. Zusätzlich stehen die entsprechenden Aktionen als Text unter den Icons. Dies kann nützlich sein, wenn ein Icon nicht auf Anhieb wiedererkannt wird. \ref{itm:4} \todo{ref auf pic von bottom-bars} \\
+Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form eines Hilfe-Overlays, welches beim intialen Start angezeigt wird, und im Nachhinein über einen dedizierten Button erreichbar ist, bereit gestellt (siehe \autoref{fig:pmhelp}). \\
 
-Des Weiteren gibt die App dem Benutzer die Möglichkeit, Formen, Größen und Farben anzupassen. Dies fördert eine flexible und effizente Benutzung. \ref{itm:7} \\
+Des Weiteren sind Aktionen nur dann verfügbar bzw. auswählbar, wenn diese im aktuellen Systemzustand legal sind.
+Dies vermeidet einerseits Situationen in denen Fehler entstehen können, andererseits gibt dies dem Benutzer eine angemessene und verständliche Rückmeldung über den derzeitigen Systemzustand der App (Nielsen~\autoref{itm:N1} \& \autoref{itm:N5}). \\
 
-Ein durchaus schwerwiegender negativer Punkt liegt bei der Benutzerkontrolle \ref{itm:3} der App. So ist es dem Benutzer nicht möglich, über einen Undo- bzw. Redo-Button seine Aktionen zu revidieren. Dies ist gerade bei der Bearbeitung von Bildern, wo es viele aneinandergereihte Aktionen des Benutzers gibt, eine entscheidende Funktionalität, welche nicht nur die Gedächtnisbelastung des Benutzer senken, sondern auch den ``Joy of Use'' deutlich steigern kann. \\
+\begin{wrapfigure}{R}{0.4\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, scale=0.35]{photo_measures/bar}
+  \caption{Statusleiste im Zeichen-Modus bei Ausrichtung der App im Querformat}
+  \label{fig:pmbar}
+\end{wrapfigure}
 
-Zudem bietet die App keine für den Nutzer erkennbare Ausstiegsmöglichkeit \ref{itm:6} an. Es gibt weder einen Zurück-Button, noch einen Button um das annotierte Bild explizit zu speichern. Die einzige Ausstiegsmöglichkeit erfolgt über die Zurück-Navigationstaste des Smartphones, welche das Bild auch zusätzlich speichert. Diese Lösungsvariante ist für den Nutzer nicht intuitiv verständlich. \todo{bild}
+\noindent
+Die App bedient sich einer Reihe universell bekannter Icons, sodass intuitiv erkennbar seien sollte, welche Aktion sich hinter welchem Button verbirgt.
+Wird ein Icon dennoch nicht erkannt, so stehen zusätzlich die Aktionen in Textform unter diesen (siehe \autoref{fig:pmbar}). \\
 
-Die App erfüllt nahezu alle acht (\ref{itm:11}-\ref{itm:18}) Heuristiken für mobile Geräte. Zu jeder Zeit ist auf dem Bildschirm erkennbar, welche Form zur Zeit ausgewählt ist. Das Smartphone kann während der Benutzung pausiert bzw. gedreht werden, ohne dass Informationen verloren gehen, oder der Benutzer durch unbekannte Bausteine überrascht wird. \todo{screens} Hier fällt als einziger negativer Punkt die unzureichende Gesten-Unterstützung auf \ref{itm:13}. So malt der Benutzer unabsichtlich mit jeder Zoom-Geste eine Form in das Bild, welche danach wieder gelöscht werden muss, da es keine Undo-Funktion gibt. \\
+Außerdem hat der Nutzer die Möglichkeit, Formen, Größen und Farben im Vornherein beliebig anzupassen.
+Dies fördert nicht nur eine flexible Benutzung der App, sondern steigert gleichzeitig die Effizienz, da die App nur einmal zu Beginn der Benutzung wie gewünscht eingestellt werden muss. \autoref{itm:N7} \\
+
+Im Gegensatz dazu steht die fehlende Benutzerkontrolle \autoref{itm:N3} der App.
+So ist es dem Benutzer nicht möglich, über einen Undo- bzw. Redo-Button seine Aktionen zu revidieren.
+Dies ist gerade bei der Bearbeitung von Bildern, bei der es viele aufeinander aufbauende Aktionen des Benutzers gibt, eine entscheidende Funktionalität, welche nicht nur die Gedächtnisbelastung senken, sondern auch den ``Joy of Use'' deutlich steigern kann. \\
+
+Zudem fällt auch in dieser App die fehlerhafte Zoom-Geste auf, welche dazu führt, dass während des Zoom-Vorgangs eine Form auf das Bild gezeichnet wird (Nielsen~\autoref{itm:N16}).
+Dies erzwingt nach fast jeder Zoom-Geste einen Lösch-Aktion der unabsichtlich gemalten Form, da es keine Undo- bzw. Redo-Funktion gibt. \\
+
+Ein positiver Aspekt dagegen liegt in der Unterstützung verschiedener Bildschirmausrichtungen, sowie dem adäquaten Umgang mit Unterbrechungen.
+So lässt sich das Gerät beliebig drehen, ohne dass Informationen in der App verloren gehen, oder der Benutzer durch eine unerwartete Ausrichtung des Bildes bzw. der Statusleiste verwirrt wird (Nielsen~\autoref{itm:N11} \& \autoref{itm:N15}). \\
+
+Die einfache Handhabung und das Zeichnen von Formen mit einem Finger ermöglichen eine einhändige Benutzung der App und wirken sich damit positiv auf die Benutzererfarhung aus (Nielsen~\autoref{itm:N13} \& \autoref{itm:N17}).
+
+Auch diese App lässt sich durch die Art, wie die bearbeiteten Bilder exportiert werden, nicht in ein bestehenden System integrieren.
+Die Messwerte müssten mühsam aus dem Bild extrahiert werden. \\
+
+Zusammenfassaend kann festgehalten werden, dass diese App eine Vielzahl der Nielsen-Heuristiken gut erfüllt.
+Das Defizit liegt hier auf der fehlenden Undo/Redo-Funktionalität und der schwierigen Integration in ein vorhandes System.
 
