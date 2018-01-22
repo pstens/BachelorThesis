@@ -16,16 +16,14 @@ Sobald das gewünschte Projekt ausgewählt wurde, bieten sich dem Benutzer über
 
 \begin{figure}[h]
   \centering
-	\begin{subfigure}[t]{0.4\textwidth}
-		\includegraphics[keepaspectratio, width=\textwidth]{bosch/menu}
-		\caption{Navigationsmenü}
-		\label{fig:bmenu}	
-	\end{subfigure}
-	\begin{subfigure}[t]{0.4\textwidth}
-		\includegraphics[keepaspectratio, width=\textwidth]{bosch/bar}
-		\caption{Aufmaße-Funktion}
-		\label{fig:bbar}	
-	\end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{bosch/menu}
+    \caption{Navigationsmenü}\label{fig:bmenu}	
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{bosch/bar}
+    \caption{Aufmaße-Funktion}\label{fig:bbar}
+  \end{subfigure}
   \caption{\mm{} bei ausgeklapptem Navigationsmenü und in der Aufmaße-Funktion}
 \end{figure}
 
@@ -45,18 +43,39 @@ Zudem lassen sich annotierte Bilder in der App speichern und zu einem späteren 
 \begin{figure}[h]
   \centering
   \includegraphics[keepaspectratio, width=\textwidth]{bosch/export}
-  \caption{Exportierte PDF}
-  \label{fig:bexport}
+  \caption{Exportierte PDF}\label{fig:bexport}
 \end{figure}
 
 \subsubsection{Evaluation}
 
-Die App zeigt in einer Art Statusleiste am unteren Rand des Bildschirms den aktuellen Modus an, und gibt über einen auffordernden Text am oberen Bildschirmrand dem Nutzer eine Hilfestellung, was er im gerade ausgewählten Modus machen kann. \todo{screens} Hiermit deckt die App Nielsen \ref{itm:1} und \ref{itm:10} ausreichend ab. \\
+Durch die Anzeige der Statusleiste am unteren Bildschirmrand (siehe \autoref{fig:bbar}) gibt die App dem Benutzer zu jeder Zeit eine klare und sichtbare Rückmeldung über den aktuellen Systemzustand (Nielsen~\autoref{itm:N1}).
 
-Des Weiteren benutzt auch diese App universell verständliche Icons, um die wichtigsten Aktionen wiedererkennbar zu machen. So hat beispielsweise das Mülleimer-Icon in jedem Modus die Löschfunktion. \\
+Zusätzlich bietet ein erklärender Text im oberen Bereich des Bildschirms eine konkrete Hilfestellung zu den möglichen Aktionen, die der Benutzer im aktuellen Systemzustand ausführen kann (Nielsen~\autoref{itm:N10}).
 
-Im Gegensatz zu \textsc{Photo Measures} bietet diese App dem Benutzer die Möglichkeit seine Aktionen rückgängig zu machen, oder sie zu wiederholen. Dies ist ein deutlicher Vorteil seitens der Usability, da Fehler nicht so hart bestraft werden, als wenn keine Undo/Redo-Button vorhanden wären. \\
+Darüber hinaus kann der Nutzer über ein Undo- bzw. Redo-Symbol fehlerhafte oder unabsichtliche Eingaben rückgängig machen, oder rückgängig gemachte Aktionen wiederholen (Nielsen~\autoref{itm:N3}).
 
-Fehler werden hier durch das Deaktivieren von Buttons, die im aktuellen Systemzustand nicht benutzbar sind, präventiv verhindert. Das Löschen von Formen ist beispielsweise nur dann möglich, wenn zuvor eine Form ausgewählt wurde.
+Dadurch, dass Aktionen nur dann ausführbar sind, wenn man den richtigen Modus in der Statusleiste ausgewählt hat, werden Fehler präventiv vermieden. So lassen sich Messwerte erst dann einfügen, wenn zuvor eine Form markiert wurde, oder Aktionen rückgängig machen, wenn zuvor eine Benutzeraktion stattgefunden hat (Nielsen~\autoref{itm:N5}).
 
-Negativ fällt auch in dieser Alternative die fehlerhafte Gesten-Unterstützung auf. So sorgen Zoom-Gesten per Doppel-Tap zum unabsichtlichen Zeichnen einer Form, welche im Nachhinein wieder gelöscht werden muss. Außerdem verletzt die App Nielsen~\ref{itm:15}, da Änderungen in der Bildschirmausrichtung dafür sorgen, dass das Bild nicht wie erwartet seine Ursprungsausrichtung beibehält, sonder auch rotiert wird. 
+Schafft man es trotzdem einen Fehlerzustand des Systems herzustellen, wird dieser durch einen ``Toast'' \todo{def} erkennbar gemacht, und gibt dem Benutzer Feedback darüber, was zum Fehler geführt hat \todo{Bild vom Toast beim Bildimport} (Nielsen~\autoref{itm:N9}).
+
+Durch die konsistente Benutzung bekannter Icons lassen sich die dahinter befindlichen Aktionen intuitiv erkennen, und die Gedächtnislast des Benutzers reduzieren. 
+So wird zum Beispiel sowohl im ``Malen-Modus'' als auch im ``Text-Modus'' das Mülleimer-Icon in der oberen Statusleiste als Löschfunktion der markierten Form bzw.\ des ausgewählten Textes benutzt (Nielsen~\autoref{itm:N4} \& \autoref{itm:N6}).
+
+Einen ``Expertenmodus'', der dem Benutzer voreingestelle Aktionen ändern, oder Abkürzungen für bestimmte Schritte nehmen lässt, gibt es in dieser App nicht (Nielsen~\autoref{itm:N7}).
+So muss der Nutzer jedesmal, wenn er ein eine zuvor eingezeichnete Form beschriften will, in den ``Text-Modus'' wechseln, die gewünschte Form markieren, und anschließend die Messwerte eintragen. 
+Alternativ hätte man hier zum Beispiel die Benutzung einer langen Klick-Aktion auf die gewünschte Form zum Beschrfiten nutzen können .
+
+Durch das Hervorheben der markierten Form durch eine andere Farbe ermöglicht die App ein schnelles und effizientes Scannen des Bildschirminhaltes (Nielsen~\autoref{itm:N12}).
+
+Das Malen von Formen durch das Klicken und anschließende Ziehen mit einem Finger auf dem Bildschirm ermöglicht eine einfache und effiziente Benutzung mit einer Hand (Nielsen~\autoref{itm:N17}).
+
+Des Weiteren kann die App zu jeder Zeit pausiert werden, ohne dass eingetragene Messwerte oder Formen verloren gehen (Nielsen~\autoref{itm:N11}).
+
+Im Kontrast dazu führen Bildschirmrotationen vom Hoch- ins Querformat zu einer verwirrenden Drehung des Bildes, welches sich entgegen aller Intuotion mit der Bildschirmausrichtung dreht, und nicht in der Ausrichtung, in der es aufgenommen wurde bleibt (Nielsen~\autoref{itm:N15}).
+
+Zudem führt die teilweise fehlerhafte Umsetzung der Gesten-Unterstützung dazu, dass der Nutzer beim Zoomen des Bildes unabsichtlich eine Form malt, wenn er zuvor im ``Malen-Modus'' ist (Nielsen~\autoref{itm:N16}).
+Dieser Punkt schmälert eine positive Benutzerfahrung enorm, da dies nach fast jeder Zoom-Aktion eine Undo-Aktion erzwingt, um die unabsichtlich-gemalte Form wieder zu entfernen (Nielsen~\autoref{itm:N13}).
+
+Der Export des bearbeiteten Bildes führt dazu, dass alle eingetragenen Messwerte nicht mehr trivial auslesbar sind (da nicht als Meta-Daten verfügbar). Zudem würde sich die App nur schwer in eine bestehende Systemarchitektur integrieren lassen, da der Punkt der Aufmaßerfassung nur eine von vielen Funktionen der App ist. \todo{ref auf weitere Kriterien}
+
+Zusammenfassend lässt sich also festhalten, dass die App \mm{} von der Bosch GmbH die Heuristiken nach Nielsen größtenteils erfüllt, sich jedoch nicht in eine bestehende Systemarchitektur integrieren lässt, und alle eingetragenen Messwerte nach Export des Bildes mühsam aus dem Bild extrahiert werden müssen, da diese dann nicht mehr als Meta-Daten vorliegen.
