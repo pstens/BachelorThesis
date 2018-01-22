@@ -15,16 +15,16 @@ Hier bietet sich die Option zwischen den bestehenden Projekten zu wechseln, oder
 
 \begin{figure}[h]
   \centering
-	\begin{subfigure}[t]{0.4\textwidth}
-		\includegraphics[keepaspectratio, width=\textwidth]{measure_sketch/menu}
-		\caption{Startbildschirm}
-		\label{fig:msmenu}	
-	\end{subfigure}
-	\begin{subfigure}[t]{0.4\textwidth}
-		\includegraphics[keepaspectratio, width=\textwidth]{measure_sketch/menu}
-		\caption{Aufmaße-Funktion} 
-		\label{fig:msbar}	
-	\end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{measure_sketch/menu}
+    \caption{Startbildschirm}
+    \label{fig:msmenu}	
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{measure_sketch/menu}
+    \caption{Aufmaße-Funktion} 
+    \label{fig:msbar}	
+  \end{subfigure}
   \caption{\ms{} beim Start der App und in der Aufmaße-Funktion}
 \end{figure}
 
@@ -39,17 +39,39 @@ Auch bei dieser App kann man modifizierte Bilder speichern, und zu einem später
 
 \subsubsection{Evaluation}
 
-\begin{wrapfigure}{R}{0.4\textwidth}
-	\includegraphics[keepaspectratio, width=0.4\textwidth]{measure_sketch/help_start}
-	\caption{Hilfe-Overlay}
-	\label{fig:mshelp}
+Das Hilfe-Overlay, welches beim ersten Start der App, sowie dem Öffnen der Aufmaß-Funktion angezeigt wird, zeigt dem Benutzer zwar, welche Aktionen duchführbar sind, der erklärende Text ist jedoch zu lang, sodass das Overlay viel mehr eine überfordernde, als hilfreiche Funktion hat (Nielsen~\autoref{itm:N10}).
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{measure_sketch/help_pic}
+  \caption{Hilfe-Overlay beim Start der Aufmaß-Funktion}
+  \label{fig:mshelp}
 \end{wrapfigure}
 
-Auch diese App bedient sich eines Hilfe-Overlays beim ersten Start, überfordert den Benutzer jedoch mit zu viel Text. So erfüllt dieses Tooltip ihre Funktion als Hilfestellung nicht, sondern überfordert den Nutzer mit Text. Alternativ bietet sich auch bei dieser App wie in \autoref{fig:pmhelp} mit Icons zu arbeiten, sodass die Gedächtnisbelastung minimiert wird. \\
+Der aktuelle Systemzustand der App ist zwar deutlich durch die Statusleiste am unteren Bilschirmrand (siehe \autoref{fig:mshelp} erkennbar, welche Aktionen aber derzeit nicht-ausführbar ist, wird durch diese nicht ersichtlich (Nielsen~\autoref{itm:N1}). 
+So werden nicht-ausfühbare Aktionen weder ausgegraut noch anders gekennzeichnet, was wiederum zur Folge hat, dass der Benutzer in ``Trial and Error''-Manier die verschiedenen Aktionen ausprobieren muss, um festzustellen, welche aktuell ausführbar sind und welche nicht (Nielsen~\autoref{itm:N5}) \\
 
-Die App kann als negativ-Beispiel bezüglich der Nielsen-Heuristiken betrachtet werden. Es gibt weder Undo- oder Redo-Button, noch wird in irgendeiner Weise hervorgehoben, welche Form aktuell ausgewählt ist. Dies führte beim Löschen oft zu Überraschungen. \\
+Das Feedback zu ausgeführten Aktionen des Benutzer bleibt in den meisten Fällen aus.
+Dieses fehlende Feedback gepaart mit der fehlenden Undo/Redo-Funktionalität führt zu Fehlern, die der Benutzer nur durch Wiederholung der zuvor ausgeführten Aktionen bis vor dem Fehlerzustand beheben kann (Nielsen~\autoref{itm:N3} \& \autoref{itm:N9}). \\
 
- Außerdem unterstützt die App keinerlei Gesten zur Navigation im Bild. So lässt sich der abgebildete Bereich des Bildes weder zoomen, noch kann der Benutzer das Bild rotieren oder verschieben. Um Formen zu zeichnen bedient sich die App eine für den Benutzer unnatürliche Geste, denn hierzu muss der Nutzer gleichzeitig mit zwei Fingern die Form in die beiden gewünschten Richtungen ``aufziehen''. So fühlt sich der Zeichen-Prozess nicht nur unnatürlich an, sondern ist in der Größe der Form durch die Spannweite der Finger des Benutzers beschränkt. \\
- 
- Zusätzlich schließt dies die Benutzung der App mit einer Hand aus, was Nielsen~\autoref{itm:16} klar widerspricht. Als Bildschirmausrichtung wird nur der Portrait-Modus unterstützt, was gerade die Bearbeitung von im Landscape aufgenommenen Bildern zu einer Herausforderung macht. \\
+Einen ``Experten-Modus'', in Form von Abkürzungen für häufig ausgeführte Aktionen, gibt es nicht (Nielsen~\autoref{itm:N7}).
+So muss der Nutzer beispielsweise um die Farbe der nocht einzuzeichnenden Formen zu ändern, diese zunächst in der Standardfarbe Grün auf das Bild zeichnen, und anschließend bei jeder einzelne die Farbe ändern.
+Hier wäre es sinnvoll, die Standardfarbe anpassbar zu machen, damit neue Formen direkt in der gewünschten Farbe auf dem Bildschirm erscheinen. \\
 
+Die ausgewählte Form wird durch einen minimal-erkennbaren Schatten gekennzeichnet, welcher es dem Nutzer unnötig schwer macht, den Systemzustand zu erkennen, und sich einen Überblick über den Bildschirminhalt zu holen (Nielsen~\autoref{itm:N12}).
+So ist es bei der Benutzung häufiger vorgekommen, dass man ein zweites Mal überprüfen musste, ob auch wirklich die gewünschte Form ausgewählt ist. \\
+
+Des Weiteren unterstützt die App keinerlei Gesten zur Navigation im Bild, was zur Folge hat, dass sich das Bild weder verkleinern bzw. vergrößern, noch rotieren oder verschieben lässt (Nielsen~\autoref{itm:N13}).  \\
+
+Die Unterstützung von verschienden Bildschirmausrichtungen wird nur teilweise erfüllt (Nielsen~\autoref{itm:N15}).
+So werden im Querformat aufgenommene Bilder richtigerweise im Querformat angezeigt, die Statusleiste bleibt jedoch an ihrer ursprünglichen Position, sodass man zur Eingaben von Messwerten oder zum Ändern der Farbe einer Form erst das Geräte in die Ursprungsausrichtung drehen muss.
+Das macht die Benutzung der App für Querformat-Bilder nicht nur besonderns fehleranfällig, sondern wirkt sich gleichzeitig negativ auf die Benutzererfahrung aus. \\
+
+Ein weiterer negativer Punkt liegt bei der Bedienung der App im ``Zeichen-Modus'' (Nielsen~\autoref{itm:N17}).
+So müssen Formen mit zwei Fingern gleichzeitig auf das Bild gelegt, und anschließend mit einem Finger in ihre gewünschte Länge gezogen werden.
+Das verhindert sowohl die einhändige Benutzung der App, als auch eine effiziente und angenehme Eingabetechnik. \\
+
+Beim Export der bearbeiteten Bilder sind die eingetragenen Messwerte im Nachhinein nur schwer aus dem Bild zu extrahieren.
+Deshalb lässt sich auch diese App nur schwer in ein bestehendes System integrieren. \\
+
+Abschließend kann also festgehalten werden, dass sich die App im Laufe der Evaluation als Negativ-Beispiel bzgl. der Nielsen-Heuristiken aufgezeigt hat. 
+Die Implementierung eines Hilfe-Overlays lässt zwar darauf schließen, dass sich die Enwtickler Gedanken zur Usability der App gemacht haben, in der Praxis wurden diese Gedanken jedoch nur mangelhaft umgesetzt.
