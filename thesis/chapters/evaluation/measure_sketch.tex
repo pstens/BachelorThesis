@@ -63,15 +63,22 @@ So ist es bei der Benutzung häufiger vorgekommen, dass man ein zweites Mal übe
 Des Weiteren unterstützt die App keinerlei Gesten zur Navigation im Bild, was zur Folge hat, dass sich das Bild weder verkleinern bzw. vergrößern, noch rotieren oder verschieben lässt (Nielsen~\autoref{itm:N13}).  \\
 
 Die Unterstützung von verschienden Bildschirmausrichtungen wird nur teilweise erfüllt (Nielsen~\autoref{itm:N15}).
-So werden im Querformat aufgenommene Bilder richtigerweise im Querformat angezeigt, die Statusleiste bleibt jedoch an ihrer ursprünglichen Position, sodass man zur Eingaben von Messwerten oder zum Ändern der Farbe einer Form erst das Geräte in die Ursprungsausrichtung drehen muss.
+So werden im Querformat aufgenommene Bilder richtigerweise im Querformat angezeigt, die Statusleiste bleibt jedoch an ihrer ursprünglichen Position, sodass man zur Eingaben von Messwerten oder zum Ändern der Farbe einer Form erst das Geräte wieder ins Hochformat drehen muss.
 Das macht die Benutzung der App für Querformat-Bilder nicht nur besonderns fehleranfällig, sondern wirkt sich gleichzeitig negativ auf die Benutzererfahrung aus. \\
 
 Ein weiterer negativer Punkt liegt bei der Bedienung der App im ``Zeichen-Modus'' (Nielsen~\autoref{itm:N17}).
 So müssen Formen mit zwei Fingern gleichzeitig auf das Bild gelegt, und anschließend mit einem Finger in ihre gewünschte Länge gezogen werden.
 Das verhindert sowohl die einhändige Benutzung der App, als auch eine effiziente und angenehme Eingabetechnik. \\
 
-Beim Export der bearbeiteten Bilder sind die eingetragenen Messwerte im Nachhinein nur schwer aus dem Bild zu extrahieren.
-Deshalb lässt sich auch diese App nur schwer in ein bestehendes System integrieren. \\
+Positiv hierbei ist jedoch aufgefallen, dass auch diese App sich einer Zoom-Linse bedient, welche beim Zeichnen den durch den Finger verdeckten Bereich auf dem Bildschirm an einer anderen Stelle vergrößert darstellt \todo{BIld}.
+Dies ermöglicht ein genaues Einzeichnen von Formen, ohne den Finger ständig vom Bildschirm nehmen zu müssen, um zu sehen, bis wohin man die Form schon gezeichnet hat.
 
-Abschließend kann also festgehalten werden, dass sich die App im Laufe der Evaluation als Negativ-Beispiel bzgl. der Nielsen-Heuristiken aufgezeigt hat. 
-Die Implementierung eines Hilfe-Overlays lässt zwar darauf schließen, dass sich die Enwtickler Gedanken zur Usability der App gemacht haben, in der Praxis wurden diese Gedanken jedoch nur mangelhaft umgesetzt.
+Beim Export der bearbeiteten Bilder sind die eingetragenen Messwerte im Nachhinein nicht mehr als Meta-Daten zugänglich.
+Außerdem lassen sich Bilder weder direkt in die App teilen, noch können annotierte Bilder direkt zu Weiterverabeitung an die bestehende Android-App freigegeben werden. \\
+
+Abschließend kann also festgehalten werden, dass sich die App im Laufe dieser Evaluation als Negativ-Beispiel bzgl. der Nielsen-Heuristiken aufgezeigt hat.
+\todo{Zählen wie viele} X der 18 Nielsen-Heuristiken werden teilweise, aber fehlerhaft, bis gar nicht umgesetzt. 
+Dies führt sowohl zu einer negativen Nutzungserfahrung als auch Fehlern, die durch die Benutzung einer Android-App eigentlich vermieden werden sollten.
+So lässt zum Beispiel die Implementierung eines Hilfe-Overlays darauf schließen, dass sich die Enwtickler Gedanken zur Usability der App gemacht haben, in der Praxis wurden diese Gedanken jedoch nicht ausreichend umgesetzt.
+
+Der Verlust der Meta-Daten beim Exportieren von annotierten Bildern macht die Integration in die bestehende Android-App und die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} nicht bzw. nur sehr schwer möglich.

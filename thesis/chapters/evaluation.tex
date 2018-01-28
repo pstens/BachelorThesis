@@ -2,9 +2,9 @@
 Im folgenden Kapitel werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und bewertet. Hierzu werden die Bewertungskriterien zunächst vorgestellt, und anschließend iterativ auf die ausgewählten Apps angewandt.
 
 \section{Bewertungskriterien}
-Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine zusätzliche Menge selbst aufgestellten Kriterien benutzt.
-Da sich die erweiterten Nielsen-Heuristiken aus 18 Punkten zusammensetzen, und nicht jede einzelne für die Bewertung der Lösungsalternativen bezüglich des Einsatzbereichs gleich relevant ist bzw. sich nur bedingt anwenden lässt, werden die Kriterien in zwei Klassen eingeteilt (R = relevant, I = irrelavant).
-Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die als relevant klassifiziert wurden.
+Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine zusätzliche Menge selbst aufgestellten Kriterien benutzt \todo{anders schreiben}.
+Da sich die erweiterten Nielsen-Heuristiken aus 18 Punkten zusammensetzen, und nicht jede einzelne für die Bewertung der Lösungsalternativen bezüglich des Einsatzbereichs gleich relevant ist bzw. sich nur bedingt anwenden lässt, werden die Kriterien nach Absprache mit der Geschäftsleitung in zwei Klassen eingeteilt (R = relevant, I = irrelavant).
+Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in diesem Kontext als relevant klassifiziert wurden.
 \todo{Gewichtung überarbeiten}
 
 \subsection{Die erweiterten Nielsen-Heuristiken}\label{subsec:nielsen}
@@ -12,7 +12,7 @@ Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die als
 
 \begin{enumerate}
     \di{Sichtbarkeit des Systemzustandes (R)}{N1}{Angemessene Rückmeldung in einem vernünftigen zeitlichen Rahmen}
-    \di{Übereinstimmung zwischen System und realer Welt (I)}{N2}{Sprache des Benutzers, natürliche und logische Reihenfolge}
+    \di{Übereinstimmung zwischen System und realer Welt (R)}{N2}{Sprache des Benutzers, natürliche und logische Reihenfolge}
     \di{Benutzerkontrolle und -freiheit (R)}{N3}{Undo und Redo}
     \di{Konsistenz und Standards (R)}{N4}{Konsistente Nutzung und Beachtung der Plattform-Konventionen}
     \di{Fehlervorbeugung (R)}{N5}{Vermeide Situationen in denen Fehler entstehen können}
@@ -38,6 +38,9 @@ Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungs
     \di{Stelle Privatheit sicher (I)}{N18}{Vermeide den Verlust/Diebstahl von privaten Daten z.b.\ durch Passwörter}
 \end{enumerate}
 
+\noindent
+\todo{warum wurden gerade diese als I markiert}
+
 \subsection{Weitere Kriterien}
 Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellen Heuristiken werden noch zwei weitere Kriterien zur Evaluation hinzugezogen, die für die Benutzung der App aus Sicht der Aufmaßerfassung im Gerüstbau wichtig sind: \todo{anders formulieren}
 
@@ -48,20 +51,32 @@ Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellen Heuristiken werden n
 \end{itemize}
 
 \section{Vorstellung und Evalutation ausgewählter Apps}\label{sec:evaluation}
-Als Lösungsalternativen wurden drei Android-Applikationen, die unter dem Suchbegriff ``Aufmaße'' im Google Play-Store verfügbar sind, ausgewählt.
-Hierbei handelt es sich um folgende drei Apps:
+Als Lösungsalternativen werden im folgenden drei Android-Applikationen vorgestellt, die unter dem Suchbegriff ``Aufmaße'' im Google Play-Store gelistet werden.
+Zudem sollen bei der Auswahl der Apps verschiedene Kriterien berücksichtigt werden
+So achtet, nach einer Studie aus dem Jahr 2014 von \citeauthor{Dogruel14}, in der 49 Smartphone-Nutzer bei ihrer Entscheidungsfindung zum Download von Apps aus dem Google-Play Store beobachten wurden, ein Großteil (74\%) der Testpersonen auf eine gute Bewertung der App wert.
+33\% der Testpersonen stützen sich laut \citeauthor{Dogruel14} bei ihrer Entscheidungsfindung außerdem auch noch auf die Rezensionen über die App.
+Für 9\% der Testpersonen sei die Anzahl der Downloads bzw. die Popularität der Applikation mit entscheidend \citep{Dogruel14}. \\
+
+Um die Lösungsalternativen möglichst repräsentativ zu wählen, wurden Apps ausgewhält, die jeweils eines der oben genannten Auswahlkriterien besonders gut erfüllt. \todo{anders formulieren}
+Bei den ausgewählten Apps handelt es sich um folgende:
+\todo{eventuell M\&S}  auswechseln gegen ImageMeter (Bewertung & Downloads)
 
 \begin{itemize}
-  \item \mm{} - Bosch GmbH
-  \item \ms{} - SameBits
-  \item \pm{} - Blue Big Pixel Inc.
+  \item \mm{} - Bosch GmbH (\textit{Popularität})
+  \item \ms{} - SameBits (\textit{Downloads})
+  \item \pm{} - Blue Big Pixel Inc. (\textit(Rezensionen))
 \end{itemize}
 
 \noindent
 \todo{Quellen} 
-Es wurden gerade diese Apps zur Evalutation ausgewählt, da sie verschiedene Auswahlkriterien verschienden stark ausfüllen.
-So stammt die App \mm{} von einem großen Unternehmen mit mehr als 80 Standorten in Deutschland, und einem Jahresumsatz von 14,5 Mrd. Euro. \\
-\ms{} wurde gewählt, da sie \todo{sie oder es?} mit 100.000 bis 500.000 Installationen eine der populärsten Apps unter dem Suchbegriff ``Aufmaße '' ist. \\
+Die App \mm{} der Bosch GmbH stammt von einem internationalen Großkonzern mit mehr als 80 Standorten in Deutschland, und einem Jahresumsatz von 14,5 Mrd. Euro.
+Mit seinen 100.000 bis 500.000 Installationen gehört die App zu einer der populärsten unter dem Suchbegriff ``Aufmaße''. \\
+
+\ms{} von SameBits wurde gewählt, da sie mit einer Gesamtbewertung von 3.6 von 5 Sternen bei 1.781 abgegebenen Bewertungen eine der beliebtesten Apps unter dem Suchbegriff ``Aufmaße'' ist.
+Dabei handlet es sich bei 41\% (726) dieser Bewertungen um Bewertungen mit fünf Sternen und bei 18$\% (313) um Bewertungen mit nur einem Stern. \\
+
+\todo{Photo measures weil beste Bewertung und Rezensionen}
+
 Im Gegensatz dazu verzeichnet \pm{} bei einem Zehntel der Installation eine durschnittliche Bewertung von 4,3 von 5 Sternen im Google Play-Store, was sie damit zu einer der beliebtesten Apps unter dem Suchbegriff ``Aufmaße'' macht.
 
 \input{chapters/evaluation/measuring_master}
@@ -69,12 +84,18 @@ Im Gegensatz dazu verzeichnet \pm{} bei einem Zehntel der Installation eine durs
 \input{chapters/evaluation/photo_measures}
 
 \section{Auswertung der Evaluationsergebnisse}
-Wie sich in \autoref{sec:evaluation} gezeigt hat, haben zwei der drei evaluierten Apps die Usability-Heuristiken nach Nielsen vergleichweise gut umgesetzt.
-Besonders aufgefallen ist, dass alle drei Apps eine Art Zoom-Linse verweden, die während des Zeichnens von Formen im oberen Bereich des Bildschirm angezeigt wird, und das Bild im Bereich der aktuellen Touchposition, welches so nicht sichtbar ist, da es vom Finger verdeckt wird, vergrößert darstellt. \\
+\todo{Tabelle}
 
-Zudem sticht heraus, dass alle Apps Probleme mit der Gesten-Unterstützung haben, da sie entweder gar nicht (\todo{ref auf measure sketch}) oder fehlerhaft (\todo{ref andere beiden}) umgesetzt wurde. \\
+Wie sich in \autoref{sec:evaluation} gezeigt hat, haben sich die beiden Apps \mm{} und \pm{} bezüglich der Usability-Heuristiken nach \citeauthor{Nielsen94} deutlich besser als \ms{} identifizieren lassen. 
+Hierbei ist besonders aufgefallen, dass sich alle drei Apps einer Zoom-Linse bedienen, die während des Zeichnens von Formen auf dem Bildschirm angezeigt wird, und das Bild im Bereich der aktuellen Zeichenposition vergrößert darstellt.
+Außerdem benutzen die Apps alle eine Statusbar, die am unteren Rand des Bildschirms verankert ist, und den aktuellen Systemzustand der App anzeigt.
+Bei der Alternative der \emph{Bosch GmbH} werden Aktionen, die zur Zeit nicht ausführbar sind, ausgegraut dargestellt. Dies gibt dem Benutzer eine klare und intuitive Rückmeldung über alle Aktionen, die im aktuellen Systemzustand möglich sind.
+Zudem fällt auf, dass alle Apps Probleme mit der Gesten-Unterstützung haben, da sie entweder gar nicht (\todo{ref auf measure sketch}) oder fehlerhaft (\todo{ref andere beiden}) umgesetzt wurde. \\
+Besonders dieser negative Punkt wirkt sich negativ auf das Benutzererlebnis aus, da eine intuitive und effiziente Navigation gerade bei Geräten mit kleineren Bildschirmgrößen essentiell sind. \todo{ref auf papers}
+So schreibt bla in seinem Paper blub, dass sich bla \dots
 
-Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in eine bereits bestehende Systemarchitektur bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. \\
+Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in die bereits bestehende Android-Applikation bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. \\
 
-Diese Ergebnisse werden im nachfolgenden Kapitel auf die Konzeption der eigenen Android-Applikation angewandt.
+Diese Evaluationsergebnisse sollen im Nachfolgenden Kapitel auf die eigene Konzeption einer Android-Applikation angewandt werden.
+Hierbei Aspekte, die besonders positiv aufgefallen sind, in die Konzeption einfließen, und Punkte, die sich bereits bei den Alternativen als Fehlerquellen identifizieren lassen haben, vermieden werden.
 \todo{ein bisschen ausbauen}

@@ -51,7 +51,7 @@ Dies vermeidet einerseits Situationen in denen Fehler entstehen können, anderer
 
 \begin{wrapfigure}{R}{0.4\textwidth}
   \centering
-  \includegraphics[keepaspectratio, scale=0.35]{photo_measures/bar}
+  \includegraphics[keepaspectratio, height=0.4\textheight]{photo_measures/bar}
   \caption{Statusleiste im Zeichen-Modus bei Ausrichtung der App im Querformat}
   \label{fig:pmbar}
 \end{wrapfigure}
@@ -74,10 +74,17 @@ Ein positiver Aspekt dagegen liegt in der Unterstützung verschiedener Bildschir
 So lässt sich das Gerät beliebig drehen, ohne dass Informationen in der App verloren gehen, oder der Benutzer durch eine unerwartete Ausrichtung des Bildes bzw. der Statusleiste verwirrt wird (Nielsen~\autoref{itm:N11} \& \autoref{itm:N15}). \\
 
 Die einfache Handhabung und das Zeichnen von Formen mit einem Finger ermöglichen eine einhändige Benutzung der App und wirken sich damit positiv auf die Benutzererfarhung aus (Nielsen~\autoref{itm:N13} \& \autoref{itm:N17}).
+Außerdem stellt auch diese App beim Zeichnen von Formen den vom Zeichenfinger verdeckten Bereich des Bildschirm vergrößert an einer anderen Stelle dar \todo{Bild}.
+Dies beugt Fehlern vor und erhöhrt zudem die Nutzungserfahrung, da der Nutzer hierdurch in der Lage ist, Formen bis zu einem gewünschten Punkt zu zeichnen, ohne den Finger vom Bilschirm nehmen zu müssen um zu sehen, bis wohin sich die Form bereits erstreckt.
 
-Auch diese App lässt sich durch die Art, wie die bearbeiteten Bilder exportiert werden, nicht in ein bestehenden System integrieren.
-Die Messwerte müssten mühsam aus dem Bild extrahiert werden. \\
+Auch diese App ermöglicht es weder Bilder aus einer anderen App heraus in diese direkt freizugeben, oder bearbeitete Bilder inklusive der Meta-Daten an eine andere App zu teilen.
+Zudem gehen beim Exportiren der annotierten Bilder alle eingetragenen Messwerte in Form von Meta-Daten, die zur Weiterverarbeitung benötigt werden, verloren.
 
-Zusammenfassaend kann festgehalten werden, dass diese App eine Vielzahl der Nielsen-Heuristiken gut erfüllt.
-Das Defizit liegt hier auf der fehlenden Undo/Redo-Funktionalität und der schwierigen Integration in ein vorhandes System.
+Zusammenfassend kann also festgehalten werden, dass die App \pm{} von \emph{Big Blue Pixel} keine Möglichkeit bietet, Messwerte, die in ein Bild eingetragen wurden, zur Weiterverarbeitung
+in der bestehenden Android-App oder in einem nachgeschalteten Dienst wie einer \emph{API} zugänglich zu machen. \\
+
+Die Nielsen-Heurstiken werden größtenteils erfüllt, jedoch wurden auch einzelne Punkte nicht gut umgesetzt.
+So führen die fehlerhafte Zoom-Geste, die bei jeder Zoom-Aktion eine Form zeichnet, in Kombination mit der gänzlich fehlenden Undo/Redo-Funktionalität zu einem negativen Nutzungserlebnis der App.
+Besonders diese fehlende Benutzkontrolle ist bei der Bearbeitung von Bildern, in der sich das Endergebnis aus einer Vielzahl von kleinen Benutzeraktionen zusammensetzt, als besonders schwerwiegend zu gewichten.
+Hierdurch entstehen Fehler, die es durch die Nutzung einer Android-Applikation zu verhindern galt.
 
