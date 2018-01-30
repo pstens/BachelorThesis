@@ -4,19 +4,27 @@ Bei der Konzeption der eigenen Android-App liegt der Fokus auf der Erfüllung al
 Hierzu werden im Folgenden Implementierungsansätze vorgestellt, die für einen ersten Prototypen umgesetzt werden sollen.
 
 \section{Sichtbarkeit des Systemzustandes}
-Um dem Benutzer zu jeder Zeit einen Überblick über die App zu ermöglichen, wird eine Statusleiste, wie sie in Kapitel 4 bei allen drei Apps vorhanden war, eingesetzt.
-Diese soll einerseits den aktuellen Modus anzeigen, andererseits soll erkenntbar sein, welche Aktionen in dem aktuellen Systemzustand ausführbar sind, und welche nicht.
+Um dem Benutzer zu jeder Zeit einen Überblick über die App zu ermöglichen, soll eine Statusleiste, wie sie in Kapitel 4 bei allen drei Apps vorhanden war, eingesetzt.
+Diese soll einerseits den aktuellen Modus anzeigen, andererseits soll erkennbar sein, welche Aktionen in dem aktuellen Modus ausführbar sind, und welche nicht.
+\todo{Bottom bar ref}
+
+\section{Übereinstimmung zwischen System und Welt}
+Zusätzlich soll die App in einer natürlichen und logischen Reihenfolge benutzbar sein.
+So soll dem Benutzer zuerst die Möglichkeit gegeben werden, ein gewünschtes Bild auszuwählen, welches im Anschluss daran in einer weiteren Benutzeroberfläche bearbeitet werden kann.
+
+\section{Benutzerkontrolle und -freieht}
+Gerade die fehlende Undo/Redo-Funktionalität hat sich bei den bei der App \pm{} als signifikantes Usability-Problem identifizieren lassen.
+In der App soll diese Funktionalität über zwei dedizierte Icons in der Menübar angeboten werden, um potentielle Verwirrung wie bei der App \im{} zu vermeiden.
+\todo{Menüleiste aus anderen Apps mit Redo/Undo}
+
+\section{Konsistenz und Standards}
+Um eine positive Benutzererfahrung zu generieren, und die Benutzung von nicht-intuitiven Icons zu vermeiden, werden bei der Implementierung die Design-Richtlinien von \emph{Google} befolgt.
+Diese bieten sowohl Konzepte zur Umsetzung verschiedener Benutzeroberflächen-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.  \todo{ref auf Material-Guidelines}
 
 \section{Fehlervorbeugung}
 Zusätzlich soll das Deaktivieren von nicht-ausführbaren Aktionen dafür sorgen, dass Situationen, in denen Fehler entstehen können, präventiv vermieden werden.
-
-\section{Benutzerkontrolle und -freieht}
-Gerade die fehlende Undo/Redo-Funktionalität hat sich bei den beiden Apps \pm{} und \ms{} als signifikantes Usability-Problem identifizieren lassen.
-In der App soll diese Funktionalität über zwei dedizierte Icons in der Menübar angeboten werden.
-
-\section{Konsistenz und Standards}
-Um eine positive Benutzererfahrung zu generieren, und die Benutzung von nicht-intuitiven Icons oder Patterns zu vermeiden, werden bei der Implementierung die Design-Richtlinien von Google befolgt.
-Diese bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an. 
+Hierzu sollen nicht-benutzbare Icons ausgegraut und nicht auswählbar gestaltet werden.
+\todo{disabled Icons in Apps}
 
 \section{Wiedererkennung statt Erinnern}
 Eine minimierte kongnitive Belastung soll durch die Verwedung von gleichen Icons für gleiche Aktionen erzielt werden.
@@ -24,92 +32,97 @@ So soll im ``Zeichen-Modus'' als auch im ``Text-Modus'' ein Mülleimer-Icon in d
 
 \section{Fleixibilität und Effizienz der Benutzung}
 Der Benutzer soll in der Lage sein, die gezeichneten Formen im Nachhinein zu bearbeiten.
-Hierzu soll es die Möglichkeit geben, dass der Benutzer bereits zu Begin eine Standard-Farbe festlegen kann, in der alle nachfolgenden Formen gefärbt werden, oder einzelne Formen nachträglich umfärben kann.
-Außerdem soll es für den erfahrenen Benutzer Abkürzungen für Aktionen wie das Eintragen von Texten geben.
-Dies kann durch eine Lang-Klick Aktion auf die gewünschte Form gelöst werden.
+Hierzu soll es die Möglichkeit geben, dass der Benutzer bereits zu Beginn eine Standard-Farbe festlegen kann.
+Diese soll dann für alle neu eingezeichneten Formen benutzt werden.
+Zudem sollte es die Möglichkeit geben, einzelne Formen nachträglich anders färben zu können.
+Abkürzungen für erfahrene Benutzer sollen durch das Einführen von verschiedenen Gesten geben werden.
+So soll es zum Beispiel möglich sein, per Lang-Klick Geste auf eine Form Text eintragen zu können, anstatt erst in der Statusleiste die entsprechenden Button zu drücken.
+\todo{Lang-Klick Geste}
 
 \section{Erkennbarkeit, Diagnose und Erholung von Fehlern}
-Zunächst liegt das Ziel fehleranfällige Sitationen präventiv zu vermeiden.
-Sollte es dennoch zu einem Fehler kommen, soll eine kurze, aber informative Nachricht in Form eines ``Toast'' auf dem Bildschirm angezeigt werden.
-Zu keiner Zeit sollte der Benutzer in eine endlose Spirale von Fehlerzuständen gelangen können, welche er nur durch das Beenden oder die Deinstallation der App verlassen kann.
+Durch das präventive Vermeiden von Situationen, in denen Fehler auftreten können, sollte der Nutzer zu keiner Zeit in die Lage geraten, sich von Fehlern erholen zu müssen.
+Sollte es dennoch zu einer solchen Situation kommen, so soll eine kurze, aber informative Nachricht in Form eines ``Toast'' auf dem Bildschirm angezeigt werden, welches dem Benutzer über den Fehler informiert, und präzise aber verständliche Anweisungen gibt, wie er diesen Fehler lösen kann. \todo{Toast bild}.
+Zu keiner Zeit sollte der Benutzer in eine endlose Schleife von Fehlerzuständen gelangen können, welche er nur durch das Beenden oder die Deinstallation der App unterbrechen kann.
 
 \section{Hilfe und Dokumentation}
-Wie in Kapitel 4 festgestellt, ist die Verwendung eines Hilfe-Overlays sinnvoll.
-Dieses soll zum initialen Start der App den Benutzer über die verschiedenen Modi informieren.
-Beim jeweils ersten Wechsel in einen Modus soll ein weiteres Hilfe-Overlay angezeigt werden, welches die verschiedenen Aktionen des ausgewählten Modus vorstellt.
+Wie in Kapitel 4 festgestellt, ist die Verwendung eines Hilfe-Overlays, welches über die eigentliche Benutzeroberfläche gelegt wird, sinnvoll. \todo{ref auf Kapitel}
+Dieses soll zum initialen Start der App den Benutzer über die verschiedenen Modi und deren Funktionen informieren.
+Beim jeweils ersten Wechsel in einen Modus soll ein anderes Hilfe-Overlay angezeigt werden, welches die verschiedenen Aktionen des ausgewählten Modus genauer erklärt.
 \todo{Tap Taget}
 
 \section{Adäquater Umgang mit Unterbrechungen}
-Die App soll bei Unterbrechung der Aktivität wie der Navigation zu einer anderen App, oder dem Wechseln auf den Home-Bildschirm alle Informationen speichern, und beim Zurückkehren in die pausierte App wieder anzeigen.
+Die App soll bei Unterbrechung der derzeitigen Aktivität, wie der Navigation zu einer anderen App, oder dem Wechsel auf den Home-Bildschirm, alle Informationen speichern, und beim Zurückkehren in die pausierte App wieder vollständig anzeigen.
 Dies kann durch die Implementierung eines \emph{Saved States} erzielt werden.
 \todo{Saved State}
 
 \section{Fokussieren der Informationen}
 Ein weiterer Wichtiger Umsetzungspunkt liegt beim Hervorheben wichtiger Informationen auf dem Bildschirm.
-So sollen markierte Formen durch die Benutzung einer Akzent-Farbe hervorgehoben werden.
+So sollen markierte Formen durch die Benutzung einer Akzent-Farbe als Schatten oder Umrandung schnell erkennbar sein.
 \todo{Accent-Color}
 
 \section{``Joy of Use''}
 Die Bedienung der App soll intuitiv und einfach sein, um ein positives Nutzungerlebnis zu garantieren.
-Hierzu sollen verschiedene Gesten zur Navigation im Bild genutzt werden.
-\todo{Gesture Support}
+Hierzu sollen verschiedene Gesten zur Navigation im Bild unterstützt werden.
+Unter anderem soll das Vergrößern und Verkleinern des Bildes durch Pinch und Doppel-Tap Gesten ermöglicht werden.
+Zudem sollen Swipe-Gesten dazu genutzt werden, eine schnelle und intuitive Navigation im Bild zu verwirklichen.
+\todo{Gesture Support, papers}
 
 \section{Unterstützung verschiedener Bildschirmausrichtungen}
-Insbesondere aufgrund des Zeichen-Fearues sollte die App im Querformat genau so einfach zu bedienen sein, wie im Hochformat.
-So bietet sich dem Benutzer nämlich die Möglichkeit im Hochformat aufgenommene Bilder auch in diesem zu Bearbeiten.
-Dies hat den Vorteil, dass das Bild in seinem ursprünglichen Seitenverhältnis angesehen und bearbeitet werden kann, und nicht in ein falsches erst skaliert werden muss.
+Insbesondere aufgrund der Zielgruppe im Gerüstbau soll die App im Querformat genau so einfach zu bedienen sein, wie im Hochformat.
+So sollen Bilder, die im Querformat aufgenommen werden, auch in diesem Bearbeitet werden können, ohne dass sich die Ausrichtung des Bildes unerwartet ändert.
 
-\section{Ergenomische Gestaltung der physischen Interatkion}
-\todo{Hier noch was finden, was anders als Joy of Use ist}
+\section{Ergonomische Gestaltung der physischen Interatkion}
+Das Unabsichtliche Auslösen von Funktionen soll in allen Fällen vermieden werden.
+Hierzu muss insbesondere darauf geachtet werden, dass Swipe- und Zoom-Gesten verlässlich von Zeichen-Gesten unterschieden werden, um unabsichtliches Zeichnen von Formen, wie in Kapitel 4 beschrieben, zu vermeiden.
+\todo{Verwendung verschiedener Gesture-Listener}
 
 \section{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit}
-Der Benutzer soll in der Lage sein, die gesamte App mit einer Hand bedienen zu können.
-Hierzu müssen neben dem Pinch-2-Zoom auch noch Doppel-Tap Gesten verarbeitet werden können.
-Außerdem sollen Formen durch eine natürliche Drag-Geste mit einem Finger verschoben oder vergrößert werden können.
+Der Benutzer soll stets in der Lage sein, die gesamte App mit einer Hand bedienen zu können.
+\todo{Wichtigte Kriterien für einhändige Handybenutzung}
 
-\subsection{Die 8 Goldenen Regeln von Shneiderman}
+% \subsection{Die 8 Goldenen Regeln von Shneiderman}
 
-\citeauthor{Shneiderman04} definieren in ihrem Buch ``Designing the User Interface: Strategies for Effective Human-Computer Interaction'' die sogenannten ``8 Goldenen Regeln des Interface Designs''.  Die acht Regeln lauten wie folgt:
+% \citeauthor{Shneiderman04} definieren in ihrem Buch ``Designing the User Interface: Strategies for Effective Human-Computer Interaction'' die sogenannten ``8 Goldenen Regeln des Interface Designs''.  Die acht Regeln lauten wie folgt:
 
-\begin{enumerate}
-  \item Bemühe Dich um Konsistenz (``Strive for consistency'')
-  \item Erlaube erfahrenen Benutzern die Nutzung von Abkürzungen (``Enable fequent users to use shortcuts'')
-  \item Biete informative Rückkopplung (``Offer informative feedback'')
-  \item Biete ein klares Ende von Teildialogen an (``Design dialogs to yield closure'')
-  \item Biete Fehlervermeidung und einfache Fehlerbehandlung an (``Offer error protection and simple error handling'')
-  \item \label{itm:undo} Erlaube eine einfach Rücknahme von Aktionen (``Permit easy reversal of actions'')
-  \item Gib dem Benutzer die Kontrolle (``Support internal locus of control'')
-  \item Minimiere Gedächtnisbelastung (``Reduce short-memory load'')
-\end{enumerate} 
+% \begin{enumerate}
+% \item Bemühe Dich um Konsistenz (``Strive for consistency'')
+% \item Erlaube erfahrenen Benutzern die Nutzung von Abkürzungen (``Enable fequent users to use shortcuts'')
+% \item Biete informative Rückkopplung (``Offer informative feedback'')
+% \item Biete ein klares Ende von Teildialogen an (``Design dialogs to yield closure'')
+% \item Biete Fehlervermeidung und einfache Fehlerbehandlung an (``Offer error protection and simple error handling'')
+% \item \label{itm:undo} Erlaube eine einfach Rücknahme von Aktionen (``Permit easy reversal of actions'')
+% \item Gib dem Benutzer die Kontrolle (``Support internal locus of control'')
+% \item Minimiere Gedächtnisbelastung (``Reduce short-memory load'')
+% \end{enumerate} 
 
-Diese Regeln sind ein weiterer guter Anhaltspunkt für die Entwicklung einer guten Software-Lösung, die den Faktor der Usability mit berücksichtigt. Vor allem der Punkt \autoref{itm:undo} sollte bei einer Applikation, deren Fokus auf den aneinander gereihten Aktionen des Benutzers beruht, erfüllt sein. Dies soll durch einen Undo- bzw. Redo-Button in der oberen Menüleiste gewährleistet werden. \\
+% Diese Regeln sind ein weiterer guter Anhaltspunkt für die Entwicklung einer guten Software-Lösung, die den Faktor der Usability mit berücksichtigt. Vor allem der Punkt \autoref{itm:undo} sollte bei einer Applikation, deren Fokus auf den aneinander gereihten Aktionen des Benutzers beruht, erfüllt sein. Dies soll durch einen Undo- bzw. Redo-Button in der oberen Menüleiste gewährleistet werden. \\
 
-Die Konsistenz der Applikation soll durch die Benutzung der \citet{AndroidMG} gewährleistet werden. 
-So werden einerseits nur Icons aus der Standard Google-Library verwendet, andererseits werden diverese Guidelines die auf \citet{AndroidMG} vorgestellt werden, benutzt. 
-Hierzu zählt auch die sogenannte \emph{Feature-Discovery}.
-Dabei soll der Benutzer durch ein hinweisendes Overlay dazu aufgefordert werden, gewisse Funktionen der App zu erkunden. 
-Dies ist besonders bei einer App, in der es mehr als eine zentrale Funktion gibt, hilfreich und wichtig. \\
+% Die Konsistenz der Applikation soll durch die Benutzung der \citet{AndroidMG} gewährleistet werden. 
+% So werden einerseits nur Icons aus der Standard Google-Library verwendet, andererseits werden diverese Guidelines die auf \citet{AndroidMG} vorgestellt werden, benutzt. 
+% Hierzu zählt auch die sogenannte \emph{Feature-Discovery}.
+% Dabei soll der Benutzer durch ein hinweisendes Overlay dazu aufgefordert werden, gewisse Funktionen der App zu erkunden. 
+% Dies ist besonders bei einer App, in der es mehr als eine zentrale Funktion gibt, hilfreich und wichtig. \\
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[keepaspectratio, width=0.5\textwidth]{fd}
-  \caption{Feature-Discovery in Form eines Tap-Targets}
-  \label{fig:fd}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \includegraphics[keepaspectratio, width=0.5\textwidth]{fd}
+% \caption{Feature-Discovery in Form eines Tap-Targets}
+% \label{fig:fd}
+% \end{figure}
 
-In \autoref{fig:fd} sieht man eine beispielhafte Implementierung einer solchen Feature-Discovery in Form eines Tap-Targets.
-Hierbei wird der Benutzer durch eine Hervorhebung bestimmter UI-Elemente auf Funktionen hingewiesen. 
-Zusätzlich wird ein kurzer erklärender Satz mit einem zusammenfassenden Titel angezeigt. \\
+% In \autoref{fig:fd} sieht man eine beispielhafte Implementierung einer solchen Feature-Discovery in Form eines Tap-Targets.
+% Hierbei wird der Benutzer durch eine Hervorhebung bestimmter UI-Elemente auf Funktionen hingewiesen. 
+% Zusätzlich wird ein kurzer erklärender Satz mit einem zusammenfassenden Titel angezeigt. \\
 
-\subsection{Gesture-Support}
+% \subsection{Gesture-Support}
 
-Mit der Einführung Applikationen für mobile Endgeräte hat sich ein weiteres, vorher nicht relevantes, Usability-Problem etabliert: 
-\emph{Die geringe Größe des Bildschirm}. \\
+% Mit der Einführung Applikationen für mobile Endgeräte hat sich ein weiteres, vorher nicht relevantes, Usability-Problem etabliert: 
+% \emph{Die geringe Größe des Bildschirm}. \\
 
-Die relativ kleine physikalische Größe der Smartphone-Displays bringt verschiedene Probleme mit sich. 
-So muss einerseits die Funktionalität einer ganzen Desktop-Applikation auf ein viel kleineres Display passen, ohne den Content zu verändern, oder gar unleserlich zu machen.
-Andererseits muss dem Benutzer eine intuitive und effiziente Navigationsmöglichkeit gegeben sein, um zwischen verschiedenen Inhalten zu wechseln. \\
+% Die relativ kleine physikalische Größe der Smartphone-Displays bringt verschiedene Probleme mit sich. 
+% So muss einerseits die Funktionalität einer ganzen Desktop-Applikation auf ein viel kleineres Display passen, ohne den Content zu verändern, oder gar unleserlich zu machen.
+% Andererseits muss dem Benutzer eine intuitive und effiziente Navigationsmöglichkeit gegeben sein, um zwischen verschiedenen Inhalten zu wechseln. \\
 
-Hierzu schreiben \citeauthor{Gutwin04}, dass die Navigationen auf kleinen Bildschirmen selbst im besten Fall deutlich langsamer sei als auf normal-großen Bildschirmen.
-Sie führen weiter an, dass eine Übersicht über den gesamten Systemzustand wertvoll sei, da dies dem Nutzer eine schnellere Navigation erlaube. \\
-Nach \citeauthor{Gutwin04} eigne sich die Technik des ``Two-Level Zooms'' besonders gut für Navigationsaufgaben, wohingegen Panning-Strategien eher negativ von den Test-Personen aufgenommen worden seien \citep[Seite 8]{Gutwin04}.  
+% Hierzu schreiben \citeauthor{Gutwin04}, dass die Navigationen auf kleinen Bildschirmen selbst im besten Fall deutlich langsamer sei als auf normal-großen Bildschirmen.
+% Sie führen weiter an, dass eine Übersicht über den gesamten Systemzustand wertvoll sei, da dies dem Nutzer eine schnellere Navigation erlaube. \\
+% Nach \citeauthor{Gutwin04} eigne sich die Technik des ``Two-Level Zooms'' besonders gut für Navigationsaufgaben, wohingegen Panning-Strategien eher negativ von den Test-Personen aufgenommen worden seien \citep[Seite 8]{Gutwin04}.  
