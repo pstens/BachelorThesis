@@ -1,2 +1,22 @@
 \chapter{Implementierung}
-  \section{Vorgehensweise bei Implementierung}
+
+Die gesammelten Eindrücke aus den Kapiteln Evaluation und Konzeption sollen im Folgenden dazu genutzt werden, einen ersten Prototyp zu entwickeln.
+Hiezu bietet es sich an den Prototyp als \emph{Android Library} \todo{def} zu implementieren, da dies sowohl schnellere Kompilierzeiten als auch die Einbindung in eine bestehende Android-Applikation deutlich erleichtert.
+Als Programmiersprache soll die von \emph{JetBrains} entwickelte Sprache \emph{Koltin} verwendet werden, welche 2017 als offiziell unterstützte Android-Sprache vorgestellt wurde.
+Die Sprache bietet im Vergleich zu \emph{Java} einen besonders guten Umgang bezüglich der \emph{Null-Safety} von Variablen. \todo{noch ein bisschen mehr warum ausgerechnet Kotlin}
+
+
+Als Architekturmuster soll das \emph{Model-View-Controller-Konzept} (kurz \emph{MVC}) verwendet werden.
+Dies erlaubt eine saubere Entkopplung von Logik und User-Interface, was das Projekt auch bei einer wachsenden Anzahl von Codezeilen übersichtlich und verwaltbar gestaltet.
+
+Dieses Kapitel entspricht der dritten Phase des \emph{Human-Centered Design Process}, und verfolgt das Ziel, einen ersten benutzbaren Prototyp zu schaffen, der die in Kapitel (Problematik) beschriebenen Probleme möglichst gut löst. Anschließend soll dieser erste Prototyp bzw. die Android-Library, die bei der Entwicklung des Prototyps entsteht, in die vorhandende Android-Applikation integriert werden, und bereits im Arbeitsalltag getestet werden.
+Dies ermöglicht das Identifizieren von eventuell auftretenden Usability-Problemen, die während der initialen Beobachtung noch nicht aufgefallen sind.
+
+Alle Erkenntnisse aus dieser ersten Test-Phase werden anschließend mit in die zweite Iteration des Zyklus genommen, um diese in einem verbesserten Prototyp zu lösen.
+
+Der Ziel dieses Kapitels ist, einen funktionierenden Prototyp in Form einer Android-Library zu entwicklen, welcher sich in die bestehende Android-Applikation integrieren lässt und die Bewertungskriterien aus Kapitel (Evaluation) erfüllt.
+
+\input{chapters/prototype/first}
+\input{chapters/prototype/second}
+\input{chapters/prototype/third}
+\input{chapters/prototype/fourth}

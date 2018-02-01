@@ -1,0 +1,45 @@
+\section{Implemention und Tests des ersten Prototyp}
+
+\subsection{Implementation}
+In Kapitel 5 wurden, in Bezug auf die Evaluationsergebnisse aus dem vorherigen Kapitel, Umsetzungsmöglichkeiten für die verschiedenen Nielsen-Heuristiken herausgearbeitet.
+Diese sollen in die Implementierung des ersten Prototyp einfließen, und so eine guten Grundstein für eine positive Benutzererfahrung der App sorgen. \\
+
+Der erste Prototpy wurde am 16. Dezember 2017 fertiggestellt, auf \emph{JitPack.io} hochgeladen, und so in die bestehende Android-App als \emph{Dependency} eingebunden.
+
+Der Aufbau des Projektes sah dabei wie folgt aus: \todo{ref auf UML} 
+
+Funktional beschränkt sich dieser erste Prototyp zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen.
+
+Dabei wurde eine Zoom-Linse, wie sie bei allen drei Apps aus Kapitel 4 umgesetzt wurde, zum schnelleren und einfacheren Einzeichnen von Formen benutzt. \\
+
+Das Wechseln des Modus ist über einen \emph{Floating Action Button} im unteren rechten Bereich des Bildschirms möglich.
+Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen importieren. \\
+
+Undo- sowie Redo-Funktion wurden auf dedizierte \emph{Buttons} in die obere Menüleiste gelegt.
+Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen, die Zeichenfarbe zu ändern, oder eine andere Form auszuwählen. \\
+
+Beim Auswählen des Farb-Icons öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, aus einem Farbkreis die gewünschte Farbe auszuwählen.
+
+Außerdem sollen eingezeichnete Kreise an den Ecken bzw. Start- und End-Punkten bei einer Linie, andeuten, dass der Benutzer mit deren Hilfe die Formgröße verändern kann.
+Zudem signalisieren diese Punkte auch, welche Form derzeit ausgewählt ist. \\
+
+Im Text-Modus bietet sich dem Benutzer die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu beschrfiten.
+Beschriftungen werden anschließend neben der ausgewählten Kante im Bild dargestellt. \\
+
+\subsection{Rollout und Test}
+Nachdem die App zwei Tage voll in den Arbeitsalltag der beiden Geschäftsführer der Fa. VERO integriert wurde, gab es am 18. Dezember das erste Feedback.
+
+Die \emph{Floating Action Buttons} haben sich bei der Benutzung der App als großer Stolperstein herausgestellt.
+So war nicht intuitiv klar, dass es zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, gibt, zwischen denen man beim Klick auf den rechten Button wechseln kann. \\
+
+Ein weiteres Problem ergab sich bei der Benutzung der App auf Tablet-Geräten.
+So waren sämtliche Texte nur schwer zu lesen, und die Punkte zum Verändern der Formen, nur mühsam und mit viel Konzentration mit dem Finger zu treffen. \\
+
+Eingetragene Messwerte waren aufgrund ihrer dunkelen Textfarbe auf den Bildern mit etwas schlechteren Lichtverhältnissen kaum zu erkennen. \\
+
+Als weitere Anmerkung kam der Wunsch nach der Mögichkeit, Formen mit vorhandenen Gerüsttypen zu verbinden, und in den späteren Meta-Daten zu speichern.
+Auf dieser Weise würde man der API noch zusätzliche Informationen liefern, die bei der Weiterverarbeitung der Meta-Daten von Wichtigkeit seien könnten. \\
+
+Außerdem wurde mehrfach angemerkt, dass es wünschenswert wäre, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst zurecht zu schneiden und eventuell drehen zu können, da es auf der Baustelle oftmals dazu komme, dass die aufgenommenen Bilder nicht nur das gewünschte Gerüst beinhalten, sondern noch andere Objekte, die nicht relevant für das Bild sind. \\
+
+Die Probleme bzw. Verbesserungspunkte, welche sich während der Benutzung dieses ersten Prototyp gezeigt haben, sollen im nächsten Unterkapitel in einer weiteren Iteration des Human-Centered Design Process ausgewertet und im besten Fall gelöst werden.
