@@ -1,11 +1,95 @@
 \section{Zweite Iteration}
 
-In Abschnitt \todo{ref} haben sich während des Testens des ersten Prototyps neue Probleme identifizieren lassen.
-Diese sollen bei der Entwicklungs eines zweiten Prototyps in diesem Abschnitt gelöst werden. \\
+In Abschnitt \todo{ref} haben sich während des Testens des ersten Prototyps sowohl neue Probleme identifizieren als auch fehlende Funktionalitäten identifizieren lassen.
+Diese sollen bei der Entwicklungs eines zweiten Prototyps in diesem Abschnitt berücksichtigt werden. \\
 
 \subsection{Observation}
-In der Testphase aus Abschnitt \todo{ref} haben sich verschiedene Usability-Probleme aufgezeigt, deren Ursprung es in desem Unterabschnitt zu untersuchen gilt. \\
+Um einen Überblick über die Test-Ergebnisse aus dem vorherigen Abschnitt herzustellen, werden diese im Nachfolgenden zunächst aufgelistet und anschließend weiter untersucht:
 
-\subsection{Idea Generation}
+\begin{enumerate}
+  \item Systemzustand nicht intuitiv erkennbar (Floating Action Buttons)
+  \item Text- und Formelemente auf Tablets nur mühsam zu lesen/berühren
+  \item Eingetragenen Messwerte aufgrund der Textfarbe nicht gut erkennbar
+  \item Zuordnen von Gerüsttypen zu Formen nicht möglich
+  \item Zuschneiden des Bildes nicht möglich
+\end{enumerate}
+
+\noindent
+Zunächst aufgefallen sind die Floating Action Buttons im unteren Bereich des Bildschirms, die nicht genug Aufschluss über den aktuellen Systemzustand und die möglichen Aktionen geben.
+Dadurch, dass die Buttons zu jeder Zeit immer nur ein Icon anzeigen, und erst beim Klick auf diese erkennbar wird, welche weitere Aktionen möglich sind, wird dem Nutzer nur wenig bis kein Feedback über den aktuellen Systemzustand und mögliche ausführbare Aktionen gegeben. \\
+
+Des Weiteren ist die Benutzung auf Endgeräten mit einer höheren Pixeldichte als weiterer Problempunkt aufgeallen.
+So sind Text- und Formelemente, die auf kleinen Bildschirmen mit einer niedrigen Pixeldichte gut zu erkennen sind, auf Tablets mit großen Bildschirmen eher mühsam zu erkennen. \\
+
+Zudem sind eingetragene Messwerte aufgrund eines fehlenden Texthintergrunds auf manchen Bildern nur schwer zu erkennen.
+Gerade bei Bilder, die in einem eher dunkelen Farbraum liegen, sind die Messwerte in grauer Textfarbe nahezu garnicht erkennbar. \\
+
+Bei der Benutzung der App ergab sich außerdem immer wieder das Problem, dass nach einer Funktion gesucht wurde, um eingetragene Formen mit bereits vorhandenen Gerüsttypen zu verknüpfen, oder Bilder beim Import in die gewünschte Größe und Form zu bringen.
+Das Fehlen dieser Funktionen hat sich negativ auf das Benutzungserlebnis ausgewirkt, da die Benutzer fest davon ausgegangen sind, dass diese in der App integriert seien.
+
+\subsection{Idea Generation}\label{subsec:idea2}
+Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art \todo{Bottom-Bar} Statusleiste am unteren Bildschirmrand zu verankern.
+Diese soll über verschiedene, aber intuitiv verständliche Icons über den aktuellen Modus (Zeichnen oder Text) informieren, und zugleich nicht benutzbare Aktionen ausgrauen. \\
+
+Für eine bessere und einfachere Benutzung der App auf Tablet-Geräten könnte man einerseits eine zweite Benutzeroberfläche, die nur bei Geräten mit einer Displaybreite von beispielsweise mindestens $600$ Pixeln benutzt wird, einbinden, andererseits würde es sich auch anbieten, die Größe diverser Text- und Formelemente mittels dichteunabhängiger Pixel zu beschreiben.
+Dies hat den Effekt, dass Interface-Elemente bei verschiedenen Bildschirmgrößen ungefähr gleich groß sind, unabhängig von der Pixeldichte des Geräts. \todo{ref} 
+
+Die schlechte Erkennbarkeit von eingetragenen Messwerten auf dunkelen Bildern, lässt sich durch die Benutzung eines Texthintergrunds lösen.
+So kann wie bei den \emph{Toasts}, die im Android System seit API X vorhanden sind, ein grauer Hintergrund unter einen weißen Text gelegt werden, um diese einfacher lesbar zu machen. \todo{ref auf toast}
+
+Um Formen direkt Gerüsttypen zuzuordnen bietet sich ein modaler Dialog an, der zum Beispiel bei einem langen Klick auf die gewünschte Form angezeigt wird, und in einem \emph{Dropdown} vorhandene Gerüsttypen zur Auswahl anzeigt.
+Falls ein langer Klick auf die Form zu unintuitiv ist, würde sich eine Option in der oben beschriebenen Statusleiste anbieten, die nur dann auswählbar ist, wenn eine Form markiert ist. \\
+
+Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der in der Android API vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer dedizierten Android-Library für das Schneiden von Bildern anbieten.
+Ersteres bringt die Gefahr mit sich, dass die Verfügbarkeit einer solchen \emph{Crop-Activity} im Android-System vom Gerätehersteller und der verwendeten Android-Version abhängig ist, sodass die Funktion nicht auf allen Geräten verfügbar ist. \todo{ref auf API docs}
+
 \subsection{Prototyping}
+Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{subsec:idea2} vorgestellten Ideen. \\
+
+So wurde die Statusleiste durch eine Bottom-Bar am unteren Bildschirmrand umgesetzt.
+Diese besteht aus vier verschiedenen Icons, die nur dann auswählbar sind, wenn die entsprechende Aktion im aktuellen Systemzustand durchgeführt werden kann.
+Das Icon ganz links ermöglicht das Wechseln zwischen dem Zeichen- und Textmodus.
+Im Zeichenmodus kann per Klick auf das zweite Icon über ein \emph{Popup-Menü} die gewünschte Form ausgewählt werden.
+Im selben Modus kann beim Klick auf das dritte Icons (Farbpalette) die gewünschte Formfarbe im Voraus konfiguriert werden. Hierzu öffnet sich, wie schon beim ersten Prototyp, ein modaler Farbauswahl-Dialog.
+bt das Löschen von ausgewählten Formen bzw. Texten. \\
+
+\todo{Bild von Statusleiste in beiden Modi} 
+Im Textmodus kann beim Klick auf das zweite Icon kann über ein \emph{Popup-Menü} entweder eine ausgewählte Form mit einer Kantenbeschriftung versehen, oder mit einem Gerüsttyp verknüpft werden.
+Das dritte Icon ermöglicht in diesem Modus das Bearbeiten von bereits eingetragenen Messwerten, oderverknüpften Gerüsttypen.
+Auch in diesem Modus sind die Icons nur dann auswählbar, wenn der aktuelle Systemzustand dies zulässt.
+So sind das dritte und vierte Icons beispielsweise nur dann benutzbar, wenn zuvor eine Form ausgewählt worden ist. \\
+
+Für eine einfache und kosistente Benutzung auch auf Tablet-Geräten wurde sämtliche Größen mit Hilfe dichteunabhängiger Pixel modelliert. Dies stellt sicher, dass auf Geräten mit einer hohen Pixeldichte Elemente nicht zu klein dargestellt werden.
+\todo{Bild vorher nachher Resize Points}
+
+Messwerte sind mit einem gefärbten Rechteck hinterlegt, welches dafür sorgt, dass sich die Texte besser vom Bild und den eingetragenen Formen abheben, und so auch bei schwierigen Bedingungen klar lesbar sind. 
+\todo{Bild vorher nachher}
+
+Das Zuordnen von Gerüsttypen zu eingetragenen Formen wurde mit Hilfe eines modalen Dialogs umgesetzt, welcher neben dem Gerüsttyp auch noch Textfelder für die verschiedenen Dimensionen des Gerüsts bietet.
+Hierdurch kann der Benutzer nicht nur den Gerüsttyp, sondern auch Maße des Gerüsts, welche im Bild aufgrund des Aufnahmewinkels eventuell nicht zu sehen sind, eintragen und in den Meta-Daten speichern.
+\todo{Bild von Dialog}
+
+Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}, eine dedizierte Android-Libray, welche auf \emph{Github} als Open-Source Projekt unter der \emph{Apache License Version 2.0} vorhanden ist, in das Projekt eingebunden. \todo{Quelle} 
+Diese bietet im Gegensatz zu der Alternative-Lösungs mittels vom System bereitgestellter \emph{Crop-Activity} Unterstützung für alle Gerätehersteller ab der Android-Version $14$ an.
+Außerdem erlaubt diese Library das Anpassen sämtlicher Farben der Benutzeroberfläche, sodass Konsistenz beim Einbinden in den Prototyp bestehen bleibt, und der Nutzer nicht von zwei völlig verschiedenen Farbpaletten überrascht wird. \todo{Bilder}
+
 \subsection{Testing}
+Der zweite Prototyp wurde sechs Tage lang, bis zum 9. Januar 2018 von den beiden Geschäftsführern in ihrem Arbeitsalltag getestet.
+Das anschließende Feedback ergibt sich aus einem Gespräch am 9. Januar.
+Als deutlich positive Verbesserung wurde dabei die Statusleiste im unteren Bildschirmbereich genannt.
+Hierduch sei beiden Testpersonen die Benutzung der App um einiges leichter gefallen, als beim ersten Prototyp mit den Floating Action Buttons. \\
+
+Jedoch sei das initiale Einarbeiten in die App immernoch zu langsam, und nicht intuitiv genug.
+Hier fehlte beiden Testpersonen eine Hilfestellung, die den typischen \emph{Prozess-Flow} der App erklärend aufzeigt. \\
+
+Ein weiterer Problempunkt, der beim Testen des Prototyps aufgefallen ist, sei die Überforderung bei Benutzung des Farbdialogs.
+Dies ist ein Problem, welches während der Testing-Phase zum ersten Prototyp nicht als solches identifiziert wurde, sich jetzt aber doch als Problem herausgestellt hat.
+Hierbei wäre es laut Testpersonen nämlich sinnvoller, den Benutzer nicht mit so vielen Auswahlmöglichkeiten zu überfordern, sondern eine übersichtliche Menge an häufig benutzten Farben direkt auswählbar zu machen. \\
+
+Außerdem wurde sich neben dem einfacheren Farbdialog auch noch Funktion gewünscht, um Freitexte ins Bild einzutragen. 
+Dies sei laut Testpersonen ein wichtiger Aspekt, da beim bisherigen Aufmaßerstellen oftmals weitere Notizen oder Kommentare auf Skizzen eingetragen werden, um besondere Punkte bzw. Abmachungen feszuhalten. \\
+
+Eine weitere Wichtige Form, die beiden Testpersonen fehle, sei eine Linie mit nur einer Pfeil-Spitze, um Längen, die auf dem Bild nur einen Startpunkt haben, und in die Tiefe offen sind, zu kennzeichnen. \\
+
+Des Weiteren seien verlinkte Gerüsttypen an Formen nicht intuitiv durch den Indikator, wie er in diesem Prototyp umgesetzt wurde, erkennbar.
+Zusätzlich wurden die Textfelder in dem Dialog zum Verlinken des Gerüsttyps als positiv augefasst, wurden aber nur selten benutzt, da eingetragene Messwerte gemerkt werden mussten, um diese anschließend in den Dialog einzutragen. \\
