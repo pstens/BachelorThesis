@@ -1,45 +1,115 @@
-\section{Implemention und Tests des ersten Prototyp}
+\section{Implemention und Test des ersten Prototyp}
 
 \subsection{Implementation}
 In Kapitel 5 wurden, in Bezug auf die Evaluationsergebnisse aus dem vorherigen Kapitel, Umsetzungsmöglichkeiten für die verschiedenen Nielsen-Heuristiken herausgearbeitet.
 Diese sollen in die Implementierung des ersten Prototyp einfließen, und so eine guten Grundstein für eine positive Benutzererfahrung der App sorgen. \\
 
-Der erste Prototpy wurde am 16. Dezember 2017 fertiggestellt, auf \emph{JitPack.io} hochgeladen, und so in die bestehende Android-App als \emph{Dependency} eingebunden.
+Der erste Prototyp wurde am 16. Dezember 2017 in Form einer Android-Library fertiggestellt, auf \emph{JitPack.io} hochgeladen, und so in die bestehende Android-App als Bibliothek eingebunden. \\
 
-Der Aufbau des Projektes sah dabei wie folgt aus: \todo{ref auf UML} 
+Bei der Implementierung wurde das Entwurfsmuster des \emph{Model-View-Controllers} eingesetzt, welches den Quellcode in drei verschiedene Komponente unterteilt (siehe \autoref{fig:mvc}).
+So gibt es einerseits das \emph{Datenmodell (model)}, die \emph{Präsentationskomponente (view)} und die \emph{Programmsteuerung (controller)}.
+Ziel dieses Musters ist es, eine flexible Architektur zu schaffen, die bei Bedarf leicht erweitert bzw. wiederverwendet werden kann.
 
-Funktional beschränkt sich dieser erste Prototyp zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen.
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{mvc}
+  \caption{Interaktion innerhalb des Model-View-Controller Prinzips}
+  \label{fig:mvc}
+\end{figure}
 
-Dabei wurde eine Zoom-Linse, wie sie bei allen drei Apps aus Kapitel 4 umgesetzt wurde, zum schnelleren und einfacheren Einzeichnen von Formen benutzt. \\
+\noindent
+Zusätzlich wurde der Aufbau des Projekts in der \emph{Unified Modelling Language}, kurz \emph{UML}, modelliert.
+Dies ermöglicht bereits vor der eigentlichen Implementierung wichtige Begriffe und mögliche Beziehungen festzulegen, und einen Überblick über die benötigten Klassen zu bekommen.
+Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (die beiden weiteren Komponenten befinden sich im Anhang):
 
-Das Wechseln des Modus ist über einen \emph{Floating Action Button} im unteren rechten Bereich des Bildschirms möglich.
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio, width=\textwidth]{prototype1/model}
+  \caption{Datenmodell-Komponente als UML-Diagramm}
+  \label{fig:model1}
+\end{figure}
+
+\noindent
+In \autoref{fig:model1} ist zentral die abstrakte Klasse des \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} ist.
+Diese vererbt die abstrakten Attribute \emph{points} und \emph{edges} an die Unterklassen, welche diese in ihrer Implementierung überschreiben müssen.
+Außerdem muss die öffentliche Methode \emph{drawShape(...)} implementiert werden.
+Dies sorgt dafür, dass jede Unterklasse selber dafür verantwortlich ist, wohin und wie ihre Form gezeichnet wird. 
+\emph{MeasureShape} selber implementiert drei verschiedene \emph{Interfaces}, die diverse Methoden zum Verschieben, Vergrößern und Editieren bereit stellen. \\
+
+\noindent
+Eine weitere Klasse in dem \emph{Datenmodell} ist die Klasse \emph{UserAction}.
+Diese ist eine versiegelte (\emph{sealed}) Oberklasse, welche die verschiedenen Aktionen, die der Nutzer ausführen kann, darstellen soll.
+Versiegelt bedeutet in diesem Kontext, dass nur die Klassen, welche im \emph{Scope} der Oberklasse liegen, auch von dieser erben können.
+In diesem ersten Prototyp unterstützt die App das Wiederholen bzw. rückgängig machen von den folgenden sechs Aktionen: 
+
+\begin{itemize}
+  \item Verschieben von Formen (\emph{DraggedShape})
+  \item Hinzufügen von Formen (\emph{AddedShape})
+  \item Löschen von Formen (\emph{RemovedShape})
+  \item Vergrößern bzw. verkleinern von Formen (\emph{ResizedPoint})
+  \item Ändern des Textes (\emph{ChangedText})
+  \item Ändern der Farbe (\emph{ChangedColor})
+\end{itemize}
+
+\noindent
+Funktional beschränkt sich dieser erste Prototyp zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen. \\
+
+Dabei wurde eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie bei allen drei Applikationen aus Kapitel 4 umgesetzt wurde, zum schnelleren und einfacheren Einzeichnen von Formen benutzt. \\
+
+Das Wechseln des Modus ist über einen \emph{Floating Action Button} im unteren rechten Bereich des Bildschirms möglich (siehe \autoref{fig:all1}).
 Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen importieren. \\
 
 Undo- sowie Redo-Funktion wurden auf dedizierte \emph{Buttons} in die obere Menüleiste gelegt.
 Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen, die Zeichenfarbe zu ändern, oder eine andere Form auszuwählen. \\
 
-Beim Auswählen des Farb-Icons öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, aus einem Farbkreis die gewünschte Farbe auszuwählen.
+\begin{figure}[h]
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/all}
+    \caption{Erster Prototyp mit bereits eingezeichneter Linie}
+    \label{fig:all1}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/drawing}
+    \caption{Zoom-Linse beim Zeichnen einen Vierecks}
+    \label{fig:draw1}
+  \end{subfigure}
+  \centering
+  \caption{Erster Prototyp bei eingezeichneter Line und beim Zeichnen eines Vierecks}
+\end{figure}
 
-Außerdem sollen eingezeichnete Kreise an den Ecken bzw. Start- und End-Punkten bei einer Linie, andeuten, dass der Benutzer mit deren Hilfe die Formgröße verändern kann.
-Zudem signalisieren diese Punkte auch, welche Form derzeit ausgewählt ist. \\
+\noindent
+Beim Auswählen des Farb-Icons in der Menü-Leiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, aus einem Farbkreis die gewünschte Farbe auszuwählen (siehe \autoref{fig:color1}).
+Diese Farbe wird für alle neu eingezeichneten Formen standardmäßig benutzt.
+Falls zuvor eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten Farbe eingefärbt.
 
-Im Text-Modus bietet sich dem Benutzer die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu beschrfiten.
-Beschriftungen werden anschließend neben der ausgewählten Kante im Bild dargestellt. \\
+\begin{wrapfigure}{R}{0.5\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{prototype1/color}
+  \caption{Geöffneter Farbauswahl-Dialog}
+  \label{fig:color1}
+\end{wrapfigure}
+
+Des Weiteren wird die aktuell markierte Form im Zeichen-Modus durch kleine graue Kreise an den Eckpunkten hervorgehoben, und zugleich soll dem Benutzer verdeutlicht werden, dass mit Hilfe dieser Kreise die Form in ihrer Größe und Lage bearbeiten kann. \\
+
+Im Text-Modus bietet sich dem Benutzer die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu beschriften.
+Hierzu öffnet sich beim langen Klick auf eine Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
+Eingetragene Messwerte werden anschließend neben der ausgewählten Kante im Bild dargestellt. \\
 
 \subsection{Rollout und Test}
-Nachdem die App zwei Tage voll in den Arbeitsalltag der beiden Geschäftsführer der Fa. VERO integriert wurde, gab es am 18. Dezember das erste Feedback.
+Nachdem die App zwei Tage in den Arbeitsalltag der beiden Geschäftsführer der Fa. VERO integriert und währenddessen getestet wurde, gab es am 18. Dezember Feedback zur Implementierung des ersten Prototyps. \\
 
-Die \emph{Floating Action Buttons} haben sich bei der Benutzung der App als großer Stolperstein herausgestellt.
-So war nicht intuitiv klar, dass es zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, gibt, zwischen denen man beim Klick auf den rechten Button wechseln kann. \\
+Nach Aussage der beiden Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.
+So sei nicht intuitiv klar, dass die App über zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, verfügt.
+Oder, dass man über einen Klick auf den rechten \emph{Floating Action Button} zwischen den beiden Modi hin und her wechseln könne. \\
 
-Ein weiteres Problem ergab sich bei der Benutzung der App auf Tablet-Geräten.
-So waren sämtliche Texte nur schwer zu lesen, und die Punkte zum Verändern der Formen, nur mühsam und mit viel Konzentration mit dem Finger zu treffen. \\
+Ein weiteres Problem ergab sich laut Testpersonen X \todo{Wie hier differenzieren?} bei der Benutzung der App auf seinem Tablet.
+So seien sämtliche Texte nur schwer zu lesen, und die Punkte zum Verändern der Formen, nur mühsam und mit viel Konzentration mit dem Finger zu treffen. \\
 
-Eingetragene Messwerte waren aufgrund ihrer dunkelen Textfarbe auf den Bildern mit etwas schlechteren Lichtverhältnissen kaum zu erkennen. \\
+Ein weiteres Problem, was beide Testpersonen schilderten, war die schlechte Lesbarkeit von eingetragenen Messwerten auf Bildern, die in dunkleren Lichtverhältnissen aufgenommen wurden.
+Hier setze sich die Textfarbe zu schlecht vom Hintergrund ab. \\
 
-Als weitere Anmerkung kam der Wunsch nach der Mögichkeit, Formen mit vorhandenen Gerüsttypen zu verbinden, und in den späteren Meta-Daten zu speichern.
-Auf dieser Weise würde man der API noch zusätzliche Informationen liefern, die bei der Weiterverarbeitung der Meta-Daten von Wichtigkeit seien könnten. \\
+Des Weiteren kam von beiden Testpersonen der Wunsch nach der Möglichkeit auf, Formen mit bereits vorhandenen Gerüsttypen wie zum Beispiel ``Hängegerüst'' oder ``Standgerüst'' zu verbinden, und in den Meta-Daten zu dem Bild zu speichern. \\
 
-Außerdem wurde mehrfach angemerkt, dass es wünschenswert wäre, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst zurecht zu schneiden und eventuell drehen zu können, da es auf der Baustelle oftmals dazu komme, dass die aufgenommenen Bilder nicht nur das gewünschte Gerüst beinhalten, sondern noch andere Objekte, die nicht relevant für das Bild sind. \\
+Außerdem wurde von beiden Testpersonen mehrfach angemerkt, dass es wünschenswert wäre, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst zurecht zu schneiden und eventuell drehen zu können, da es auf der Baustelle oftmals dazu komme, dass die aufgenommenen Bilder nicht nur das gewünschte Gerüst ,sondern noch andere Objekte, die nicht relevant für das Bild seien, beinhalten. \\
 
-Die Probleme bzw. Verbesserungspunkte, welche sich während der Benutzung dieses ersten Prototyp gezeigt haben, sollen im nächsten Unterkapitel in einer weiteren Iteration des Human-Centered Design Process ausgewertet und im besten Fall gelöst werden.
+Ursachen und mögliche Lösungsideen dieser Probleme sollen im nächsten Abschnitt in einer weiteren Iteration des ``Human-Centered Design Process' weiter ausgewertet und mit Hilfe eines erweiterten Prototyps, bestenfalls optimal, gelöst werden.
