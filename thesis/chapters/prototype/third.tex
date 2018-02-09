@@ -1,67 +1,91 @@
 \section{Dritte Iteration}
-Die beim Testen des zweiten Prototyps identifizierten Probleme sollen nun in einer weiteren Iteration des Human-Centered Design Process gelöst werden.
+Die beim Testen des zweiten Prototyps in \autoref{sec:pro2} identifizierten Probleme sollen nun in einer dritten Iteration des ``Human-Centered Design Process'' gelöst werden.
 Hierzu werden wie schon im vorherigen Abschnitt die vier Phasen des Zyklus durchlaufen, und am Ende festgehalten, ob ein weitere Iteration des Zyklus notwending ist, um eventuelle neue Usability-Probleme zu lösen.
-\subsection{Observation}\label{subsec:prob3}
+
+\subsection{Observation}\label{subsec:obs3}
 
 Um auch in diesem Abschnitt einen Überblick über die gesammelten Test-Ergebnisse zu bekommen, werden die diese im Nachfolgenden zur Übersicht aufgelistet, und in den folgenden Unterabschnitten weiter evaluiert:
 
 \begin{enumerate}
   \item Fehlende Hilfestellung beim initialen Start der App
   \item Überforderung bei Benutzung des Farbdialogs
-  \item Einführen einer Freitext-Form
-  \item Einführen einer Pfeil-Form 
   \item Wiedererkennbarkeit des Gerüsttyp-Indikators
   \item Gedächtnisbelastung beim Eintragen der Messwerte in Gerüsttyp-Dialog
+  \item Einführen einer Freitext-Form
+  \item Einführen einer Pfeil-Form 
 \end{enumerate}
 
+Zu erkennen war, dass beide Testpersonen in \autoref{subsec:test2} Benutzungsprobleme aufgrund einer fehlenden Hilfestellung zur richtigen Benutzung der App hatten.
+Aufgrund dieser fehlenden Hilfe kam es bei beiden Testern zu einem negativen ersten Eindruck, und einer Situation, in der nur durch ``Ausprobieren'' die verschiedenen Funktionen der App erkundet werden konnte.
+Gerade diese beiden Punkte führen schnell zu einer negativen Benutzererfahrung und sind Probleme, die eine weitere Nutzung der App schon zu Beginn erschweren. \\
+
+Ein weiterer negativer Punkt war die Überforderung der Benutzer durch den Farbdialog.
+Durch die Möglichkeit eine beliebige Farbe mit Hilfe des Farbkreis auszuwählen und zusätzlich noch die Transparenz über eine weitere Einstellung anpassen zu können, wird der Benutzer mit Informationen überschüttet. \\
+
+Die Benutzung einer einzelnen Zahl als Indikator für die Anzahl der verknüpften Gerüste zu einer Form hat sich während der Testphase als nicht sinnvoll herausgestellt.
+Hier fehlte den Testpersonen etwas Wiedererkennbares, um die Zahl mit den Gerüsttypen zu assozieren.  \\
+
+Zudem wurden die kognitiven Fähigkeiten durch die Textfelder im Gerüsttyp-Dialog nur unnötig strapaziert.
+Für beide Tester trat immer wieder der Fall ein, dass sie den Dialog schließen mussten, um sich noch einmal zu vergewissern, welcher Messwert im Bild eingetragen war, bevor der Dialog wieder geöffnet, der passende Gerüsttyp wieder ausgewählt, und anschließend der zuvor gemerkte Messwert eingetragen werden konnte. \\
+
+\todo{Wie neue Funktionen beschreiben hier?}
+
 \subsection{Idea Generation}\label{subsec:idea3}
-Um dem Benutzer beim Start der App einen Überblick über die beiden Modi und den darin enthalteten Funktionen zu geben, soll dem Nutzer eine Hilfestellung beim initialen Start angezeigt werden.
-Dafür bietet sich entweder ein \emph{Onboarding-Pager} an, der den Benutzer mit Hilfe eines Fullscreen-Dialogs die verschiedenen Funktionen der App vor dem eigentlich Start der App zeigt, oder das Verwenden verschiedener Hilfe-Overlays, welche erst dann angezeigt werden, sobald der Benutzer diese braucht.
+Um dem Benutzer beim Start der App einen Überblick über die beiden Modi und den darin enthaltenen Funktionen zu geben, soll dem Nutzer eine Hilfestellung beim initialen Start der App angezeigt werden.
+Dafür bietet sich entweder ein \emph{Onboarding-Pager} an, der den Benutzer mit Hilfe eines Vollbild-Dialogs die verschiedenen Funktionen der App vor dem eigentlich Start der App zeigt, oder das Verwenden verschiedener Hilfe-Overlays, welche erst dann angezeigt werden, sobald der Benutzer diese braucht.
 Hierbei könnte man zum Beispiel beim ersten Wechsel in den jeweiligen Modus eine Overlay anzeigen, welches die verschiedenen Aktionen in der Statusleiste erklärt. \\
+\todo{ref auf tap target prompt und onboarding pages}
 
-Der Farbdialog kann in einem einfacheren Modus angezeigt werden, der standardmäßig nur eine kleine Menge voreingestellte Farben anzeigt, und bei Bedarf zu einem vollständigen Farbkreis erweitert werden kann. \\
+Damit der Farbdialog nicht mehr so überfordernd wirkt, kann er in einem ``einfachen'' Modus angezeigt werden, in dem sich die Einstellungsmöglichkeiten auf ein Minimum reduzieren.
+So könnte man beispielsweise standardmäßig nur eine kleine Menge voreingestellter Farben anzeigen, und erst bei Bedarf zu einer erweiterten Farbauswahl gelangen. \\
+\todo{Paper zur Dialoggestaltung?}
 
-Sowohl die Freitext-Form als auch die Pfeil-Form können mit Hilfe der bestehenden abstrakten Oberklasse \emph{MeasureShape} modelliert werden.
-Wichtig bei der Freitext-Form wird es, wie sich in Abschnitt \todo{ref auf 2. proto} gezeigt hat, einen Hintergrund zu verwenden, damit der Text jederzeit lesbar ist. \\
+Um den Gerüsttyp-Indikator intuitiver und vor allem wiedererkennbar zu gestalten, könnte man ein Icon benutzen, welches neben der Indikator-Zahl angezeigt wird.
+Alternativ könnte man auch einen weiteren Text hinzufügen, der ausdrückt, was die Zahl bedeutet.
+Hierbei muss man jedoch bei der Implementierung darauf achten, dass - besonders bei kleineren Geräten - nur eine begrenzte Menge Text auf dem Bildschirm gleichzeitig anzeigen werden sollte, bevor dieser zu unübersichtlich wird. \\
+\todo{Irgendwas zur Wiedererkennbarkeit bei Indikatoren}
 
-Um den Indikator, dass Formen mit einem Gerüsttyp verknüpft sind, deutlicher und besser wiedererkennbar zu gestalten, könnte man ein Icon benutzen, welches neben der Indikator-Zahl angezeigt wird.
-Alternativ könnte man auch einen weiteren Text hinzufügen, der die Verlinkung anzeigt.
-Hierbei muss man jedoch bei der Implementierung darauf achten, dass man - besonders bei kleineren Geräten - nur eine begrenzte Menge Text auf dem Bildschirm gleichzeitig anzeigen sollte bevor dieser zu unübersichtlich wird. \\
+Der Gerüsttyp-Dialog kann durch die Verwendung von Vorschlägen in den Textfeldern, die aus den eingetragenen Messwerten stammen, bei der Eingabe der Maße vereinfacht werden. \\
+\todo{AutoCompleteTextField}
 
-Der Gerüsttyp-Dialog kann durch die Verwendung von Vorschlägen, die aus den eingetragenen Messwerten stammen, bei der Eingabe der Maße vereinfacht werden. \\
+Sowohl die Freitext- als auch die Pfeil-Form können mit Hilfe der bestehenden abstrakten Oberklasse \emph{MeasureShape} modelliert werden.
+Wichtig bei der Freitext-Form wird es sein, einen geeigneten Text-Hintergrund zu verwenden, damit der Text jederzeit ohne Anstrengung lesbar ist.
+\todo{Hintergrund für Texte}
 
 \subsection{Prototyping}
 Der dritte Prototyp wurde am 16. Januar 2018 in die bestehende Android-App eingebunden.
-Bei der Implementierung dieses Prototyps wurde versucht alle in \autoref{subsec:idea3} gennanten Ideen zur Lösung der Probleme aus \autoref{subsec:prob3} zu lösen.
+Bei der Implementierung dieses Prototyps wurde versucht alle in \autoref{subsec:idea3} genannten Ideen zur Lösung der Probleme aus \autoref{subsec:obs3} umzusetzen.
 
-So wurden drei Hilfe-Overlays, welche beim initialen Start, beim ersten Wechsel in den Textmodus, und beim ersten Wechsel in den Zeichenmodus implementiert.
-Diese sollen dem Benutzer durch ihre Position und ihre kurzen erklärenden Text eine kurze, aber präzise Hilfestellung bei der Benutzung der App geben.
-\todo{schreiben warum kein Onboarding screen}
+So wurden drei Hilfe-Overlays, welche beim initialen Start, beim ersten Wechsel in den Text-Modus, und beim ersten Wechsel in den Zeichen-Modus implementiert.
+Diese sollen dem Benutzer durch ihre Position und ihre erklärenden Text eine kurze, aber präzise Hilfestellung bei der Benutzung der App geben.
+\todo{schreiben warum kein Onboarding screen und Pic}
 
-Die verwendete ColorPicker-Library ermöglicht das Benutzen eines \emph{Preset-Mode}, welcher genau das gewünschte Verhalten, wie in \autoref{subsec:idea3} beschrieben, umsetzt.
+Die verwendete \emph{ColorPicker-Library} ermöglicht das Benutzen eines \emph{Preset-Mode}, welcher genau das gewünschte Verhalten, wie in \autoref{subsec:idea3} beschrieben, umsetzt.
 Um den Dialog um einen weiteren \emph{Abbrechen-Button} zu ergänzen, musste die Library \emph{geforked} und anschließend musste dieser \emph{Fork} um den Button erweitert werden, da die Library an sich, eine solche Modifikation nicht vorgesehen hat. \todo{Fork erklären und Quelle}
+\todo{Picker vorher nachher}
+
+Um mit einem Gerüsttyp verlinkte Formen deutlicher zu kennzeichnen, wurde ein Icon \todo{icon zeigen} hinter den Text gehangen.
+Dies soll dafür sorgen, dass man beim Sehen des Indikators mit dem Icon direkt den Gerüsttyp-Dialog assoziiert.
+Außerdem wurde die Position des Indikators so verändert, dass dieser jetzt immer neben den eingetragenen Messwerten, falls diese vorhanden sind, oder sonst an deren Position angezeigt wird. \\
+\todo{Indikator vorher nachher}
+
+Im Gerüsttyp-Dialog wurden \emph{AutoCompleteTextField} Elemente benutzt, welche die eingetragenen Messwerte der Form beim Tippen vorschlagen.
+So hat der Nutzer direkt eine Übersicht über die zuvor eingetragenen Messwerte, und muss nicht zwischen Dialog und Bild hin und her wechseln. \\
+\todo{Dialog vorher nachher}
 
 Beide neuen Formen sind durch zwei Klassen, welche von der abstrakten Oberklasse \emph{MeasureShape} erben, modelliert und umgesetzt worden.
 Dieser Prozess war für das Hinzufügen der Pfeil-Form trivial, da diese nahezu identisch zu der bereits vorhandenen Linien-Form ist.
-Bei der Freitext-Form gab es jedoch ein paar Besonderheiten, die zu beachten waren.
+Bei der Freitext-Form gab es jedoch ein paar Besonderheiten, die zu beachten waren:
 So werden diese nicht wie die anderen Formen mit Hilfe einer Zeichen-Geste auf das Bild gezeichnet, sondern sollen beim Hinzufügen in der Mitte des derzeitigen Sichtbereichs erscheinen.
-Außerdem muss die Größe einer Textform abhängig vom eingegebenen Text dynamisch berechnet, und beim Verändern erneut angepasst werden. \\
-
-Um mit einem Gerüsttyp verlinkte Formen deutlicher zu kennzeichnen, wurde ein Icon \todo{icon zeigen} hinter dem Indikatortext angehangen.
-Dies soll dafür sorgen, dass man beim Sehen des Indikators mit dem Icon direkt den Gerüsttyp-Dialog assoziiert.
-Außerdem wurde die Position des Indikators so verändert, dass dieser jetzt immer neben den eingetragenen Messwerten, falls diese vorhanden sind, oder sonst genau an deren Position angezeigt wird. \\
-
-Der Gerüsttyp-Dialog wurde um Vorschläge bei den Textfeldern ergänzt, welche die eingetragenen Messwerte der Form anzeigen.
-So hat der Nutzer direkt eine Übersicht über die zuvor eingetragenen Messwerte, und muss nicht zwischen Dialog und Bild hin und her wechseln. \\
+Außerdem muss die Größe einer Text-Form abhängig vom eingegebenen Text dynamisch berechnet, und beim Verändern erneut angepasst werden. \\
+\todo{Zeige neue Formen nebeneinander in einem Bild}
 
 \subsection{Testing}
-Der dritte Prototyp war 8 Tage in den Arbeitsalltag integriert, bis es am 24. Januar 2018 Feedback zur Implementierung gab.
+Der dritte Prototyp war 8 Tage in den Arbeitsalltag der beiden Geschäftsführer integriert, bevor am 24. Januar 2018 Feedback zur Benutzung des Prototyps gesammelt wurde. \\
 
-Hierbei hat sich herausgestellt, dass alle Punkte, die sich während der Observation dieses Abschnittes als Probleme identifizieren lassen haben, gelöst wurden.
-Jedoch sind bei der Implementierung neuer Funktionen noch nicht bekannte Usability-Probleme aufgetregen.
-So machen die Freitext-Formen im parktischen Gebrauch das Bild zu unübersichtlich, da es keine Möglichkeit gibt, diese zu verkleinern oder auszublenden. \\
+Die neuen Freitext-Form sei laut Testpersonen in ihrer Funktion nützlich, habe aber den Nachteil, dass wenn mehrere auf dem selben Bild benutzt werden, diese schnell zu unübersichtlich werde. \\
 
-Außerdem hat sich als weiterer Negativpunkt identifizieren lassen, dass der Speichern-Dialog, bei dem man einen Titel für das annotierte Bild eintragen muss, sich nur mit dem Beschreibungs-Dialog, der in der vorhandenen Android-App nach dem Speichern des Bildes angezeigt wird, das Schreiben des gleichen Textes nach sich zieht.
-Dies ist ein Punkt der für den Benutzer sowohl nervig, als auch irritierend ist, da er ohne erkennbaren Grund dazu aufgefordert wird, an zwei verschiedenen Stellen den selben Text einzugeben. \\
+Zudem sei der Speicher-Dialog irritierend, da man sowohl im Dialog, als auch in der bestehenden App eine Beschreibung für das Bild eingeben muss.
+Dies sei ``[...] lästig, weil man zweimal den selben Text eintippen muss'' (Testperson X).
 
 \todo{ andere punkte in bb app }
