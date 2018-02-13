@@ -1,10 +1,10 @@
-\section{Implementation und Test des ersten Prototyp}\label{sec:pro1}
+\section{Implementation und Test des ersten Prototyps}\label{sec:pro1}
 
 \subsection{Implementation}
-In Kapitel 5 wurden, in Bezug auf die Evaluationsergebnisse aus dem vorherigen Kapitel, Umsetzungsmöglichkeiten für die verschiedenen Nielsen-Heuristiken herausgearbeitet.
-Diese sollen in die Implementierung des ersten Prototyp einfließen, und so für eine guten Grundstein für eine positive Benutzererfahrung der App sorgen. \\
+In \autoref{chap:concept} wurden, in Bezug auf die Evaluationsergebnisse aus dem vorherigen Kapitel, Umsetzungsmöglichkeiten für die verschiedenen Nielsen-Heuristiken herausgearbeitet.
+Diese sollen in die Implementierung des ersten Prototyps einfließen, und so einen guten Grundstein für eine positive Benutzererfahrung der App legen. \\
 
-Der erste Prototyp wurde am 16. Dezember 2017 in Form einer Android-Library fertiggestellt, auf \emph{JitPack.io}, einem online Service zum Verwalten und Teilen von Android-Projekten, hochgeladen, und so in die bestehende Android-App als Bibliothek eingebunden. \\
+Der erste Prototyp wurde am 16. Dezember 2017 in Form einer Android-Library fertiggestellt, auf \emph{JitPack.io}, einem online Service zum Verwalten und Teilen von Android-Projekten, hochgeladen, und so in die bestehende Android-App als \emph{Library} eingebunden. \\
 \todo{Hier bild von buid.gralde?}
 
 Bei der Implementierung wurde das Entwurfsmuster des \emph{Model-View-Controllers} eingesetzt, welches den Quellcode in drei verschiedene Komponente unterteilt (siehe \autoref{fig:mvc}).
@@ -21,7 +21,6 @@ Ziel dieses Musters ist es, eine flexible Architektur zu schaffen, die bei Bedar
 \noindent
 Zusätzlich wurde der Aufbau des Projekts in der \emph{Unified Modelling Language}, kurz \emph{UML}, modelliert.
 Dies ermöglicht bereits vor der eigentlichen Implementierung wichtige Begriffe und mögliche Beziehungen festzulegen, und einen Überblick über die benötigten Klassen zu bekommen.
-Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (die beiden weiteren Komponenten befinden sich im Anhang):
 
 \begin{figure}[h]
   \centering
@@ -31,11 +30,13 @@ Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (die beiden weite
 \end{figure}
 
 \noindent
+Die Komponente des \emph{Datenmodells} (siehe \autoref{fig:model1}) sah dabei wie folgt aus (die beiden weiteren Komponenten befinden sich im Anhang):
 In \autoref{fig:model1} ist zentral die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} ist.
-Diese vererbt die abstrakten Attribute \emph{points} und \emph{edges} an die Unterklassen, welche diese in ihrer Implementierung überschreiben müssen.
+Diese vererbt die abstrakten Attribute \emph{points} und \emph{edges} an die Unterklassen, die diese in ihrer Implementierung überschreiben müssen.
 Außerdem muss jeweils die öffentliche Methode \emph{drawShape(...)} implementiert werden.
 Dies sorgt dafür, dass jede Unterklasse selber dafür verantwortlich ist, wohin und wie ihre Form gezeichnet wird. 
 \emph{MeasureShape} selber implementiert drei verschiedene \emph{Interfaces}, die diverse Methoden zum Verschieben, Vergrößern und Editieren für alle ihre Unterklassen bereit stellen. \\
+\todo{Bilder vielleicht aufsplitten in Measureshape und UserAction}
 
 \noindent
 Eine weitere Klasse in dem \emph{Datenmodell} ist \emph{UserAction}.
@@ -55,7 +56,7 @@ In diesem ersten Prototyp unterstützt die App das Wiederholen bzw. rückgängig
 \noindent
 Funktional beschränkt sich die Implementierung des ersten Prototyps zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen. \\
 
-Dabei wurde eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie bei allen drei Applikationen aus Kapitel 4 umgesetzt wurde, zum schnelleren und einfacheren Einzeichnen von Formen benutzt. \\
+Dabei wurde eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie bei allen drei Applikationen aus \autoref{chap:eval} umgesetzt wurde, zum schnelleren und einfacheren Einzeichnen von Formen benutzt. \\
 
 Das Wechseln des Modus ist über einen \emph{Floating Action Button} im unteren rechten Bereich des Bildschirms möglich (siehe \autoref{fig:all1}).
 Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen importieren. \\
@@ -90,7 +91,7 @@ Falls zuvor eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten
   \label{fig:color1}
 \end{wrapfigure}
 
-Des Weiteren wird die aktuell markierte Form im Zeichen-Modus durch graue Kreise an den Eckpunkten hervorgehoben, und zugleich soll dem Benutzer hierdurch verdeutlicht werden, dass mit Hilfe dieser Kreise die Form in ihrer Größe und Lage bearbeitet werden kann. \\
+Des Weiteren wird die aktuell markierte Form im Zeichen-Modus durch graue Kreise an den Eckpunkten hervorgehoben, was dem Benutzer verdeutlichen soll, dass mit Hilfe dieser Kreise die Form in ihrer Größe und Position bearbeitet werden kann. \\
 
 Im Text-Modus bietet sich dem Benutzer die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu beschriften (siehe \autoref{fig:labeling1}).
 Hierzu öffnet sich beim langen Klick auf eine Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
@@ -116,7 +117,7 @@ Nachdem die App zwei Tage in den Arbeitsalltag der beiden Geschäftsführer der 
 
 Nach Aussage beider Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.
 So sei nicht intuitiv klar, dass die App über zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, verfügt.
-Zudem sei unklar, dass man über einen Klick auf den rechten \emph{Floating Action Button} zwischen den beiden Modi hin und her wechseln könne. \\
+Zudem sei unklar, dass man über einen Klick auf den rechten \emph{Floating Action Button} zwischen den beiden Modi hin und her wechseln kann. \\
 
 Ein weiteres Problem ergab sich laut Testpersonen X \todo{Wie hier differenzieren?} bei der Benutzung der App auf seinem Tablet.
 So seien sämtliche Texte nur schwer lesbar, und diverse Punkte zum Verändern der Formen zu klein, sodass sie nur mühsam und mit viel Konzentration mit dem Finger zu treffen seien. \\
@@ -129,4 +130,4 @@ Des Weiteren kam von beiden Testpersonen der Wunsch nach der Möglichkeit, Forme
 Außerdem wurde von beiden Testpersonen mehrfach angemerkt, dass es wünschenswert wäre, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst zurecht zu schneiden und eventuell drehen zu können.
 Dies sei eine essentielle Funktion, da es auf der Baustelle oftmals dazu komme, dass aufgenommene Bilder nicht nur das gewünschte Gerüst, sondern noch andere Objekte, die nicht relevant für das Bild seien, beinhalten. \\
 
-Ursachen und mögliche Lösungsideen dieser Probleme sollen im nächsten Abschnitt in einer weiteren Iteration des ``Human-Centered Design Process' weiter ausgewertet und mit Hilfe eines zweiten Prototyps - bestenfalls optimal - gelöst werden.
+Die Ursachen und mögliche Lösungsideen dieser Probleme sollen im nächsten Abschnitt in einer weiteren Iteration des ``Human-Centered Design Process'' ausgewertet und mit Hilfe eines zweiten Prototyps versucht gelöst zu werden.
