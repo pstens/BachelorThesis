@@ -1,20 +1,29 @@
-\chapter{Konzeption}
+\chapter{Konzeption}\label{chap:concept}
+(Idea Generation erste Iteration)
 
 Bei der Konzeption der eigenen Android-App liegt der Fokus auf der Erfüllung aller in Kapitel 4 als relevant klassifizierten Kriterien.
-Hierzu werden im Folgenden Implementierungsansätze vorgestellt, die für einen ersten Prototypen umgesetzt werden sollen.
+Hierzu werden im Folgenden Ideen vorgestellt, die in einem ersten Prototyp umgesetzt werden sollen.
 
 \section{Sichtbarkeit des Systemzustandes}
-Um dem Benutzer zu jeder Zeit einen Überblick über die App zu ermöglichen, soll eine Statusleiste, wie sie in Kapitel 4 bei allen drei Apps vorhanden war, eingesetzt.
-Diese soll einerseits den aktuellen Modus anzeigen, andererseits soll erkennbar sein, welche Aktionen in dem aktuellen Modus ausführbar sind, und welche nicht.
-\todo{Bottom bar ref}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{fab}
+  \caption{Floating Action Button}
+  \label{fig:fab}
+\end{wrapfigure}
+
+Um dem Benutzer zu jeder Zeit einen Überblick über den Systemzustand der App zu ermöglichen, soll ein \emph{Floating Action Button} (siehe \autoref{fig:fab}) eingesetzt werden, da dieser nicht viel Platz auf dem Bildschirm einnimmt, für den Benutzer dennoch jederzeit leicht zugänglich ist.
+So schreibt \citeauthor{SJ16} in seiner Usability-Studie zum Vergleich eines traditionellen Buttons mit einem \emph{FAB}, dass die Nutzung eines \emph{Floating Action Buttons} dazu führe, dass Aufgaben, nachdem sie einmal mit dem \emph{FAB} erfolgreich ausgeführt wurden, anschließend effizienter durchgeführt werden können als mit einem traditionellen Button \citep[Seiten 14--16]{SJ16}.
 
 \section{Übereinstimmung zwischen System und Welt}
 Zusätzlich soll die App in einer natürlichen und logischen Reihenfolge benutzbar sein.
 So soll dem Benutzer zuerst die Möglichkeit gegeben werden, ein gewünschtes Bild auszuwählen, welches im Anschluss daran in einer weiteren Benutzeroberfläche bearbeitet werden kann.
+\todo{Hier workflow?}
 
 \section{Benutzerkontrolle und -freieht}
-Gerade die fehlende Undo/Redo-Funktionalität hat sich bei den bei der App \pm{} als signifikantes Usability-Problem identifizieren lassen.
-In der App soll diese Funktionalität über zwei dedizierte Icons in der Menübar angeboten werden, um potentielle Verwirrung wie bei der App \im{} zu vermeiden.
+Gerade die fehlende Undo/Redo-Funktionalität hat sich bei der App \pm{} in \autoref{subsec:pmeva} als  signifikantes Usability-Problem identifizieren lassen.
+Aufgrund dessen soll diese Funktionalität über zwei dedizierte Icons in der Menüleiste angeboten werden, um potentielle Verwirrung wie in \autoref{subsec:imeva} bei der App \im{} zu vermeiden.
 \todo{Menüleiste aus anderen Apps mit Redo/Undo}
 
 \section{Konsistenz und Standards}
@@ -27,28 +36,29 @@ Hierzu sollen nicht-benutzbare Icons ausgegraut und nicht auswählbar gestaltet 
 \todo{disabled Icons in Apps}
 
 \section{Wiedererkennung statt Erinnern}
-Eine minimierte kongnitive Belastung soll durch die Verwedung von gleichen Icons für gleiche Aktionen erzielt werden.
+Eine minimierte kognitive Belastung soll durch die Verwendung von gleichen Icons für gleiche Aktionen erzielt werden.
 So soll im ``Zeichen-Modus'' als auch im ``Text-Modus'' ein Mülleimer-Icon in der Menüleiste die Möglichkeit bieten, die markierte Form bzw. den ausgewählten Text zu löschen.
 
-\section{Fleixibilität und Effizienz der Benutzung}
+\section{Flexibilität und Effizienz der Benutzung}
 Der Benutzer soll in der Lage sein, die gezeichneten Formen im Nachhinein zu bearbeiten.
 Hierzu soll es die Möglichkeit geben, dass der Benutzer bereits zu Beginn eine Standard-Farbe festlegen kann.
 Diese soll dann für alle neu eingezeichneten Formen benutzt werden.
 Zudem sollte es die Möglichkeit geben, einzelne Formen nachträglich anders färben zu können.
-Abkürzungen für erfahrene Benutzer sollen durch das Einführen von verschiedenen Gesten geben werden.
-So soll es zum Beispiel möglich sein, per Lang-Klick Geste auf eine Form Text eintragen zu können, anstatt erst in der Statusleiste die entsprechenden Button zu drücken.
+Abkürzungen für erfahrene Benutzer sollen durch das Einführen von verschiedenen Gesten gegeben werden.
+So soll es zum Beispiel möglich sein, per Lang-Klick Geste auf eine Form Text eintragen zu können, anstatt erst in der Statusleiste den entsprechenden Button zu drücken.
+Zudem soll die Möglichkeit bestehen, Texte im Nachhinein bearbeiten zu können, ohne diese erst löschen und dann neu erstellen zu müssen.
 \todo{Lang-Klick Geste}
 
 \section{Erkennbarkeit, Diagnose und Erholung von Fehlern}
-Durch das präventive Vermeiden von Situationen, in denen Fehler auftreten können, sollte der Nutzer zu keiner Zeit in die Lage geraten, sich von Fehlern erholen zu müssen.
-Sollte es dennoch zu einer solchen Situation kommen, so soll eine kurze, aber informative Nachricht in Form eines ``Toast'' auf dem Bildschirm angezeigt werden, welches dem Benutzer über den Fehler informiert, und präzise aber verständliche Anweisungen gibt, wie er diesen Fehler lösen kann. \todo{Toast bild}.
+Durch das präventive Vermeiden von Situationen, in denen Fehler auftreten können, sollte der Nutzer zu keiner Zeit in eine Fehlersituation gelangen können.
+Sollte es dennoch zu einer solchen Situation kommen, so soll eine kurze, aber informative Nachricht in Form eines ``Toasts'' auf dem Bildschirm angezeigt werden, welches dem Benutzer über den Fehler informiert, und präzise aber verständliche Anweisungen gibt, wie er diesen Fehler lösen kann.
+\todo{Toast bild}.
 Zu keiner Zeit sollte der Benutzer in eine endlose Schleife von Fehlerzuständen gelangen können, welche er nur durch das Beenden oder die Deinstallation der App unterbrechen kann.
 
 \section{Hilfe und Dokumentation}
-Wie in Kapitel 4 festgestellt, ist die Verwendung eines Hilfe-Overlays, welches über die eigentliche Benutzeroberfläche gelegt wird, sinnvoll. \todo{ref auf Kapitel}
-Dieses soll zum initialen Start der App den Benutzer über die verschiedenen Modi und deren Funktionen informieren.
-Beim jeweils ersten Wechsel in einen Modus soll ein anderes Hilfe-Overlay angezeigt werden, welches die verschiedenen Aktionen des ausgewählten Modus genauer erklärt.
-\todo{Tap Taget}
+Zur Hilfe und Dokumentation sollen sogenannte ``Content-Descriptions'' benutzt werden, die es dem Benutzer ermöglichen, bei einem langen Klick auf ein Icon einen kleinen Text angezeigt zu bekommen, der beschreibt, welche Funktion sich hinter dem Symbol verbirgt.
+Ein weiterer Vorteil bei der Benutzung von ``Content-Descriptions'' liegt in der Unterstützung von Screen-Readern und der Navigation per Keyboard.
+\todo{Content-Description Guidelines und besser rechtfertigen}
 
 \section{Adäquater Umgang mit Unterbrechungen}
 Die App soll bei Unterbrechung der derzeitigen Aktivität, wie der Navigation zu einer anderen App, oder dem Wechsel auf den Home-Bildschirm, alle Informationen speichern, und beim Zurückkehren in die pausierte App wieder vollständig anzeigen.
@@ -56,24 +66,25 @@ Dies kann durch die Implementierung eines \emph{Saved States} erzielt werden.
 \todo{Saved State}
 
 \section{Fokussieren der Informationen}
-Ein weiterer Wichtiger Umsetzungspunkt liegt beim Hervorheben wichtiger Informationen auf dem Bildschirm.
-So sollen markierte Formen durch die Benutzung einer Akzent-Farbe als Schatten oder Umrandung schnell erkennbar sein.
-\todo{Accent-Color}
+Ein weiterer notwendiger Punkt liegt beim Hervorheben wichtiger Informationen auf dem Bildschirm.
+So sollen Formen durch die Benutzung einer Akzent-Farbe als Schatten oder Umrandung schnell als ``markiert'' erkennbar sein und dem Benutzer einen schnellen Überblick über den Appzustand verschaffen.
+Außerdem sollen ausgefüllte Kreise an den Eckpunkten der zur Zeit markierten Formen dafür sorgen, dass ein ``Call-for-Action'' entsteht, der den Nutzer dazu animiert, die Form mit Hilfe dieser Eckpunkte in ihrer Form oder Position zu verändern.
+\todo{Accent-Color, Call for Action}
 
 \section{``Joy of Use''}
-Die Bedienung der App soll intuitiv und einfach sein, um ein positives Nutzungerlebnis zu garantieren.
+Die Bedienung der App soll intuitiv und einfach sein, um ein positives Nutzungserlebnis zu garantieren.
 Hierzu sollen verschiedene Gesten zur Navigation im Bild unterstützt werden.
 Unter anderem soll das Vergrößern und Verkleinern des Bildes durch Pinch und Doppel-Tap Gesten ermöglicht werden.
 Zudem sollen Swipe-Gesten dazu genutzt werden, eine schnelle und intuitive Navigation im Bild zu verwirklichen.
 \todo{Gesture Support, papers}
 
 \section{Unterstützung verschiedener Bildschirmausrichtungen}
-Insbesondere aufgrund der Zielgruppe im Gerüstbau soll die App im Querformat genau so einfach zu bedienen sein, wie im Hochformat.
+Insbesondere weil die App zur Bildbearbeitung eingesetzt werden soll, sollte sie im Querformat genau so einfach zu bedienen sein, wie im Hochformat.
 So sollen Bilder, die im Querformat aufgenommen werden, auch in diesem Bearbeitet werden können, ohne dass sich die Ausrichtung des Bildes unerwartet ändert.
 
 \section{Ergonomische Gestaltung der physischen Interatkion}
-Das Unabsichtliche Auslösen von Funktionen soll in allen Fällen vermieden werden.
-Hierzu muss insbesondere darauf geachtet werden, dass Swipe- und Zoom-Gesten verlässlich von Zeichen-Gesten unterschieden werden, um unabsichtliches Zeichnen von Formen, wie in Kapitel 4 beschrieben, zu vermeiden.
+Das unabsichtliche Auslösen von Funktionen soll in allen Fällen vermieden werden.
+Hierzu muss insbesondere darauf geachtet werden, dass Swipe- und Zoom-Gesten verlässlich von Zeichen-Gesten unterschieden werden, um unabsichtliches Zeichnen von Formen, wie in \autoref{chap:eval} beschrieben, zu vermeiden.
 \todo{Verwendung verschiedener Gesture-Listener}
 
 \section{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit}
