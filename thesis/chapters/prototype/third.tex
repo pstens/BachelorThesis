@@ -1,36 +1,48 @@
-\section{Dritte Iteration}\label{sec:pro3}
-Die beim Testen des zweiten Prototyps in \autoref{sec:pro2} identifizierten Probleme sollen nun in einer dritten Iteration des ``Human-Centered Design Process'' gelöst werden.
-Hierzu werden wie schon im vorherigen Abschnitt die vier Phasen des Zyklus durchlaufen, und am Ende festgehalten, ob ein weitere Iteration des Zyklus notwending ist, um eventuelle neue Usability-Probleme zu lösen.
+\chapter{Dritte Iteration}\label{chap:pro3}
+Die beim Testen des zweiten Prototyps in \autoref{sec:pro2} identifizierten Probleme sollen nun in einer dritten Iteration des \hcdp{} gelöst werden.
+Hierzu werden, wie schon im vorherigen Abschnitt, die vier Phasen des Zyklus ein weiteres Mal durchlaufen.
+Das Ziel dieses Kapitels ist es, durch die Entwicklung eines zweiten Prototyps die Usability-Probleme aus dem Ersten zu lösen.
 
-\subsection{Observation}\label{subsec:obs3}
-
-Um auch in diesem Abschnitt einen Überblick über die gesammelten Test-Ergebnisse zu bekommen, werden die diese im Nachfolgenden zur Übersicht aufgelistet, und in den folgenden Unterabschnitten weiter evaluiert:
+\section{Observation}\label{sec:obs3}
+Um auch in diesem Abschnitt einen Überblick über die gesammelten Test-Ergebnisse aus \autoref{sec:test2} zu bekommen, werden diese im Nachfolgenden zur Übersicht aufgelistet, und anschließend weiter evaluiert:
 
 \begin{enumerate}
-  \item Fehlende Hilfestellung beim initialen Start der App
-  \item Überforderung bei Benutzung des Farbdialogs
-  \item Wiedererkennbarkeit des Gerüsttyp-Indikators
-  \item Gedächtnisbelastung beim Eintragen der Messwerte in Gerüsttyp-Dialog
-  \item Einführen einer Freitext-Form
-  \item Einführen einer Pfeil-Form 
+  \item Hilfestellung beim initialen Start der App unzureichend
+  \item Auswahlmöglichkeiten im Farbdialog zu erweitert
+  \item Gerüsttyp-Indikator nicht intuitiv als solcher erkennbar
+  \item Kognitive Last beim Eintragen der Messwerte im Gerüsttyp-Dialog zu hoch
+  \item Anwenderwunsch: Einführen einer Freitext-Form
+  \item Anwenderwunsch: Einführen einer Pfeil-Form 
 \end{enumerate}
 
-Zu erkennen war, dass beide Testpersonen in \autoref{subsec:test2} Benutzungsprobleme aufgrund einer fehlenden Hilfestellung zur richtigen Benutzung der App hatten.
-Aufgrund dieser fehlenden Hilfe kam es bei beiden Testern zu einem negativen ersten Eindruck, und einer Situation, in der nur durch ``Ausprobieren'' die verschiedenen Funktionen der App erkundet werden konnte.
-Gerade diese beiden Punkte führen schnell zu einer negativen Benutzererfahrung und sind Probleme, die eine weitere Nutzung der App schon zu Beginn erschweren. \\
+\noindent
+Die Testergebnisse zeigen, dass beide Testpersonen in \autoref{sec:test2} Nutzungsprobleme aufgrund einer unzureichenden Hilfestellung beim initialen Start der App haben.
+Daher müssen Funktionen der App durch eine Art ``Trial and Error'' erkundet werden.
+Dies erzeugt nicht nur einen negativen ersten Eindruck beim Nutzer, sondern potenziert das Auftreten von Situationen, die vom Nutzer nicht beabsichtigt waren.
+Besonders diese beiden Punkte führen schnell zu einem negativen Anwendererlebnis der App, und erschweren somit bereits zu Beginn die Nutzung der App.
+(Nielsen~\autoref{itm:N5} \& \autoref{itm:N13}) \\
 
-Ein weiterer negativer Punkt war die Überforderung der Benutzer durch den Farbdialog.
-Durch die Möglichkeit eine beliebige Farbe mit Hilfe des Farbkreis auszuwählen und zusätzlich noch die Transparenz über eine weitere Einstellung anpassen zu können, wird der Benutzer mit Informationen überschüttet. \\
+Die zu fortgeschrittenen Auswahlmöglichkeiten im Farbdialog sind ein weiteres Usability-Problem, das sich während der Testphase in \autoref{sec:test2} gezeigt hat.
+Durch die Verwendung eines Farbkreises, der das Auswählen einer beliebigen Farbe und der dazugehörigen Transparenz ermöglicht, zeigen sich beide Testpersonen überfordert.
+Diese vielen Einstellungsmöglichkeiten übertreffen das Ziel des Benutzers, nämlich schnell und unkompliziert eine Farbe auszuwählen.
+(Nielsen~\autoref{itm:N12}) \\
 
-Die Benutzung einer einzelnen Zahl als Indikator für die Anzahl der verknüpften Gerüste zu einer Form hat sich während der Testphase als nicht sinnvoll herausgestellt.
-Hier fehlte den Testpersonen etwas Wiedererkennbares, um die Zahl mit den Gerüsttypen zu assozieren.  \\
+Außerdem zeigen die Testergebnisse, dass der verwendete Indikator für die verlinkten Gerüsttypen nicht intuitiv als solcher erkennbar ist.
+Die Benutzung einer einzelnen Zahl als Indikator für die Anzahl der verknüpften Gerüste zu einer Form hat nicht genug Wiedererkennungswert, um mit den Gerüsttypen assoziiert zu werden.
+Hier fehlt ein wiedererkennbares Icon, welches dem Benutzer den Kontext des Indikators intuitiv erkennbar macht.
+(Nielsen~\autoref{itm:N6}) \\
 
-Zudem wurden die kognitiven Fähigkeiten durch die Textfelder im Gerüsttyp-Dialog nur unnötig strapaziert.
-Für beide Tester trat immer wieder der Fall ein, dass sie den Dialog schließen mussten, um sich noch einmal zu vergewissern, welcher Messwert im Bild eingetragen war, bevor der Dialog wieder geöffnet, der passende Gerüsttyp wieder ausgewählt, und anschließend der zuvor gemerkte Messwert eingetragen werden konnte. \\
+Zudem belasten die Eingabefelder im Gerüsttyp-Dialog die kognitiven Fähigkeiten der Testpersonen zu schwer.
+Da die Eingabefelder keinerlei Vorschläge für die einzutragenden Werte bieten, müssen die Nutzer sich Messwerte merken, die sie anschließend in den Dialog eintragen wollen.
+Dies führt im schlimmsten Fall dazu, dass mehrfach zwischen Dialog und Bild gewechselt werden muss, um alle Messwerte in den Dialog eintragen zu können.
+Weil Dialoge unter Android nicht minimiert, und zu einem späteren Zeitpunkt wieder angezeigt werden können, muss der Benutzer alle zuvor eingetragenen Daten wieder eingeben.
+(Nielsen~\autoref{itm:N11}) \\
 
-\todo{Wie neue Funktionen beschreiben hier?}
+Zusätzlich zu den Usability-Problemen des ersten Prototyps, die sich in \autoref{sec:test2} gezeigt haben, gab es Wünsche für neue Funktionen, die regelmäßig im Arbeitsalltag gebraucht werden.
+So soll die App um zwei neue Formen, der Freitext- und Pfeil-Form, erweitert werden.
+Die Freitext-Form soll es dem Nutzer ermöglichen, beliebige Texte auf das Bild zu schreiben, ohne zuvor eine Form zeichnen zu müssen. Durch die Pfeil-Form sollen Längenmaße, die sich mit Hilfe der Linien-Form nicht gut abbilden lassen, dargestellt werden. \\
 
-\subsection{Idea Generation}\label{subsec:idea3}
+\section{Idea Generation}\label{sec:idea3}
 Um dem Benutzer beim Start der App einen Überblick über die beiden Modi und den darin enthaltenen Funktionen zu geben, soll dem Nutzer eine Hilfestellung beim initialen Start der App angezeigt werden.
 Dafür bietet sich entweder ein \emph{Onboarding-Pager} an, der den Benutzer mit Hilfe eines Vollbild-Dialogs die verschiedenen Funktionen der App vor dem eigentlich Start der App zeigt, oder das Verwenden verschiedener Hilfe-Overlays, welche erst dann angezeigt werden, sobald der Benutzer diese braucht.
 Hierbei könnte man zum Beispiel beim ersten Wechsel in den jeweiligen Modus eine Overlay anzeigen, welches die verschiedenen Aktionen in der Statusleiste erklärt. \\
@@ -52,7 +64,7 @@ Sowohl die Freitext- als auch die Pfeil-Form können mit Hilfe der bestehenden a
 Wichtig bei der Freitext-Form wird es sein, einen geeigneten Text-Hintergrund zu verwenden, damit der Text jederzeit ohne Anstrengung lesbar ist.
 \todo{Hintergrund für Texte}
 
-\subsection{Prototyping}
+\section{Prototyping}
 Der dritte Prototyp wurde am 16. Januar 2018 in die bestehende Android-App eingebunden.
 Bei der Implementierung dieses Prototyps wurde versucht alle in \autoref{subsec:idea3} genannten Ideen zur Lösung der Probleme aus \autoref{subsec:obs3} umzusetzen.
 
@@ -80,7 +92,7 @@ So werden diese nicht wie die anderen Formen mit Hilfe einer Zeichen-Geste auf d
 Außerdem muss die Größe einer Text-Form abhängig vom eingegebenen Text dynamisch berechnet, und beim Verändern erneut angepasst werden. \\
 \todo{Zeige neue Formen nebeneinander in einem Bild}
 
-\subsection{Testing}\label{subsec:test3}
+\section{Testing}\label{sec:test3}
 Der dritte Prototyp war 8 Tage in den Arbeitsalltag der beiden Geschäftsführer integriert, bevor am 24. Januar 2018 Feedback zur Benutzung des Prototyps gesammelt wurde. \\
 
 Die neuen Freitext-Form sei laut Testpersonen in ihrer Funktion nützlich, habe aber den Nachteil, dass wenn mehrere Text-Formen nebeneinander benutzt werden, das Bild schnell unübersichtlich werde. \\

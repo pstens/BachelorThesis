@@ -1,38 +1,42 @@
-\section{Zweite Iteration}\label{sec:pro2}
-
-In \autoref{sec:pro1} haben sich während der Testphase des ersten Prototyps sowohl neue Probleme als auch fehlende Funktionen identifizieren lassen.
+\chapter{Zweite Iteration}\label{chap:pro2}
+In \autoref{subsec:test1} haben sich während der Testphase des ersten Prototyps sowohl neue Probleme als auch fehlende Funktionen identifizieren lassen.
 Diese sollen bei der Entwicklung eines zweiten Prototyps in diesem Abschnitt berücksichtigt werden. 
 Hierzu werden die vier Phasen des \hcdp{} ein weiteres Mal durchlaufen.
 
-\subsection{Observation}
-Um einen Überblick über die Test-Ergebnisse aus \autoref{subsec:test1} herzustellen und eventuelle Ursachen zu identifizieren, werden diese im Nachfolgenden zunächst noch einmal aufgelistet und anschließend weiter evaluiert:
+\section{Observation}
+Um einen Überblick über die Test-Ergebnisse aus \autoref{subsec:test1} herzustellen, werden diese im Nachfolgenden zunächst noch einmal aufgelistet und anschließend weiter evaluiert:
 
 \begin{itemize}
-  \item Bedienung der App nicht intuitiv (\emph{Floating Action Buttons})
+  \item Bedienung der App nicht intuitiv
   \item Text- und Formelemente auf Tablet-Geräten nicht gut bedienbar
-  \item Eingetragene Messwerte bei dunkelen Hintergründen nicht gut erkennbar
-  \item Zuordnen von Gerüsttypen zu Formen nicht möglich
-  \item Zuschneiden und Rotieren des Bildes nicht möglich
+  \item Eingetragene Messwerte bei dunklem Hintergründen nicht gut erkennbar
+  \item Anwenderwunsch: Zuordnen von Gerüsttypen zu Formen
+  \item Anwenderwunsch: Zuschneiden und Rotieren des Bildes
 \end{itemize}
 
 \noindent
-Zunächst aufgefallen ist, dass beide Testpersonen in \autoref{subsec:test1} die \emph{Floating Action Buttons} als Hindernis bei der Benutzung der App beschrieben haben.
-Dadurch, dass die \emph{FABs} zu jeder Zeit immer nur ein Icon anzeigen, und erst beim Klick auf diese erkennbar wird, welche weiteren Aktionen möglich sind, wird dem Nutzer nur wenig bis keine Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen gegeben.
-Dies verletzt die Nielsen-Heuristik \autoref{itm:N1} und spiegelt sich in einer negativen Benutzererfahrung der App wieder. \\
+Zunächst auffällig ist, dass beide Testpersonen in \autoref{subsec:test1} die \emph{Floating Action Buttons} als Hindernis bei der Bedienung der App beschreiben.
+Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{Floating Action Button} angeklickt wird, und sonst nur ein einzelnes Icon angezeigt wird, wird dem Nutzer keine angemessene Rückmeldung über den aktuellen Systemzustand gegeben.
+Außerdem wird hierdurch keine ausreichende Hilfestellung zu den vorhandenen Funktionen, und wie diese zu benutzen sind gegeben.
+(Nielsen~\autoref{itm:N1} \& \autoref{itm:N10}) \\
 
-Ein weiterer Punkt, der in \autoref{subsec:test1} negativ aufgefallen ist, ist die Benutzung auf Tablet-Geräten.
-So ist die Nutzung der App auf Endgeräten mit einer hohen Pixeldichte mühsam und fehleranfällig.
-Da Text- und Formelemente, die auf kleineren Bildschirm ohne Probleme zu erkennen und bedienen sind, auf den größeren Bildschirmen nicht skaliert werden, sind diese bei einer höheren Pixeldichte des Geräts nur mühsam erkennbar, und produzieren so eine potentielle Quelle für Fehler (Nielsen~\autoref{itm:N5}).\\ 
+Ein weiterer Punkt, der in \autoref{subsec:test1} negativ aufgefallen ist, ist die Benutzung der App auf Tablet-Geräten.
+Damit Endgeräte mit einer großen Bildschirmdiagonale trotzdem über eine scharfe Auflösung verfügen, besitzen diese mehr Pixel pro Zentimeter bzw. eine höhere Pixeldichte.
+Da die UI-Elemente im ersten Prototyp mit Hilfe von \emph{Pixeln}, welche von Android zur Laufzeit nicht für die entsprechenden Bildschirmgrößen optimiert werden, modelliert worden sind, werden UI-Elemente auf Tablet-Geräten kleiner dargestellt, als auf normalen Smartphones.
+Dies erschwert die Benutzung der App auf Tablets, da Texte nur mühsam zu lesen, und Formen schwierig auszuwählen sind.
+So werden hier einerseits potentielle Fehlerquellen generiert, andererseits wird das Nutzungerlebnis auf Tablet-Geräten negativ beeinflusst.
+(Nielsen~\autoref{itm:N5} \& \autoref{itm:N13}) \\
 
-Die schlechte Lesbarkeit von eingetragenen Messwerten bei Bildern mit einem dunklen Hintergrund hängt vermutlich damit zusammen, dass die Textfarbe unabhängig von den Bildeigenschaften auf Grau festgelegt ist.
-So führt die graue Textfarbe in Kombination mit einem fehlenden Texthintergrund zur schlechten Lesbarkeit der Messwerte (Nielsen~\autoref{itm:N12}). \\
+Darüber hinaus zeigen die Testergebnisse, dass die Testpersonen Probleme beim Erkennen von eingetragenen Messwerten auf dunklen Bildern haben.
+Die schlechte Lesbarkeit der Messwerte resultiert wahrscheinlich aus der grauen Textfarbe, welche unabhängig vom Farbraum des Bildes festgelegt ist.
+Zudem fehlt ein Hintergrund, der unter dem Text liegt, und diesen so vom eigentlichen Bild abhebt.
+(Nielsen~\autoref{itm:N12}). \\
 
-Beim Testen der App ergab sich für beide Testpersonen außerdem das Problem, dass nach Funktionen gesucht wurde, die so im ersten Prototyp nicht vorhanden sind.
-Dies lässt darauf schließen, dass es sich um Funktionen handelt, die im Arbeitsalltag der Testpersonen regelmäßig benötigt werden, und daher in der App nicht fehlen sollten.
-So wurde sich die Funktion gewünscht, eingetragene Formen mit bereits vorhandenen Gerüsttypen zu verknüpfen, oder Bilder beim Import in die gewünschte Größe und Form bringen zu können.
-Das Fehlen dieser Funktionalitäten hat sich negativ auf das Andwendungserlebnis ausgewirkt, da hier die Übereinstimmung zwischen System und realer Welt nicht vollständig hergestellt wurde (Nielsen~\autoref{itm:N2}).
+Zusätzlich zu den Problemen, die während der Testphase des ersten Prototyps identifiziert worden sind, haben sich bei den Testpersonen Wünsche für Funktionen, die nicht in der Implementierung des ersten Prototyps zu finden sind, aber im Alltag regelmäßig benötigt werden, herauskristallisiert. 
+So soll die \emph{Library} zum Einen um eine Funktionen erweitert werden, die es ermöglicht, eingetragene Formen mit vordefinierten Gerüsttypen zu verknüpfen.
+Zum Anderen soll die Möglichkeit bestehen, Bilder beim Import in die App in die gewünschte Größe und Form schneiden zu können.
 
-\subsection{Idea Generation}\label{subsec:idea2}
+\section{Idea Generation}\label{sec:idea2}
 \todo{refs auf papers/guidelines wie bei Konzeption}
 Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art Statusleiste am unteren Bildschirmrand zu verankern.
 Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus (Zeichnen oder Text) informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten. \\
@@ -58,7 +62,7 @@ Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der i
 Ersteres bringt die Gefahr mit sich, dass die Verfügbarkeit einer solchen \emph{Crop-Activity} im Android-System vom Gerätehersteller und der verwendeten Android-Version abhängig ist, sodass nicht sichergestellt werden kann, dass die Funktion auf allen Geräten funktionieren wird. \\
 \todo{ref auf API docs}
 
-\subsection{Prototyping}
+\section{Prototyping}
 
 Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{subsec:idea2} gesammelten Ideen. \\
 
@@ -95,9 +99,9 @@ Auch in diesem Modus sind die Icons nur dann auswählbar, wenn der aktuelle Syst
 Für eine einfache und fehlerfreie Benutzung auf Tablet-Geräten wurden sämtliche Größen mit Hilfe von dichteunabhängigen Pixeln modelliert, wie sie in den \emph{Android-Developer Guides} vorgeschlagen werden \citep{DP18}.
 So werden hierbei alle Größen der Bildschirm-Elemente in der Einheit \emph{dp} (``density-independent pixel'') angegeben, welche zur Laufzeit vom System in normale Pixel (\emph{px}) umgewandelt werden.
 Die genaue Umformung lautet dabei wie folgt:
-$$
-px =  dp \times (\frac{dpi}{160}),
-$$
+\[
+  px =  dp \times (\frac{dpi}{160}),
+\]
 wobei $dp$ für ``dots per inch'' steht.
 Dies stellt sicher, dass, unabhängig von der Bilschirmgröße, alle Elemente ungefähr gleich groß dargestellt werden. \\
 \todo{Bild vorher nachher Resize Points}
@@ -115,7 +119,7 @@ Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop
 Diese bietet im Gegensatz zu der \emph{Crop-Activity}, welche von manchen Android-Versionen zur Verfügung gestellt wird, Unterstützung für alle Gerätehersteller ab der Android-Version $14$ an.
 \todo{Bilder lib}
 
-\subsection{Testing}\label{subsec:test2}
+\section{Testing}\label{sec:test2}
 Der zweite Prototyp wurde sechs Tage, vom 3. bis zum 9. Januar 2018, von den beiden Geschäftsführern in den Arbeitsalltag integriert.
 Das anschließende Feedback ergibt sich aus einem Gespräch am 9. Januar. \\
 
