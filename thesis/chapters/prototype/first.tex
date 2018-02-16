@@ -1,15 +1,17 @@
 \section{Implementation und Test des ersten Prototyps}\label{sec:pro1}
 
 \subsection{Implementation}
-In \autoref{chap:concept} wurden, in Bezug auf die Evaluationsergebnisse aus dem vorherigen Kapitel, Umsetzungsmöglichkeiten für die verschiedenen Nielsen-Heuristiken herausgearbeitet.
-Diese sollen in die Implementierung des ersten Prototyps einfließen, und so einen guten Grundstein für eine positive Benutzererfahrung der App legen. \\
+In \autoref{chap:concept} wurden Umsetzungsmöglichkeiten für die verschiedenen Bewertungskriterien aus \todo{ref auf sec} herausgearbeitet.
+Diese sollen in die Implementierung des ersten Prototyps einfließen, und so einen Grundstein für eine positive Benutzererfahrung der App legen. \\
 
-Der erste Prototyp wurde am 16. Dezember 2017 in Form einer Android-Library fertiggestellt, auf \emph{JitPack.io}, einem online Service zum Verwalten und Teilen von Android-Projekten, hochgeladen, und so in die bestehende Android-App als \emph{Library} eingebunden. \\
-\todo{Hier bild von buid.gralde?}
+Der erste Prototyp wurde am 16. Dezember 2017 in Form fertiggestellt und in die bestehende App eingebunden.
+Der Prototyp an sich wurde als \emph{Android-Library} programmiert, um den Quellcode möglichst übersichtlich und unabhängig von der bestehenden App schreiben zu können.
+Die Implementierung als \emph{Android-Library} erlaubt zudem kürzerer Kompilierungszeiten und eine einfachere Einbindung in bestehende Android-Projekte. \\
+\todo{jitpack nenne?}
 
 Bei der Implementierung wurde das Entwurfsmuster des \emph{Model-View-Controllers} eingesetzt, welches den Quellcode in drei verschiedene Komponente unterteilt (siehe \autoref{fig:mvc}).
 So gibt es einerseits das \emph{Datenmodell (model)}, die \emph{Präsentationskomponente (view)} und die \emph{Programmsteuerung (controller)}.
-Ziel dieses Musters ist es, eine flexible Architektur zu schaffen, die bei Bedarf leicht erweitert bzw. wiederverwendet werden kann.
+Ziel des Entwurfsmusters ist es, eine flexible Architektur zu schaffen, die bei Bedarf leicht erweitert bzw. wiederverwendet werden kann.
 
 \begin{figure}[h]
   \centering
@@ -31,18 +33,18 @@ Dies ermöglicht bereits vor der eigentlichen Implementierung wichtige Begriffe 
 
 \noindent
 Die Komponente des \emph{Datenmodells} (siehe \autoref{fig:model1}) sah dabei wie folgt aus (die beiden weiteren Komponenten befinden sich im Anhang):
-In \autoref{fig:model1} ist zentral die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} ist.
-Diese vererbt die abstrakten Attribute \emph{points} und \emph{edges} an die Unterklassen, die diese in ihrer Implementierung überschreiben müssen.
-Außerdem muss jeweils die öffentliche Methode \emph{drawShape(...)} implementiert werden.
-Dies sorgt dafür, dass jede Unterklasse selber dafür verantwortlich ist, wohin und wie ihre Form gezeichnet wird. 
-\emph{MeasureShape} selber implementiert drei verschiedene \emph{Interfaces}, die diverse Methoden zum Verschieben, Vergrößern und Editieren für alle ihre Unterklassen bereit stellen. \\
-\todo{Bilder vielleicht aufsplitten in Measureshape und UserAction}
+In \autoref{fig:model1} ist zentral die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} darstellt.
+\emph{MeasureShape} vererbt die abstrakten Attribute \emph{points} und \emph{edges} an ihre Unterklassen, die diese Attribute in überschreiben müssen.
+Außerdem muss die öffentliche Methode \emph{drawShape(...)} von beiden Unterklassen implementiert werden.
+Dies sorgt dafür, dass jede Unterklasse selber dafür ``verantwortlich'' ist, wie und wohin ihre Form gezeichnet wird.
+\emph{MeasureShape} selber implementiert die drei verschiedene \emph{Interfaces} \emph{Draggable, Resizable und Editable}, welche Schnittstellen zum Verschieben, Vergrößern und Editieren von Formen bereit stellen. \\
+\todo{hier nur MeasureShape zeigen und Rest in Anhang}
 
 \noindent
-Eine weitere Klasse in dem \emph{Datenmodell} ist \emph{UserAction}.
-Diese ist eine versiegelte (\emph{sealed}) Oberklasse, welche die verschiedenen Aktionen, die der Nutzer ausführen kann, darstellt.
+Eine weitere Klasse im \emph{Datenmodell} ist \emph{UserAction}.
+Diese ist eine versiegelte (\emph{sealed}) Oberklasse, welche die verschiedenen Benutzeraktionen darstellt.
 Versiegelt bedeutet in diesem Kontext, dass nur Klassen, welche im \emph{Scope} der Oberklasse liegen, von dieser erben können.
-In diesem ersten Prototyp unterstützt die App das Wiederholen bzw. rückgängig machen von den folgenden sechs Aktionen: 
+Folgende sechs Benutzeraktionen können in der Implementierung des ersten Prototyps über die Undo/Redo-Funktion rückgängig gemacht oder wiederhergestellt werden:
 
 \begin{itemize}
   \item Verschieben von Formen (\emph{DraggedShape})
@@ -54,14 +56,12 @@ In diesem ersten Prototyp unterstützt die App das Wiederholen bzw. rückgängig
 \end{itemize}
 
 \noindent
-Funktional beschränkt sich die Implementierung des ersten Prototyps zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen. \\
+Funktional beschränkt sich die Implementierung des ersten Prototyps zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen.
+Zum schnellen und präzisen Zeichnen der Formen wird eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie in allen drei Apps aus \autoref{chap:eval} umgesetzt wurde, verwendet.
+Der Prototyp verfügt über zwei verschiedene Modi, den Zeichen- und Text-Modus, zwischen denen mit Hilfe des \emph{Floating Action Buttons} im unteren rechten Bildschirmbereich umgeschaltet werden kann (siehe \autoref{fig:all1}).
+Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen in die App importieren. \\
 
-Dabei wurde eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie bei allen drei Applikationen aus \autoref{chap:eval} umgesetzt wurde, zum schnelleren und einfacheren Einzeichnen von Formen benutzt. \\
-
-Das Wechseln des Modus ist über einen \emph{Floating Action Button} im unteren rechten Bereich des Bildschirms möglich (siehe \autoref{fig:all1}).
-Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen importieren. \\
-
-Undo- sowie Redo-Funktion wurden auf dedizierte \emph{Buttons} in die obere Menüleiste gelegt.
+Undo- sowie Redo-Funktion befinden auf dedizierten \emph{Buttons} in der Menüleiste der App (siehe \autoref{fig:all1}).
 Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen, die Zeichenfarbe zu ändern, oder eine andere Form zum Zeichnen auszuwählen. \\
 
 \begin{figure}[h]
@@ -80,9 +80,9 @@ Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen,
 \end{figure}
 
 \noindent
-Beim Auswählen des Farb-Icons in der Menü-Leiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, aus einem Farbkreis die gewünschte Farbe auszuwählen (siehe \autoref{fig:color1}).
-Diese Farbe wird für alle neu eingezeichneten Formen standardmäßig benutzt.
-Falls zuvor eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten Farbe eingefärbt. \\
+Beim Auswählen des Farb-Icons in der Menüleiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, die gewünschte Farbe auszuwählen (siehe \autoref{fig:color1}).
+Diese Farbe wird als Standardfarbe für alle neuen Formen genutzt.
+Falls vor dem Öffnen des Dialogs eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten Farbe eingefärbt. \\
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -91,11 +91,11 @@ Falls zuvor eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten
   \label{fig:color1}
 \end{wrapfigure}
 
-Des Weiteren wird die aktuell markierte Form im Zeichen-Modus durch graue Kreise an den Eckpunkten hervorgehoben, was dem Benutzer verdeutlichen soll, dass mit Hilfe dieser Kreise die Form in ihrer Größe und Position bearbeitet werden kann. \\
-
-Im Text-Modus bietet sich dem Benutzer die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu beschriften (siehe \autoref{fig:labeling1}).
-Hierzu öffnet sich beim langen Klick auf eine Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
-Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante im Bild dargestellt (siehe \autoref{fig:label1}). \todo{neues Bild wo Messwert besser sichtbar}
+Graue Indikatoren an den Eckpunkten der aktuell ausgewählte Form sollen dem Nutzer verdeutlichen, dass dieser mit Hilfe der Indikatoren die Form in ihrer Größe und Position bearbeiten kann.
+Um Formen zu beschriften bietet sich dem Benutzer im Text-Modus die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu annotieren (siehe \autoref{fig:labeling1}).
+Hierzu öffnet sich beim langen Klick auf die Kante einer Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
+Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante im Bild dargestellt (siehe \autoref{fig:label1}). 
+\todo{neues Bild wo Messwert besser sichtbar}
 
 \begin{figure}[h]
   \begin{subfigure}[t]{0.4\textwidth}
@@ -112,7 +112,7 @@ Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante 
   \caption{Eintragen und Anzeigen von Messwerten im ersten Prototyp}
 \end{figure}
 
-\subsection{Rollout und Test}\label{subsec:test1}
+\subsection{Test}\label{subsec:test1}
 Nachdem die App zwei Tage in den Arbeitsalltag der beiden Geschäftsführer der Fa. VERO integriert und währenddessen getestet wurde, gab es am 18. Dezember Feedback zur Implementierung des ersten Prototyps. \\
 
 Nach Aussage beider Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.

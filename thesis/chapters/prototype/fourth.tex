@@ -1,29 +1,30 @@
-\section{Vierte Iteration}
-Die während der dritten Iteration in \autoref{sec:pro3} identifizierten Usability-Probleme sollen im folgenden Abschnitt weiter analysiert und im besten Fall gelöst werden.
-Hierzu wird eine weitere Iteration des ``Human-Centered Design Process'' ausgeführt.
+\chapter{Vierte Iteration}
+Die während der dritten Iteration in \autoref{chap:pro3} identifizierten Usability-Probleme und Anwenderwünsche sollen in diesem Kapitel gelöst werden.
+Hierzu wird eine weitere Iteration des \hcdp{} ausgeführt.
 
-\subsection{Observation}
-Um die in \autoref{subsec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehung genauer zu analysieren, werden diese zuerst noch einmal aufgelistet und anschließend weiter beleuchtet.
+\section{Observation}
+Um die in \autoref{sec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehung genauer zu evaluieren, werden diese zuerst aufgelistet und anschließend weiter beleuchtet.
 
 \begin{itemize}
-  \item Verwendung mehrerer Freitext-Formen machen Bild zu unübersichtlich
-  \item Verwirrung durch doppelte Eingabe beim Speichern
+  \item Verwendung mehrerer Freitext-Formen im Bild zu unübersichtlich
+  \item Doppelte Eingabe des Bildtitles beim Speichern irritierend
 \end{itemize}
 
 \noindent
-Beide Testpersonen berichten in \autoref{subsec:test3} von einer Unübersichtlichkeit bei der Verwendung von mehreren Text-Formen.
-Dies könnte damit zusammenhängen, dass die Größe des Texts dem Zoom-Level der Anwendung angepasst wird.
-So wird der Text kleiner, wenn man in das Bild hereinzoomt, und größer wenn man wieder herauszoomt.
-Auf diese Weise soll sichergestellt werden, dass der Text zu jeder Zeit lesbar ist.
-Im herausgezoomten Zustand nehmen die Text-Formen jedoch zu viel Platz auf dem Bildschirm ein.
-Dies könnte daraus resultieren, dass es keine Möglichkeit gibt, die Textgröße anzupassen oder die Formen
-manuell zu verkleinern. \\
+Beide Testpersonen berichten in \autoref{sec:test3} von einer Unübersichtlichkeit bei der Verwendung von mehreren Text-Formen.
+Die Schriftgröße des Textes wird dem aktuellen Zoom-Level der App angepasst.
+So verkleinert sich der Text, wenn der Nutzer in das Bild hereinzoomt, und vergrößert sich wieder, sobald herausgezoomt wird.
+Auf diese Weise soll sichergestellt werden, dass der Text unabhängig vom Zoom-Level jederzeit lesbar ist.
+Im herausgezoomten Zustand wird die Schriftgröße jedoch so stark vergrößert, dass die gesamte Text-Form zu viel Platz auf dem Bildschirm einnimmt.
+Erstellt der Nutzer jetzt mehrere Text-Formen so kann es schnell passieren, dass diese überlappen, und den gesamten Sichtbereich verdecken.
+(Nielsen~\autoref{itm:N12}) \\ 
 
-Die Verwirrung beim Speichern von Bildern hängt mit der doppelten Eingabe der Bildbeschreibung beim Speichern zusammen.
+Außerdem zeigen die Testergebnisse, dass es beim Speichern des bearbeiteten Bildes zu einer doppelten Eingabe des Titels kommt.
 So muss der Benutzer einmal beim Speichern des Bildes innerhalb der \emph{Library} eine Beschreibung eingeben, und anschließend ein zweites Mal beim Hochladen des Bildes in der bestehenden App.
-Diese doppelte Eingabe der gleichen Beschreibung ist für den Benutzer nicht nachvollziehbar und sorgt so nur für unnötige Verwirrung. \\
+Diese doppelte Eingabe der exakt gleichen Beschreibung ist für den Benutzer nicht nachvollziehbar und sorgt drüber hinaus für unnötige Verwirrung.
+(Nielsen~\autoref{itm:N1} \& \autoref{itm:N17}) \\ 
 
-\subsection{Idea Generation}\label{subsec:idea4}
+\section{Idea Generation}\label{subsec:idea4}
 Um das Bild auch bei der Verwendung von mehreren Text-Formen übersichtlich zu halten, bietet es sich an die Textgröße der Formen konfigurierbar zu machen.
 Eine Alternative hierzu wäre es, die Formen verkleinerbar zu gestalten, sodass der Nutzer selber entscheiden kann, welche Notiz zu welcher Zeit sichtbar sein soll, und welche zum Beispiel nur als \emph{Icon} auf dem Bild zu sehen ist. \\
 \todo{Collapsable Views?}
@@ -32,7 +33,7 @@ Die doppelte Eingaben der Bildbeschreibung beim Speichern lässt sich durch das 
 So kann bei der bestehenden App der Speicher-Dialog in der \emph{Library} einfach ausgeblendet werden, und so das doppelte Eintragen einer Beschreibung vermieden werden. \\
 \todo{Konfigurierabare Libs?}
 
-\subsection{Prototyping}
+\section{Prototyping}
 Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{subsec:idea4} genannten Ideen umzusetzen. \\
 
 Für die bessere Übersichtlichkeit bei der Verwendung von mehreren Text-Formen wurde die Funktion implementiert, dass Text-Formen über einen Doppel-Klick ihre Form verändern können.
@@ -43,7 +44,7 @@ Dies soll dem Benutzer die Möglichkeit geben, selber zu entscheiden, welcher Te
 Der Speicher-Dialog wurde durch das Setzen eines optionalen Parameters in der \emph{Library} ausgeblendet, und ist so bei der Benutzung in der bestehenden Android-App nicht mehr zu sehen.
 Hier wird das Bild direkt, ohne zuvor nach einer Beschreibung zu fragen, auf dem Handy gespeichert. \\
 
-\subsection{Testing}
+\section{Testing}
 Feedback zur Nutzungserfahrung des vierten Prototyps gab es X Tage nach dem Rollout von den beiden Geschäftsführern. \\
 
 In dieser vierten Iteration des ``Human-Centered Design Process'' seien keine weiteren Probleme bei der Benutzung der App aufgefallen.
