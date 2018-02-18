@@ -89,7 +89,7 @@ Falls vor dem Öffnen des Dialogs eine Form markiert wurde, wird diese ebenfalls
   \label{fig:color1}
 \end{wrapfigure}
 
-Graue Indikatoren an den Eckpunkten der aktuell ausgewählte Form sollen dem Nutzer verdeutlichen, dass dieser mit Hilfe der Indikatoren die Form in ihrer Größe und Position bearbeiten kann.
+Graue Indikatoren an den Eckpunkten der aktuell ausgewählte Form sollen dem Nutzer verdeutlichen, dass diese mit Hilfe der Indikatoren in ihrer Größe und Position bearbeitet werden kann.
 Um Formen zu beschriften bietet sich dem Benutzer im Text-Modus die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu annotieren (siehe \autoref{fig:labeling1}).
 Hierzu öffnet sich beim langen Klick auf die Kante einer Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
 Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante im Bild dargestellt (siehe \autoref{fig:label1}). 
@@ -111,21 +111,45 @@ Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante 
 \end{figure}
 
 \section{Test}\label{sec:test1}
-Nachdem die App zwei Tage in den Arbeitsalltag der beiden Geschäftsführer der Fa. VERO integriert und währenddessen getestet wurde, gab es am 18. Dezember Feedback zur Implementierung des ersten Prototyps. \\
+\todo{Vielleicht noch ein bisschen ausschmücken}
+Zum Testen des Prototyps wurde dieser in die App der beiden Geschäftsführer der Fa. \vr{} (siehe \autoref{table:testers}) eingebunden.
+Testperson 1, André Vermeulen, repräsentiert hierbei den ``Poweruser'' der App, wohingegen Testperson 2, Sebastian Wiesbrock, die App eher selten nutzt.
+Beiden Testern wurde weder eine verbale noch schriftliche Hilfestellung zur Verfügung gestellt.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l | c | c}
+    \hline
+    \textbf{Testperson} & \textbf{1} & \textbf{2} \\
+    \hline
+    \textbf{Name} & André Vermeulen & Sebastian Wiesbrock \\
+    \hline
+    \textbf{Rolle} & Geschäftsleitung & Geschäftsleitung \\
+    \hline
+    \textbf{Alter} & ? & ? \\
+    \hline
+    \textbf{Nutzungsgrad der App} & hoch & niedrig \\
+    \hline
+  \end{tabular}
+  \caption{Demografische Daten der Testpersonen}
+  \label{table:testers}
+\end{table}
+
+\todo{Zeit kontrollieren}
+Nachdem die beiden Tester den Prototyp zwei Tage in ihren Arbeitsalltag integriert haben, wurden am 18. Dezember die Testergebnisse gesammelt. \\
 
 Nach Aussage beider Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.
 So sei nicht intuitiv klar, dass die App über zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, verfügt.
 Zudem sei unklar, dass man über einen Klick auf den rechten \emph{Floating Action Button} zwischen den beiden Modi hin und her wechseln kann. \\
 
-Ein weiteres Problem ergab sich laut Testpersonen X \todo{Wie hier differenzieren?} bei der Benutzung der App auf seinem Tablet.
-So seien sämtliche Texte nur schwer lesbar, und diverse Punkte zum Verändern der Formen zu klein, sodass sie nur mühsam und mit viel Konzentration mit dem Finger zu treffen seien. \\
+Ein weiteres Problem ergab sich laut Testpersonen 1 bei der Benutzung der App auf seinem Tablet.
+So seien sämtliche Texte nur schwer lesbar, und die Punkte zum Verändern der Formen so klein, dass sie nur mühsam und mit viel Konzentration mit dem Finger zu treffen seien. \\
 
-Ein weiteres Problem, was beide Testpersonen schilderten, war die schlechte Lesbarkeit von eingetragenen Messwerten auf Bildern, die in dunkleren Lichtverhältnissen aufgenommen wurden.
+Darüber hinaus schilderten beide Testpersonen, dass eingetragene Messwerte auf Bildern, die in dunkleren Lichtverhältnissen aufgenommen wurden, nur schlecht lesbar seien.
 Hier setze sich die Textfarbe zu schlecht vom Hintergrund ab. \\
 
-Des Weiteren kam von beiden Testpersonen der Wunsch nach der Möglichkeit, Formen mit bereits vorhandenen Gerüsttypen wie zum Beispiel ``Hängegerüst'' oder ``Standgerüst'' zu verbinden, und in den Meta-Daten des Bildes zu speichern. \\
+Zusätzlich zu den identifizierten Usability-Problemen kam bei beiden Testern der Wunsch nach neuen Funktionen auf, die sie sich als nützliche Erweiterungen hinsichtlich ihres Arbeitsalltags vorstellen konnten.
+So wünschten sich beide Testpersonen einerseits die Möglichkeit, Formen mit bereits vorhandenen Gerüsttypen wie zum Beispiel ``Hängegerüst'' oder ``Standgerüst'' zu verbinden, und in den Meta-Daten des Bildes zu speichern.
+Andererseits wurde angemerkt, dass es sinnvoll sei, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst in die gewünschte Größe und Form schneiden zu können, da es oftmals auf der Baustelle vorkomme, dass die aufgenommenen Bilder nicht nur das gewünschte Gerüst, sondern auch andere Objekte, die für das Bild nicht relevant sind, beinhalten. \\
 
-Außerdem wurde von beiden Testpersonen mehrfach angemerkt, dass es wünschenswert wäre, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst zurecht zu schneiden und eventuell drehen zu können.
-Dies sei eine essentielle Funktion, da es auf der Baustelle oftmals dazu komme, dass aufgenommene Bilder nicht nur das gewünschte Gerüst, sondern noch andere Objekte, die nicht relevant für das Bild seien, beinhalten. \\
-
-Die Ursachen und mögliche Lösungsideen dieser Probleme sollen im nächsten Abschnitt in einer weiteren Iteration des ``Human-Centered Design Process'' ausgewertet und mit Hilfe eines zweiten Prototyps versucht gelöst zu werden.
+Die Ursachen und mögliche Lösungsideen der Probleme, die während dieser Testphase identifiziert wurden, sollen im nächsten Abschnitt in einer weiteren Iteration des \hcdp{} ausgewertet und mit Hilfe eines zweiten Prototyps gelöst werden.
