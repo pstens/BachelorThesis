@@ -9,7 +9,7 @@ Um einen Überblick über die Test-Ergebnisse aus \autoref{sec:test1} herzustell
 \begin{itemize}
   \item Bedienung der App nicht intuitiv
   \item Text- und Formelemente auf Tablet-Geräten nicht gut bedienbar
-  \item Eingetragene Messwerte bei dunklem Hintergründen nicht gut erkennbar
+  \item Eingetragene Messwerte bei dunklem Hintergrund nicht gut erkennbar
   \item Anwenderwunsch: Zuordnen von Gerüsttypen zu Formen
   \item Anwenderwunsch: Zuschneiden und Rotieren des Bildes
 \end{itemize}
@@ -20,11 +20,12 @@ Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{Floating A
 Außerdem wird hierdurch keine ausreichende Hilfestellung zu den vorhandenen Funktionen, und wie diese zu benutzen sind gegeben.
 (Nielsen~\autoref{itm:N1} \& \autoref{itm:N10}) \\
 
+\todo{Formulierung}
 Ein weiterer Punkt, der in \autoref{sec:test1} negativ aufgefallen ist, ist die Benutzung der App auf Tablet-Geräten.
 Damit Endgeräte mit einer großen Bildschirmdiagonale trotzdem über eine scharfe Auflösung verfügen, besitzen diese mehr Pixel pro Zentimeter bzw. eine höhere Pixeldichte.
 Da die UI-Elemente im ersten Prototyp mit Hilfe von \emph{Pixeln}, welche von Android zur Laufzeit nicht für die entsprechenden Bildschirmgrößen optimiert werden, modelliert worden sind, werden UI-Elemente auf Tablet-Geräten kleiner dargestellt, als auf normalen Smartphones.
 Dies erschwert die Benutzung der App auf Tablets, da Texte nur mühsam zu lesen, und Formen schwierig auszuwählen sind.
-So werden hier einerseits potentielle Fehlerquellen generiert, andererseits wird das Nutzungerlebnis auf Tablet-Geräten negativ beeinflusst.
+So werden hier einerseits potentielle Fehlerquellen generiert, andererseits wird das Nutzungserlebnis auf Tablet-Geräten negativ beeinflusst.
 (Nielsen~\autoref{itm:N5} \& \autoref{itm:N13}) \\
 
 Darüber hinaus zeigen die Testergebnisse, dass die Testpersonen Probleme beim Erkennen von eingetragenen Messwerten auf dunklen Bildern haben.
@@ -33,29 +34,32 @@ Zudem fehlt ein Hintergrund, der unter dem Text liegt, und diesen so vom eigentl
 (Nielsen~\autoref{itm:N12}). \\
 
 Zusätzlich zu den Problemen, die während der Testphase des ersten Prototyps identifiziert worden sind, haben sich bei den Testpersonen Wünsche für Funktionen, die nicht in der Implementierung des ersten Prototyps zu finden sind, aber im Alltag regelmäßig benötigt werden, herauskristallisiert. 
-So soll die \emph{Library} zum Einen um eine Funktionen erweitert werden, die es ermöglicht, eingetragene Formen mit vordefinierten Gerüsttypen zu verknüpfen.
+So soll der Prototyp zum Einen um eine Funktionen erweitert werden, die es ermöglicht, eingetragene Formen mit vordefinierten Gerüsttypen zu verknüpfen.
 Zum Anderen soll die Möglichkeit bestehen, Bilder beim Import in die App in die gewünschte Größe und Form schneiden zu können.
 
 \section{Idea Generation}\label{sec:idea2}
-\todo{refs auf papers/guidelines wie bei Konzeption}
 Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art Statusleiste am unteren Bildschirmrand zu verankern.
-Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus (Zeichnen oder Text) informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten. \\
-\todo{Worauf hier reffen?}
+Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten.
+Die \mg{} suggerieren hierfür die Nutzung einer sogenannten ``Bottom navigation''.
+Diese kann nach \citeauthor{BN18} dazu eingesetzt werden, um die Erkundung von Apps einfach zu gestalten, und den Wechsel zwischen Ansichten auf der obersten Ebene der App zu beschleunigen \citep{BN18}. \\
 
-Für eine bessere und einfachere Benutzung der App auf Tablet-Geräten könnte eine zweite Benutzeroberfläche, die nur bei Geräten mit einer Displaybreite von beispielsweise mindestens $600$ Pixeln benutzt wird, in die App eingebunden werden. 
-Alternativ besteht die Möglichkeit, die Größe diverser Text- und Formelemente mit der Bildschirmgröße zu skalieren.
-Dies hat den Effekt, dass Bildschirm-Elemente bei verschiedenen Bildschirmgrößen immer ungefähr gleich groß sind.
+Für eine bessere und einfachere Benutzung der App auf Tablet-Geräten kann eine zweite Benutzeroberfläche, die nur auf Tablet-Geräten angezeigt wird, in die App eingebunden werden. 
+Hierzu heißt es in  den ``Developer Guides'' von ``Android'' im Abschnitt ``Supporting Multiple Screens'', dass Entwickler verschiedene Konfigurationskriterien festlegen können, die zur Laufzeit der App ausgewertet werden, und in der Benutzung verschiedener Ressourcen wie zum Beispiel der angezeigten Oberfläche resultieren \citep[How to Support Multiple Screens]{SS18}.
+So gibt beispielsweise das Kriterium \emph{sw720dp} an, dass alle Geräte, die eine Bildschirmbreite von mindestens $720dp$ besitzen, die Ressourcen benutzen, welche mit \emph{sw720dp} gekennzeichnet sind.
+Dies kann dazu genutzt werden, um eine dedizierte Benutzeroberfläche mit größeren Icons und Texten für Tablet-Geräte bereit zu stellen.
+Alternativ besteht die Möglichkeit, eine Oberfläche für alle Geräte zu nutzen, aber die Größe diverser Text- und Formelemente mit der Bildschirmgröße zu skalieren.
+Die ``Developer Guidelines'' schlagen hierzu die Nutzung sogenannter ``dichteunabhängiger Pixel'' vor \citep[Density Independence]{SS18}.
+Diese können dazu genutzt werden, um dem System die Skalierung sämtlicher UI-Elemente zu überlassen, was zur Folge hat, dass diese auf unterschiedlichen Bildschirmgrößen gleich groß dargestellt werden.
 \\
-\todo{Supporting multiple screens android devguides}
 
-Die schlechte Erkennbarkeit von eingetragenen Messwerten auf Bildern mit dunklem Hintergrund lässt sich durch das Anpassen der Textfarbe in Kombination mit der Benutzung eines Texthintergrundes lösen.
-So könnte, wie bei \emph{Toasts}, die im Android System seit API X vorhanden sind, ein dunkler Hintergrund mit einem hellen Text dazu genutzt werden, eingetragene Messwerte unabhängig von den Lichtverhältnissen im Bild gut erkennbar zu gestalten. \\
-\todo{ref auf toast}
+Die schlechte Erkennbarkeit von eingetragenen Messwerten auf Bildern mit dunklem Hintergrund sollen durch das Anpassen der Textfarbe in Kombination mit der Benutzung eines Texthintergrundes gelöst werden.
+\citeauthor{Jankowski10} schreiben hierzu in ihrer Arbeit ``Integrating Text with Video and 3D Graphics: The Effects of Text Drawing Styles on Text Readability'' aus dem Jahr 2010, dass ein Plakatwand-ähnlicher Zeichenstil zur schnellsten und genausten Erkennbarkeit des Textes führt \citep[Seite 1330]{Jankowski10}.
+Zudem führe die Benutzung von weißem Text auf einem halbtransparenten schwarzen Hintergrund zu einer deutlich schnelleren und genaueren Erkennbarkeit des Textes als die Verwendung von schwarzer Schrift auf weißem Hintergrund \citep[Seite 1328]{Jankowski10}.
 
-Um Formen direkt den passenden Gerüsttypen zuzuordnen, bietet sich ein modaler Dialog an.
+Um Formen direkt den passenden Gerüsttypen zuzuordnen, bietet sich die Verwendung eines modalen Dialogs an.
 Dieser könnte zum Beispiel bei einem langen Klick auf die gewünschte Form angezeigt werden, und in einem \emph{Dropdown} vorhandene Gerüsttypen zur Auswahl anbieten.
-Falls ein langer Klick auf die Form bei der ersten Benutzung zu kontraintuitiv ist, würde sich eine Option in der oben beschriebenen Statusleiste anbieten, die nur dann auswählbar ist, wenn zuvor eine Form markiert wurde.
-Zudem muss an der From selbst erkenntlich werden, dass diese mit einem Gerüsttypen verlinkt ist. \\
+Falls ein langer Klick auf die Form bei der ersten Benutzung zu kontraintuitiv ist, würde sich ein \emph{Button} anbieten, der nur dann auswählbar ist, wenn zuvor eine Form markiert wurde.
+Zudem sollte die Form erkenntlich machen, dass sie bereits mit einem Gerüsttyp verlinkt ist.
 \todo{Dropdowns und long press gestures}
 
 Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der im Android-System vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer dedizierten \emph{Android-Library} für das Schneiden von Bildern anbieten.
@@ -63,8 +67,7 @@ Ersteres bringt die Gefahr mit sich, dass die Verfügbarkeit einer solchen \emph
 \todo{ref auf API docs}
 
 \section{Prototyping}
-
-Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{subsec:idea2} gesammelten Ideen. \\
+Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{sec:idea2} gesammelten Ideen. \\
 
 Die Statusleiste wurde durch eine \emph{Bottom-Bar} am unteren Bildschirmrand umgesetzt (siehe \autoref{fig:bar2}).
 
