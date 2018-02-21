@@ -59,17 +59,18 @@ Zudem führe die Benutzung von weißem Text auf einem halbtransparenten schwarze
 Um Formen direkt den passenden Gerüsttypen zuzuordnen, bietet sich die Verwendung eines modalen Dialogs an.
 Dieser könnte zum Beispiel bei einem langen Klick auf die gewünschte Form angezeigt werden, und in einem \emph{Dropdown} vorhandene Gerüsttypen zur Auswahl anbieten.
 Falls ein langer Klick auf die Form bei der ersten Benutzung zu kontraintuitiv ist, würde sich ein \emph{Button} anbieten, der nur dann auswählbar ist, wenn zuvor eine Form markiert wurde.
-Zudem sollte die Form erkenntlich machen, dass sie bereits mit einem Gerüsttyp verlinkt ist. \\
-\todo{Dropdowns und long press gestures}
+Zudem sollte an der Form erkenntlich werden, dass sie bereits mit einem Gerüsttyp verlinkt ist. \\
+\todo{Guidelines zu Dropdowns und long press gestures hier?}
 
 Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der im Android-System vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer dedizierten \emph{Android-Library} für das Schneiden von Bildern anbieten.
-Ersteres bringt die Gefahr mit sich, dass die Verfügbarkeit einer solchen \emph{Crop-Activity} im Android-System vom Gerätehersteller und der verwendeten Android-Version abhängig ist, sodass nicht sichergestellt werden kann, dass die Funktion auf allen Geräten funktionieren wird.
-\todo{ref auf API docs}
+Ersteres birgt die Gefahr in sich, dass die Verfügbarkeit einer solchen \emph{Crop-Activity} im Android-System vom Gerätehersteller und der verwendeten Android-Version abhängig ist.
+Hierdurch kann nicht sichergestellt werden, dass die Funktion auf allen Geräten funktioniert.
+\todo{ref auf API docs und crop activity thread stack-overflow}
 
 \section{Prototyping}
 Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{sec:idea2} gesammelten Ideen. \\
-Die Statusleiste wurde durch eine \emph{Bottom-Navigation Bar} am unteren Bildschirmrand umgesetzt (siehe \autoref{fig:bar2}).
 
+Die Statusleiste wurde durch eine \emph{Bottom-Navigation Bar} am unteren Bildschirmrand umgesetzt (siehe \autoref{fig:bar2}).
 \begin{figure}[ht]
   \begin{subfigure}[t]{0.4\textwidth}
     \includegraphics[keepaspectratio, width=\textwidth]{prototype2/expanded_mode}
@@ -85,12 +86,11 @@ Die Statusleiste wurde durch eine \emph{Bottom-Navigation Bar} am unteren Bildsc
   \caption{Bedienung der Statusleiste im zweiten Prototyp}
   \label{fig:bar2}
 \end{figure}
-
 Diese besteht aus vier verschiedenen Icons, die nur dann auswählbar sind, wenn die entsprechende Aktion im aktuellen Systemzustand durchführbar ist.
 Das Pinsel- bzw. Text-Icon ganz links in der Leiste ermöglicht das Wechseln zwischen dem Zeichen- und Text-Modus (siehe \autoref{fig:mode2}). \\
 
 Im Zeichen-Modus (vgl. \autoref{fig:mode2}) kann per Klick auf das zweite Icon von links die gewünschte Form ausgewählt werden. 
-Das Icon passt sich beim Ändern der Form an, und gibt so jederzeit Auskunft über die aktuell ausgewählte Form.
+Das Icon passt sich beim Ändern der Form an, und gibt so jederzeit Auskunft über die aktuell ausgewählte Zeichenform.
 In \autoref{fig:mode2} ist bspw. zur Zeit die Linien-Form ausgewählt.
 Im selben Modus kann beim Klick auf das dritte Icons (Farbpalette) die gewünschte Zeichenfarbe im Voraus konfiguriert werden. 
 Hierzu öffnet sich, wie schon beim ersten Prototyp, ein modaler Farbauswahl-Dialog.
@@ -101,14 +101,14 @@ Hierbei wird der Nutzer nicht nach einer Bestätigung des Löschvorgangs gefragt
 
 Im Text-Modus kann beim Klick auf das zweite Icon von links (Plus-Zeichen) entweder eine ausgewählte Form mit einer Beschriftung versehen, oder mit einem Gerüsttyp verknüpft werden (siehe \autoref{fig:labelp2}).
 Beim Hinzufügen einer Beschriftung öffnet sich ein modaler Eingabedialog, in den der Benutzer den gewünschten Text eintragen kann.
-Entscheidet sich der Nutzer die ausgewählte Form mit einem Gerüsttyp zu verknüpfen, so öffnet sich der Gerüsttyp-Dialog, der dem Nutzer über ein ``Dropdown'' alle möglichen Gerüsttypen zur Verfügung stellt.
+Entscheidet sich der Nutzer die ausgewählte Form mit einem Gerüsttyp zu verknüpfen, so öffnet sich der Gerüsttyp-Dialog \todo{ref auf Bild vom Dialog}, der dem Nutzer über ein ``Dropdown'' alle möglichen Gerüsttypen zur Verfügung stellt.
 Das dritte Icon von links (Stift) ermöglicht das Bearbeiten von bereits eingetragenen Messwerten und verknüpften Gerüsttypen.
 Auch in diesem Modus sind die Icons nur dann auswählbar, wenn der aktuelle Systemzustand dies zulässt. 
 So ist bspw. in \autoref{fig:mode2} keine Form ausgewählt, und deshalb das Mülleimer-Icon nicht auswählbar. 
 In \autoref{fig:labelp2} dagegen kann die ausgewählte Linie ohne Probleme gelöscht werden. \\
 
-Für eine einfache und fehlerfreie Benutzung auf Tablet-Geräten wurden sämtliche Größen mit Hilfe von dichteunabhängigen Pixeln modelliert, wie sie in den ``Android Developer Guides'' suggeriert werden.
-So sind hierbei alle Größen der UI-Elemente in der Einheit \emph{dp} (``density-independent pixel'') angegeben, welche zur Laufzeit vom System in normale Pixel (\emph{px}) umgewandelt werden.
+Für eine einfachere und nicht so fehleranfällige Benutzung auf Tablet-Geräten wurden sämtliche Größen mit Hilfe von dichteunabhängigen Pixeln modelliert, wie sie in den ``Android Developer Guides'' suggeriert werden.
+So sind hierbei alle Größen der UI-Elemente in der Einheit \emph{dp} (``density-independent pixel'') angegeben, welche zur Laufzeit vom Android-System in normale Pixel (\emph{px}) umgewandelt werden.
 Die genaue Umformung lautet dabei wie folgt:
 \[
   px =  dp \times (\frac{dpi}{160}),
@@ -126,33 +126,34 @@ Verknüpfte Formen zeigen mittels eines Indikators (siehe fig), ob und mit wie v
 Auf diese Weise soll der Benutzer die bereits verlinkten von den nicht-verlinkten Formen unterscheiden können. \\
 \todo{Bild von Dialog und Indikator}
 
-Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}, eine dedizierte Android-Library, welche auf \emph{Github} als Open-Source Projekt vorhanden ist, in das Projekt eingebunden \citep{UC18}.
-Diese bietet im Gegensatz zu der \emph{Crop-Activity}, welche von manchen Android-Versionen zur Verfügung gestellt wird, Unterstützung für alle Gerätehersteller ab Android-Version $14$ an.
+Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}, eine dedizierte Android-Library, in das Projekt eingebunden \citep{UC18}.
+\emph{uCrop} ist auf \emph{Github} als Open-Source Projekt verfügbar, und bietet so die Möglichkeit, den eigenen Bedürfnissen angepasst zu werden \todo{Quelle Github}.
+Diese bietet im Gegensatz zu der \emph{Crop-Activity} Unterstützung für alle Gerätehersteller ab Android-Version $14$ an.
 \todo{Bilder lib}
 
 \section{Testing}\label{sec:test2}
-Der zweite Prototyp wurde sechs Tage, vom 3. bis zum 9. Januar 2018, von den beiden Geschäftsleitern in den Arbeitsalltag integriert.
-Das anschließende Feedback ergibt sich aus einem Gespräch am 9. Januar. \\
+Der zweite Prototyp wurde sechs Tage, vom 3. bis zum 9. Januar 2018, von den beiden Testpersonen in ihren Arbeitsalltag integriert.
+Das anschließende Feedback resultiert aus einem Gespräch am 9. Januar. \todo{besser formulieren}  \\
 
 Als deutlich positive Verbesserung wurde dabei von beiden Testpersonen die neue Statusleiste am unteren Bildschirmrand genannt.
 Hierdurch sei ihnen die Benutzung der App um einiges leichter gefallen, als noch beim ersten Prototyp mit den \emph{Floating Action Buttons}. \\
 
 Jedoch sei, so beide Tester, das initiale Einarbeiten in die App immer noch zu schwierig, und nicht intuitiv genug.
-Hier wünsche man sich ein ``kleines Bild, was die App kurz beschreibt'' (Testperson 2) \\
+Hier wünsche man sich eine ``kleine Anleitung, die die App kurz beschreibt'' (Testperson 2) \\
 
-Ein weiteres Problem, dass beim Testen des Prototyps aufgefallen ist, ist der Farbdialog.
+Ein weiteres Problem, dass beim Testen des Prototyps aufgefallen ist, sei der Farbdialog.
 Dieser sei nach Aussage von Testperson 2, zu fortgeschritten und biete eine Auswahl an Farben, die ``[...] der normale Gerüstbauer niemals verwendet wird'' (Testperson 2).
 Hierbei wäre es laut Testperson 2 sinnvoller, den Benutzer ``[...] nicht mit so vielen Auswahlmöglichkeiten zu überschütten [...]'', sondern die populärsten Farben direkt auswählbar zu machen. \\
 
-Außerdem wurde sich neben einem einfacheren Farbdialog eine Funktion gewünscht, Freitexte ins Bild eintragen zu können. 
-Dies sei laut der Aussage beider Tester eine wichtige Funktion, da es bisher keine Möglichkeit gibt, weitere Notizen oder Anmerkungen an das Bild zu schreiben. \\
+Außerdem wurde sich neben einem einfacheren Farbdialog eine Funktion gewünscht, Freitexte in das Bild eintragen zu können. 
+Dies sei laut der Aussage beider Tester eine wichtige Funktion, da es bisher keine Möglichkeit gibt, weitere Notizen oder Anmerkungen im Bild zu hinterlegen \\
 
 Zudem kam der Wunsch nach einer weiteren Form, nämlich einer Linien mit nur einer Pfeilspitze, auf.
 Dies sei, so beide Testpersonen, wichtig, um Längen, die auf dem Bild nur einen Startpunkt haben, und in die Tiefe offen sind, zu kennzeichnen. \\
 
 Des Weiteren seien verlinkte Gerüsttypen an Formen nicht intuitiv durch den in diesem Prototyp eingeführten Indikator erkennbar.
-Hierzu fügten beide Testpersonen hinzu, dass die Eingabefelder zum Eintragen der Messwerte im Gerüsttyp-Dialog ``[...] durchaus sinnvoll [...]'' (Testperson 1) seien, in der Praxis jedoch daran scheitern, dass sich Messwerte zuerst gemerkt werden müssen, bevor sie im Dialog eingegeben werden können.
-Dies habe sich besonders dann als Problem herausgestellt, wenn mehrere Messwerte eingetragen werden sollten. \\
+Hierzu fügten beide Testpersonen hinzu, dass die Eingabefelder zum Eintragen der Messwerte im Gerüsttyp-Dialog ``[...] durchaus sinnvoll [...]'' (Testperson 1) seien, in der Praxis jedoch daran scheitern würde, dass sich Messwerte zuerst gemerkt werden müssen, bevor sie im Dialog eingegeben werden können.
+Dies habe sich besonders dann als Problem herausgestellt, wenn mehr als ein Messwerte zugleich eingetragen werden sollten. \\
 
-In dieser Testphase haben sich weitere Usability-Probleme, aber auch neue Anwenderwünsche identifizieren lassen.
-Diese sollen in einer weiteren Iteration des \hcdp{} im nächsten Kapitel gelöst werden.
+Zusammenfassend lässt sich festhalten, dass sich in dieser Testphase sowohl neue Usability-Probleme, als auch neue Anwenderwünsche identifizieren lassen haben.
+Diese Ergebnisse sollen in einer weiteren Iteration des \hcdp{} im nächsten Kapitel genauer untersucht werden.
