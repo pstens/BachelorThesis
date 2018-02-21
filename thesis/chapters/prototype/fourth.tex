@@ -1,9 +1,9 @@
 \chapter{Vierte Iteration}
-Die während der dritten Iteration in \autoref{chap:pro3} identifizierten Usability-Probleme und Anwenderwünsche sollen in diesem Kapitel gelöst werden.
+Die während der dritten Iteration in \autoref{chap:pro3} identifizierten Usability-Probleme und Anwenderwünsche sollen in diesem Kapitel weiter evaluiert werden.
 Hierzu wird eine weitere Iteration des \hcdp{} ausgeführt.
 
 \section{Observation}
-Um die in \autoref{sec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehung genauer zu evaluieren, werden diese zuerst aufgelistet und anschließend weiter beleuchtet.
+Um die in \autoref{sec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehung genauer zu untersuchen, werden diese zunächst aufgelistet und anschließend weiter beleuchtet.
 
 \begin{itemize}
   \item Verwendung mehrerer Freitext-Formen im Bild zu unübersichtlich
@@ -12,42 +12,42 @@ Um die in \autoref{sec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehu
 
 \noindent
 Beide Testpersonen berichten in \autoref{sec:test3} von einer Unübersichtlichkeit bei der Verwendung von mehreren Text-Formen.
-Die Schriftgröße des Textes wird dem aktuellen Zoom-Level der App angepasst.
-So verkleinert sich der Text, wenn der Nutzer in das Bild hereinzoomt, und vergrößert sich wieder, sobald herausgezoomt wird.
-Auf diese Weise soll sichergestellt werden, dass der Text unabhängig vom Zoom-Level jederzeit lesbar ist.
-Im herausgezoomten Zustand wird die Schriftgröße jedoch so stark vergrößert, dass die gesamte Text-Form zu viel Platz auf dem Bildschirm einnimmt.
-Erstellt der Nutzer jetzt mehrere Text-Formen so kann es schnell passieren, dass diese überlappen, und den gesamten Sichtbereich verdecken.
+Dies hängt wahrscheinlich damit zusammen, dass die Schriftgröße des Textes dem aktuellen Zoom-Level der App angepasst wird.
+So verkleinert sich der Text, wenn der Nutzer in das Bild hereinzoomt, und vergrößert sich wieder, sobald dieser herauszoomt.
+Auf diese Weise soll sichergestellt werden, dass der Text unabhängig vom Zoom-Level jederzeit leicht lesbar ist.
+Im herausgezoomten Zustand wird die Schriftgröße jedoch so stark vergrößert, dass die gesamte Freitext-Form zu viel Platz auf dem Bildschirm einnimmt.
+Dies ist besonders auffällig, wenn der Nutzer mehrere Freitext-Formen erstellt, da diese anfangen sich zu überlappen und einen Großteil des Sichtbereiches zu verdecken.
 (Nielsen~\autoref{itm:N12}) \\ 
 
 Außerdem zeigen die Testergebnisse, dass es beim Speichern des bearbeiteten Bildes zu einer doppelten Eingabe des Titels kommt.
 So muss der Benutzer einmal beim Speichern des Bildes innerhalb der \emph{Library} eine Beschreibung eingeben, und anschließend ein zweites Mal beim Hochladen des Bildes in der bestehenden App.
-Diese doppelte Eingabe der exakt gleichen Beschreibung ist für den Benutzer nicht nachvollziehbar und sorgt drüber hinaus für unnötige Verwirrung.
+Diese doppelte Eingabe der exakt gleichen Beschreibung ist für den Benutzer nicht nachvollziehbar und sorgt darüber hinaus für unnötige Verwirrung.
 (Nielsen~\autoref{itm:N1} \& \autoref{itm:N17}) \\ 
 
-\section{Idea Generation}\label{subsec:idea4}
-Um das Bild auch bei der Verwendung von mehreren Text-Formen übersichtlich zu halten, bietet es sich an die Textgröße der Formen konfigurierbar zu machen.
-Eine Alternative hierzu wäre es, die Formen verkleinerbar zu gestalten, sodass der Nutzer selber entscheiden kann, welche Notiz zu welcher Zeit sichtbar sein soll, und welche zum Beispiel nur als \emph{Icon} auf dem Bild zu sehen ist. \\
+\section{Idea Generation}\label{sec:idea4}
+Um das Bild auch bei der Verwendung von mehreren Freitext-Formen übersichtlich zu halten, bietet es sich an die Schriftgröße des Textes konfigurierbar zu machen.
+Eine Alternative hierzu wäre es, die Formen aufklappbar zu gestalten, sodass der Nutzer selber entscheiden kann, welche Notiz zu welcher Zeit sichtbar sein soll, und welche zum Beispiel nur als \emph{Icon} auf dem Bild zu sehen ist. \\
 \todo{Collapsable Views?}
 
-Die doppelte Eingaben der Bildbeschreibung beim Speichern lässt sich durch das Einführen einer Option in der \emph{Library} lösen, die es der verwendenden App möglich macht, den Speicher-Dialog auszublenden.
-So kann bei der bestehenden App der Speicher-Dialog in der \emph{Library} einfach ausgeblendet werden, und so das doppelte Eintragen einer Beschreibung vermieden werden. \\
+Die doppelte Eingabe der Bildbeschreibung beim Speichern lässt sich durch das Einführen eines weiteren Parameters beim Starten der Library lösen.
+So kann beim Benutzen der \emph{Library} über den zusätzliche Parameter entschieden werden, ob beim Speichern ein Speicher-Dialog innerhalb der \emph{Library} angezeigt werden soll oder nicht.
+Hierdurch lässt sich der Speicher-Dialog für die bestehende App einfach ausblenden, und das doppelte Eintragen des Bildtitels verhindern.
 \todo{Konfigurierabare Libs?}
 
 \section{Prototyping}
-Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{subsec:idea4} genannten Ideen umzusetzen. \\
+Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{sec:idea4} genannten Lösungsideen umzusetzen. \\
 
-Für die bessere Übersichtlichkeit bei der Verwendung von mehreren Text-Formen wurde die Funktion implementiert, dass Text-Formen über einen Doppel-Klick ihre Form verändern können.
-So werden diese im ``normalen'' Modus wie zuvor als Text-Form mit Hintergrund angezeigt, beim Doppel-Klick transformiert sich diese Form jedoch zu einem kleinen Icon, welches keinerlei Text anzeigt, und nur suggerieren soll, dass sich hier eine Notiz befindet. 
-Dies soll dem Benutzer die Möglichkeit geben, selber zu entscheiden, welcher Text wann auf dem Bildschirm sichtbar sein soll und welcher nicht. \\
+Für eine bessere Übersichtlichkeit bei der Verwendung von mehreren Freitext-Formen gleichzeitig, wurde die Funktion hinzugefügt, dass Freitext-Formen über einen Doppelklick ein- bzw. aufgeklappt werden könne.
+So werden diese im ``ausgeklappten'' Modus wie zuvor als Text mit Hintergrund angezeigt, beim Doppelklick transformiert sich diese Form jedoch zu einem kleinen Icon, welches keinerlei Text anzeigt, und so nur suggeriert , dass sich hinter dem Icon eine Freitext-Form befindet. 
+Dies soll dem Benutzer die Möglichkeit geben, selber zu entscheiden, welcher Text wann auf dem Bildschirm sichtbar ist und welcher nicht. \\
 \todo{Bild mit vielen Texten vorher nachher}
 
-Der Speicher-Dialog wurde durch das Setzen eines optionalen Parameters in der \emph{Library} ausgeblendet, und ist so bei der Benutzung in der bestehenden Android-App nicht mehr zu sehen.
-Hier wird das Bild direkt, ohne zuvor nach einer Beschreibung zu fragen, auf dem Handy gespeichert. \\
+Der Speicher-Dialog wurde durch das Hinzufügen eines weiteren Start-Parameters in der \emph{Library} ausgeblendet, und ist so bei der Benutzung in der bestehenden Android-App nicht mehr zu sehen.
+Hier wird das Bild direkt auf dem Gerät gespeichert und anschließend in der bestehenden App nach einem Bildtitel gefragt. \\
 
 \section{Testing}
-Feedback zur Nutzungserfahrung des vierten Prototyps gab es X Tage nach dem Rollout von den beiden Geschäftsführern. \\
+Feedback zum Benutzererlebnis des vierten Prototyps gab es X Tage nach dem Rollout. \\
 
-In dieser vierten Iteration des ``Human-Centered Design Process'' seien keine weiteren Probleme bei der Benutzung der App aufgefallen.
-Sie ließe sich, so beide Testpersonen, gut und einfach zum Erfassen der Aufmaße verwenden und würde auf langer Sicht viel Arbeit und Zeit sparen, da alle Informationen sofort digital und für jeden verfügbar seien.
-\todo{Zitate und abschließend Fazit?}
-
+In dieser vierten Iteration des \hcdp{} sind keine weiteren Usability-Probleme identifiziert worden.
+Der Prototyp ließe sich, so beide Testpersonen, effizient und einfach zum Erfassen der Aufmaße verwenden und würde auf langer Sicht viel Arbeit und Zeit sparen, da alle Informationen sofort digital und für alle Mitarbeiter zur Verfügung stehen.
+\todo{Hier abschließend Fazit?}
