@@ -1,9 +1,11 @@
 \chapter{Evaluation vorhandener Lösungsalternativen}\label{chap:eval}
-Im folgenden Kapitel werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und bewertet. Hierzu werden die Bewertungskriterien zunächst vorgestellt, und anschließend iterativ auf die ausgewählten Apps angewandt.
+Im folgenden Kapitel werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und evaluiert.
+Hierzu werden die Bewertungskriterien zunächst vorgestellt, und anschließend iterativ auf die ausgewählten Apps angewandt.
+Dieses Kapitel schließt die \emph{Observation} Phase ab, welche in \autoref{chap:problem} begonnen wurde. 
 
 \section{Bewertungskriterien}
-Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine zusätzliche Menge selbst aufgestellten Kriterien benutzt \todo{anders schreiben}.
-Da sich die erweiterten Nielsen-Heuristiken aus 18 Punkten zusammensetzen, und nicht jede einzelne für die Bewertung der Lösungsalternativen bezüglich des Einsatzbereichs gleich relevant ist bzw. sich nur bedingt anwenden lässt, werden die Kriterien nach Absprache mit der Geschäftsleitung in zwei Klassen eingeteilt (R = relevant, I = irrelavant).
+Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine zusätzliche Menge selbst aufgestellter Kriterien benutzt \todo{anders schreiben}.
+Da sich die erweiterten Nielsen-Heuristiken aus 18 verschiedenen Kriterien zusammensetzen, von denen nicht jede bezüglich des Einsatzbereiches im Gerüstbau gleich relevant ist, werden die Kriterien nach Absprache mit der Geschäftsleitung in zwei Klassen eingeteilt (R = als relevant beurteil, I = als nicht relevant beurteilt).
 Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in diesem Kontext als relevant klassifiziert wurden.
 \todo{Gewichtung überarbeiten}
 
@@ -24,7 +26,8 @@ Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in 
 \end{enumerate} 
 
 \noindent
-Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass weitere acht Heuristiken, die speziell für mobile Geräte ausgelegt sind, hizugezogen werden \todo{ref auf ue, 239}:
+Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass acht weitere Heuristiken, die speziell für mobile Geräte ausgelegt sind, hinzugezogen werden \citep{Bertini06}.
+\citeauthor{MachadoNeto13} schlagen hierzu in ihrem Artikel ``Heuristics for the assessment of interfaces of mobile devices'' die folgenden weiteren Kriterien vor:
 
 \begin{enumerate}
     \setcounter{enumi}{10}
@@ -39,26 +42,28 @@ Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungs
 \end{enumerate}
 
 \noindent
+Bei der Klassifizierung der Kriterien wurden ``8. Ästethisches und minimalistisches Design'', ``14. Don't lie to the user'' und ``18. Stelle Privatheit sicher'' als nicht relevant gewichtet, da diese drei Punkte nach Absprache mit der Geschäftsleitung bei der Entwicklung einer eigenen Android-App für die Zielgruppe nicht wichtig seien.
 \todo{warum wurden gerade diese als I markiert}
 
 \subsection{Weitere Kriterien}
-Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellen Heuristiken werden noch zwei weitere Kriterien zur Evaluation hinzugezogen, die für die Benutzung der App aus Sicht der Aufmaßerfassung im Gerüstbau wichtig sind: \todo{anders formulieren}
+Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellten Heuristiken werden noch zwei weitere Kriterien zur Evaluation hinzugezogen, die für die Einbindung in eine bereits bestehende Systemarchitektur wichtig sind: 
 
 \begin{itemize}
-    \di{Integration der App in eine vorhandene Systemarchitektur}{integration}{Die Software-Lösung sollte sich in eine bereits vorhandene Systemarchitektur integrieren lassen}
-    \di{Export des annotierten Bildes und der Metadaten zur Weiterverarbeitung in einem nachgelagerten Dienst (z.B.\ API)}{export}{Die App sollte die eingetragenen Meta-Daten, wie zum Beispiel die Längen einer Linie, zur Weiterverarbeitung exportierbar machen}
-    \todo{mehr Kriterien raussuchen}
+    \di{Integration der App in eine vorhandene Systemarchitektur}{integration}{Die App sollte sich in eine bereits vorhandene Systemarchitektur leicht integrieren lassen}
+    \di{Export des annotierten Bildes und der Metadaten zur Weiterverarbeitung durch einen nachgelagerten Dienst (z.B. \emph{API})}{export}{Die App sollte die eingetragenen Meta-Daten, wie zum Beispiel die Längen einer Linie, zur Weiterverarbeitung exportierbar machen}
+    \todo{Hier noch mehr Kriterien auflisten}
 \end{itemize}
+\todo{Punkte beschreiben}
 
-\section{Vorstellung und Evalutation ausgewählter Apps}\label{sec:evaluation}
+\section{Vorstellung und Evaluation ausgewählter Apps}\label{sec:evaluation}
 Als Lösungsalternativen werden im folgenden drei Android-Applikationen vorgestellt, die unter dem Suchbegriff ``Aufmaße'' im Google Play-Store gelistet werden.
 Bei der Auswahl der Lösungsalternativen wurden verschiedene Auswahlkriterien berücksichtigt.
 So achtet, nach einer Studie aus dem Jahr 2014 von \citeauthor{Dogruel14}, in der 49 Smartphone-Nutzer bei ihrer Entscheidungsfindung zum Download von Apps aus dem Google-Play Store beobachten wurden, ein Großteil (74\%) der Testpersonen auf eine gute Bewertung der App.
 33\% der Testpersonen stützen sich laut \citeauthor{Dogruel14} bei ihrer Entscheidungsfindung außerdem auch noch auf Rezensionen über die App.
-Für 9\% der Testpersonen sei die Anzahl der Downloads bzw. die Popularität der Applikation mit entscheidend \citep{Dogruel14}. \\
+Für 9\% der Testpersonen sei die Anzahl der Downloads bzw. die Popularität der Applikation ein weiteres Entscheidungskriterium \citep{Dogruel14}. \\
 
-Um die Lösungsalternativen möglichst repräsentativ zu wählen, wurden Apps ausgewählt, die jeweils eines der oben genannten Auswahlkriterien besonders gut erfüllt. \todo{anders formulieren}
-Hierbei handelt es sich um folgende drei Apps:
+Um die Lösungsalternativen möglichst repräsentativ für das Angebot im Play-Store zu wählen, wurden Apps ausgewählt, die jeweils eine der oben genannten Auswahlkriterien besonders gut erfüllen.
+Hierbei handelt es sich um die folgenden drei Apps:
 
 \begin{itemize}
   \item \mm{} - Bosch GmbH (\textit{Popularität})
@@ -68,17 +73,16 @@ Hierbei handelt es sich um folgende drei Apps:
 
 \noindent
 Die App \mm{} der Bosch GmbH stammt von einem internationalen Großkonzern mit mehr als 80 Standorten in Deutschland, und einem Jahresumsatz von 14,5 Mrd. Euro \citep{Bosch18}.
-Mit zwischen 100.000 bis 500.000 Installationen gehört die App zu einer der Populärsten unter dem Suchbegriff ``Aufmaße''. \\
+Mit zwischen 100 000 bis 500 000 Installationen gehört die App zu einer der Populärsten unter dem Suchbegriff ``Aufmaße'' im Google Play-Store.
 
-\im{} von Dirk Farin wurde gewählt, da die App mit einer Gesamtbewertung von 3.9 von 5 Sternen bei 2.764 abgegebenen Bewertungen eine der beliebtesten Apps unter dem Suchbegriff ``Aufmaße'' ist.
+\im{} von Dirk Farin wurde ausgewählt, da die App mit einer Gesamtbewertung von 3,9 von 5 Sternen bei 2 764 abgegebenen Bewertungen eine der beliebtesten Apps unter dem Suchbegriff ``Aufmaße'' ist.
 
-Im Gegensatz dazu zeichnet sich die App \pm{} von Blue Bixel Inc. durch eine Vielzahl positiver Rezension, die in der Beschreibung im Google-Play Store rezitiert werden, aus.
-So bewertet die Review-Seite ``App-Safari'' die App mit den Worten ``So incredibly convenient'' \citep{AppSafari18}, und auf der deutschen Seite ``appgefahren.de'' wird App weiter gelobt: 
+Im Gegensatz dazu zeichnet sich die App \pm{} von Blue Bixel Inc. durch eine Vielzahl positiver Rezension aus, welche in der App-Beschreibung im Google Play-Store rezitiert werden.
+So bewertet die Review-Seite ``App-Safari'' die App mit den Worten ``So incredibly convenient'' \citep{AppSafari18}, und auf der deutschen Seite ``appgefahren.de'' wird die App weiter gelobt:
 ``[...] für seinen Zweck eine richtige Empfehlung - die App macht genau das, was sie verspricht.'' \citep{Appgefahren18}.
-Das Architektur- und Designmagazin ``Architectural Digest'' bewertet die App als ``very useful when shopping or meeting with contractors'' \citep{Architekt18}.
+Das Architektur- und Designmagazin ``Architectural Digest'' bewertet die App als ``very useful when shopping or meeting with contractors'' \citep{Architekt18}. \\
 
-Die Bewertungskriterien werden in den nachfolgenden Unterkapiteln jeweils in der Reihenfolge evaluiert, wie sie während der normalen Benutzung der entsprchenden App aufgetreten sind.
-
+Die Bewertungskriterien werden in den nachfolgenden Unterkapiteln jeweils in der Reihenfolge evaluiert, wie sie während des normalen Nutzungsablaufs der entsprechenden App aufgetreten sind.
 \input{chapters/evaluation/measuring_master}
 \input{chapters/evaluation/image_meter}
 \input{chapters/evaluation/photo_measures}
