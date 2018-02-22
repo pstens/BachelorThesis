@@ -1,6 +1,6 @@
 \chapter{Forschungsmethodik}
-Als Forschungsmethode wird in dieser Arbeit ``The Human-Centered Design Process'' (menschenzentriertes Design) nach \citeauthor{Norman13} angewandt. \\
-Dieser definiert jenen Prozess in seinem Buch ``The Design of Everyday Things: Revised and Expanded Version'' wie folgt: \citep[Abbildung 6.2]{Norman13}
+Als Forschungsmethode wird in dieser Arbeit der \hcdp{} nach \citeauthor{Norman13} angewandt. \\
+\citeauthor{Norman13} definiert den Prozess in seinem Buch ``The Design of Everyday Things: Revised and Expanded Version'' wie folgt \citep[Abbildung 6.2]{Norman13}:
 
 \begin{quote}
   ``Make observations on the intended target population, generate ideas, produce prototypes and test them.
@@ -8,8 +8,9 @@ Dieser definiert jenen Prozess in seinem Buch ``The Design of Everyday Things: R
 \end{quote}
 
 \noindent
-Die Idee des ``Human-Centered Design Process'' ist es, die durch Beobachtung einer zielgruppen-ähnlichen Menge an Test-Personen identifizierten Usability-Probleme iterativ zu lösen.
-Hierzu beschreibt \citeauthor{Norman13} den Prozess als Zyklus, welcher sich aus vier Phasen zusammensetzt.
+Die Idee des \hcdp{} ist es, eine ausgewählte Menge and Testpersonen aus der Zielgruppe in ihrem Alltag zu beobachten.
+Hierbei sollen mögliche Usability-Probleme identifiziert und anschließend durch das Aufstellen verschiedener Ideen und die Entwicklung eines Prototyps gelöst werden.
+Diesbezüglich beschreibt \citeauthor{Norman13} den Prozess als Zyklus, welcher sich aus vier verschiedenen Phasen zusammensetzt.
 Dieser Zyklus wird iterativ so lange wiederholt, bis sich in der Testphase keine weiteren Usability-Probleme mehr identifizieren lassen, oder man mit den bis dahin erzielten Ergebnissen zufrieden ist. \\
 
 \begin{figure}[h]
@@ -20,21 +21,23 @@ Dieser Zyklus wird iterativ so lange wiederholt, bis sich in der Testphase keine
 \end{figure}
 
 \noindent
-In \autoref{fig:hcp} sieht man die vier verschiedenen Phasen des Zyklus:
+In \autoref{fig:hcp} sind die vier Phasen des Zyklus dargestellt:
 \begin{enumerate}
   \item Observation (Beobachtung) \label{itm:observation}
   \item Idea Generation (Ideenfindung) \label{itm:idea}
-  \item Prototyping (Prototypenentwicklung) \label{itm:prototyping}
+  \item Prototyping (Entwicklung eines Prototyps) \label{itm:prototyping}
   \item Testing (Testen) \label{itm:testing}
 \end{enumerate}
 
 \noindent
-Zu Beginn des Zyklus (Observation) wird eine Menge an Test-Personen ausgewählt, welche möglichst repräsentativ für die eigentliche Zielgruppe des Problems ist. 
-Diese ausgewählte Test-Gruppe wird bei der Bearbeitung von Aufgaben, die für das Usability-Problem relevant sind, zu jeder Zeit beobachtet und eventuelle Probleme werden notiert. 
-Auf diese Weise ist es den Beobachtern möglich, ein tiefgründiges Verständnis für die angestrebten Ziele und den dabei auftauchenden Problemen der Test-Personen zu erlangen. \\
+In der ersten Phase des Zyklus (\emph{Observation}) wird eine Menge an ausgewählten Testpersonen bei der Bearbeitung von Aufgaben, die für das zu untersuchende Problemgebiet relevant sind, beobachtet.
+Hierbei werden alle auftretenden Probleme notiert, und auf ihre eventuellen Ursachen untersucht.
+Auf diese Weise ist es den Beobachtern möglich, ein tiefgründiges Verständnis für die angestrebten Ziele und den dabei anfallenden Problemen der Test-Personen zu erlangen.
+Bezogen auf diese Arbeit findet die Phase der \emph{Observation} während Kapitel 3 und 4 statt. \\
+\todo{Wie Phasen auf Arbeit beziehen?}
 
-In der zweiten Phase (Idea Generation) wird versucht möglichst viele Ideen zur Lösung der in der ersten Phase identifizierten Probleme zu finden.
-Hierzu führt \citeauthor{Norman13} drei Regeln zur Orientierung an \citep[Seite 226]{Norman13}:
+In der zweiten Phase (\emph{Idea Generation}) werden Lösungsansätze zu den in der ersten Phase identifizierten Problemen aufgestellt.
+Hierzu führt \citeauthor{Norman13} drei Richtlinien zur Orientierung an \citep[Seite 226]{Norman13}:
 
 \begin{itemize}
   \item ``Generate numerous ideas'' (Generiere viele Ideen)
@@ -43,12 +46,18 @@ Hierzu führt \citeauthor{Norman13} drei Regeln zur Orientierung an \citep[Seite
 \end{itemize}
 
 \noindent
-Zusammengefasst sagen diese drei Regeln aus, dass es bei der Ideenfindung (Idea generation) durchaus sinnvoll sein kann, sich nicht auf die Findung \textbf{der} optimalen Lösung für ein Problem zu versteifen, sondern möglichst viele, kreative Ideen zu sammeln, die zur finalen Lösung alle einen kleinen Anteil beitragen. \\
+Zusammengefasst sagen diese drei Regeln aus, dass es während der \emph{Idea Generation} sinnvoll sei, viele kreative Lösungsansätze für die Usability-Probleme aufzustellen und zu hinterfragen.
+Nach \citeauthor{Norman13} könne selbst eine anfangs nicht viel versprechende Idee zur Findung der finalen Lösung einen kleinen Anteil beitragen.
+Die Phase der \emph{Idea Generation} findet bezüglich dieser Arbeit in Kapitel 5, bei der Konzeption einer eigenen Android-App, statt. \\
 
-Anschließend werden in der dritten Phase (Prototyping) erste Lösungsansatze in Form von Mock-Ups oder Prototypen zu den Ideenn aus der vorherigen Phase entwickelt.
-Diese Prototypen werden am Ende des Zyklus (Testing) einer ausgewählten Menge an Test-Personen zum Testen zur Verfügung gestellt. Bei der Auswertung dieser Tests erhofft man sich einen Großteil der in Phase 1 identifizierten Probleme zu lösen.
-Es kann jedoch auch vorkommen, dass während dieses ganzes Prozesses Probleme bis zur letzten Phase unerkannt bleiben, oder durch die Lösung eines Problems ein Neues entsteht.
-Diese neu gewonnenen Eindrücke werden dann mit in die nächste Iteration des Design-Prozesses genommen, und bestenfalls bei einem weiteren Durchlauf des Zyklus gelöst. \\
+Anschließend werden die Lösungsansätze in der dritten Phase (\emph{Prototyping}) in Form eines Prototyps umgesetzt.
+Diese Phase korrespondiert zum ersten Unterabschnitt von Kapitel 6 dieser Arbeit. \\
 
-Das Ziel dieses Entwicklungsprozesses ist es, den Zyklus so lange zu wiederholen, bis sich optimalerweise keine Usability-Probleme mehr finden lassen. \\
+In der vierten Phase des Zyklus (\emph{Testing}) wird der zuvor entwickelte Prototyp an eine Menge ausgewählter Testpersonen verteilt.
+Bei der Auswertung der Testergebnisse, die während dieser Phase entstehen, erhofft man sich, dass ein Großteil der in Phase 1 identifizierten Probleme gelöst werden konnten.
+Sollten keine weiteren Usability-Probleme während des \emph{Testing} auftreten, kann der \hcdp{} an dieser Stelle erfolgreich beendet werden.
+Kommt es dennoch zu der Situation, dass einzelne Probleme nicht optimal gelöst werden konnten, oder sogar neue Probleme identifiziert worden sind, wird eine weitere Iteration des Zyklus mit Hilfe der gewonnenen Testergebnisse gestartet.
+Der zweite Unterabschnitt von Kapitel 6 beschreibt genau diese \emph{Testing} Phase.
+Anschließend werden in den darauffolgenden Kapiteln alle weiteren Iterationen, die nötig sind um einen optimalen Prototyp zu entwickeln, beschrieben. \\
 
+Das Ziel dieses Entwicklungsprozesses ist es, den \hcdp{} so lange zu wiederholen, bis ein Prototyp entwickelt worden ist, der während der Test-Phase keine weiteren Usability-Probleme mehr aufzeigt.
