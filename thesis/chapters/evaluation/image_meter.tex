@@ -1,10 +1,10 @@
-\subsection{Image Meter - Messen im Foto}
+\subsection{Image Meter}
 
 \subsubsection{Vorstellung}
-Die App \im{} von \emph{Dirk Farin} hat zur Zeit des Downloads (20. Januar 2018) bei insgesamt 2.764 abgegeben Bewertungen eine durchschnittliche Bewertung von 3,9 von 5 Sternen im Google Play-Store \citep{FarinIM}.
-Hierbei haben 72\% (1324 + 654) der Bewertungen vier oder fünf, und nur 28\% (289 + 154 + 343) 3 oder weniger Sterne. \\
-Dies ist im Vergleich zu den aderen Apps, die im Play-Store unter dem Suchbegriff ``Aufmaße'' frei erhältlich sind, eine vergleichweise hohe Bewertung, und macht diese App zu einer der beliebtesten in der Kategorie \emph{Aufmaße}.
-Selbst beschreibt der Entwickler die App im Play-Store wie folgt \citep{FarinIM}:
+Die App \im{} von \emph{Dirk Farin} hat zur Zeit des Downloads (20. Januar 2018) bei insgesamt 2 764 abgegeben Bewertungen eine durchschnittliche Bewertung von 3,9 von 5 Sternen im Google Play-Store \citep{FarinIM}.
+Hierbei haben 72\% (1978) der Bewertungen vier oder fünf, und nur 28\% (786) 3 oder weniger Sterne.
+Dies ist eine überdurchschnittlich hohe Bewertung, und macht die App zu einer der Beliebtesten unter dem Suchbegriff ``Aufmaße''.
+Der Entwickler selbst beschreibt die App im Play-Store wie folgt \citep{FarinIM}:
 
 \begin{quote}
   ``ImageMeter erlaubt das Beschriften Ihrer Fotos mit Längen-, Winkel- und Flächenmaßen sowie Text.
@@ -12,7 +12,7 @@ Selbst beschreibt der Entwickler die App im Play-Store wie folgt \citep{FarinIM}
 \end{quote}
 
 \noindent
-Beim Start der App wird dem Benutzer der sogenannte ``Tipp des Tages'' angezeigt. \\
+Beim Start der App wird dem Benutzer der sogenannte ``Tipp des Tages'' angezeigt.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -24,14 +24,16 @@ Beim Start der App wird dem Benutzer der sogenannte ``Tipp des Tages'' angezeigt
 Dieser enthält Informationen zu bestimmten Funktionen der App, wie zum Beispiel dem Exportieren von Bildern (siehe \autoref{fig:imtip}).
 Hier hat der Nutzer die Möglichkeit sich weitere Tipps anzusehen, oder diese durch das Entfernen des Hakens in der Checkbox ``Tipp des Tages beim Start zeigen'' dauerhaft zu deaktivieren. \\
 
-Sobald der Dialog zum ``Tipp des Tages'' geschlossen wurde, bietet sich über die Aktionsleiste am unteren Bildschirmrand die Möglichkeit, ein neues Bild aufzunehmen, oder direkt eines aus der Galerie zu importieren (siehe \autoref{fig:immenu}).
-Das ausgewählte Bild wird nach erfolgreichem Import in die App im Hauptmenü an die Bilderliste angehangen. \\
+Sobald der Dialog zum ``Tipp des Tages'' geschlossen wurde, bietet sich über die Statusleiste am unteren Bildschirmrand die Möglichkeit, ein neues Bild aufzunehmen, oder direkt eines aus der Galerie zu importieren (siehe \autoref{fig:immenu}). \\
 
-Hier gelangt der Benutzer durch einen Klick auf das gewünschte Bild in eine neue Bildschirmöberfläche, in der Aufmaße eingezeichnet werden können (siehe \autoref{fig:imdraw})
-In dieser Umgebung wird zusätzlich zum Bild noch eine Statusleiste am unteren Bildschirmrand und ein darüber befindlicher ``Floating Action Button'' \todo{ref} mit einem Fragezeichen-Symbol angezeigt.
-Beim Klick auf diesen schwebenden Button öffnet sich eine Hilfe-Seite, in der zu den verschiedenen Funktionalitäten der App häufig gestellte Fragen, und deren Antworten zu lesen sind. \\
+Das ausgewählte Bild wird nach erfolgreichem Import in die App im Hauptmenü in einer Liste mit alleren weiteren Bildern angezeigt.
+Hier gelangt der Benutzer durch einen Klick auf das gewünschte Bild in eine neue Bildschirmoberfläche, in der das Bild beschriftet werden kann (siehe \autoref{fig:imdraw}).
+In dieser Oberfläche wird dem Nutzer das zuvor ausgewählte Bild und eine neue Statusleiste am unteren Bildschirm angezeigt.
+Oberhalb der Statusleiste befindet sich ein ``Floating Action Button'' (\emph{FAB}), der durch ein Fragezeichen-Icon gekennzeichnet ist.
+Der \emph{FAB} öffnet beim Klick auf sich eine separate Hilfe-Seite, in der häufig gestellte Fragen und deren Antworten zu den Funktionen der App beschrieben stehen. \\
 
-Zusätzlich zu dieser Hilfestellung, wird dem Benutzer beim Auswählen des ``Zeichen-Modus'' ein erklärender Text über der Statusleiste angezeigt (siehe \autoref{fig:imdraw}), der genau beschreibt, welche Aktion der Nutzer in diesem Systemzustand durchführen kann bzw. soll. \\
+Zusätzlich zu dieser Hilfestellung, wird dem Benutzer beim Auswählen des Zeichen-Modus ein erklärender Text über der Statusleiste angezeigt (siehe \autoref{fig:imdraw}).
+Dieser beschreibt genau, welche Aktion der Nutzer im aktuellen Systemzustand durchführen kann bzw. soll. \\
 
 \begin{figure}[h]
   \centering
@@ -49,20 +51,23 @@ Zusätzlich zu dieser Hilfestellung, wird dem Benutzer beim Auswählen des ``Zei
 \end{figure}
 
 \noindent
-Zudem kann der Nutzer über die Statusleiste die gewünschte Form und deren Farbe auswählen.
-Bereits eingezeichnete Formen können im Nachhinein wieder vergrößert bzw. verkleinert und in ihrem Aussehen verändert werden. \\
+Die Statusleiste bietet dem Nutzer außerdem die Möglichkeit, die gewünschte Form und deren Farbe festzulegen.
+Die Farbe bereits eingezeichneter Formen kann auch noch im Nachhinein angepasst werden.
+Zu jeder Zeit sind nur die Funktionen in der Statusleiste auswählbar, die im aktuellen Systemzustand durchführbar sind.
+So ist bspw. das Löschen von Formen nur dann möglich, wenn zuvor eine Form markiert wurde. \\
 
-Des Weiteren werden nur die Funktionen, die zum jeweiligen Systemzustand ausführbar sind (z.B. Löschen und Textändernungen nur wenn Form ausgewählt), in der Statusleiste angezeigt.
-Die App bietet die Möglichkeit aus sieben Formen - zehn in der Pro-Version - auszuwählen, und diese in das Bild einzuzeichnen.
-Zusätzlich kann man in dieser App Gebrauch von Referenzpunkten machen, die es der App ermöglichen, neu eingezeichnete Formen automatisch mit Messwerten zu versehen.
-Versehentlich ausgeführte Aktionen können durch einen Undo- bzw. Redo-Button in der Statusleiste rückgängig gemacht bzw. wiederholt werden. \\
+Insgesamt kann der Nutzer aus bis zu sieben verschiedene Formen (zehn in der Pro-Version) frei auswählen.
+Unter diesen sieben Formen der Free-Version befinden sich auch zwei Referenz-Formen.
+Diese können dazu genutzt werden, um Referenzlängen im Bild festzulegen, und ermöglichen so, dass alle nachträglich eingezeichneten Formen automatisch mit Messwerten versehen werden. \\
+
+Eine Undo- bzw. Redo-Funktion ist über das \emph{Overflow-Menü} in der Statusleiste erreichbar.
+Hierdurch können ausgeführte Aktionen rückgängig gemacht oder wiederholt werden. \\
 
 Auch in dieser App lassen sich gespeicherte Bilder zu einem späteren Zeitpunkt weiter bearbeiten.
 Außerdem können mehrere Bilder gleichzeitig zusammen in einer \emph{PDF} exportiert werden.
 
 \subsubsection{Evaluation}\label{subsec:imeva}
-
-Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form des ``Tipp des Tages'' Dialogs (siehe \autoref{fig:imtip}), welcher sich zum Start der App zeigt, und durch eine dedizierte Benutzeroberfläche, die man über den Floating Action Button erreicht, bereit gestellt.
+Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form des ``Tipp des Tages'' (siehe \autoref{fig:imtip}) und die dedizierte Hilfe-Oberfläche bereits gestellt.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -71,13 +76,15 @@ Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form
   \label{fig:imfaq}
 \end{wrapfigure}
 
-Hierbei bietet die Hilfeoberfläche Antworten auf eine vorgegebene Menge Fragen zu den verschiedenen Funktionen der App (siehe \autoref{fig:imfaq}). \\
+Hierbei bietet die Hilfe-Oberfläche Antworten auf eine vorgegebene Menge an Fragen zu den verschiedenen Funktionen der App an (siehe \autoref{fig:imfaq}). \\
 
-Die Statusleite zeigt zu jedem Zeitpunkt den ausgewählten Modus und die verfügbaren Aktionen an, und gibt dem Benutzer so eine angemessene und verständliche Rückmeldung über den aktuellen Systemzustand der App (Nielsen~\autoref{itm:N1} \& \autoref{itm:N5}). \\
+Die Statusleiste zeigt zu jedem Zeitpunkt den ausgewählten Modus und die ausführbaren Aktionen an.
+Hierdurch gibt die App dem Nutzer eine angemessene und verständliche Rückmeldung über den aktuellen Systemzustand der App (Nielsen~\autoref{itm:N1} \& \autoref{itm:N5}). \\
 
-Formen können, nachdem sie in das Bild gezeichnet wurden, zu einem späteren Zeitpunkt in ihrem Aussehn und ihrer Größe verändert werden. Zusätzlich dazu gibt es in den Einstellungen der App weitere Punkte, um diese den eigenen Benutzungsbedürfnissen anzupassen.
+Formen können, nachdem sie in das Bild gezeichnet wurden, zu einem späteren Zeitpunkt in ihrer Farbe und Größe verändert werden.
+Zusätzlich dazu gibt es in den Einstellungen der App weitere Optionen, um die App an die eigenen Bedürfnisse anzupassen.
 So kann zum Beispiel eingestellt werden, ob Maßeinheiten angezeigt werden sollen, welche metrischen Einheiten benutzt werden sollen, oder wie viele Dezimalstellen für Messwerte verwendet werden solle.
-Dies erlaubt nicht nur eine flexible Benutzung der App, sondern sorgt gleichzeitig für eine potentielle Effizienzsteigerung, da die App nur einmal zu Beginn der Benutzung den Vorstellungen entsprechend konfiguriert werden muss (Nielsten~\autoref{itm:N7}) \\
+Dies erlaubt nicht nur eine flexible Benutzung der App, sondern kann gleichzeitig zu einer Effizienzsteigerung führen, da die App nur einmal zu Beginn der Benutzung konfiguriert werden muss (Nielsten~\autoref{itm:N7}) \\
 
 Die App versucht Situationen, in denen Fehler auftreten könnten, präventiv zu vermeiden.
 Hierzu werden Aktionen, die beim Ausführen im aktuellen Systemzustand zu einem Fehler führen würden, ausgegraut und sind nicht auswählbar (Nielsen~\autoref{itm:N5} \& \autoref{itm:N9}).
@@ -89,12 +96,16 @@ Hierzu werden Aktionen, die beim Ausführen im aktuellen Systemzustand zu einem 
   \label{fig:imbar}
 \end{wrapfigure}
 
-Das Ausgrauen der unbenutzbaren Aktionen führt jedoch in Kombination mit den anderen verwendeten Farben in der Statusbar schnell zu Verwirrung.
-So werden hier zwei verschiedene Grautöne benutzt, die sich nur minimal unterscheiden (siehe \autoref{fig:imbar}). \todo{bisschen mehr hierzu} \\
+Das Ausgrauen der unbenutzbaren Icons kann jedoch in Kombination mit den anderen verwendeten Farben in der Statusleiste zu Verwirrung führen.
+So werden hier zwei verschiedene Grautöne benutzt, die sich nur minimal unterscheiden (siehe \autoref{fig:imbar}). 
+\todo{bisschen mehr hierzu} \\
 
-Über einen Undo- bzw. Redo-Menüpunkt hat der Benutzer die Möglichkeit, ungewollte oder fehlerhafte Eingaben zu revidieren, oder Aktionen zu wiederholen (Nielsen \autoref{itm:N3}).
-Bei der Benutzung im Hochformat sind diese Menüpunkte jedoch nicht offensichtlich erkennbar, da sie in dem Overflow-Menü \todo{def} an der rechten Seite der Statusbar versteckt sind (siehe \autoref{fig:imbar}).
-Der Benutzer muss hier also durch Zufall schon einmal das Overflow-Menü ausgeklappt haben, um zu wissen, dass sich dort die Optionen zum Undo bzw. Redo befinden. \\
+Über einen Undo- bzw. Redo-Button hat der Benutzer die Möglichkeit, fehlerhafte Eingaben zu verbessern, oder Aktionen zu wiederholen (Nielsen \autoref{itm:N3}).
+Bei der Benutzung im Hochformat sind beide Buttons jedoch nicht sichtbar, da sie in dem \emph{Overflow-Menü} an der rechten Seite der Statusleiste versteckt sind (siehe \autoref{fig:imbar}).
+Der Benutzer ist hier also darauf angewiesen, das \emph{Overflow-Menü} anzuklicken, um zu wissen, dass sich dort die Optionen zum Undo bzw. Redo befinden.
+Generell fühlt sich die Statusleiste mit den sieben Icons (inklusive \emph{Overflow-Menü}) zu überladen an.
+Hier wäre die Verwendung einer zusätzlichen Menüleiste sinnvoll, die einen Teil der Icons übernimmt. \\
+\todo{anders schreiben}
 
 Ein positiver Aspekt dagegen liegt beim adäquaten Umgang mit Unterbrechungen, sowie der Unterstützung verschiedener Bildschirmausrichtungen (Nielsen~\autoref{itm:N11} \& \autoref{itm:N15}).
 Beim Pausieren und Drehen der App gehen keine Informationen, wie bereits eingezeichnete Formen oder eingetragene Messwerte verloren, und das Bild bleibt stets in der erwarteten Ausrichtung. 
