@@ -1,9 +1,10 @@
 \subsection{Measuring Master}
+\todo{Einleitung + Zitat hier hin?}
 
 \subsubsection{Vorstellung}
 \todo{Version, Downloaddatum, Playstore-Link}
 Die App \mm{} von der Bosch GmbH ist im Play-Store unter der Rubrik ``Effizienz'' aufgelistet.
-Selbst beschreibt der App-Hersteller seine Software wie folgt \citep{BoschMM}:
+Selbst beschreibt der App-Hersteller die App wie folgt \citep{BoschMM}:
 
 \begin{quote}
   ``Measuring Master ist eine multifunktionale App, die es ermöglicht, Aufmaße, Grundrisse und Temperaturmesswerte an einem Ort zu dokumentieren und zu verwalten.\\
@@ -12,7 +13,7 @@ Selbst beschreibt der App-Hersteller seine Software wie folgt \citep{BoschMM}:
 
 \noindent
 Nach dem Start der Applikation bietet sich die Möglichkeit ein neues Projekt anzulegen, oder bereits vorhandene Projekte zu bearbeiten.
-Sobald das gewünschte Projekt ausgewählt wurde, kann der Benutzer durch das Ausklappen des Menüs an der linken Seite diverse Funktionen (siehe \autoref{fig:bmenu}) der App sehen. \\
+Sobald das gewünschte Projekt ausgewählt wurde, kann der Benutzer durch Ausklappen des Menüs an der linken Seite die Funktionen der App (siehe \autoref{fig:bmenu}) der App sehen. \\
 
 \begin{figure}[h]
   \centering
@@ -28,32 +29,35 @@ Sobald das gewünschte Projekt ausgewählt wurde, kann der Benutzer durch das Au
 \end{figure}
 
 Im Folgenden wird der Menüpunkt ``Aufmaße'' und die damit verbundene Funktionalität weiter vorgestellt und evaluiert.
-So bietet sich dem Benutzer nach Auswahl der Aufmaße-Funktion die Möglichkeit, ausgewählte Bilder direkt mit Messwerten zu beschriften.
-Hierzu können entweder Bilder direkt aus der Gallerie importiert, oder mit der Kamera aufgenommen werden.
-Sobald der Benutzer den Foto-Import erfolgreich abgeschlossen hat, öffnet sich eine neue Ansicht, welche das ausgewählte Bild und weitere Bedienelement, in Form einer Statusleiste am unteren Rand, zeigt (siehe \autoref{fig:bbar}). \\
+So bietet sich dem Benutzer nach Auswahl der Aufmaße-Funktion die Möglichkeit, beliebige Bilder mit Messwerten zu beschriften.
+Hierzu können die Bilder entweder direkt aus der Galerie importiert, oder mit der Kamera aufgenommen werden.
+Sobald der Nutzer den Foto-Import erfolgreich abgeschlossen hat, öffnet sich eine neue Benutzeroberfläche, die das zuvor ausgewählte Bild und weitere Bedienelement zeigt (siehe \autoref{fig:bbar}). \\
 
-In dieser Benutzeroberfläche kann der Nutzer mit Hilfe von vier verschiedenen Formen (Linie, Viereck, Winkel, Freiform) Aufmaße ins Bild anzeichnen, und über einen Klick auf die gewünschte Form, Messwerte eintragen.
-Außerdem bietet die App die Option, eine ausgewählte Reihe von Laserentfernungsmesser mit der App zu verbinden.
-Dies ermöglicht eine Übertraung der gemessenen Distanzen über eine Bluetooth-Schnittstelle direkt an die App. \\
+In dieser Oberfläche kann der Benutzer vier verschiedenen Formen (Linie, Viereck, Winkel, Freiform) in das Bild anzeichnen, und über einen Klick auf die gewünschte Form die zugehörigen Messwerte eintragen.
+Hierbei bietet die App zusätzlich die Funktion, ein Laserentfernungsmesser mit der App zu verbinden.
+Dieser ermöglicht das Übertragen der gemessenen Distanzen über eine Bluetooth-Schnittstelle direkt an die App. \\
 
-Um das annotierte Bild außerhalb der App weiter zu benutzen, bietet diese den Export als \emph{PDF} und \emph{JPEG} an.
+Um das annotierte Bild außerhalb der App weiter zu benutzen, bietet diese den Export als \emph{PDF} oder \emph{JPEG} an.
 Die exportierte \emph{PDF} enthält im Gegensatz zu der \emph{JPEG} zusätzlich zu dem annotierten Bild auch noch eine Tabelle mit allen eingetragenen Messwerten \autoref{fig:bexport}. 
-Zudem lassen sich annotierte Bilder in der App speichern und zu einem späteren Zeitpunkt wieder bearbeiten.
+Zudem lassen sich die Bilder in der App speichern und zu einem späteren Zeitpunkt weiter bearbeiten.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[keepaspectratio, width=\textwidth]{bosch/export}
+  \shadowbox{
+    \includegraphics[keepaspectratio, width=\textwidth]{bosch/export}
+  } 
   \caption{Exportierte PDF}\label{fig:bexport}
 \end{figure}
 
 \subsubsection{Evaluation}
+Durch die Anzeige einer Statusleiste am unteren Bildschirmrand (siehe \autoref{fig:bbar}) gibt die App dem Benutzer zu jeder Zeit eine klare und sichtbare Rückmeldung über den aktuellen Systemzustand (Nielsen~\autoref{itm:N1}). \\
 
-Durch die Anzeige der Statusleiste am unteren Bildschirmrand (siehe \autoref{fig:bbar}) gibt die App dem Benutzer zu jeder Zeit eine klare und sichtbare Rückmeldung über den aktuellen Systemzustand (Nielsen~\autoref{itm:N1}). \\
+Zusätzlich bietet der erklärender Text im oberen Bereich des Bildschirms (siehe \autoref{fig:bbar}) eine konkrete Hilfestellung zu den möglichen Aktionen, die der Benutzer im aktuellen Systemzustand ausführen kann.
+So fungiert der Satz ``Linie wählen oder zeichnen'' in \autoref{fig:bbar} gleichzeitig als Hilfestellung und Aufforderung an den Nutzer eine der beiden Aktionen auszuführen.
+(Nielsen~\autoref{itm:N10}). \\
 
-Zusätzlich bietet ein erklärender Text im oberen Bereich des Bildschirms eine konkrete Hilfestellung zu den möglichen Aktionen, die der Benutzer im aktuellen Systemzustand ausführen kann (Nielsen~\autoref{itm:N10}). \\
-
-Darüber hinaus kann der Nutzer über ein Undo- bzw. Redo-Symbol fehlerhafte oder unabsichtliche Eingaben rückgängig machen, oder rückgängig gemachte Aktionen wiederholen (Nielsen~\autoref{itm:N3}).
-Dadurch, dass Aktionen nur dann ausführbar sind, wenn man den richtigen Modus in der Statusleiste ausgewählt hat, werden Fehler präventiv vermieden (siehe \autoref{fig:bicons}).
+Darüber hinaus kann der Nutzer über ein Undo- bzw. Redo-Symbol in der Menüleiste (siehe \autoref{fig:bbar}) fehlerhafte Eingaben rückgängig machen, oder rückgängig gemachte Aktionen wiederholen (Nielsen~\autoref{itm:N3}).
+Dadurch, dass alle Menüpunkte, die im aktuellen Systemzustand nicht ausgeführt werden können, ausgegraut dargestellt werden, werden Fehler präventiv vermieden (siehe \autoref{fig:bicons}).
 So lassen sich Formen erst dann löschen, wenn diese zuvor markiert wurde, oder Aktionen rückgängig machen, wenn zuvor eine Benutzeraktion stattgefunden hat (Nielsen~\autoref{itm:N5}). \\
 
 \begin{figure}[h]
@@ -63,20 +67,23 @@ So lassen sich Formen erst dann löschen, wenn diese zuvor markiert wurde, oder 
   \label{fig:bicons}
 \end{figure}
 
-Schafft man es trotzdem einen Fehlerzustand des Systems herzustellen, wird dieser durch einen ``Toast'' \todo{def} erkennbar gemacht, und gibt dem Benutzer Feedback darüber, was zum Fehler geführt hat \todo{Bild vom Toast beim Bildimport} (Nielsen~\autoref{itm:N9}). \\
+Sollte die App doch in einen Fehlerzustand gelangen, wie bspw. durch den Import eines beschädigten Bildes, wird ein \emph{Toast} angezeigt.
+Dieses \emph{Toast} klärt den Nutzer darüber auf, was zu dem Fehler geführt hat, und wie dieser gelöst werden kann.
+\todo{Bild vom Toast beim Bildimport} (Nielsen~\autoref{itm:N9}). \\
 
-Durch die konsistente Benutzung bekannter Icons lassen sich die dahinter befindlichen Aktionen intuitiv erkennen, und die Gedächtnislast des Benutzers reduzieren. 
-So wird zum Beispiel sowohl im ``Zeichen-'' als auch im ``Text-Modus'' das Mülleimer-Icon (siehe \autoref{fig:bicons}) in der oberen Statusleiste als Löschfunktion der markierten Form bzw.\ des ausgewählten Textes benutzt (Nielsen~\autoref{itm:N4} \& \autoref{itm:N6}). \\
+Durch die konsistente Benutzung intuitiv verständlicher Icons lassen sich die dahinter befindlichen Aktionen ohne große Anstrengung erkennen.
+Dieser Punkt wirkt sich positiv auf das Nutzungserlebnis der App aus, da sämtliche Icons nicht zuerst auswendig gelernt werden müssen.
+So dient zum Beispiel das Mülleimer-Icon in der Menüleiste (siehe \autoref{fig:bicons}) sowohl im Zeichen- als auch im Text-Modus als Löschfunktion der markierten Form bzw. des ausgewählten Textes (Nielsen~\autoref{itm:N4} \& \autoref{itm:N6}). \\
 
-Einen ``Expertenmodus'', der dem Benutzer voreingestelle Aktionen ändern, oder Abkürzungen für bestimmte Schritte nehmen lässt, gibt es in dieser App nicht (Nielsen~\autoref{itm:N7}).
-So muss der Nutzer jedesmal, wenn er ein eine zuvor eingezeichnete Form beschriften will, in den ``Text-Modus'' wechseln, die gewünschte Form markieren, und anschließend die Messwerte eintragen. 
-Alternativ hätte man hier zum Beispiel die Benutzung einer langen Klick-Aktion auf die gewünschte Form zum Beschrfiten nutzen können. \\
+Einen ``Expertenmodus'', der es dem Benutzer ermöglicht, die App zu konfigurieren oder bestimmte Schritte abzukürzen, ist in der App nicht vorhanden (Nielsen~\autoref{itm:N7}).
+So muss der Nutzer jedesmal, wenn er ein eine zuvor eingezeichnete Form beschriften will, in den Text-Modus wechseln, die gewünschte Form markieren, und anschließend die Messwerte eintragen.  \\
 
-Durch das Hervorheben der markierten Form durch eine andere Farbe ermöglicht die App ein schnelles und effizientes Scannen des Bildschirminhaltes (Nielsen~\autoref{itm:N12}). \\
+Markierte Formen werden durch die Verwendung einer anderen Farbe hervorgehoben.
+Dies ermöglicht ein schnelles und effizientes Scannen des Bildschirminhaltes, da sofort ersichtlich ist, welche Form zur Zeit ausgewählt ist (Nielsen~\autoref{itm:N12}). \\ 
 
-Das Malen von Formen durch das Klicken und anschließende Ziehen mit einem Finger auf dem Bildschirm ermöglicht eine einfache und effiziente Benutzung mit einer Hand (Nielsen~\autoref{itm:N17}).
-Zusätzlich wird mit Hilfe einer Lupe, die sich beim Zeichnen stets neben dem Finger befindet, der Bereich unter dem Finger vergößert dargestellt (siehe \autoref{fig:blense}).
-Dies macht das Malen von Formen nicht nur effizienter, sondern beugt auch Fehlern vor, da dieser Bereich sonst vom Finger des Benutzer bedeckt ist und man nicht sehen würde, wo genau man malt. \\
+Das Malen von Formen durch das Klicken und anschließende Ziehen mit einem Finger auf dem Bildschirm ermöglicht eine einfache und effiziente Benutzung der App mit einer Hand (Nielsen~\autoref{itm:N17}).
+Zusätzlich wird mit Hilfe einer Lupe, die sich beim Zeichnen stets neben dem Finger befindet, der Bereich unter dem Finger vergrößert dargestellt (siehe \autoref{fig:blense}).
+Dies macht das Malen von Formen nicht nur effizienter, sondern beugt auch Fehlern vor, da dieser Bereich sonst vom Finger des Benutzer bedeckt ist. \\
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -85,16 +92,23 @@ Dies macht das Malen von Formen nicht nur effizienter, sondern beugt auch Fehler
   \label{fig:blense}
 \end{wrapfigure}
 
-Des Weiteren kann die App zu jeder Zeit pausiert werden, ohne dass eingetragene Messwerte oder Formen verloren gehen (Nielsen~\autoref{itm:N11}). \\
+Des Weiteren kann die App zu jeder Zeit pausiert werden, ohne dass eingetragene Messwerte oder Formen verloren gehen (Nielsen~\autoref{itm:N11}). 
+Dies ist besonders wichtig, wenn während der Benutzung der App bspw. ein Anruf angenommen werden muss. \\
 
-Im Kontrast dazu führen Bildschirmrotationen vom Hoch- ins Querformat zu einer verwirrenden Drehung des Bildes, welches sich entgegen aller Erwartungen mit der Bildschirmausrichtung dreht, und nicht in der Ausrichtung, in der es aufgenommen wurde bleibt (Nielsen~\autoref{itm:N15}). \\
+Im Kontrast zu dem guten Umgang mit Unterbrechungen, führt die Rotation des Bildschirms vom Hoch- ins Querformat zu einer Drehung des Bildes in die Rotationsrichtung.
+Hierdurch bleibt das Bild entgegen den Erwartungen nicht in der ursprünglichen Ausrichtung, in der es aufgenommen wurde, sondern dreht sich stets mit der Bildschirmausrichtung mit (Nielsen~\autoref{itm:N15}). \\
+\todo{Bilder Portrait und landscape}
 
-Zudem führt die teilweise fehlerhafte Umsetzung der Gesten-Unterstützung dazu, dass der Nutzer beim Zoomen des Bildes unabsichtlich eine Form malt, wenn er zuvor im ``Zeichen-Modus'' ist (Nielsen~\autoref{itm:N16}).
-Dieser Punkt schmälert eine positive Benutzerfahrung enorm, da dies nach fast jeder Zoom-Aktion eine Undo-Aktion erzwingt, um die unabsichtlich-gemalte Form wieder zu entfernen (Nielsen~\autoref{itm:N13}). \\
+Wie bereits festgehalten, ermöglicht die App das Benutzen einer \emph{Drag-Geste} zum Zeichnen von Formen.
+Die Gesten-Unterstützung zur Navigation im Bild ist jedoch nur nicht so gut umgesetzt worden.
+So führt die fehlerhafte Umsetzung der \emph{Pinch-Geste} dazu, dass der Nutzer beim Zoomen des Bildes unabsichtlich eine Form malt, wenn er zuvor im Zeichen-Modus ist (Nielsen~\autoref{itm:N16}).
+Dieser Punkt wirkt sich negativ auf das Anwendungserlebnis aus, da hierdurch nach nahezu jeder Zoom-Aktion eine Undo-Aktion erzwungen wird, um die unabsichtlich-gemalte Form rückgängig zu machen (Nielsen~\autoref{itm:N13}). \\
 
-Der Export des bearbeiteten Bildes führt dazu, dass alle eingetragenen Messwerte nicht mehr trivial auslesbar sind (da nicht als Meta-Daten verfügbar). Zudem würde sich die App nur schwer in eine bestehende Systemarchitektur integrieren lassen, da der Punkt der Aufmaßerfassung nur eine von vielen Funktionen der App ist. \todo{ref auf weitere Kriterien} \\
+Der Export des bearbeiteten Bildes führt dazu, dass alle zuvor eingetragenen Messwerte nicht mehr trivial auslesbar sind, da diese nicht mehr als Meta-Daten vorliegen (\autoref{itm:export}).
+Zudem lässt sich die App nur schwer in eine bestehende Systemarchitektur integrieren, weil es keine Möglichkeit gibt, Bilder direkt in die App zu teilen, oder die annotierten Bilder inklusive der Meta-Daten für einen nachgelagerten Dienst aufzubereiten (\autoref{itm:integration}). \\
 
-Zusammenfassend lässt sich also festhalten, dass die App \mm{} von der Bosch GmbH die Heuristiken nach Nielsen größtenteils erfüllt, sich jedoch Mängel bei der Benutzung von Gesten zum Zoomen im Bild und der Unterstützung von verschiedenen Bildschirmausrichtungen identifizieren lassen haben.
-Dies sind Punkte, welche nicht nur eine positive Nutzungserfahrung schmälern, sondern auch potentielle Fehlerquellen, die durch die Benutzung einer Android-App minimiert werden sollten, vergößern.
+Zusammenfassend lässt sich festhalten, dass die App \mm{} von der Bosch GmbH die Usability-Heuristiken nach Nielsen größtenteils erfüllt.
+Einzig bei der Benutzung von Gesten zum Zoomen im Bild und der Unterstützung von verschiedenen Bildschirmausrichtungen identifizieren haben sich während der Evaluation Schwachstellen identifizieren lassen.
+Besonders die fehlerhafte Gesten-Unterstützung und den damit verbundenen unabsichtlich-gemalten Formen ist ein Kritikpunkt, der das Nutzungserlebnis der App enorm schmälert, da der Benutzer hier dazu ``gezwungen'' wird, nach jeder Zoom-Aktion eine Undo-Aktion zu tätigen.
 Zudem lässt sich die Aufmaß-Funktion nicht in die bestehende Android-App integrieren, da es keine Möglichkeit gibt, annotierte Bilder inklusive der Meta-Daten an eine andere App zu teilen bzw. in einer anderen App aufgenommene Bilder direkt an \mm{} freizugeben.
-Auch die eingetragenen Messwerte lassen sich im Nachhinein nur mühsam aus dem Bild extrahieren, da diese nicht mehr als Meta-Daten vorliegen, sodass die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} nicht möglich sind.
+Auch die eingetragenen Messwerte lassen sich im Nachhinein nur mühsam aus dem Bild extrahieren, da diese nicht mehr als Meta-Daten vorliegen, sodass die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} nur erschwert möglich sind.
