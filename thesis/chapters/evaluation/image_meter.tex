@@ -12,15 +12,13 @@ Der Entwickler selbst beschreibt die App im Play-Store wie folgt \citep{FarinIM}
 \end{quote}
 
 \noindent
-Beim Start der App wird dem Benutzer der sogenannte ``Tipp des Tages'' angezeigt.
-
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
   \includegraphics[keepaspectratio, width=0.5\textwidth]{image_meter/tip}
   \caption{``Tipp des Tages'' beim Start der App}
   \label{fig:imtip}
 \end{wrapfigure}
-
+Beim Start der App wird dem Benutzer der sogenannte ``Tipp des Tages'' angezeigt.
 Dieser enthält Informationen zu bestimmten Funktionen der App, wie zum Beispiel dem Exportieren von Bildern (siehe \autoref{fig:imtip}).
 Hier hat der Nutzer die Möglichkeit sich weitere Tipps anzusehen, oder diese durch das Entfernen des Hakens in der Checkbox ``Tipp des Tages beim Start zeigen'' dauerhaft zu deaktivieren. \\
 
@@ -67,7 +65,7 @@ Auch in dieser App lassen sich gespeicherte Bilder zu einem späteren Zeitpunkt 
 Außerdem können mehrere Bilder gleichzeitig zusammen in einer \emph{PDF} exportiert werden.
 
 \subsubsection{Evaluation}\label{subsec:imeva}
-Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form des ``Tipp des Tages'' (siehe \autoref{fig:imtip}) und die dedizierte Hilfe-Oberfläche bereits gestellt.
+Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form des ``Tipp des Tages'' (siehe \autoref{fig:imtip}) und die dedizierte Hilfe-Oberfläche bereit gestellt.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -76,18 +74,18 @@ Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form
   \label{fig:imfaq}
 \end{wrapfigure}
 
-Hierbei bietet die Hilfe-Oberfläche Antworten auf eine vorgegebene Menge an Fragen zu den verschiedenen Funktionen der App an (siehe \autoref{fig:imfaq}). \\
+Hierbei bietet die Hilfe-Oberfläche eine Liste von Fragen und Antworten zu den verschiedenen Funktionen der App an (siehe \autoref{fig:imfaq}). \\
 
-Die Statusleiste zeigt zu jedem Zeitpunkt den ausgewählten Modus und die ausführbaren Aktionen an.
+Die Statusleiste zeigt zu jedem Zeitpunkt den ausgewählten Modus und die darin ausführbaren Aktionen an.
 Hierdurch gibt die App dem Nutzer eine angemessene und verständliche Rückmeldung über den aktuellen Systemzustand der App (Nielsen~\autoref{itm:N1} \& \autoref{itm:N5}). \\
 
 Formen können, nachdem sie in das Bild gezeichnet wurden, zu einem späteren Zeitpunkt in ihrer Farbe und Größe verändert werden.
-Zusätzlich dazu gibt es in den Einstellungen der App weitere Optionen, um die App an die eigenen Bedürfnisse anzupassen.
-So kann zum Beispiel eingestellt werden, ob Maßeinheiten angezeigt werden sollen, welche metrischen Einheiten benutzt werden sollen, oder wie viele Dezimalstellen für Messwerte verwendet werden solle.
-Dies erlaubt nicht nur eine flexible Benutzung der App, sondern kann gleichzeitig zu einer Effizienzsteigerung führen, da die App nur einmal zu Beginn der Benutzung konfiguriert werden muss (Nielsten~\autoref{itm:N7}) \\
+Zusätzlich dazu gibt es in den Einstellungen der App weitere Möglichkeiten, die App an die eigenen Bedürfnisse anzupassen.
+So kann unter anderem eingestellt werden, ob Maßeinheiten angezeigt werden sollen, welche metrischen Einheiten benutzt werden sollen, oder wie viele Dezimalstellen für Messwerte verwendet werden solle.
+Dies erlaubt nicht nur eine flexible Benutzung der App, sondern kann gleichzeitig zu einer effizienteren Nutzung führen, da die App nur einmal zu Beginn konfiguriert werden muss (Nielsten~\autoref{itm:N7}) \\
 
-Die App versucht Situationen, in denen Fehler auftreten könnten, präventiv zu vermeiden.
-Hierzu werden Aktionen, die beim Ausführen im aktuellen Systemzustand zu einem Fehler führen würden, ausgegraut und sind nicht auswählbar (Nielsen~\autoref{itm:N5} \& \autoref{itm:N9}).
+Situationen, in denen Fehler entstehen könnten, werden von der App präventiv vermieden.
+Hierzu werden Aktionen, die beim Ausführen im aktuellen Systemzustand zu einem Fehler führen würden, ausgegraut und sind in der Statusleiste nicht auswählbar (Nielsen~\autoref{itm:N5} \& \autoref{itm:N9}). \\
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -96,19 +94,19 @@ Hierzu werden Aktionen, die beim Ausführen im aktuellen Systemzustand zu einem 
   \label{fig:imbar}
 \end{wrapfigure}
 
-Das Ausgrauen der unbenutzbaren Icons kann jedoch in Kombination mit den anderen verwendeten Farben in der Statusleiste zu Verwirrung führen.
-So werden hier zwei verschiedene Grautöne benutzt, die sich nur minimal unterscheiden (siehe \autoref{fig:imbar}). 
-\todo{bisschen mehr hierzu} \\
+Das Ausgrauen der deaktivierten Icons kann jedoch in Kombination mit den anderen verwendeten Farben in der Statusleiste zu Verwirrung führen.
+So werden hier nicht nur deaktivierte Icons grau eingefärbt, sondern auch die anderen Icons in einem ähnlichen Grauton dargestellt (siehe \autoref{fig:imbar}).
+Hier wird nicht deutlich, ob das Plus-Icon (ganz links) zur Zeit deaktiviert oder aktiviert ist, weil es in einem ähnlichen Grauton wie die deaktivierten Icons auf der rechten Seite dargestellt wird.
+Diese Verwirrung wird zusätzlich durch die Icon-Farbe der ausgewählten Form (zweites Icon von links) verstärkt.
+Für dieses Icon wird nämlich eine schwarze Farbe verwendet. \\
 
-Über einen Undo- bzw. Redo-Button hat der Benutzer die Möglichkeit, fehlerhafte Eingaben zu verbessern, oder Aktionen zu wiederholen (Nielsen \autoref{itm:N3}).
-Bei der Benutzung im Hochformat sind beide Buttons jedoch nicht sichtbar, da sie in dem \emph{Overflow-Menü} an der rechten Seite der Statusleiste versteckt sind (siehe \autoref{fig:imbar}).
-Der Benutzer ist hier also darauf angewiesen, das \emph{Overflow-Menü} anzuklicken, um zu wissen, dass sich dort die Optionen zum Undo bzw. Redo befinden.
-Generell fühlt sich die Statusleiste mit den sieben Icons (inklusive \emph{Overflow-Menü}) zu überladen an.
-Hier wäre die Verwendung einer zusätzlichen Menüleiste sinnvoll, die einen Teil der Icons übernimmt. \\
-\todo{anders schreiben}
+Fehlerhafte oder ungewollte Eingaben kann der Nutzer über den Undo- bzw. Redo-Button in der Statusleiste verbessern bzw. wiederholen (Nielsen \autoref{itm:N3}).
+Bei der Benutzung der App im Hochformat sind diese beiden Buttons jedoch nicht direkt sichtbar, da sie in einem \emph{Overflow-Menü} an der rechten Seite der Statusleiste versteckt sind (siehe \autoref{fig:imbar}).
+Der Benutzer muss hier also im Voraus wissen, dass sich dort die Optionen zum Undo bzw. Redo befinden. \todo{Schreiben, warum das ungünstig ist} \\
 
 Ein positiver Aspekt dagegen liegt beim adäquaten Umgang mit Unterbrechungen, sowie der Unterstützung verschiedener Bildschirmausrichtungen (Nielsen~\autoref{itm:N11} \& \autoref{itm:N15}).
-Beim Pausieren und Drehen der App gehen keine Informationen, wie bereits eingezeichnete Formen oder eingetragene Messwerte verloren, und das Bild bleibt stets in der erwarteten Ausrichtung. 
+Beim Pausieren und Drehen der App werden alle bereits eingezeichnete Formen oder eingetragene Messwerte gespeichert, und das Bild bleibt stets in der erwarteten Ausrichtung.
+Zudem wird die zusätzliche Bildschirmbreite, die sich bei der Benutzung im Querformat ergibt, dazu genutzt, um alle Elemente der Statusleiste anzuzeigen, ohne Aktionen in einem Overflow-Menü zu gruppieren. \todo{Bild von Statusleiste im Querformat} \\
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -117,21 +115,23 @@ Beim Pausieren und Drehen der App gehen keine Informationen, wie bereits eingeze
   \label{fig:imlense}
 \end{wrapfigure}
 
-Hinzukommend wird der zusätzliche Bildschirmplatz der sich im Querformat ergibt genutzt, um alle Elemente der Statusleiste anzuzeigen, ohne Aktionen im Overflow-Menü zu verstecken. \\
+Die Gesten-Unterstützung zur Navigation im Bild ist in dieser App problemlos möglich (Nielsen~\autoref{itm:N13}, \autoref{itm:N16} \& \autoref{itm:N17}).
+Hier kann der Benutzer mit Hilfe einer \emph{Pinch-} oder \emph{Doppelklick-Geste} in das Bild herein- bzw. herauszuzoomen.
+Um den Sichtbereich im Bild zu verschieben, kann eine \emph{Pan-Geste} genutzt werden.
+Diese gute Umsetzung der Gesten-Unterstützung in Kombination mit einer effizienten einhändigen Handhabung der App führen zu einem deutlich positiven Anwendererlebnis. \todo{Irgendwo vorher die verschiedenen Gesten erklären} \\
 
-Eine positive Benutzererfahrung ergibt sich aus der einfachen und effizienten einhändigen Handhabung in Kombination mit einer fehlerfreien Gesten-Unterstützung zur Navigation im Bild. (Nielsen~\autoref{itm:N13}, \autoref{itm:N16} \& \autoref{itm:N17}). \\
+Auch diese App bedient sich beim Zeichnen von Formen einer Zoom-Linse, welche den Bereich um die Fingerposition vergrößert darstellt.
+Negativ fällt bei der Umsetzung dieser Funktion jedoch auf, dass die Zoom-Linse statisch in der oberen linken Ecke angezeigt wird, und sich bei einer Kollision mit dem Finger nicht bewegt.
+So kann es passieren, dass die Zoom-Linse beim Zeichnen einer Form den gewünschten Zeichenbereich verdeckt, und der Benutzer nicht sieht, wo genau die Form eingezeichnet wird.
+Die Zoom-Linse verfehlt also in dieser Umsetzung ihre eigentlichen Aufgabe als Hilfestellung zum genaueren und schnelleren Zeichnen der Formen (siehe \autoref{fig:imlense}). \\
 
-Außerdem bedient sich auch diese App beim Zeichnen von Formen einer Zoom-Linse, welche den Bereich um die Fingerposition vergößert darstellt.
-Negativ fällt bei der Umsetzung dieser Funktion jedoch auf, dass die Zoom-Linse statisch in der oberen linken Ecke angezeigt wird, und sich bei Kollision mit dem Zeichenfinger nicht bewegt.
-Dies kann dazu führen, dass der gezoomte Bereich beim Zeichnen die Form verdeckt und seine eigentlichen Aufgabe als Hilfestellung zur genaueren und schnelleren Zeichnung verfehlt (siehe \autoref{fig:imlense}). \\
+Der Export von eingetragenen Messwerten als Meta-Daten ist auch in dieser App nicht möglich.
+So bietet die App zwar die Möglichkeit Bilder aus einer bestehenden App an diese zu teilen, stellt beim anschließenden Exportieren der bearbeiteten Bilder jedoch keinerlei Meta-Daten zur Weiterverarbeitung in einem nachgelagerten Dienst wie einer \emph{API} bereit (\autoref{itm:export}). \\
 
-Die App ermöglicht das Teilen von vorhandenen Bildern in diese, bietet beim Exportieren jedoch keine Möglichkeit die eingetragenen Messwerte als Meta-Daten beizubehalten.
-So wäre es zwar möglich, Bilder aus der bestehenden Android-App an \im{} zu teilen, diese zu bearbeiten und anschließend abzuspeichern. 
-Aber es gäbe keine Möglichkeit aus der bestehenden Android-App auf die eingetragenen Messwerte zuzugreifen, und diese für einen nachgeschalteten Diesnt aufzubereiten. \\
-
-Zusammenfassend kann gesagt werden, dass die App \im{} von \emph{Dirk Farin} die Nielsen-Heuristiken überwiegend positive erfüllt.
-Die versteckten Undo/Redo-Funktionalität und die Verwirrung des Nutzers durch die Verwendung ähnlicher Grautöne für unterschiedliche Aktionen in der Statsubar sind bei der Evaluation als Negativaspekte identifiziert worden.
-Besonders diese beiden Punkte in Kombination mit der fehldenden Einführung bzw. Hilfe-Stellung beim ersten Start der Aufmaß-Funktion, wirken sich negativ auf die initiale Benutzererfahrung der App aus.
-So muss der Benutzer, falls sich Fragen während des Einzeichnens von Formen ergeben, die aktuelle Oberfläche verlassen, in eine andere Oberfläche wechseln, und dort die passende Frage suchen. 
-
-Hierdurch können Fehler entstehen, die mit der Nutzung einer Android-App für die Aufmaßerfassung verhindert werden sollten.
+Zusammenfassend kann festgehalten werden, dass die App \im{} von \emph{Dirk Farin} die Nielsen-Heuristiken überwiegend positive erfüllt.
+Besonders die gute Umsetzung der Gesten-Unterstützung sorgt für ein positives Nutzungserlebnis.
+Negativ fallen jedoch die versteckte Undo- und Redo-Funktion im \emph{Overflow-Menü} und die Verwirrung des Nutzers durch die Verwendung ähnlicher Grautöne für unterschiedliche Aktionen in der Statusleiste auf.
+Zudem fehlt eine initiale Hilfestellung beim Wechsel in die Aufmaß-Oberfläche.
+Hier muss der Benutzer zuerst in eine andere Benutzeroberfläche wechseln und die passende Antwort suchen, falls sich Fragen während des Zeichnens von Formen ergeben.
+Die Integration in eine bestehende Systemarchitektur ist auch bei dieser App nicht ohne Weiteres umsetzbar, da alle eingetragenen Messwerte beim Exportieren der Bilder nicht mehr als Meta-Daten vorhanden sind.
+\todo{Schreiben, dass Tipp des Tages schlecht umgesetzt, weil nur 3 statische Tipps (Wiederholung)}
