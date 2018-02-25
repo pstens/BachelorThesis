@@ -1,10 +1,9 @@
 \subsection{Photo Measures}
 
 \subsubsection{Vorstellung}
-Die App \pm{} von \emph{Big Blue Pixel Inc.} hat zur Zeit des Downloads (20. Januar 2018) bei insgesamt 425 abgegeben Bewertungen eine durchschnittliche Bewertung von 4,3 von 5 Sternen im Google Play-Store \citep{PixelPM}.
-Auch diese App wird wie die beiden zuvor vorgestellten Apps unter der Kategorie ``Effizienz'' gelistet.
-Im Gegensatz zu den anderen Apps ist diese jedoch nicht kostenlos erhältlich, sondern kann für einen Preis von 3,99 Euro erworben werden. \todo{kaufen?} 
-Die Beschreibung im Play-Store selbst lautet wie folgt \todo{cite aus playstore}:
+Die App \pm{} von \emph{Big Blue Pixel Inc.} hat zur Zeit des Downloads (20. Januar 2018) bei insgesamt 1 469 abgegeben Bewertungen eine durchschnittliche Bewertung von 3,7 von 5 Sternen im Google Play-Store \citep{PixelPM}.
+Auch diese App wird im Play-Store unter der Kategorie ``Effizienz'' gelistet.
+Zu den in der App-Beschreibung aufgelisteten positiven Rezensionen von verschiedensten Webseiten und Magazinen, schreibt der Entwickler selbst noch folgende Wort \citep{PixelPM}:
 
 \begin{quote}
   ``Photo Measures is the best and easiest way to save measures on your own photos on Android.
@@ -12,7 +11,8 @@ Die Beschreibung im Play-Store selbst lautet wie folgt \todo{cite aus playstore}
 \end{quote}
 
 \noindent
-Beim ersten Start der App wird der Nutzer über eine Textbox, welche auf ein Plus-Symbol (siehe \autoref{fig:pmmenu}) mit der Unterschrift ``New'' zeigt, auf die möglichen Aktionen hingewiesen, die er in diesem Appzustand ausführen kann.
+Beim initialen Start der App wird ein \emph{Tooltip} über der Statusleiste angezeigt (siehe \autoref{fig:pmmenu}).
+Dieser \emph{Tooltip} zeigt auf das Plus-Icon in der Statusleiste, und gibt zusätzlich noch einen kurzen erklärenden Text zu der Aktion, die sich hinter dem Plus-Icon verbirgt.
 
 \begin{figure}[h]
   \centering
@@ -30,61 +30,73 @@ Beim ersten Start der App wird der Nutzer über eine Textbox, welche auf ein Plu
 \end{figure}
 
 \noindent
-Durch einen Klick auf das beschriebene Plus-Symbol öffnet sich ein Dialog, der den Benutzer auffordert, ein Bild auszuwählen.
-Hierzu kann der Benutzer das Bild direkt aus der Galerie importieren, oder ein Neues mit der Kamera aufnehmen. \\
-Anschließend wechselt die App in eine andere Benutzeroberfläche, in der das ausgewählte Bild und eine Statusleiste am unteren Rand des Bildschirms zu sehen sind (\autoref{fig:pmhelp}).
-Wenn der Benutzer diese Oberfläche zum ersten Mal öffnet, zeigt die App außerdem ein Hilfe-Overlay, welches dem Benutzer darüber informiert, wie Formen in das Bild eingezeichnet werden können.  \\
+Durch einen Klick auf das beschriebene Plus-Icon öffnet sich ein Dialog, der den Benutzer auffordert, ein Bild auszuwählen.
+Hierzu kann der Benutzer direkt ein Bild aus der Galerie importieren, oder ein Neues mit der Kamera aufnehmen. \\
 
-Zudem werden nur die Funktionen, die zum jeweiligen Systemzustand ausführbar sind (z.B. Farbe ändern nur wenn Form ausgewählt), in der Statusleiste am unteren Bildschirmrand angezeigt.
-Die Statusleiste bietet, wenn keine Form ausgewählt ist, die Möglichkeit zwischen drei verschienden Formen (Linie, Winkel, Freitext) zu wählen, die gewünschte Größe einzustellen, oder das Bild schrittweise um 90 Grad im Uhrzeigersinn zu drehen.
-Wenn eine Form ausgewählt ist, kann diese über die Statusleite im Nachhinein beschriftet, gefärbt oder gelöscht werden. \\
+Anschließend wechselt die App in eine andere Benutzeroberfläche.
+Hier werden die zuvor angezeigten Icons der Statusleiste durch vier neue Icons ersetzt, und das ausgewählte Bild angezeigt (siehe \autoref{fig:pmhelp}).
+Wenn der Benutzer diese Oberfläche zum ersten Mal öffnet, zeigt die App außerdem ein Hilfe-Overlay.
+Dieses stellt die drei möglichen Gesten zur Navigation in der Oberfläche jeweils mit Hilfe eines Icons und kurzen Satzes dar. 
+Sobald der Nutzer den Bildschirm berührt, wird das Hilfe-Overlay ausgeblendet. \\
 
-Auch in dieser App lassen sich gespeicherte Bilder zu einem späteren Zeitpunkt weiter bearbeiten.
-Außerdem können mehrere Bilder gleichzeitig zusammen in einer \emph{PDF} oder als jeweils einzelnes Bild geteilt werden.
+Die Statusleiste bietet dem Benutzer nur die Funktionen an, die im aktuellen Systemzustand ausführbar sind.
+Dies wird in dieser App so umgesetzt, dass eine weitere Statusleiste über die vorhandene geschoben wird, wenn eine Form markiert wird.
+Diese eingeschobene Statusleiste bietet nur Aktionen zur Bearbeitung der markierte Form an, und verdeckt somit gleichzeitig alle Aktionen, die im aktuellen Systemzustand nicht ausführbar seien sollen.
+So hat der Nutzer, wenn keine Form markiert ist, die Möglichkeit zwischen drei verschiedenen Formen (Linie, Winkel, Freitext) zu wählen, die gewünschte Größe einzustellen, oder das Bild schrittweise um $90$ Grad im Uhrzeigersinn zu rotieren.
+Außerdem kann in diesem Zustand über das Fragezeichen-Icon jederzeit ein \emph{Quick-Start Guide} aufgerufen werden.
+Wenn eine Form markiert ist, kann diese über die eingeschobene Statusleiste (siehe \autoref{fig:pmbar}) im Nachhinein beschriftet, in ihrer Zeichenart verändert, gefärbt, oder gelöscht werden.
+Sobald der Nutzer die Markierung aufhebt, wird die Statusleiste wieder ausgeblendet. \\
+
+Auch in dieser App lassen sich bearbeitete Bilder speichern, und zu einem späteren Zeitpunkt weiter bearbeiten.
+Zusätzlich ermöglicht die App das Exportieren mehrerer Bilder in einer \emph{PDF} oder jeweils als einzelnes \emph{JPG}.
 
 \subsubsection{Evaluation}\label{subsec:pmeva}
+Das initiale Hilfe-Overlay, welches beim Wechsel in die Bearbeitungs-Oberfläche angezeigt wird dient zusammen mit dem \emph{Quick-Start Guide} als Hilfe und Dokumentation der App (Nielsen \autoref{itm:N10}).
+Besonders die Benutzung von Schaubildern im Hilfe-Overlay (\autoref{fig:pmhelp}) gestalten die initiale Benutzung der App intuitiv und einfach. \\
 
-Hilfe und Dokumentation (Nielsen~\autoref{itm:N10}) werden in dieser App in Form eines Hilfe-Overlays, welches beim intialen Start angezeigt wird, und im Nachhinein über einen dedizierten Button erreichbar ist, bereit gestellt (siehe \autoref{fig:pmhelp}). \\
-
-Des Weiteren sind Aktionen nur dann verfügbar bzw. auswählbar, wenn diese im aktuellen Systemzustand legal sind.
-Dies vermeidet einerseits Situationen in denen Fehler entstehen können, andererseits gibt dies dem Benutzer eine angemessene und verständliche Rückmeldung über den derzeitigen Systemzustand der App (Nielsen~\autoref{itm:N1} \& \autoref{itm:N5}). \\
+Fehleranfällige Situationen werden durch die Benutzung einer jeweils dedizierten Statusleiste präventiv vermieden (Nielsen \autoref{itm:N5}).
+Hier kann der Nutzer im jeweiligen Systemzustand nur die Aktionen durchführen, die von der aktuell sichtbaren Statusleiste angeboten werden.
+Zusätzlich zur präventiven Fehlervorbeugung sorgt die Verwendung verschiedener Statusleisten für eine angemessene und verständliche Rückmeldung über den derzeitigen Systemzustand der App (Nielsen \autoref{itm:N1}) \\
 
 \begin{wrapfigure}{R}{0.4\textwidth}
   \centering
   \includegraphics[keepaspectratio, height=0.4\textheight]{photo_measures/bar}
-  \caption{Statusleiste im Zeichen-Modus bei Ausrichtung der App im Querformat}
+  \caption{Statusleiste bei markierter Form im Querformat}
   \label{fig:pmbar}
 \end{wrapfigure}
+\todo{Warum ist das Bild im Querformat? Hier nochmal normales im Hochformat machen}
 
 \noindent
-Die App bedient sich einer Reihe universell bekannter Icons, sodass intuitiv erkennbar seien sollte, welche Aktion sich hinter welchem Button verbirgt.
+Die App bedient sich einer Reihe bekannter Icons, sodass intuitiv erkennbar ist, welche Aktion sich hinter welchem Icon in der Statusleiste verbirgt.
 Wird ein Icon dennoch nicht erkannt, so stehen zusätzlich die Aktionen in Textform unter diesen (siehe \autoref{fig:pmbar}). \\
 
-Außerdem hat der Nutzer die Möglichkeit, Formen, Größen und Farben im Vornherein beliebig anzupassen.
-Dies fördert nicht nur eine flexible Benutzung der App, sondern steigert gleichzeitig die Effizienz, da die App nur einmal zu Beginn der Benutzung wie gewünscht eingestellt werden muss. \autoref{itm:N7} \\
+Der Nutzer hat die Möglichkeit vor dem Zeichnen der Formen, die Form- sowie Text-Größe einzustellen.
+Die ausgewählte Zeichenfarbe wird für alle weiteren Formen übernommen, sodass diese nur ein einziges Mal konfiguriert werden muss.
+Dies sorgt nicht nur eine flexible und individuelle, sondern auch für eine effizientere Benutzung der App, da diese nur einmal zu Beginn wie gewünscht konfiguriert werden muss. \autoref{itm:N7} \\
 
-Im Gegensatz dazu steht die fehlende Benutzerkontrolle \autoref{itm:N3} der App.
-So ist es dem Benutzer nicht möglich, über einen Undo- bzw. Redo-Button seine Aktionen zu revidieren.
-Dies ist gerade bei der Bearbeitung von Bildern, bei der es viele aufeinander aufbauende Aktionen des Benutzers gibt, eine entscheidende Funktionalität, welche nicht nur die Gedächtnisbelastung senken, sondern auch den ``Joy of Use'' deutlich steigern kann. \\
+Im Gegensatz dazu steht die fehlende Benutzerkontrolle (Nielsen \autoref{itm:N3}) der App.
+So ist es dem Benutzer nicht möglich, über einen Undo- bzw. Redo-Button seine Aktionen rückgängig zu machen bzw. zu wiederholen.
+Dies ist gerade bei der Bearbeitung von Bildern, bei welcher es viele aufeinander aufbauende Aktionen des Benutzers gibt, eine essentielle Funktionalität, die fehlt.
+Hierdurch wird einerseits das Nutzungserlebnis negativ beeinflusst, da fehlerhafte Eingaben vollständig gelöscht, und anschließend neu ausgeführt werden müssen.
+Andererseits wirkt sich eine fehlende Undo- bzw. Redo-Funktion auch negativ auf die kognitive Last des Benutzers aus.
+Dieser muss sich alle ausgeführten Bearbeitungsschritte für den Fall einer fehlerhaften Eingabe merken, um diese anschließend erneut ausführen zu können. \\
 
-Zudem fällt auch in dieser App die fehlerhafte Zoom-Geste auf, welche dazu führt, dass während des Zoom-Vorgangs eine Form auf das Bild gezeichnet wird (Nielsen~\autoref{itm:N16}).
-Dies erzwingt nach fast jeder Zoom-Geste einen Lösch-Aktion der unabsichtlich gemalten Form, da es keine Undo- bzw. Redo-Funktion gibt. \\
+Besonders auffällig wird die fehlende Benutzerkontrolle in Kombination mit der fehlerhaften \emph{Pinch-Geste} zum Zoomen des Bildes.
+Hierbei zeichnet der Nutzer beim Ausführen der \emph{Pinch-Geste} ungewollt eine Form auf das Bild (Nielsen \autoref{itm:N16}).
+Da die App keinerlei Möglichkeit bietet, unabsichtlich ausgeführte Aktionen rückgängig zu machen, muss der Nutzer nach jeder Zoom-Aktion die eingezeichnete Form löschen, und kann erst danach mit der eigentlichen Bearbeitung der App fortfahren.
+Gerade bei der Bearbeitung von Bilder mit vielen Details ist die Navigation im Bild und insbesondere das Zoomen unausweichlich. \\
 
-Ein positiver Aspekt dagegen liegt in der Unterstützung verschiedener Bildschirmausrichtungen, sowie dem adäquaten Umgang mit Unterbrechungen.
-So lässt sich das Gerät beliebig drehen, ohne dass Informationen in der App verloren gehen, oder der Benutzer durch eine unerwartete Ausrichtung des Bildes bzw. der Statusleiste verwirrt wird (Nielsen~\autoref{itm:N11} \& \autoref{itm:N15}). \\
+Ein positiver Aspekt dagegen liegt in der Unterstützung der verschiedenen Bildschirmausrichtungen, sowie dem adäquaten Umgang mit Unterbrechungen.
+Der Nutzer kann die App jederzeit drehen, ohne dass Informationen in der App verloren gehen, oder der Benutzer durch eine unerwartete Neuausrichtung des Bildes verwirrt wird (Nielsen \autoref{itm:N11} \& \autoref{itm:N15}). \\
 
-Die einfache Handhabung und das Zeichnen von Formen mit einem Finger ermöglichen eine einhändige Benutzung der App und wirken sich damit positiv auf die Benutzererfarhung aus (Nielsen~\autoref{itm:N13} \& \autoref{itm:N17}).
-Außerdem stellt auch diese App beim Zeichnen von Formen den vom Zeichenfinger verdeckten Bereich des Bildschirm vergrößert an einer anderen Stelle dar \todo{Bild}.
-Dies beugt Fehlern vor und erhöhrt zudem die Nutzungserfahrung, da der Nutzer hierdurch in der Lage ist, Formen bis zu einem gewünschten Punkt zu zeichnen, ohne den Finger vom Bilschirm nehmen zu müssen um zu sehen, bis wohin sich die Form bereits erstreckt.
+Die einfache Handhabung und das Zeichnen von Formen mit einem Finger ermöglichen eine einhändige Benutzung der App und wirken sich damit positiv auf das Nutzungserfahrung der App aus (Nielsen~\autoref{itm:N13} \& \autoref{itm:N17}).
+Zudem benutzt auch diese App eine Zoom-Linse, um den Bereich, der beim Zeichnen vom Finger verdeckt wird, an einer anderen Stelle vergrößert darzustellen.
+Dies beugt Fehlern beim Zeichnen der Formen vor und erhöht außerdem die Effizienz, da der Nutzer nicht jedes Mal erst den Finger vom Bildschirm nehmen muss, um zu sehen, bis wohin er die Form schon gezeichnet hat. \\
+\todo{Bild von Linse}
 
-Auch diese App ermöglicht es weder Bilder aus einer anderen App heraus in diese direkt freizugeben, oder bearbeitete Bilder inklusive der Meta-Daten an eine andere App zu teilen.
-Zudem gehen beim Exportiren der annotierten Bilder alle eingetragenen Messwerte in Form von Meta-Daten, die zur Weiterverarbeitung benötigt werden, verloren.
+Eingetragene Messwerte stehen nach dem Exportieren der bearbeiteten Bilder nicht mehr als Meta-Daten zur Verfügung.
+Hierdurch können die in der App annotierte Bilder nicht für die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} genutzt werden (\autoref{itm:export}).
+Außerdem lassen sich Bilder aus einer bestehenden App nicht in \pm{} teilen, sodass eine Integration in eine bestehende Systemarchitektur nur sehr mühsam möglich wäre (\autoref{itm:integration}). \\
 
-Zusammenfassend kann also festgehalten werden, dass die App \pm{} von \emph{Big Blue Pixel} keine Möglichkeit bietet, Messwerte, die in ein Bild eingetragen wurden, zur Weiterverarbeitung
-in der bestehenden Android-App oder in einem nachgeschalteten Dienst wie einer \emph{API} zugänglich zu machen. \\
-
-Die Nielsen-Heurstiken werden größtenteils erfüllt, jedoch wurden auch einzelne Punkte nicht gut umgesetzt.
-So führen die fehlerhafte Zoom-Geste, die bei jeder Zoom-Aktion eine Form zeichnet, in Kombination mit der gänzlich fehlenden Undo/Redo-Funktionalität zu einem negativen Nutzungserlebnis der App.
-Besonders diese fehlende Benutzkontrolle ist bei der Bearbeitung von Bildern, in der sich das Endergebnis aus einer Vielzahl von kleinen Benutzeraktionen zusammensetzt, als besonders schwerwiegend zu gewichten.
-Hierdurch entstehen Fehler, die es durch die Nutzung einer Android-Applikation zu verhindern galt.
-
+Zusammenfassend kann also festgehalten werden, dass die App \pm{} von \emph{Big Blue Pixel} die Usability-Heuristiken nach Nielsen nur bedingt gut umsetzt, da besonders die Kombination der fehlerhaften \emph{Pinch-Geste} beim Zoomen mit der fehlenden Undo- bzw. Redo-Funktionalität zu einem negativen Anwendungserlebnis führen.
+\todo{Noch ein bisschen mehr zusammenfassen} 
