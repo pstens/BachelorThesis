@@ -90,17 +90,27 @@ Die Bewertungskriterien werden in den nachfolgenden Unterkapiteln jeweils in der
 \section{Auswertung der Evaluationsergebnisse}
 \input{chapters/evaluation/table}
 
-\todo{Überarbeiten da kein MS mehr}
-Wie sich in \autoref{sec:evaluation} gezeigt hat, haben sich die beiden Apps \mm{} und \pm{} bezüglich der Usability-Heuristiken nach \citeauthor{Nielsen94} deutlich besser als \ms{} identifizieren lassen. 
-Hierbei ist besonders aufgefallen, dass sich alle drei Apps einer Zoom-Linse bedienen, die während des Zeichnens von Formen auf dem Bildschirm angezeigt wird, und das Bild im Bereich der aktuellen Zeichenposition vergrößert darstellt.
-Außerdem benutzen die Apps alle eine Statusbar, die am unteren Rand des Bildschirms verankert ist, und den aktuellen Systemzustand der App anzeigt.
-Bei der Alternative der \emph{Bosch GmbH} werden Aktionen, die zur Zeit nicht ausführbar sind, ausgegraut dargestellt. Dies gibt dem Benutzer eine klare und intuitive Rückmeldung über alle Aktionen, die im aktuellen Systemzustand möglich sind.
-Zudem fällt auf, dass alle Apps Probleme mit der Gesten-Unterstützung haben, da sie entweder gar nicht (\todo{ref auf measure sketch}) oder fehlerhaft (\todo{ref andere beiden}) umgesetzt wurde. \\
-Besonders dieser negative Punkt wirkt sich negativ auf das Benutzererlebnis aus, da eine intuitive und effiziente Navigation gerade bei Geräten mit kleineren Bildschirmgrößen essentiell sind. \todo{ref auf papers}
-So schreibt bla in seinem Paper blub, dass sich bla \dots
+Wie sich in \autoref{sec:evaluation} gezeigt hat, hat jede der drei vorhandenen Lösungsalternativen verschiedene Vor-, aber auch Nachteile.
+Besonders auffällig hierbei ist die fehlerhafte Umsetzung der \emph{Pinch-Geste} zum Zoomen des Bildes in den beiden Apps \mm{} und \pm{}.
+Dies ist ein Punkt, der gerade bei einer App zum Bearbeiten von Bildern, ein großes Gewicht hat.
+Diese fehlerhafte Umsetzung der \emph{Pinch-Geste} führt nämlich dazu, dass der Nutzer Formen löschen muss, die unabsichtlich gezeichnet wurden.
+Insbesondere bei der App \pm{} führt dieser Fehler zu einem enorm schlechten Anwendererlebnis, da es keine Undo-Funktion gibt, um die fehlerhaft eingezeichnete Form schnell rückgängig zu machen.
+Hier muss die Form zuerst markiert, und anschließend über einen Klick auf das Mülleimer-Icon in der Statusleiste gelöscht werden, bevor der Nutzer mit der eigentlichen Arbeit fortfahren kann. \\
 
-Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in die bereits bestehende Android-Applikation bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. \\
+Außerdem ist in \autoref{sec:evaluation} aufgefallen, dass alle drei Apps eine Zoom-Linse benutzen, um den Bereich, der von dem Finger beim Zeichnen einer Form bedeckt wird, vergrößert an einer anderen Stelle des Bildschirms darzustellen.
+Hierdurch kann der Nutzer schnell und präzise Formen in das Bild zeichnen, ohne jedes Mal den Finger hochnehmen zu müssen, um zu sehen, bis wohin die Form schon gezeichnet wurde.
+Die Umsetzung dieser Zoom-Linse ist in den beiden Apps \mm{} und \pm{} besser gelöst als in \im{}.
+Hier ist die Position der Zoom-Linse statisch in der oberen linke Ecke des Bildschirm fixiert, und bewegt sich auch bei der Kollision mit der gezeichneten Form nicht. \\
 
-Diese Evaluationsergebnisse sollen im Nachfolgenden Kapitel auf die eigene Konzeption einer Android-Applikation angewandt werden.
-Hierbei Aspekte, die besonders positiv aufgefallen sind, in die Konzeption einfließen, und Punkte, die sich bereits bei den Alternativen als Fehlerquellen identifizieren lassen haben, vermieden werden.
+Alle drei Apps benutzen Icons, um den Systemzustand und die darin ausführbaren Aktionen darzustellen.
+Zusätzlich deaktivieren alle drei Apps die Aktionen, welche im aktuellen Systemzustand nicht ausführbar sind bzw. zu Fehlern führen würden.
+Dieses Deaktivieren bestimmter Icons wird bei den beiden Alternativen \mm{} und \pm{} intuitiv verständlich umgesetzt, wohingegen die App \im{} durch die Verwendung ähnlicher Grautöne für deaktivierte und normale Icons für Verwirrung beim Benutzer sorgt. \\
+
+Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in eine bereits bestehende Systemarchitektur bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. 
+Hierbei hat die App \im{} im Vergleich zu den anderen beiden Alternative besser abgeschnitten, da diese das Teilen von Bilder aus einer bestehenden App in sich zulässt.
+Die Integration bleibt jedoch auch bei \im{} sowie bei \mm{} und \pm{} nur sehr mühsam möglich, da beim Export der bearbeiteten Bilder die Messwerte nicht mehr als Meta-Daten vorliegen.
+Durch den Export werden nämlich sämtliche eingetragene Messwerte und Formen in das Bild geschrieben, und müssten anschließend wieder mühsam aus dem Bild extrahiert werden. \\
+
+Alle Evaluationsergebnisse, die in diesem Kapitel gesammelt werden konnten, sollen im nächsten Kapitel auf die Konzeption einer eigenen Android-Applikation angewandt werden.
+Hierbei sollen Aspekte, die während der Evaluation der Apps als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen, und bereits identifizierte Usability-Probleme vermieden werden.
 \todo{ein bisschen ausbauen}
