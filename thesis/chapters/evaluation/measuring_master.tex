@@ -23,7 +23,7 @@ Sobald das gewünschte Projekt ausgewählt wurde, kann der Benutzer durch Auskla
   \end{subfigure}
   \begin{subfigure}[t]{0.4\textwidth}
     \includegraphics[keepaspectratio, width=\textwidth]{bosch/bar}
-    \caption{Aufmaße-Funktion}\label{fig:bbar}
+    \caption{Aufmaß-Funktion}\label{fig:bbar}
   \end{subfigure}
   \caption{\mm{} bei ausgeklapptem Navigationsmenü und in der Aufmaße-Funktion}
 \end{figure}
@@ -67,7 +67,7 @@ So lassen sich Formen erst dann löschen, wenn diese zuvor markiert wurde, oder 
   \label{fig:bicons}
 \end{figure}
 
-Sollte die App doch in einen Fehlerzustand gelangen, wie bspw. durch den Import eines beschädigten Bildes, wird ein \emph{Toast} angezeigt.
+Sollte die App doch in einen Fehlerzustand gelangen, wie bspw. durch den Import eines beschädigten Bildes, wird ein \emph{Toast}\footnote{Ein \emph{Toast} ist ein kleines Popup, welches für eine kurze Zeit auf dem Bildschirm eingeblendet wird. Dabei bleibt die aktuelle Oberfläche weiterhin sichtbar und der Benutzer kann mit dieser normal interagieren.} angezeigt.
 Dieses \emph{Toast} klärt den Nutzer darüber auf, was zu dem Fehler geführt hat, und wie dieser gelöst werden kann.
 \todo{Bild vom Toast beim Bildimport} (Nielsen~\autoref{itm:N9}). \\
 
@@ -79,11 +79,11 @@ Einen ``Expertenmodus'', der es dem Benutzer ermöglicht, die App zu konfigurier
 So muss der Nutzer jedesmal, wenn er ein eine zuvor eingezeichnete Form beschriften will, in den Text-Modus wechseln, die gewünschte Form markieren, und anschließend die Messwerte eintragen.  \\
 
 Markierte Formen werden durch die Verwendung einer anderen Farbe hervorgehoben.
-Dies ermöglicht ein schnelles und effizientes Scannen des Bildschirminhaltes, da sofort ersichtlich ist, welche Form zur Zeit ausgewählt ist (Nielsen~\autoref{itm:N12}). \\ 
+Dies ermöglicht ein schnelles und effizientes Erfassen des Bildschirminhaltes, da sofort ersichtlich ist, welche Form zur Zeit ausgewählt ist (Nielsen~\autoref{itm:N12}). \\ 
 
-Das Malen von Formen durch das Klicken und anschließende Ziehen mit einem Finger auf dem Bildschirm ermöglicht eine einfache und effiziente Benutzung der App mit einer Hand (Nielsen~\autoref{itm:N17}).
+Das Zeichnen von Formen durch das Klicken und anschließende Ziehen mit einem Finger auf dem Bildschirm ermöglicht eine einfache und effiziente Benutzung der App mit einer Hand (Nielsen~\autoref{itm:N17}).
 Zusätzlich wird mit Hilfe einer Lupe, die sich beim Zeichnen stets neben dem Finger befindet, der Bereich unter dem Finger vergrößert dargestellt (siehe \autoref{fig:blense}).
-Dies macht das Malen von Formen nicht nur effizienter, sondern beugt auch Fehlern vor, da dieser Bereich sonst vom Finger des Benutzer bedeckt ist. \\
+Dies macht das Zeichnen von Formen nicht nur effizienter, sondern beugt auch Fehlern vor, da dieser Bereich sonst vom Finger des Benutzer bedeckt ist. \\
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -101,14 +101,14 @@ Hierdurch bleibt das Bild entgegen den Erwartungen nicht in der ursprünglichen 
 
 Wie bereits festgehalten, ermöglicht die App das Benutzen einer \emph{Drag-Geste} zum Zeichnen von Formen.
 Die Gesten-Unterstützung zur Navigation im Bild ist jedoch nur nicht so gut umgesetzt worden.
-So führt die fehlerhafte Umsetzung der \emph{Pinch-Geste} dazu, dass der Nutzer beim Zoomen des Bildes unabsichtlich eine Form malt, wenn er zuvor im Zeichen-Modus ist (Nielsen~\autoref{itm:N16}).
-Dieser Punkt wirkt sich negativ auf das Anwendungserlebnis aus, da hierdurch nach nahezu jeder Zoom-Aktion eine Undo-Aktion erzwungen wird, um die unabsichtlich-gemalte Form rückgängig zu machen (Nielsen~\autoref{itm:N13}). \\
+So führt die fehlerhafte Umsetzung der \emph{Pinch-Geste} dazu, dass der Nutzer beim Zoomen des Bildes unabsichtlich eine Form zeichnet, wenn er zuvor im Zeichen-Modus ist (Nielsen~\autoref{itm:N16}).
+Dieser Punkt wirkt sich negativ auf das Anwendungserlebnis aus, da hierdurch nach nahezu jeder Zoom-Aktion eine Undo-Aktion erzwungen wird, um die unabsichtlich-gezeichnete Form rückgängig zu machen (Nielsen~\autoref{itm:N13}). \\
 
 Der Export des bearbeiteten Bildes führt dazu, dass alle zuvor eingetragenen Messwerte nicht mehr trivial auslesbar sind, da diese nicht mehr als Meta-Daten vorliegen (\autoref{itm:export}).
 Zudem lässt sich die App nur schwer in eine bestehende Systemarchitektur integrieren, weil es keine Möglichkeit gibt, Bilder direkt in die App zu teilen, oder die annotierten Bilder inklusive der Meta-Daten für einen nachgelagerten Dienst aufzubereiten (\autoref{itm:integration}). \\
 
 Zusammenfassend lässt sich festhalten, dass die App \mm{} von der Bosch GmbH die Usability-Heuristiken nach Nielsen größtenteils erfüllt.
-Einzig bei der Benutzung von Gesten zum Zoomen im Bild und der Unterstützung von verschiedenen Bildschirmausrichtungen identifizieren haben sich während der Evaluation Schwachstellen identifizieren lassen.
-Besonders die fehlerhafte Gesten-Unterstützung und den damit verbundenen unabsichtlich-gemalten Formen ist ein Kritikpunkt, der das Nutzungserlebnis der App enorm schmälert, da der Benutzer hier dazu ``gezwungen'' wird, nach jeder Zoom-Aktion eine Undo-Aktion zu tätigen.
+Einzig bei der Benutzung von Gesten zum Zoomen im Bild und der Unterstützung von verschiedenen Bildschirmausrichtungen haben sich während der Evaluation Schwachstellen identifizieren lassen.
+Besonders die fehlerhafte Gesten-Unterstützung und den damit verbundenen unabsichtlich-gezeichnete Formen ist ein Kritikpunkt, der das Nutzungserlebnis der App einschränkt.
 Zudem lässt sich die Aufmaß-Funktion nicht in die bestehende Android-App integrieren, da es keine Möglichkeit gibt, annotierte Bilder inklusive der Meta-Daten an eine andere App zu teilen bzw. in einer anderen App aufgenommene Bilder direkt an \mm{} freizugeben.
-Auch die eingetragenen Messwerte lassen sich im Nachhinein nur mühsam aus dem Bild extrahieren, da diese nicht mehr als Meta-Daten vorliegen, sodass die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} nur erschwert möglich sind.
+Auch die eingetragenen Messwerte lassen sich im Nachhinein nur mühsam aus dem Bild extrahieren, da diese nicht mehr als Meta-Daten vorliegen, sodass die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} nur schwer möglich sind.

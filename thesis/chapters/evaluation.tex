@@ -1,10 +1,10 @@
 \chapter{Evaluation vorhandener Lösungsalternativen}\label{chap:eval}
-Im folgenden Kapitel werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und evaluiert.
-Hierzu werden die Bewertungskriterien zunächst vorgestellt, und anschließend iterativ auf die ausgewählten Apps angewandt.
+Im folgenden Kapitel werden die Bewertungskriterien zur Evaluation zunächst vorgestellt, und anschließend iterativ auf ausgewählte Apps angewandt.
+Hierzu werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und evaluiert.
 Dieses Kapitel schließt die \emph{Observation} Phase ab, welche in \autoref{chap:problem} begonnen wurde. 
 
 \section{Bewertungskriterien}
-Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie eine zusätzliche Menge selbst aufgestellter Kriterien benutzt \todo{anders schreiben}.
+Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie zwei selbst aufgestellte Kriterien benutzt \todo{anders schreiben}.
 Da sich die erweiterten Nielsen-Heuristiken aus 18 verschiedenen Kriterien zusammensetzen, von denen nicht jede bezüglich des Einsatzbereiches im Gerüstbau gleich relevant ist, werden die Kriterien nach Absprache mit der Geschäftsleitung in zwei Klassen eingeteilt (R = als relevant beurteil, I = als nicht relevant beurteilt).
 Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in diesem Kontext als relevant klassifiziert wurden.
 \todo{Gewichtung überarbeiten}
@@ -15,7 +15,7 @@ Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in 
 \begin{enumerate}
     \di{Sichtbarkeit des Systemzustandes (R)}{N1}{Angemessene Rückmeldung in einem vernünftigen zeitlichen Rahmen}
     \di{Übereinstimmung zwischen System und realer Welt (R)}{N2}{Sprache des Benutzers, natürliche und logische Reihenfolge}
-    \di{Benutzerkontrolle und -freiheit (R)}{N3}{Undo und Redo}
+    \di{Benutzerkontrolle und -freiheit (R)}{N3}{Rückgängig und Wiederholen\todo{bessere Wörter}}
     \di{Konsistenz und Standards (R)}{N4}{Konsistente Nutzung und Beachtung der Plattform-Konventionen}
     \di{Fehlervorbeugung (R)}{N5}{Vermeide Situationen in denen Fehler entstehen können}
     \di{Wiedererkennung statt Erinnern (R)}{N6}{Objekte, Optionen und Aktionen sollen sichtbar sein}
@@ -28,6 +28,7 @@ Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in 
 \noindent
 Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass acht weitere Heuristiken, die speziell für mobile Geräte ausgelegt sind, hinzugezogen werden \citep{Bertini06}.
 \citeauthor{MachadoNeto13} schlagen hierzu in ihrem Artikel ``Heuristics for the assessment of interfaces of mobile devices'' die folgenden weiteren Kriterien vor:
+\todo{fix citeauthor}
 
 \begin{enumerate}
     \setcounter{enumi}{10}
@@ -108,7 +109,8 @@ Dieses Deaktivieren bestimmter Icons wird bei den beiden Alternativen \mm{} und 
 Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in eine bereits bestehende Systemarchitektur bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. 
 Hierbei hat die App \im{} im Vergleich zu den anderen beiden Alternativen besser abgeschnitten, da diese das Teilen von Bilder aus einer bestehenden App in sich selber zulässt.
 Die Integration bleibt jedoch bei allen drei Apps nur sehr mühsam möglich, da beim Export der bearbeiteten Bilder die Messwerte nicht mehr als Meta-Daten vorliegen.
-Durch den Export werden nämlich sämtliche eingetragene Messwerte und Formen in das Bild geschrieben, und müssten anschließend wieder mühsam aus dem Bild extrahiert werden. \\
+Durch den Export werden nämlich sämtliche eingetragene Messwerte und Formen in das Bild geschrieben, und müssten anschließend wieder aus dem Bild extrahiert werden.
+Da die nachgelagerte Verwendung ein wichtiges Kriterium ist, wurde entschieden selbst eine Android-App zu entwickeln.
 
 Alle Evaluationsergebnisse, die in diesem Kapitel gesammelt werden konnten, sollen im nächsten Kapitel auf die Konzeption einer eigenen Android-Applikation angewandt werden.
 Hierbei sollen Aspekte, die während der Evaluation als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen, und bereits identifizierte Usability-Probleme vermieden werden.
