@@ -9,12 +9,12 @@ Die Phase wird erst im nächsten Kapitel vollständig abgeschlossen.
 \section{Analyse der Problematik}\label{sec:problem}
 In diesem Kapitel wird der charakteristische Vorgang der Aufmaßerfassung im Gerüstbau zunächst beschrieben, und anschließend werden vermeidliche Fehlerquellen, die sich in der Vergangenheit gezeigt haben, evaluiert. \\
 
-Der bisherige Ablauf sieht dabei für einen Monteur der Fa. \emph{VERO} wie folgt aus:
+Der bisherige Ablauf sieht dabei für einen Monteur der \emph{Fa. VERO} wie folgt aus:
 \begin{enumerate}
-  \item Fahrt zum Kunden
+  \item Fahrt zur Baustelle
   \item Erstellen des Aufmaßes
   \item Aufschreiben der gesammelten Daten auf Papier \label{itm:paper}
-  \item Abnahme vom Kunden
+  \item Abnahme vom Auftraggeber
   \item Rückfahrt ins Büro
   \item Eintragen der Daten ins System \label{itm:system}
   \item Rechnungsstellung
@@ -25,26 +25,27 @@ Der bisherige Ablauf sieht dabei für einen Monteur der Fa. \emph{VERO} wie folg
 Dieses Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwändig herausgestellt. 
 Durch zu grobe Schätzungen, aber auch die hohe kognitive Belastung der Monteure, kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch eine effizientere Informationsverarbeitung vor Ort auf den Baustellen vermeiden lassen. \\
 
-Gerade die Aufgaben in \autoref{itm:paper} bis \autoref{itm:system} des bisherigen Ablaufes haben sich als potentielle Fehlerquellen identifizieren lassen.
-So sind die auf Papier gesammelten Daten im Nachhinein oft nur vom ursprünglichen Verfasser zu verstehen, oder gehen noch bevor sie im Büro ins System eingetragen werden verloren.
+Insbesondere die Aufgaben in \autoref{itm:paper} bis \autoref{itm:system} des bisherigen Ablaufes sind potentielle Fehlerquellen.
+So sind die auf Papier gesammelten Daten im Nachhinein oft nur vom ursprünglichen Verfasser zu lesen oder gehen noch bevor sie im Büro ins System eingetragen werden können verloren.
 Zudem kommt es bei der Nachbearbeitung der Informationen auch häufig dazu, dass Informationen, die vor Ort beim Kunden abgesprochen worden sind, in Vergessenheit geraten und nicht ins System eingetragen werden. \\
 
 Genau diese Problematik soll durch einen optimierten Prozess der Aufmaßerfassung mit Hilfe einer mobilen Applikation für Android-Endgeräte gelöst werden.
-Wie genau dieser optimierte Prozess für den Monteur dabei aussehen kann, wird im nächsten Kapitel weiter ausgeführt.
+Ein solcher optimierter Prozess wird im nächsten Kapitel weiter ausgeführt.
 
 \section{Optimierter Prozess}
-Die in \autoref{sec:problem} identifizierten Fehlerquellen ergeben sich durch die hohe kognitive Belastung der Monteure gepaart mit dem verspäteten Eintragen der gesammelten Informationen ins System erst bei Rückkehr ins Büro. \\
+Die in \autoref{sec:problem} identifizierten Fehlerquellen ergeben sich durch die hohe kognitive Belastung der Monteure und dem verspäteten Eintragen der gesammelten ggfs. unpräzisen und unvollständigen Informationen ins System erst bei Rückkehr ins Büro. \\
 
-Durch die Entwicklung einer Android-Applikation sollen genau diese Fehlerquellen minimiert, und die Effizienz der Monteure gesteigert werden.
+Durch die Entwicklung einer Android-Applikation sollen genau diese Fehlerquellen minimiert und die Effizienz der Monteure gesteigert werden.
 Dabei soll die App es dem Benutzer ermöglichen, bereits auf der Baustelle Bilder von den Gerüsten zu machen, die er anschließend mit Hilfe von verschiedenen geometrischen Formen annotieren kann.
-Außerdem soll die Möglichkeit bestehen, Informationen wie Länge, Breite und Höhe der Gerüste direkt in der App zu hinterlegen. \\
+Außerdem soll die Möglichkeit bestehen, Informationen wie Länge, Breite und Höhe der Gerüste mit Bezug zum Bild direkt in der App zu hinterlegen. \\
 
-Um den Prozess der Aufmaßerfassung abzurunden, soll es dem Benutzer möglich sein, die annotierten Bilder an einen nachgelagerten Dienst, wie zum Beispiel eine \emph{API}, zu senden, welche anhand der eingetragen Maße ein fertiges Aufmaß für den Kunden zur Abnahme generiert.
+Um den Prozess der Aufmaßerfassung zu vervollständigen, soll es dem Benutzer möglich sein, die annotierten Bilder an einen nachgelagerten Dienst, wie zum Beispiel eine \emph{API}, zu senden.
+Die \emph{API} kann anhand der eingetragen Maße ein Aufmaß für den Auftraggeber zur Abnahme generieren.
 Ein optimierter Prozess könnte dann beispielsweise wie folgt aussehen:
 \begin{enumerate}
-  \item Fahrt zum Kunden
+  \item Fahrt zur Baustelle
   \item Erstellen der Aufmaße mit Hilfe der App
-  \item Abnahme vom Kunden
+  \item Abnahme vom Auftraggeber
   \item Rechnungsstellung
 \end{enumerate} 
 
