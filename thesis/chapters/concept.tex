@@ -1,5 +1,5 @@
 \chapter{Konzeption}\label{chap:concept}
-In diesem Kapitel werden die Evaluationsergebnisse aus \autoref{chap:eval} auf die Konzeption einer eigenen Android-App angewandt werden.
+In diesem Kapitel werden die Evaluationsergebnisse aus \autoref{chap:eval} auf die Konzeption einer eigenen Android-App angewandt.
 Hierzu werden Umsetzungsideen zu den einzelnen Bewertungskriterien, die zur Evaluation der Lösungsalternativen genutzt wurden, nacheinander vorgestellt.
 Dieses Kapitel der Arbeit entspricht der dritten Phase (\emph{dea Generation}) des \hcdp{}, und dient dazu, Ideen zur Lösung der während der \emph{Observation} identifizieren Usability-Probleme aufzustellen.
 
@@ -17,11 +17,11 @@ So schreibt \citeauthor{SJ16} in seiner Usability-Studie zum Vergleich eines tra
 \section{Übereinstimmung zwischen System und Welt}
 Zusätzlich soll die App in einer natürlichen und logischen Reihenfolge benutzbar sein.
 So soll dem Benutzer zuerst die Möglichkeit gegeben werden, ein gewünschtes Bild auszuwählen, welches im Anschluss daran in einer weiteren Benutzeroberfläche bearbeitet werden kann.
-Dieser Ablauf soll sicherstellen, dass der Benutzer bei der Verwendung der App nicht überfordert wird, und sich intuitiv zurecht findet.
 Zudem soll die App in zwei Modi, den Zeichen- und Text-Modus, unterteilt werden, um eine klare Grenze zwischen dem Zeichnen Formen und Eintragen von Messwerten zu schaffen.
+Dieser Ablauf soll sicherstellen, dass der Benutzer bei der Verwendung der App nicht überfordert wird, und sich intuitiv zurecht findet.
 \todo{Sequence Diagram zum basic Workflow einfügen}
 
-\section{Benutzerkontrolle und -freieht}
+\section{Benutzerkontrolle und -freiheit}
 Gerade die fehlende Undo- bzw. Redo-Funktionalität hat sich bei der App \pm{} in \autoref{subsec:pmeva} als signifikantes Usability-Problem identifizieren lassen.
 Aufgrund dessen soll diese Funktionalität über zwei dedizierte Icons in der Menüleiste der App angeboten werden.
 Dies soll potentielle Verwirrung wie in \autoref{subsec:imeva} bei der App \im{} vermeiden, und ein positives Nutzungserlebnis garantieren.
@@ -29,8 +29,7 @@ Dies soll potentielle Verwirrung wie in \autoref{subsec:imeva} bei der App \im{}
 
 \section{Konsistenz und Standards}
 Um eine positive Benutzererfahrung zu generieren, und die Benutzung von nicht-intuitiven Icons zu vermeiden, werden bei der Implementierung die Design-Richtlinien von \emph{Google} befolgt.
-Diese sogenannten \mg{} bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.
-\todo{ref auf Material-Guidelines}
+Diese sogenannten \mg{}\footnote{Die \mg{} umfassen Designempfehlungen von \emph{Google} um Apps einheitlich und benutzerfreundlich zu gestalten.} bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.
 
 \section{Fehlervorbeugung}
 Situationen, in denen Fehler auftreten können, sollen in der App präventiv vermieden werden.
@@ -73,7 +72,7 @@ Dies kann durch die Implementierung eines \emph{Saved States} garantiert werden.
 \section{Fokussieren der Informationen}
 Ein weiterer Aspekt liegt beim Hervorheben wichtiger Informationen auf dem Bildschirm.
 So sollen Formen durch die Benutzung einer Akzent-Farbe als Schatten oder Umrandung schnell als ``markiert'' erkennbar sein und dem Benutzer einen schnellen Überblick über den Appzustand verschaffen.
-Außerdem sollen ausgefüllte Kreise an den Eckpunkten der zur Zeit markierten Formen als \emph{Call for action} dienen, und dem Nutzer so darauf aufmerksam machen, dass die Form mit Hilfe dieser Eckpunkte in ihrer Position und Größe verändert werden kann.
+Außerdem sollen ausgefüllte Kreise an den Eckpunkten der zur Zeit markierten Formen als \emph{Call for action} dienen, und dem Nutzer so darauf aufmerksam machen, dass die Form mit Hilfe dieser Eckpunkte in ihrer Position und damit ihrer Größe verändert werden kann.
 \todo{Accent-Color, Call for Action}
 
 \section{``Joy of Use''}
@@ -95,6 +94,8 @@ Hierzu muss insbesondere darauf geachtet werden, dass \emph{Pan}- und \emph{Pinc
 
 \section{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit}
 Der Benutzer soll stets in der Lage sein, die gesamte App mit einer Hand bedienen zu können.
+Um die App übersichtlich zu gestalten, sollen häufig genutzte Aktionen in die Menüleiste der App integriert werden.
+Hierzu gehören bspw. die Undo- bzw. Redo-Funktionalität, das Auswählen der verschiedenen Formen und das Löschen von markierten Formen bzw. ausgewählten Texten.
 \todo{Wichtigte Kriterien für einhändige Handybenutzung}
 
 % \subsection{Die 8 Goldenen Regeln von Shneiderman}
