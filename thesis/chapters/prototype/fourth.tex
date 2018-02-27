@@ -8,6 +8,7 @@ Um die in \autoref{sec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehu
 \begin{itemize}
   \item Verwendung mehrerer Freitext-Formen im Bild zu unübersichtlich
   \item Doppelte Eingabe des Bildtitles beim Speichern irritierend
+  \item Ungewollte Rotation von importieren Bildern
 \end{itemize}
 
 \noindent
@@ -22,7 +23,17 @@ Dies ist besonders auffällig, wenn der Nutzer mehrere Freitext-Formen erstellt,
 Außerdem zeigen die Testergebnisse, dass es beim Speichern des bearbeiteten Bildes zu einer doppelten Eingabe des Titels kommt.
 So muss der Benutzer einmal beim Speichern des Bildes innerhalb der \emph{Library} eine Beschreibung eingeben, und anschließend ein zweites Mal beim Hochladen des Bildes in der bestehenden App.
 Diese doppelte Eingabe der exakt gleichen Beschreibung ist für den Benutzer nicht nachvollziehbar und sorgt darüber hinaus für unnötige Verwirrung.
-(Nielsen~\autoref{itm:N1} \& \autoref{itm:N17}) \\ 
+(Nielsen~\autoref{itm:N1} \& \autoref{itm:N17}) 
+
+Zudem berichten beide Tester, dass sich im Hochformat aufgenommene Bilder ohne jegliche Interaktion beim Importieren in die App ins Querformat drehen.
+Dieser Punkt ist beim lokalen Testen während der Implementierung des Prototyps auf keinem der benutzten Geräten aufgefallen.
+Da beide Testpersonen ein \emph{Samsung}-Gerät verwenden, könnte es sich hierbei um einen Herstellerspezifischen Fehler handeln.
+Auffällig ist auch, dass die beschriebene Rotation des Bildes nur dann geschieht, wenn das Bild beim Import weder skaliert noch zugeschnitten wurde.
+Dieses Verhalten lässt sich im \emph{Quellcode} der \emph{uCrop-Library} verifizieren.
+Hier wird vor dem Zuschneiden des Bildes geprüft, ob der Nutzer das Bild angepasst hat.
+Ist dies nicht der Fall, so wird das Originalbild ohne jegliche Modifikation in die Zieldatei geschrieben.
+Hierbei gehen auf \emph{Samsung}-Geräten anscheinend die \emph{Exif}-Daten\footnote{erklären} verloren.
+(Nielsen~\autoref{itm:N5}) \\ 
 
 \section{Idea Generation}\label{sec:idea4}
 Um das Bild auch bei der Verwendung von mehreren Freitext-Formen übersichtlich zu halten, bietet es sich an die Schriftgröße des Textes konfigurierbar zu machen.
@@ -33,6 +44,10 @@ Die doppelte Eingabe der Bildbeschreibung beim Speichern lässt sich durch das E
 So kann beim Benutzen der \emph{Library} über den zusätzliche Parameter entschieden werden, ob beim Speichern ein Speicher-Dialog innerhalb der \emph{Library} angezeigt werden soll oder nicht.
 Hierdurch lässt sich der Speicher-Dialog für die bestehende App einfach ausblenden, und das doppelte Eintragen des Bildtitels verhindern.
 \todo{Konfigurierabare Libs?}
+
+Das ungewollte Rotieren von Bilder, die im Hochformat aufgenommen wurde, kann durch eine spezielle Überprüfung des Geräteherstellers verhindert werden.
+Diese Überprüfung soll das Bild, wenn es sich um ein Geräte von \emph{Samsung} handelt, auch dann zuschneiden, wenn der Nutzer keine Modifikation am Bild vorgenommen hat.
+Hierdurch soll sichergestellt werden, dass die \emph{Exif}-Daten nicht verloren gehen und das Bild nicht ungewollt rotiert wird.
 
 \section{Prototyping}
 Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{sec:idea4} genannten Lösungsideen umzusetzen. \\
@@ -45,9 +60,17 @@ Dies soll dem Benutzer die Möglichkeit geben, selber zu entscheiden, welcher Te
 Der Speicher-Dialog wurde durch das Hinzufügen eines weiteren Start-Parameters in der \emph{Library} ausgeblendet, und ist so bei der Benutzung in der bestehenden Android-App nicht mehr zu sehen.
 Hier wird das Bild direkt auf dem Gerät gespeichert und anschließend in der bestehenden App nach einem Bildtitel gefragt. \\
 
+Die ungewollte Rotation der Bilder auf \emph{Samsung}-Geräten wurde durch die Modifikation der \emph{uCrop-Library} umgesetzt.
+Hierzu wurde die \emph{Library} \emph{geforked}\footnote{fork erklären} und anschließend eine Überprüfung des Geräteherstellers in den \emph{Quellcode} eingebaut.
+
 \section{Testing}
 Feedback zum Benutzererlebnis des vierten Prototyps gab es X Tage nach dem Rollout. \\
 
 In dieser vierten Iteration des \hcdp{} sind keine weiteren Usability-Probleme identifiziert worden.
 Der Prototyp ließe sich, so beide Testpersonen, effizient und einfach zum Erfassen der Aufmaße verwenden und würde auf langer Sicht viel Arbeit und Zeit sparen, da alle Informationen sofort digital und für alle Mitarbeiter zur Verfügung stehen.
-\todo{Hier abschließend Fazit?}
+Mittlerweile ist der Prototyp unternehmensweit ausgerollt und im Zeitraum X bis Y wurden schon Z Bilder mit Aufmaßen versehen. 
+Ein abschließender Wunsch, der nicht direkt die Implementierung des Prototyps betrifft, bezieht sich auf das Hoch- und Runterladen annotierter Bilder inklusive Meta-Daten mit Hilfe der \emph{API}.
+Hierzu sollen auf Seiten der \emph{API} ein neuer Knotenpunkt eingeführt werden, der es ermöglicht, alle Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\footnote{erklären} an die \emph{API} zu senden.
+Zusätzlich zu den Meta-Daten soll das Originalbild und das annotierte Bild hochgeladen und mit den Meta-Daten verknüpft werden.
+Zukünftig soll die \emph{API} in der Lage sein, Meta-Daten und die zugehörigen Bilder an die App zurückzuliefern.
+Hierdurch soll es dem Benutzer möglich sein, annotierte Bilder zu einem späteren Zeitpunkt weiter bearbeiten zu können.

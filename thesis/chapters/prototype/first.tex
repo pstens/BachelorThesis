@@ -1,11 +1,8 @@
 \section{Implementation}\label{sec:pro1}
-In \autoref{chap:concept} wurden Umsetzungsmöglichkeiten für die verschiedenen Bewertungskriterien aus \todo{ref auf sec} herausgearbeitet.
+In \autoref{chap:concept} wurden Umsetzungsmöglichkeiten für die verschiedenen Bewertungskriterien aus \autoref{sec:criteria} ausgearbeitet.
 Diese sollen in die Implementierung des ersten Prototyps einfließen, und so einen Grundstein für eine positive Benutzererfahrung der App legen. \\
 
-Der erste Prototyp wurde am 16. Dezember 2017 in Form fertiggestellt und in die bestehende App eingebunden.
-Der Prototyp an sich wurde als \emph{Android-Library} programmiert, um den Quellcode möglichst übersichtlich und unabhängig von der bestehenden App schreiben zu können.
-Die Implementierung als \emph{Android-Library} erlaubt zudem kürzerer Kompilierungszeiten und eine einfachere Einbindung in bestehende Android-Projekte. \\
-\todo{jitpack nenne?}
+Der erste Prototyp wurde am 16. Dezember 2017 fertiggestellt und in die bestehende Android-App eingebunden. \\
 
 Bei der Implementierung wurde das Entwurfsmuster des \emph{Model-View-Controllers} eingesetzt, welches den Quellcode in drei verschiedene Komponente unterteilt (siehe \autoref{fig:mvc}).
 So gibt es einerseits das \emph{Datenmodell (model)}, die \emph{Präsentationskomponente (view)} und die \emph{Programmsteuerung (controller)}.
@@ -114,7 +111,7 @@ Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante 
 \todo{Vielleicht noch ein bisschen ausschmücken}
 Zum Testen des Prototyps wurde dieser in die App der beiden Geschäftsführer der Fa. \vr{} (siehe \autoref{table:testers}) eingebunden.
 Testperson 1, André Vermeulen, repräsentiert hierbei den ``Poweruser'' der App, wohingegen Testperson 2, Sebastian Wiesbrock, die App eher selten nutzt.
-Beiden Testern wurde weder eine verbale noch schriftliche Hilfestellung zur Verfügung gestellt.
+Beiden Testern wurde zur Nutzung des Prototyps weder eine verbale noch schriftliche Hilfestellung zur Verfügung gestellt.
 
 \begin{table}[h]
   \centering
@@ -140,9 +137,9 @@ Nachdem die beiden Tester den Prototyp zwei Tage in ihren Arbeitsalltag integrie
 
 Nach Aussage beider Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.
 So sei nicht intuitiv klar, dass die App über zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, verfügt.
-Zudem sei unklar, dass man über einen Klick auf den rechten \emph{Floating Action Button} zwischen den beiden Modi hin und her wechseln kann. \\
+Zudem sei unklar, dass man über einen Klick auf den rechten \emph{Floating Action Button} zwischen den beiden Modi wechseln kann. \\
 
-Ein weiteres Problem ergab sich laut Testpersonen 1 bei der Benutzung der App auf seinem Tablet.
+Ein weiteres Problem ergab sich laut Testperson 1 bei der Benutzung der App auf seinem Tablet.
 So seien sämtliche Texte nur schwer lesbar, und die Punkte zum Verändern der Formen so klein, dass sie nur mühsam und mit viel Konzentration mit dem Finger zu treffen seien. \\
 
 Darüber hinaus schilderten beide Testpersonen, dass eingetragene Messwerte auf Bildern, die in dunkleren Lichtverhältnissen aufgenommen wurden, nur schlecht lesbar seien.

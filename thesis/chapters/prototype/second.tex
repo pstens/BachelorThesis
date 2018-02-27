@@ -7,7 +7,7 @@ Hierzu werden die vier Phasen des \hcdp{} ein weiteres Mal durchlaufen.
 Um einen Überblick über die Test-Ergebnisse aus \autoref{sec:test1} herzustellen, werden diese im Nachfolgenden zunächst noch einmal aufgelistet und anschließend weiter evaluiert:
 
 \begin{itemize}
-  \item Bedienung der App nicht intuitiv
+  \item Bedienung der App über \emph{FAB} nicht intuitiv
   \item Text- und Formelemente auf Tablet-Geräten nicht gut bedienbar
   \item Eingetragene Messwerte bei dunklem Hintergrund nicht gut erkennbar
   \item Anwenderwunsch: Zuordnen von Gerüsttypen zu Formen
@@ -16,7 +16,7 @@ Um einen Überblick über die Test-Ergebnisse aus \autoref{sec:test1} herzustell
 
 \noindent
 Zunächst auffällig ist, dass beide Testpersonen in \autoref{sec:test1} die \emph{Floating Action Buttons} als Hindernis bei der Bedienung der App beschreiben.
-Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{Floating Action Button} angeklickt wird, und sonst nur ein einzelnes Icon angezeigt wird, wird dem Nutzer keine angemessene Rückmeldung über den aktuellen Systemzustand gegeben.
+Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{FAB} angeklickt wird, und sonst nur ein einzelnes Icon angezeigt wird, wird dem Nutzer keine angemessene Rückmeldung über den aktuellen Systemzustand gegeben.
 Außerdem wird hierdurch keine ausreichende Hilfestellung zu den vorhandenen Funktionen, und wie diese zu benutzen sind gegeben.
 (Nielsen~\autoref{itm:N1} \& \autoref{itm:N10}) \\
 
@@ -62,9 +62,10 @@ Falls ein langer Klick auf die Form bei der ersten Benutzung zu kontraintuitiv i
 Zudem sollte an der Form erkenntlich werden, dass sie bereits mit einem Gerüsttyp verlinkt ist. \\
 \todo{Guidelines zu Dropdowns und long press gestures hier?}
 
-Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der im Android-System vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer dedizierten \emph{Android-Library} für das Schneiden von Bildern anbieten.
-Ersteres birgt die Gefahr in sich, dass die Verfügbarkeit einer solchen \emph{Crop-Activity} im Android-System vom Gerätehersteller und der verwendeten Android-Version abhängig ist.
+Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der im Android-System vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer \emph{Open-Source Android-Library} für das Schneiden von Bildern anbieten.
+Die Verfügbarkeit der von Android bereitgestellten \emph{Crop-Activity} ist jedoch vom Gerätehersteller und der verwendeten Android-Version abhängig.
 Hierdurch kann nicht sichergestellt werden, dass die Funktion auf allen Geräten funktioniert.
+Deshalb bietet sich die Verwendung einer \emph{Open-Source Android-Library} an.
 \todo{ref auf API docs und crop activity thread stack-overflow}
 
 \section{Prototyping}
@@ -127,8 +128,9 @@ Auf diese Weise soll der Benutzer die bereits verlinkten von den nicht-verlinkte
 \todo{Bild von Dialog und Indikator}
 
 Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}, eine dedizierte Android-Library, in das Projekt eingebunden \citep{UC18}.
-\emph{uCrop} ist auf \emph{Github} als Open-Source Projekt verfügbar, und bietet so die Möglichkeit, den eigenen Bedürfnissen angepasst zu werden \todo{Quelle Github}.
-Diese bietet im Gegensatz zu der \emph{Crop-Activity} Unterstützung für alle Gerätehersteller ab Android-Version $14$ an.
+\emph{uCrop} ist auf \emph{Github} als \emph{Open-Source} Projekt verfügbar und bietet so die Möglichkeit, den eigenen Bedürfnissen angepasst zu werden \todo{Quelle Github}.
+\emph{uCrop} unterstützt alle Android-Geräte ab der Android-Version $14$ und deckt somit über 99\% aller Android-Nutzer ab.
+\todo{Link zu https://developer.android.com/about/dashboards/index.html und kleine pie chart}
 \todo{Bilder lib}
 
 \section{Testing}\label{sec:test2}
@@ -142,14 +144,14 @@ Jedoch sei, so beide Tester, das initiale Einarbeiten in die App immer noch zu s
 Hier wünsche man sich eine ``kleine Anleitung, die die App kurz beschreibt'' (Testperson 2) \\
 
 Ein weiteres Problem, dass beim Testen des Prototyps aufgefallen ist, sei der Farbdialog.
-Dieser sei nach Aussage von Testperson 2, zu fortgeschritten und biete eine Auswahl an Farben, die ``[...] der normale Gerüstbauer niemals verwendet wird'' (Testperson 2).
-Hierbei wäre es laut Testperson 2 sinnvoller, den Benutzer ``[...] nicht mit so vielen Auswahlmöglichkeiten zu überschütten [...]'', sondern die populärsten Farben direkt auswählbar zu machen. \\
+Dieser sei nach Aussage von Testperson 1, zu fortgeschritten und biete eine Auswahl an Farben, die ``[...] der normale Gerüstbauer niemals verwenden wird'' (Testperson 1).
+Hierbei wäre es laut Testperson 1 sinnvoller, den Benutzer ``[...] nicht mit so vielen Auswahlmöglichkeiten zu überschütten [...]'', sondern die populärsten Farben direkt auswählbar zu machen. \\
 
 Außerdem wurde sich neben einem einfacheren Farbdialog eine Funktion gewünscht, Freitexte in das Bild eintragen zu können. 
 Dies sei laut der Aussage beider Tester eine wichtige Funktion, da es bisher keine Möglichkeit gibt, weitere Notizen oder Anmerkungen im Bild zu hinterlegen \\
 
 Zudem kam der Wunsch nach einer weiteren Form, nämlich einer Linien mit nur einer Pfeilspitze, auf.
-Dies sei, so beide Testpersonen, wichtig, um Längen, die auf dem Bild nur einen Startpunkt haben, und in die Tiefe offen sind, zu kennzeichnen. \\
+Dies sei, so beide Testpersonen, wichtig, um Längen, die auf dem Bild nur einen Startpunkt haben, und in die Tiefe offen sind, zu kennzeichnen oder bestimmte Details hervorzuheben. \\
 
 Des Weiteren seien verlinkte Gerüsttypen an Formen nicht intuitiv durch den in diesem Prototyp eingeführten Indikator erkennbar.
 Hierzu fügten beide Testpersonen hinzu, dass die Eingabefelder zum Eintragen der Messwerte im Gerüsttyp-Dialog ``[...] durchaus sinnvoll [...]'' (Testperson 1) seien, in der Praxis jedoch daran scheitern würde, dass sich Messwerte zuerst gemerkt werden müssen, bevor sie im Dialog eingegeben werden können.
