@@ -1,9 +1,7 @@
 \subsection{Measuring Master}
-\todo{Einleitung + Zitat hier hin?}
-
 \subsubsection{Vorstellung}
-\todo{Version, Downloaddatum, Playstore-Link}
-Die App \mm{} von der Bosch GmbH ist im Play-Store unter der Rubrik ``Effizienz'' aufgelistet.
+Die App \mm{} von der Bosch GmbH ist im Google Play-Store unter der Rubrik ``Effizienz'' aufgelistet.
+Bei der vorliegenden App handelt es sich um die Version \emph{1.3.1}, welche am 8. Januar 2018 aus dem Play-Store\urlnote{https://play.google.com/store/apps/details?id=com.bosch.measuringmaster&hl=de} runtergeladen wurde.
 Selbst beschreibt der App-Hersteller die App wie folgt \citep{BoschMM}:
 
 \begin{quote}
@@ -17,11 +15,11 @@ Sobald das gewünschte Projekt ausgewählt wurde, kann der Benutzer durch Auskla
 
 \begin{figure}[h]
   \centering
-  \begin{subfigure}[t]{0.4\textwidth}
+  \begin{subfigure}[t]{0.45\textwidth}
     \includegraphics[keepaspectratio, width=\textwidth]{bosch/menu}
     \caption{Navigationsmenü}\label{fig:bmenu}	
   \end{subfigure}
-  \begin{subfigure}[t]{0.4\textwidth}
+  \begin{subfigure}[t]{0.45\textwidth}
     \includegraphics[keepaspectratio, width=\textwidth]{bosch/bar}
     \caption{Aufmaß-Funktion}\label{fig:bbar}
   \end{subfigure}
@@ -67,13 +65,26 @@ So lassen sich Formen erst dann löschen, wenn diese zuvor markiert wurde, oder 
   \label{fig:bicons}
 \end{figure}
 
-Sollte die App doch in einen Fehlerzustand gelangen, wie bspw. durch den Import eines beschädigten Bildes, wird ein \emph{Toast}\footnote{Ein \emph{Toast} ist ein kleines Popup, welches für eine kurze Zeit auf dem Bildschirm eingeblendet wird. Dabei bleibt die aktuelle Oberfläche weiterhin sichtbar und der Benutzer kann mit dieser normal interagieren.} angezeigt.
-Dieses \emph{Toast} klärt den Nutzer darüber auf, was zu dem Fehler geführt hat, und wie dieser gelöst werden kann.
-\todo{Bild vom Toast beim Bildimport} (Nielsen~\autoref{itm:N9}). \\
+Sollte die App doch in einen Fehlerzustand gelangen, wie bspw. durch den Import eines beschädigten Bildes, wird ein \emph{Toast}\urlnote{footnote} angezeigt (siehe \autoref{fig:btoast}).
+Dieses \emph{Toast} gibt dem Nutzer eine Information darüber, was zum Fehler geführt hat (Nielsen~\autoref{itm:N9}).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{bosch/toast}
+  \caption{\emph{Toast} beim Import eines beschädigten Bildes}
+  \label{fig:btoast}
+\end{figure}
 
 Durch die konsistente Benutzung intuitiv verständlicher Icons lassen sich die dahinter befindlichen Aktionen ohne große Anstrengung erkennen.
 Dieser Punkt wirkt sich positiv auf das Nutzungserlebnis der App aus, da sämtliche Icons nicht zuerst auswendig gelernt werden müssen.
 So dient zum Beispiel das Mülleimer-Icon in der Menüleiste (siehe \autoref{fig:bicons}) sowohl im Zeichen- als auch im Text-Modus als Löschfunktion der markierten Form bzw. des ausgewählten Textes (Nielsen~\autoref{itm:N4} \& \autoref{itm:N6}). \\
+
+\begin{wrapfigure}{R}{0.4\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{bosch/lense}
+  \caption{Zoom-Linse beim Zeichnen einer Form}
+  \label{fig:blense}
+\end{wrapfigure}
 
 Einen ``Expertenmodus'', der es dem Benutzer ermöglicht, die App zu konfigurieren oder bestimmte Schritte abzukürzen, ist in der App nicht vorhanden (Nielsen~\autoref{itm:N7}).
 So muss der Nutzer jedesmal, wenn er ein eine zuvor eingezeichnete Form beschriften will, in den Text-Modus wechseln, die gewünschte Form markieren, und anschließend die Messwerte eintragen.  \\
@@ -85,19 +96,24 @@ Das Zeichnen von Formen durch das Klicken und anschließende Ziehen mit einem Fi
 Zusätzlich wird mit Hilfe einer Lupe, die sich beim Zeichnen stets neben dem Finger befindet, der Bereich unter dem Finger vergrößert dargestellt (siehe \autoref{fig:blense}).
 Dies macht das Zeichnen von Formen nicht nur effizienter, sondern beugt auch Fehlern vor, da dieser Bereich sonst vom Finger des Benutzer bedeckt ist. \\
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-  \centering
-  \includegraphics[keepaspectratio, width=0.5\textwidth]{bosch/lense}
-  \caption{Zoom-Linse beim Zeichnen einer Form}
-  \label{fig:blense}
-\end{wrapfigure}
-
 Des Weiteren kann die App zu jeder Zeit pausiert werden, ohne dass eingetragene Messwerte oder Formen verloren gehen (Nielsen~\autoref{itm:N11}). 
 Dies ist besonders wichtig, wenn während der Benutzung der App bspw. ein Anruf angenommen werden muss. \\
 
 Im Kontrast zu dem guten Umgang mit Unterbrechungen, führt die Rotation des Bildschirms vom Hoch- ins Querformat zu einer Drehung des Bildes in die Rotationsrichtung.
 Hierdurch bleibt das Bild entgegen den Erwartungen nicht in der ursprünglichen Ausrichtung, in der es aufgenommen wurde, sondern dreht sich stets mit der Bildschirmausrichtung mit (Nielsen~\autoref{itm:N15}). \\
-\todo{Bilder Portrait und landscape}
+% \begin{figure}[h]
+% \centering
+% \begin{subfigure}[t]{0.4\textwidth}
+% \includegraphics[keepaspectratio, width=\textwidth]{bosch/portrait}
+% \caption{App im Hochformat}
+% \end{subfigure}
+% \begin{subfigure}[c]{0.4\textwidth}
+% \includegraphics[keepaspectratio, width=\textwidth]{bosch/landscape}
+% \caption{App im Querformat}
+% \end{subfigure}
+% \caption{App im Hochformat und im Querformat nach einer Rotation um 90 Grad gegen den Uhrzeigersinn}
+% \label{fig:app14}
+% \end{figure}
 
 Wie bereits festgehalten, ermöglicht die App das Benutzen einer \emph{Drag-Geste} zum Zeichnen von Formen.
 Die Gesten-Unterstützung zur Navigation im Bild ist jedoch nur nicht so gut umgesetzt worden.

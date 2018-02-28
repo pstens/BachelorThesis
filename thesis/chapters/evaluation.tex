@@ -4,10 +4,9 @@ Hierzu werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerf
 Dieses Kapitel schließt die \emph{Observation} Phase ab, welche in \autoref{chap:problem} begonnen wurde. 
 
 \section{Bewertungskriterien}\label{sec:criteria}
-Zur Evaluation der Lösungsalternativen wird die erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie zwei selbst aufgestellte Kriterien benutzt \todo{anders schreiben}.
-Da sich die erweiterten Nielsen-Heuristiken aus 18 verschiedenen Kriterien zusammensetzen, von denen nicht jede bezüglich des Einsatzbereiches im Gerüstbau gleich relevant ist, werden die Kriterien nach Absprache mit der Geschäftsleitung in zwei Klassen eingeteilt (R = als relevant beurteil, I = als nicht relevant beurteilt).
+Zur Evaluation der Lösungsalternativen wird eine erweiterte Version der Nielsen-Heuristiken \citep{Nielsen94}, sowie zwei selbst aufgestellte Kriterien verwendet. 
+Da sich die erweiterten Nielsen-Heuristiken aus 18 verschiedenen Kriterien zusammensetzen, von denen nicht jede bezüglich des Einsatzbereiches im Gerüstbau gleich relevant ist, werden die Kriterien nach Absprache mit der Geschäftsleitung in zwei Klassen eingeteilt (R = als relevant beurteilt, I = als nicht relevant beurteilt).
 Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in diesem Kontext als relevant klassifiziert wurden.
-\todo{Gewichtung überarbeiten}
 
 \subsection{Die erweiterten Nielsen-Heuristiken}\label{subsec:nielsen}
 \citeauthor{Nielsen94} führt in seinem Buch ``Usability inspection methods'' zehn Heuristiken auf, die auf einer Grundlage von allgemein anerkannten Prinzipien beruhen, und sich zur Evaluation von Usability-Problemen besonders gut eignen \citep[Seiten 25--62]{Nielsen94}: 
@@ -15,36 +14,35 @@ Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in 
 \begin{enumerate}
     \di{Sichtbarkeit des Systemzustandes (R)}{N1}{Angemessene Rückmeldung in einem vernünftigen zeitlichen Rahmen}
     \di{Übereinstimmung zwischen System und realer Welt (R)}{N2}{Sprache des Benutzers, natürliche und logische Reihenfolge}
-    \di{Benutzerkontrolle und -freiheit (R)}{N3}{Rückgängig und Wiederholen\todo{bessere Wörter}}
+    \di{Benutzerkontrolle und -freiheit (R)}{N3}{Rückgängig machen und Wiederholen}
     \di{Konsistenz und Standards (R)}{N4}{Konsistente Nutzung und Beachtung der Plattform-Konventionen}
     \di{Fehlervorbeugung (R)}{N5}{Vermeide Situationen in denen Fehler entstehen können}
     \di{Wiedererkennung statt Erinnern (R)}{N6}{Objekte, Optionen und Aktionen sollen sichtbar sein}
     \di{Flexibilität und Effizienz der Benutzung (R)}{N7}{Häufige Aktionen anpassbar, Experten schnellere Bedienung erlauben}
-    \di{Ästethisches und minimalistisches Design (I)}{N8}{Keine irrelevanten Informationen}
+    \di{Ästhetisches und minimalistisches Design (R)}{N8}{Keine irrelevanten Informationen}
     \di{Erkennbarkeit, Diagnose und Erholung von Fehlern (R)}{N9}{Verständliche Fehlermeldungen}
     \di{Hilfe und Dokumentation (R)}{N10}{Leicht zu finden, abgestimmt auf Aufgabe, konkrete Schritte zur Lösung}
 \end{enumerate} 
 
 \noindent
 Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass acht weitere Heuristiken, die speziell für mobile Geräte ausgelegt sind, hinzugezogen werden \citep{Bertini06}.
-\citeauthor{MachadoNeto13} schlagen hierzu in ihrem Artikel ``Heuristics for the assessment of interfaces of mobile devices'' die folgenden weiteren Kriterien vor:
-\todo{fix citeauthor}
+\citet{MachadoNeto13} schlagen hierzu in ihrem Artikel ``Heuristics for the assessment of interfaces of mobile devices'' die folgenden weiteren Kriterien vor:
+\todo{bib style auf deutsch stellen!}
 
 \begin{enumerate}
     \setcounter{enumi}{10}
-    \di{Adäquater Umgang mit Unterbrechnungen (R)}{N11}{Kein Verlust von Informationen bei Unterbrechung der Aktivität}
+    \di{Adäquater Umgang mit Unterbrechungen (R)}{N11}{Kein Verlust von Informationen bei Unterbrechung der Aktivität}
     \di{Fokussieren der Informationen (R)}{N12}{Hervorheben der wichtigen Informationen, um schnelles Scannen zu erlauben}
     \di{``Joy of Use'' (R)}{N13}{Positives Nutzungserlebnis bei Bedienung/Verwendung}
     \di{``Don't lie to the user'' (I)}{N14}{Keine falschen oder ungültigen Zahlen, Fakten bzw. Nachrichten}
     \di{Unterstützung verschiedener Bildschirmausrichtungen (R)}{N15}{Keine Verwirrung bei verschiedenen Ausrichtungen des Bildschirms}
     \di{Ergonomische Gestaltung der physischen Interatkion (R)}{N16}{Kein unabsichtliches Auslösen von Funktionen}
-    \di{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit (R)}{N17}{Einfache Navigations- und Eingabetechniken bei einhändiger Benutzung}
+    \di{Einfache Eingabe, Lesbarkeit und Übersichtlichkeit (R)}{N17}{Einfache Navigations- und Eingabetechniken bei einhändiger Benutzung}
     \di{Stelle Privatheit sicher (I)}{N18}{Vermeide den Verlust/Diebstahl von privaten Daten z.b.\ durch Passwörter}
 \end{enumerate}
 
 \noindent
-Bei der Klassifizierung der Kriterien wurden ``8. Ästethisches und minimalistisches Design'', ``14. Don't lie to the user'' und ``18. Stelle Privatheit sicher'' als nicht relevant gewichtet, da diese drei Punkte nach Absprache mit der Geschäftsleitung bei der Entwicklung einer eigenen Android-App für die Zielgruppe nicht wichtig seien.
-\todo{warum wurden gerade diese als I markiert}
+Da in der App weder sensible Nutzerdaten gesammelt oder übertragen, noch Fakten oder Nachrichten dargestellt werden sollen, wurden die Kriterien ``14. Don't lie to the user'' und ``18. Stelle Privatheit sicher'' nach Absprache mit der Geschäftsleitung als für den Kontext der App nicht relevant gewichtet.
 
 \subsection{Weitere Kriterien}
 Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellten Heuristiken werden noch zwei weitere Kriterien zur Evaluation hinzugezogen, die für die Einbindung in eine bereits bestehende Systemarchitektur wichtig sind: 
@@ -52,9 +50,7 @@ Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellten Heuristiken werden 
 \begin{itemize}
     \di{Integration der App in eine vorhandene Systemarchitektur}{integration}{Die App sollte sich in eine bereits vorhandene Systemarchitektur leicht integrieren lassen}
     \di{Export des annotierten Bildes und der Metadaten zur Weiterverarbeitung durch einen nachgelagerten Dienst (z.B. \emph{API})}{export}{Die App sollte die eingetragenen Meta-Daten, wie zum Beispiel die Längen einer Linie, zur Weiterverarbeitung exportierbar machen}
-    \todo{Hier noch mehr Kriterien auflisten}
 \end{itemize}
-\todo{Punkte beschreiben}
 
 \section{Vorstellung und Evaluation ausgewählter Apps}\label{sec:evaluation}
 Als Lösungsalternativen werden im folgenden drei Android-Applikationen vorgestellt, die unter dem Suchbegriff ``Aufmaße'' im Google Play-Store gelistet werden.
@@ -67,14 +63,14 @@ Um die Lösungsalternativen möglichst repräsentativ für das Angebot im Play-S
 Hierbei handelt es sich um die folgenden drei Apps:
 
 \begin{itemize}
-  \item \mm{} - Bosch GmbH (\textit{Popularität})
-  \item \im{} - Dirk Farin (\textit{Bewertungen})
-  \item \pm{} - Blue Big Pixel Inc. (\textit{Rezensionen})
+  \item \textbf{\mm{}} - Bosch GmbH (\textit{Popularität})
+  \item \textbf{\im{}} - Dirk Farin (\textit{Bewertungen})
+  \item \textbf{\pm{}} - Blue Big Pixel Inc. (\textit{Rezensionen})
 \end{itemize}
 
 \noindent
 Die App \mm{} der Bosch GmbH stammt von einem internationalen Großkonzern mit mehr als 80 Standorten in Deutschland, und einem Jahresumsatz von 14,5 Mrd. Euro \citep{Bosch18}.
-Mit zwischen 100 000 bis 500 000 Installationen gehört die App zu einer der Populärsten unter dem Suchbegriff ``Aufmaße'' im Google Play-Store.
+Mit zwischen 100 000 bis 500 000 Installationen gehört die App zu einer der Populärsten unter dem Suchbegriff ``Aufmaße'' im Google Play-Store. \\
 
 \im{} von Dirk Farin wurde ausgewählt, da die App mit einer Gesamtbewertung von 3,9 von 5 Sternen bei 2 764 abgegebenen Bewertungen eine der beliebtesten Apps unter dem Suchbegriff ``Aufmaße'' ist.
 
@@ -114,4 +110,3 @@ Da die nachgelagerte Verwendung ein wichtiges Kriterium ist, wurde entschieden s
 
 Alle Evaluationsergebnisse, die in diesem Kapitel gesammelt werden konnten, sollen im nächsten Kapitel auf die Konzeption einer eigenen Android-Applikation angewandt werden.
 Hierbei sollen Aspekte, die während der Evaluation als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen, und bereits identifizierte Usability-Probleme vermieden werden.
-\todo{ein bisschen ausbauen}
