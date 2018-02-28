@@ -1,8 +1,8 @@
 \chapter{Auswertung der Problematik}\label{chap:problem}
-Wie in \autoref{subsec:motivation} bereits beschrieben, liegt der Fokus dieser Arbeit auf der Problematik der Aufmaßerfassung im Gerüstbau. \todo{anderer wortlaut}
+Wie in \autoref{subsec:motivation} bereits beschrieben, liegt der Fokus dieser Arbeit in der Entwicklung einer effizienten und robusten Software-Lösung in Form einer Android-App für die Aufmaßerfassung im Gerüstbau.
 Der Prozess der Aufmaßerfassung hat sich im Laufe der Zeit als fehleranfällig und aufwändig herausgestellt.
-Wie genau dieser Prozess aussieht, und was ihn so fehleranfällig macht, wird im Folgenden am Beispiel der Fa. \vr{} illustriert.
-Anschließend wird ein möglicher optimierter Prozess vorgestellt, der im Verlauf dieser Arbeit mit Hilfe eines IT-Artefakts in Form einer mobilen Applikation für Android-Geräte umgesetzt werden soll.
+Im folgenden Kapitel wird am Beispiel der \emph{Fa. VERO} der bisherige, analoge Prozess der Aufmaßerfassung illustriert.
+Anschließend wird ein möglicher, optimierter Prozess vorgestellt, der im Verlauf dieser Arbeit mit Hilfe eines IT-Artefakts in Form einer mobilen Applikation für Android-Geräte umgesetzt werden soll.
 Bezüglich des \hcdp{} entspricht dieses Kapitel einem Teil der \emph{Observation}.
 Die Phase wird erst im nächsten Kapitel vollständig abgeschlossen.
 
@@ -19,18 +19,36 @@ Der bisherige Ablauf sieht dabei für einen Monteur der \emph{Fa. VERO} wie folg
   \item Eintragen der Daten ins System \label{itm:system}
   \item Rechnungsstellung
 \end{enumerate}
-\todo{Skizze von Andre hier einfügen}
 
 \noindent
 Dieses Verfahren hat sich im Laufe der Zeit als fehleranfällig und zeitaufwändig herausgestellt. 
 Durch zu grobe Schätzungen, aber auch die hohe kognitive Belastung der Monteure, kommt es bei der Aufmaßerfassung immer wieder zu Fehlern und damit Kosten, die sich durch eine effizientere Informationsverarbeitung vor Ort auf den Baustellen vermeiden lassen. \\
 
 Insbesondere die Aufgaben in \autoref{itm:paper} bis \autoref{itm:system} des bisherigen Ablaufes sind potentielle Fehlerquellen.
-So sind die auf Papier gesammelten Daten im Nachhinein oft nur vom ursprünglichen Verfasser zu lesen oder gehen noch bevor sie im Büro ins System eingetragen werden können verloren.
+So sind die auf Papier gesammelten Daten (siehe \autoref{fig:notes}) im Nachhinein oft nur vom ursprünglichen Verfasser zu lesen oder gehen noch bevor sie im Büro ins System eingetragen werden können verloren.
 Zudem kommt es bei der Nachbearbeitung der Informationen auch häufig dazu, dass Informationen, die vor Ort beim Kunden abgesprochen worden sind, in Vergessenheit geraten und nicht ins System eingetragen werden. \\
 
 Genau diese Problematik soll durch einen optimierten Prozess der Aufmaßerfassung mit Hilfe einer mobilen Applikation für Android-Endgeräte gelöst werden.
 Ein solcher optimierter Prozess wird im nächsten Kapitel weiter ausgeführt.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{aufmasse/front}
+    \caption{Gebäudeseite mit Fassadengerüst}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{aufmasse/notes}
+    \caption{Notizen zum Aufmaß des Fassadengerüsts}
+    \label{fig:notes}
+  \end{subfigure}
+  \caption{Analoge Aufmaßerfassung eines Fassadengerüsts}
+  \label{fig:problem}
+\end{figure}
+
+In \autoref{fig:problem} sind die Aufmaße eines Fassadengerüst vom X.Y zu sehen.
+Diese Notiz stammt aus dem Notizbuch einer der Geschäftsleiter der \emph{Fa. VERO}, der die Aufmaße vor Ort auf der Baustelle angefertigt hat.
+\todo{kann ich hier das richtige Datum schreiben, oder machen wir sonst eine Zeitreise?} 
 
 \section{Optimierter Prozess}
 Die in \autoref{sec:problem} identifizierten Fehlerquellen ergeben sich durch die hohe kognitive Belastung der Monteure und dem verspäteten Eintragen der gesammelten ggfs. unpräzisen und unvollständigen Informationen ins System erst bei Rückkehr ins Büro. \\
