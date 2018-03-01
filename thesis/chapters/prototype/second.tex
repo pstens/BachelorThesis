@@ -20,8 +20,7 @@ Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{FAB} angek
 Außerdem wird hierdurch keine ausreichende Hilfestellung zu den vorhandenen Funktionen, und wie diese zu benutzen sind gegeben.
 (Nielsen~\autoref{itm:N1} \& \autoref{itm:N10}) \\
 
-\todo{Formulierung}
-Ein weiterer Punkt, der in \autoref{sec:test1} negativ aufgefallen ist, ist die Benutzung der App auf Tablet-Geräten.
+Ein weiterer Punkt, der in \autoref{sec:test1} während der \emph{Testing}-Phase negativ aufgefallen ist, ist die Benutzung der App auf Tablet-Geräten.
 Damit Endgeräte mit einer großen Bildschirmdiagonale trotzdem über eine scharfe Auflösung verfügen, besitzen diese mehr Pixel pro Zentimeter bzw. eine höhere Pixeldichte.
 Da die UI-Elemente im ersten Prototyp mit Hilfe von \emph{Pixeln}, welche von Android zur Laufzeit nicht für die entsprechenden Bildschirmgrößen optimiert werden, modelliert worden sind, werden UI-Elemente auf Tablet-Geräten kleiner dargestellt, als auf normalen Smartphones.
 Dies erschwert die Benutzung der App auf Tablets, da Texte nur mühsam zu lesen, und Formen schwierig auszuwählen sind.
@@ -40,11 +39,11 @@ Zum Anderen soll die Möglichkeit bestehen, Bilder beim Import in die App in die
 \section{Idea Generation}\label{sec:idea2}
 Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art Statusleiste am unteren Bildschirmrand zu verankern.
 Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten.
-Die \mg{} suggerieren hierfür die Nutzung einer sogenannten ``Bottom navigation''.
-Diese kann nach \citeauthor{BN18} dazu eingesetzt werden, um die Erkundung von Apps einfach zu gestalten, und den Wechsel zwischen Ansichten auf der obersten Ebene der App zu beschleunigen \citep{BN18}. \\
+Die \mg{} suggerieren hierfür die Nutzung einer sogenannten ``Bottom navigation''\urlnote{https://material.io/guidelines/components/bottom-navigation.html}.
+Diese kann, so die \mg{}, dazu eingesetzt werden, um die Erkundung von Apps einfach zu gestalten und den Wechsel zwischen den Ansichten auf der obersten Ebene einer App zu beschleunigen \citep{BN18}. \\
 
 Für eine bessere und einfachere Benutzung der App auf Tablet-Geräten kann eine zweite Benutzeroberfläche, die nur auf Tablet-Geräten angezeigt wird, in die App eingebunden werden. 
-Hierzu heißt es in  den ``Developer Guides'' von ``Android'' im Abschnitt ``Supporting Multiple Screens'', dass Entwickler verschiedene Konfigurationskriterien festlegen können, die zur Laufzeit der App ausgewertet werden, und in der Benutzung verschiedener Ressourcen wie zum Beispiel der angezeigten Oberfläche resultieren \citep[How to Support Multiple Screens]{SS18}.
+Hierzu heißt es in  den ``Developer Guides'' von Android zur Unterstützung von verschiedenen Bildschirmgrößen\urlnote{https://developer.android.com/guide/practices/screens_support.html} im Abschnitt ``Supporting Multiple Screens'', dass Entwickler verschiedene Konfigurationskriterien festlegen können, die zur Laufzeit der App ausgewertet werden, und in der Benutzung verschiedener Ressourcen wie zum Beispiel der angezeigten Oberfläche resultieren \citep[How to Support Multiple Screens]{SS18}.
 So gibt beispielsweise das Kriterium \emph{sw720dp} an, dass alle Geräte, die eine Bildschirmbreite von mindestens $720dp$ besitzen, die Ressourcen benutzen, welche mit \emph{sw720dp} gekennzeichnet sind.
 Dies kann dazu genutzt werden, um eine dedizierte Benutzeroberfläche mit größeren Icons und Texten für Tablet-Geräte bereit zu stellen.
 Alternativ besteht die Möglichkeit, eine Oberfläche für alle Geräte zu nutzen, aber die Größe diverser Text- und Formelemente mit der Bildschirmgröße zu skalieren.
@@ -60,13 +59,16 @@ Um Formen direkt den passenden Gerüsttypen zuzuordnen, bietet sich die Verwendu
 Dieser könnte zum Beispiel bei einem langen Klick auf die gewünschte Form angezeigt werden, und in einem \emph{Dropdown} vorhandene Gerüsttypen zur Auswahl anbieten.
 Falls ein langer Klick auf die Form bei der ersten Benutzung zu kontraintuitiv ist, würde sich ein \emph{Button} anbieten, der nur dann auswählbar ist, wenn zuvor eine Form markiert wurde.
 Zudem sollte an der Form erkenntlich werden, dass sie bereits mit einem Gerüsttyp verlinkt ist. \\
-\todo{Guidelines zu Dropdowns und long press gestures hier?}
 
 Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der im Android-System vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer \emph{Open-Source Android-Library} für das Schneiden von Bildern anbieten.
 Die Verfügbarkeit der von Android bereitgestellten \emph{Crop-Activity} ist jedoch vom Gerätehersteller und der verwendeten Android-Version abhängig.
 Hierdurch kann nicht sichergestellt werden, dass die Funktion auf allen Geräten funktioniert.
 Deshalb bietet sich die Verwendung einer \emph{Open-Source Android-Library} an.
-\todo{ref auf API docs und crop activity thread stack-overflow}
+\citeauthor{Commonsware13} schreibt dazu in einem Blog-Eintrag mit dem Title ``No, Android Does *Not* Have a Crop Intent'' folgendes \citep{Commonsware13}:
+\begin{quote}
+  ``Many developers are calling startActivity() on an Intent with an action of com.android.camera.action.CROP.
+  [...] Devices lacking this app will not respond to this undocumented Intent action, and your app will crash.'' 
+\end{quote}
 
 \section{Prototyping}
 Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{sec:idea2} gesammelten Ideen. \\
