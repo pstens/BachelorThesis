@@ -1,7 +1,7 @@
 \subsection{Photo Measures}
 
 \subsubsection{Vorstellung}
-Die App \pm{} von \emph{Big Blue Pixel Inc.} hat zur Zeit des Downloads (20. Januar 2018) bei insgesamt 1 469 abgegeben Bewertungen eine durchschnittliche Bewertung von 3,7 von 5 Sternen im Google Play-Store \citep{PixelPM}.
+Die App \pm{} von \emph{Big Blue Pixel Inc.} hat zur Zeit des Downloads (20. Januar 2018, Version \emph{1.29.4}) bei insgesamt 1 469 abgegeben Bewertungen eine durchschnittliche Bewertung von 3,7 von 5 Sternen im Google Play-Store \citep{PixelPM}.
 Auch diese App wird im Play-Store unter der Kategorie ``Effizienz'' gelistet.
 Zu den in der App-Beschreibung aufgelisteten positiven Rezensionen von verschiedensten Webseiten und Magazinen, schreibt der Entwickler selbst noch folgende Wort \citep{PixelPM}:
 
@@ -12,7 +12,7 @@ Zu den in der App-Beschreibung aufgelisteten positiven Rezensionen von verschied
 
 \noindent
 Beim initialen Start der App wird ein \emph{Tooltip} über der Statusleiste angezeigt (siehe \autoref{fig:pmmenu}).
-Dieser \emph{Tooltip} zeigt auf das Plus-Icon in der Statusleiste, und gibt zusätzlich noch einen kurzen erklärenden Text zu der Aktion, die sich hinter dem Plus-Icon verbirgt.
+Dieser \emph{Tooltip} zeigt auf ein Plus-Icon in der Statusleiste, und gibt zusätzlich noch einen kurzen erklärenden Text zu der Aktion, die sich hinter diesem Icon verbirgt.
 
 \begin{figure}[h]
   \centering
@@ -39,11 +39,18 @@ Wenn der Benutzer diese Oberfläche zum ersten Mal öffnet, zeigt die App außer
 Dieses stellt die drei möglichen Gesten zur Navigation in der Oberfläche jeweils mit Hilfe eines Icons und kurzen Satzes dar. 
 Sobald der Nutzer den Bildschirm berührt, wird das Hilfe-Overlay ausgeblendet. \\
 
+\begin{wrapfigure}{R}{0.4\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, width=0.4\textwidth]{photo_measures/qs}
+  \caption{\emph{Quick-Start Guide}}
+  \label{fig:pmqs}
+\end{wrapfigure}
+
 Die Statusleiste bietet dem Benutzer nur die Funktionen an, die im aktuellen Systemzustand ausführbar sind.
 Dies wird in dieser App so umgesetzt, dass eine weitere Statusleiste über die vorhandene geschoben wird, wenn eine Form markiert wird.
 Diese eingeschobene Statusleiste bietet nur Aktionen zur Bearbeitung der markierte Form an, und verdeckt somit gleichzeitig alle Aktionen, die im aktuellen Systemzustand nicht ausführbar seien sollen.
 So hat der Nutzer, wenn keine Form markiert ist, die Möglichkeit zwischen drei verschiedenen Formen (Linie, Winkel, Freitext) zu wählen, die gewünschte Größe einzustellen, oder das Bild schrittweise um $90$ Grad im Uhrzeigersinn zu rotieren.
-Außerdem kann in diesem Zustand über das Fragezeichen-Icon jederzeit ein \emph{Quick-Start Guide} aufgerufen werden.
+Außerdem kann in diesem Zustand über das Fragezeichen-Icon jederzeit ein \emph{Quick-Start Guide} aufgerufen werden (siehe \autoref{fig:pmqs}).
 Wenn eine Form markiert ist, kann diese über die eingeschobene Statusleiste (siehe \autoref{fig:pmbar}) im Nachhinein beschriftet, in ihrer Zeichenart verändert, gefärbt, oder gelöscht werden.
 Sobald der Nutzer die Markierung aufhebt, wird die Statusleiste wieder ausgeblendet. \\
 
@@ -60,11 +67,10 @@ Zusätzlich zur präventiven Fehlervorbeugung sorgt die Verwendung verschiedener
 
 \begin{wrapfigure}{R}{0.4\textwidth}
   \centering
-  \includegraphics[keepaspectratio, height=0.4\textheight]{photo_measures/bar}
-  \caption{Statusleiste bei markierter Form im Querformat}
+  \includegraphics[keepaspectratio, width=0.4\textwidth]{photo_measures/bar}
+  \caption{Statusleiste bei ausgewählter Form}
   \label{fig:pmbar}
 \end{wrapfigure}
-\todo{Warum ist das Bild im Querformat? Hier nochmal normales im Hochformat machen}
 
 \noindent
 Die App bedient sich einer Reihe bekannter Icons, sodass intuitiv erkennbar ist, welche Aktion sich hinter welchem Icon in der Statusleiste verbirgt.
@@ -89,14 +95,21 @@ Gerade bei der Bearbeitung von Bilder mit vielen Details ist die Navigation im B
 Ein positiver Aspekt dagegen liegt in der Unterstützung der verschiedenen Bildschirmausrichtungen, sowie dem adäquaten Umgang mit Unterbrechungen.
 Der Nutzer kann die App jederzeit drehen, ohne dass Informationen in der App verloren gehen, oder der Benutzer durch eine unerwartete Neuausrichtung des Bildes verwirrt wird (Nielsen \autoref{itm:N11} \& \autoref{itm:N15}). \\
 
+\begin{wrapfigure}{R}{0.4\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, width=0.4\textwidth]{photo_measures/lense}
+  \caption{Zoom-Linse beim Zeichnen einer Linien-Form}
+  \label{fig:pmlense}
+\end{wrapfigure}
+
 Die einfache Handhabung und das Zeichnen von Formen mit einem Finger ermöglichen eine einhändige Benutzung der App und wirken sich damit positiv auf das Nutzungserfahrung der App aus (Nielsen~\autoref{itm:N13} \& \autoref{itm:N17}).
-Zudem benutzt auch diese App eine Zoom-Linse, um den Bereich, der beim Zeichnen vom Finger verdeckt wird, an einer anderen Stelle vergrößert darzustellen.
+Zudem benutzt auch diese App eine Zoom-Linse, um den Bereich, der beim Zeichnen vom Finger verdeckt wird, an einer anderen Stelle vergrößert darzustellen (siehe \autoref{fig:pmlense}).
 Dies beugt Fehlern beim Zeichnen der Formen vor und erhöht außerdem die Effizienz, da der Nutzer nicht jedes Mal erst den Finger vom Bildschirm nehmen muss, um zu sehen, bis wohin er die Form schon gezeichnet hat. \\
-\todo{Bild von Linse}
 
 Eingetragene Messwerte stehen nach dem Exportieren der bearbeiteten Bilder nicht mehr als Meta-Daten zur Verfügung.
 Hierdurch können die in der App annotierte Bilder nicht für die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} genutzt werden (\autoref{itm:export}).
 Außerdem lassen sich Bilder aus einer bestehenden App nicht in \pm{} teilen, sodass eine Integration in eine bestehende Systemarchitektur nur sehr mühsam möglich wäre (\autoref{itm:integration}). \\
 
 Zusammenfassend kann also festgehalten werden, dass die App \pm{} von \emph{Big Blue Pixel} die Usability-Heuristiken nach Nielsen nur bedingt gut umsetzt, da besonders die Kombination der fehlerhaften \emph{Pinch-Geste} beim Zoomen mit der fehlenden Undo- bzw. Redo-Funktionalität zu einem negativen Anwendungserlebnis führen.
-\todo{Noch ein bisschen mehr zusammenfassen} 
+Der Benutzer muss hier also nach fast jeder Zoom-Aktion eine Lösch-Aktion ausführen, um die unabsichtlich gezeichnete Form wieder zu löschen.
+Hierdurch wird nicht nur das Nutzungserlebnis geschmälert, sondern auch eine effiziente Nutzung der App als Alternative zur analogen Aufmaßerfassung nahezu unmöglich.
