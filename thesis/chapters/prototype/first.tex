@@ -1,4 +1,5 @@
 \section{Implementation}\label{sec:pro1}
+\todo{Perfekt oder Präsens?}
 In \autoref{chap:concept} wurden Umsetzungsmöglichkeiten für die verschiedenen Bewertungskriterien aus \autoref{sec:criteria} ausgearbeitet.
 Diese sollen in die Implementierung des ersten Prototyps einfließen, und so einen Grundstein für eine positive Benutzererfahrung der App legen. \\
 
@@ -21,22 +22,21 @@ Dies ermöglicht bereits vor der eigentlichen Implementierung wichtige Begriffe 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[keepaspectratio, width=\textwidth]{prototype1/model}
-  \caption{Datenmodell-Komponente als UML-Diagramm}
-  \label{fig:model1}
+  \includegraphics[keepaspectratio, width=\textwidth]{prototype1/shape}
+  \caption{Ausschnitt aus der Datenmodell-Komponente des UML-Diagramms}
+  \label{fig:shape}
 \end{figure}
 
 \noindent
-Die Komponente des \emph{Datenmodells} (siehe \autoref{fig:model1}) sah dabei wie folgt aus (die beiden weiteren Komponenten befinden sich im Anhang):
-In \autoref{fig:model1} ist zentral die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} darstellt.
+Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (eine vollständige Version des UML-Diagramms befindet sich im Anhang \todo{in Anhang packen}):
+In \autoref{fig:shape} ist die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} darstellt.
 \emph{MeasureShape} vererbt die abstrakten Attribute \emph{points} und \emph{edges} an ihre Unterklassen, die diese Attribute in überschreiben müssen.
 Außerdem muss die öffentliche Methode \emph{drawShape(...)} von beiden Unterklassen implementiert werden.
 Dies sorgt dafür, dass jede Unterklasse selber dafür ``verantwortlich'' ist, wie und wohin ihre Form gezeichnet wird.
 \emph{MeasureShape} selber implementiert die drei verschiedene \emph{Interfaces} \emph{Draggable, Resizable und Editable}, welche Schnittstellen zum Verschieben, Vergrößern und Editieren von Formen bereit stellen. \\
-\todo{hier nur MeasureShape zeigen und Rest in Anhang}
 
 \noindent
-Eine weitere Klasse im \emph{Datenmodell} ist \emph{UserAction}.
+Eine weitere Klasse im \emph{Datenmodell} ist \emph{UserAction} (\todo{ref auf Anhang}).
 Diese ist eine versiegelte (\emph{sealed}) Oberklasse, welche die verschiedenen Benutzeraktionen darstellt.
 Versiegelt bedeutet in diesem Kontext, dass nur Klassen, welche im \emph{Scope} der Oberklasse liegen, von dieser erben können.
 Folgende sechs Benutzeraktionen können in der Implementierung des ersten Prototyps über die Undo/Redo-Funktion rückgängig gemacht oder wiederhergestellt werden:
@@ -54,10 +54,7 @@ Folgende sechs Benutzeraktionen können in der Implementierung des ersten Protot
 Funktional beschränkt sich die Implementierung des ersten Prototyps zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen.
 Zum schnellen und präzisen Zeichnen der Formen wird eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie in allen drei Apps aus \autoref{chap:eval} umgesetzt wurde, verwendet.
 Der Prototyp verfügt über zwei verschiedene Modi, den Zeichen- und Text-Modus, zwischen denen mit Hilfe des \emph{Floating Action Buttons} im unteren rechten Bildschirmbereich umgeschaltet werden kann (siehe \autoref{fig:all1}).
-Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen in die App importieren. \\
-
-Undo- sowie Redo-Funktion befinden auf dedizierten \emph{Buttons} in der Menüleiste der App (siehe \autoref{fig:all1}).
-Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen, die Zeichenfarbe zu ändern, oder eine andere Form zum Zeichnen auszuwählen. \\
+Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen in die App importieren.
 
 \begin{figure}[h]
   \begin{subfigure}[t]{0.4\textwidth}
@@ -66,49 +63,49 @@ Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen,
     \label{fig:all1}
   \end{subfigure}
   \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/drawing}
-    \caption{Zoom-Linse beim Zeichnen einen Vierecks}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/rect}
+    \caption{Zoom-Linse beim Zeichnen eines Vierecks}
     \label{fig:draw1}
   \end{subfigure}
   \centering
   \caption{Erster Prototyp bei eingezeichneter Linie und beim Zeichnen eines Vierecks}
 \end{figure}
 
-\noindent
-Beim Auswählen des Farb-Icons in der Menüleiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, die gewünschte Farbe auszuwählen (siehe \autoref{fig:color1}).
-Diese Farbe wird als Standardfarbe für alle neuen Formen genutzt.
-Falls vor dem Öffnen des Dialogs eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten Farbe eingefärbt. \\
+Undo- sowie Redo-Funktion befinden auf dedizierten \emph{Buttons} in der Menüleiste der App (siehe \autoref{fig:all1}).
+Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen, die Zeichenfarbe zu ändern, oder eine andere Form zum Zeichnen auszuwählen. \\
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.4\textwidth}
   \centering
   \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype1/color}
   \caption{Geöffneter Farbauswahl-Dialog}
   \label{fig:color1}
 \end{wrapfigure}
 
-Graue Indikatoren an den Eckpunkten der aktuell ausgewählte Form sollen dem Nutzer verdeutlichen, dass diese mit Hilfe der Indikatoren in ihrer Größe und Position bearbeitet werden kann.
-Um Formen zu beschriften bietet sich dem Benutzer im Text-Modus die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu annotieren (siehe \autoref{fig:labeling1}).
-Hierzu öffnet sich beim langen Klick auf die Kante einer Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
-Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante im Bild dargestellt (siehe \autoref{fig:label1}). 
-\todo{neues Bild wo Messwert besser sichtbar}
+Beim Auswählen des Farb-Icons in der Menüleiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, die gewünschte Farbe auszuwählen (siehe \autoref{fig:color1}).
+Diese Farbe wird als Standardfarbe für alle neuen Formen genutzt.
+Falls vor dem Öffnen des Dialogs eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten Farbe eingefärbt. \\
 
-\begin{figure}[h]
-  \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/labeling}
-    \caption{Dialog zum Eintragen von Messwerten}
-    \label{fig:labeling1}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/label}
-    \caption{Linie mit eingetragenem Messwert}
-    \label{fig:label1}
-  \end{subfigure}
-  \centering
-  \caption{Eintragen und Anzeigen von Messwerten im ersten Prototyp}
-\end{figure}
+Graue Indikatoren an den Eckpunkten der aktuell ausgewählte Form sollen dem Nutzer verdeutlichen, dass diese mit Hilfe der Indikatoren in ihrer Größe und Position bearbeitet werden kann. (siehe \autoref{fig:rect}).
+Um Formen zu beschriften bietet sich dem Benutzer im Text-Modus die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu annotieren.
+Hierzu öffnet sich durch einen langen Klick auf die Kante einer Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
+Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante im Bild dargestellt. 
+
+% \begin{figure}[h]
+% \begin{subfigure}[t]{0.4\textwidth}
+% \includegraphics[keepaspectratio, width=\textwidth]{prototype1/labeling}
+% \caption{Dialog zum Eintragen von Messwerten}
+% \label{fig:labeling1}
+% \end{subfigure}
+% \begin{subfigure}[t]{0.4\textwidth}
+% \includegraphics[keepaspectratio, width=\textwidth]{prototype1/label}
+% \caption{Linie mit eingetragenem Messwert}
+% \label{fig:label1}
+% \end{subfigure}
+% \centering
+% \caption{Eintragen und Anzeigen von Messwerten im ersten Prototyp}
+% \end{figure}
 
 \section{Test}\label{sec:test1}
-\todo{Vielleicht noch ein bisschen ausschmücken}
 Zum Testen des Prototyps wurde dieser in die App der beiden Geschäftsführer der Fa. \vr{} (siehe \autoref{table:testers}) eingebunden.
 Testperson 1, André Vermeulen, repräsentiert hierbei den ``Poweruser'' der App, wohingegen Testperson 2, Sebastian Wiesbrock, die App eher selten nutzt.
 Beiden Testern wurde zur Nutzung des Prototyps weder eine verbale noch schriftliche Hilfestellung zur Verfügung gestellt.
@@ -132,7 +129,6 @@ Beiden Testern wurde zur Nutzung des Prototyps weder eine verbale noch schriftli
   \label{table:testers}
 \end{table}
 
-\todo{Zeit kontrollieren}
 Nachdem die beiden Tester den Prototyp zwei Tage in ihren Arbeitsalltag integriert haben, wurden am 18. Dezember die Testergebnisse gesammelt. \\
 
 Nach Aussage beider Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.
