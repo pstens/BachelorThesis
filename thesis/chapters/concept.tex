@@ -1,4 +1,6 @@
 \chapter{Konzeption}\label{chap:concept}
+\todo{Ich bin mit diesem Kapitel nicht zufrieden, aber weiß auch nicht, was ich noch großartig anders machen soll}
+\todo{Brauche ich hier papers/literatur für die Entscheidungen?}
 In diesem Kapitel werden die Evaluationsergebnisse aus \autoref{chap:eval} auf die Konzeption einer eigenen Android-App angewandt.
 Hierzu werden Umsetzungsideen zu den einzelnen Bewertungskriterien, die zur Evaluation der Lösungsalternativen genutzt wurden, nacheinander vorgestellt.
 Dieses Kapitel der Arbeit entspricht der dritten Phase (\emph{dea Generation}) des \hcdp{}, und dient dazu, Ideen zur Lösung der während der \emph{Observation} identifizieren Usability-Probleme aufzustellen.
@@ -6,7 +8,7 @@ Dieses Kapitel der Arbeit entspricht der dritten Phase (\emph{dea Generation}) d
 \section{Sichtbarkeit des Systemzustandes}
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
-  \includegraphics[keepaspectratio, width=0.5\textwidth]{fab}
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{concept/fab}
   \caption{Floating Action Button (FAB)}
   \label{fig:fab}
 \end{wrapfigure}
@@ -19,28 +21,25 @@ Zusätzlich soll die App in einer natürlichen und logischen Reihenfolge benutzb
 So soll dem Benutzer zuerst die Möglichkeit gegeben werden, ein gewünschtes Bild auszuwählen, welches im Anschluss daran in einer weiteren Benutzeroberfläche bearbeitet werden kann.
 Zudem soll die App in zwei Modi, den Zeichen- und Text-Modus, unterteilt werden, um eine klare Grenze zwischen dem Zeichnen Formen und Eintragen von Messwerten zu schaffen.
 Dieser Ablauf soll sicherstellen, dass der Benutzer bei der Verwendung der App nicht überfordert wird, und sich intuitiv zurecht findet.
-\todo{Sequence Diagram zum basic Workflow einfügen}
 
 \section{Benutzerkontrolle und -freiheit}
 Gerade die fehlende Undo- bzw. Redo-Funktionalität hat sich bei der App \pm{} in \autoref{subsec:pmeva} als signifikantes Usability-Problem identifizieren lassen.
-Aufgrund dessen soll diese Funktionalität über zwei dedizierte Icons in der Menüleiste der App angeboten werden.
+Aufgrund dessen soll diese Funktionalität, wie bei \mm{} (siehe \autoref{fig:bicons}), über zwei dedizierte Icons in der Menüleiste der App angeboten werden. 
 Dies soll potentielle Verwirrung wie in \autoref{subsec:imeva} bei der App \im{} vermeiden, und ein positives Nutzungserlebnis garantieren.
-\todo{Bild von Menüleiste aus anderen Apps mit Redo/Undo}
 
 \section{Konsistenz und Standards}
 Um eine positive Benutzererfahrung zu generieren, und die Benutzung von nicht-intuitiven Icons zu vermeiden, werden bei der Implementierung die Design-Richtlinien von \emph{Google} befolgt.
-Diese sogenannten \mg{}\footnote{Die \mg{} umfassen Designempfehlungen von \emph{Google} um Apps einheitlich und benutzerfreundlich zu gestalten.} bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.
+Diese sogenannten \mg{}\urlnote{https://material.io/guidelines/} bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.
 
 \section{Fehlervorbeugung}
 Situationen, in denen Fehler auftreten können, sollen in der App präventiv vermieden werden.
 Hierzu sollen Aktionen, die im aktuellen Systemzustand zu einer solchen Situation führen würden, deaktiviert werden.
-Dies kann zum Beispiel durch das Ausgrauen der Icons von nicht-ausführbaren Aktionen umgesetzt werden.
-\todo{Bild von disabled Icons in Apps}
+Dies kann zum Beispiel durch das Ausgrauen der Icons von nicht-ausführbaren Aktionen umgesetzt werden, wie es auch bei \mm{} gemacht wird (siehe \autoref{fig:bicons}).
 
 \section{Wiedererkennung statt Erinnern}
 Eine minimierte kognitive Belastung soll durch die Verwendung von gleichartigen Icons für gleichartige Aktionen erzielt werden.
 So soll bspw. im Zeichen-Modus als auch im Text-Modus ein Mülleimer-Icon in der Menüleiste die Möglichkeit bieten, die markierte Form bzw. den ausgewählten Text zu löschen.
-\todo{ref auf was?} 
+Zur Auswahl dieser Icons können ebenfalls die \mg{} genutzt werden.
 
 \section{Flexibilität und Effizienz der Benutzung}
 Der Benutzer soll in der Lage sein, die gezeichneten Formen im Nachhinein zu bearbeiten.
@@ -49,48 +48,53 @@ Diese soll dann für alle neu eingezeichneten Formen benutzt werden.
 Zudem sollten einzelne Formen im Nachhinein in einer anderen Farbe gefärbt, und Texte bearbeitet werden können.
 Die Unterstützung von verschiedenen Gesten sollen Abkürzungen für erfahrene Benutzer bereits stellen.
 So soll es zum Beispiel möglich sein, per \emph{Langklick-Geste} auf eine Form Text eintragen zu können, anstatt erst den entsprechenden Button drücken zu müssen.
-\todo{Irgendein Bild Langklick Geste}
 
 \section{Erkennbarkeit, Diagnose und Erholung von Fehlern}
 Durch das präventive Vermeiden von Situationen, in denen Fehler auftreten können, sollte der Nutzer zu keiner Zeit in eine solche Situation gelangen können.
 Sollte es dennoch dazu kommen, so soll eine kurze, aber informative Nachricht in Form eines \emph{Toasts} auf dem Bildschirm angezeigt werden.
 Diese soll den Nutzer über den Fehler informieren, und präzise aber verständliche Anweisungen geben, wie er diesen lösen kann.
 Zu keiner Zeit sollte der Benutzer in eine Schleife von Fehlerzuständen gelangen können, welche er nur durch das Beenden oder die Deinstallation der App unterbrechen kann. 
-\todo{Toast bild}.
 
 \section{Hilfe und Dokumentation}
-Zur Hilfe und Dokumentation sollen sogenannte \emph{Content-Descriptions} eingesetzt werden.
-Diese ermöglichen es dem Benutzer, bei einem langen Klick auf ein Icon einen kleinen Satz angezeigt zu bekommen, der beschreibt, welche Funktion sich hinter dem Symbol verbirgt.
-Ein weiterer Vorteil bei der Benutzung von \emph{Content-Descriptions} liegt in der Unterstützung von Screen-Readern und der Navigation per Keyboard.
-\todo{Content-Description Guidelines und besser rechtfertigen}
+Zur Hilfe und Dokumentation sollen sogenannte \emph{Content-Descriptions}\urlnote{https://developer.android.com/guide/topics/ui/accessibility/apps.html} eingesetzt werden.
+Diese ermöglichen es dem Benutzer, bei einem langen Klick auf ein Icon eine Beschreibung zur Funktion zu bekommen, die sich hinter dem Symbol verbirgt.
+Hierdurch soll sichergestellt werden, dass der Nutzer nicht erst auf das Icon klicken und die Aktion ausführen muss, um zu sehen, mit welcher Funktion das Icon verknüpft ist.
+Ein weiterer Vorteil bei der Benutzung von \emph{Content-Descriptions} liegt in der Unterstützung von Screen-Readern und der Navigation per Tastatur.
 
 \section{Adäquater Umgang mit Unterbrechungen}
 Die App soll bei Unterbrechung der derzeitigen Aktivität, wie der Navigation zu einer anderen App, oder dem Wechsel auf den Start-Bildschirm, alle Informationen speichern, und beim Zurückkehren in die pausierte App wieder vollständig herstellen.
-Dies kann durch die Implementierung eines \emph{Saved States} garantiert werden.
-\todo{Saved State android guidelines}
+Dies kann durch die Implementierung eines \emph{Saved States}\urlnote{https://developer.android.com/topic/libraries/architecture/saving-states.html} umgesetzt werden.
+\emph{Saved States} werden eingesetzt, um Informationen während des \emph{Activity Lifecycles} (siehe \autoref{fig:lifecycle}) zu speichern.
+Der \emph{Activity Lifecycle} ist eine Besonderheit unter Android und stellt der \emph{Activity}\urlnote{https://developer.android.com/reference/android/app/Activity.html} eine Reihe verschiedener Methoden zur Verfügung.
+Diese sollten ggfs. von der \emph{Activity} überschrieben werden, um eine reibungslose Navigation des Benutzer in der App und zwischen verschiedenen Apps zu ermöglichen.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio, height=0.5\textheight]{concept/lifecycle}
+  \caption{\emph{Activity Lifecycle}}
+  \label{fig:lifecycle}
+\end{figure}
 
 \section{Fokussieren der Informationen}
 Ein weiterer Aspekt liegt beim Hervorheben wichtiger Informationen auf dem Bildschirm.
-So sollen Formen durch die Benutzung einer Akzent-Farbe als Schatten oder Umrandung schnell als ``markiert'' erkennbar sein und dem Benutzer einen schnellen Überblick über den Appzustand verschaffen.
+So sollen Formen durch die Benutzung einer Akzent-Farbe als Schatten oder Umrandung schnell als ``markiert'' erkennbar sein und dem Benutzer einen schnellen Überblick über den Systemzustand verschaffen.
 Außerdem sollen ausgefüllte Kreise an den Eckpunkten der zur Zeit markierten Formen als \emph{Call for action} dienen, und dem Nutzer so darauf aufmerksam machen, dass die Form mit Hilfe dieser Eckpunkte in ihrer Position und damit ihrer Größe verändert werden kann.
-\todo{Accent-Color, Call for Action}
 
 \section{``Joy of Use''}
 Die Bedienung der App soll intuitiv und einfach möglich sein, um ein positives Nutzungserlebnis zu garantieren.
 Hierzu sollen verschiedene Gesten zur Navigation im Bild unterstützt werden.
 Unter anderem soll das Vergrößern und Verkleinern des Bildes durch eine \emph{Pinch-} und \emph{Doppelklick-Geste} ermöglicht werden.
 Zudem soll eine \emph{Pan-Geste} dazu genutzt werden, eine schnelle und präzise Navigation im Bild zu verwirklichen.
-\todo{Gesture Support, papers}
+\todo{Hierzu irgendein paper finden?}
 
 \section{Unterstützung verschiedener Bildschirmausrichtungen}
 Insbesondere weil die App zur Bearbeitung von Bildern eingesetzt werden soll, sollte sie im Querformat genau so einfach zu bedienen sein, wie im Hochformat.
 So sollen Bilder, die im Querformat aufgenommen werden, auch in diesem Bearbeitet werden können, ohne dass sich die Ausrichtung des Bildes unerwartet ändert.
-\todo{android guidelines zu screen rotation}
+\todo{Hierzu irgendein paper finden?}
 
 \section{Ergonomische Gestaltung der physischen Interaktion}
 Das unabsichtliche Auslösen von Funktionen soll in allen Fällen vermieden werden.
 Hierzu muss insbesondere darauf geachtet werden, dass \emph{Pan}- und \emph{Pinch-Gesten} verlässlich von Zeichen-Gesten unterschieden werden, um unabsichtliches Zeichnen von Formen, wie in \autoref{chap:eval} beschrieben, zu vermeiden.
-\todo{Verwendung verschiedener Gesture-Listener}
 
 \section{Einfache Eingabe, Bildschirmlesbarkeit und Übersichtlichkeit}
 Der Benutzer soll stets in der Lage sein, die gesamte App mit einer Hand bedienen zu können.
