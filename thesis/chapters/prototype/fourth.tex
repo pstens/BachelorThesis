@@ -38,16 +38,14 @@ Hierbei gehen auf \emph{Samsung}-Geräten anscheinend die \emph{Exif}-Daten\foot
 \section{Idea Generation}\label{sec:idea4}
 Um das Bild auch bei der Verwendung von mehreren Freitext-Formen übersichtlich zu halten, bietet es sich an die Schriftgröße des Textes konfigurierbar zu machen.
 Eine Alternative hierzu wäre es, die Formen aufklappbar zu gestalten, sodass der Nutzer selber entscheiden kann, welche Notiz zu welcher Zeit sichtbar sein soll, und welche zum Beispiel nur als \emph{Icon} auf dem Bild zu sehen ist. \\
-\todo{Collapsable Views?}
 
 Die doppelte Eingabe der Bildbeschreibung beim Speichern lässt sich durch das Einführen eines weiteren Parameters beim Starten der Library lösen.
 So kann beim Benutzen der \emph{Library} über den zusätzliche Parameter entschieden werden, ob beim Speichern ein Speicher-Dialog innerhalb der \emph{Library} angezeigt werden soll oder nicht.
-Hierdurch lässt sich der Speicher-Dialog für die bestehende App einfach ausblenden, und das doppelte Eintragen des Bildtitels verhindern.
-\todo{Konfigurierabare Libs?}
+Hierdurch lässt sich der Speicher-Dialog für die bestehende App einfach ausblenden, und das doppelte Eintragen des Bildtitels verhindern. \\
 
 Das ungewollte Rotieren von Bilder, die im Hochformat aufgenommen wurde, kann durch eine spezielle Überprüfung des Geräteherstellers verhindert werden.
 Diese Überprüfung soll das Bild, wenn es sich um ein Geräte von \emph{Samsung} handelt, auch dann zuschneiden, wenn der Nutzer keine Modifikation am Bild vorgenommen hat.
-Hierdurch soll sichergestellt werden, dass die \emph{Exif}-Daten nicht verloren gehen und das Bild nicht ungewollt rotiert wird.
+Hierdurch soll sichergestellt werden, dass die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057} nicht verloren gehen und das Bild nicht ungewollt rotiert wird.
 
 \section{Prototyping}
 Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{sec:idea4} genannten Lösungsideen umzusetzen. \\
@@ -55,13 +53,26 @@ Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in d
 Für eine bessere Übersichtlichkeit bei der Verwendung von mehreren Freitext-Formen gleichzeitig, wurde die Funktion hinzugefügt, dass Freitext-Formen über einen Doppelklick ein- bzw. aufgeklappt werden könne.
 So werden diese im ``ausgeklappten'' Modus wie zuvor als Text mit Hintergrund angezeigt, beim Doppelklick transformiert sich diese Form jedoch zu einem kleinen Icon, welches keinerlei Text anzeigt, und so nur suggeriert , dass sich hinter dem Icon eine Freitext-Form befindet. 
 Dies soll dem Benutzer die Möglichkeit geben, selber zu entscheiden, welcher Text wann auf dem Bildschirm sichtbar ist und welcher nicht. \\
-\todo{Bild mit vielen Texten vorher nachher}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype4/text1}
+    \caption{Anzeige zweier Freitext-Formen im dritten Prototyp}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype4/text2}
+    \caption{Anzeigen zweier Freitext-Formen im vierten Prototyp (eine minimiert)}
+  \end{subfigure}
+  \caption{Vorher-Nachher-Vergleich: Anezige zweier Freitext-Formen im dritten und vierten Prototyp}
+  \label{fig:texts}
+\end{figure}
 
 Der Speicher-Dialog wurde durch das Hinzufügen eines weiteren Start-Parameters in der \emph{Library} ausgeblendet, und ist so bei der Benutzung in der bestehenden Android-App nicht mehr zu sehen.
 Hier wird das Bild direkt auf dem Gerät gespeichert und anschließend in der bestehenden App nach einem Bildtitel gefragt. \\
 
 Die ungewollte Rotation der Bilder auf \emph{Samsung}-Geräten wurde durch die Modifikation der \emph{uCrop-Library} umgesetzt.
-Hierzu wurde die \emph{Library} \emph{geforked}\footnote{fork erklären} und anschließend eine Überprüfung des Geräteherstellers in den \emph{Quellcode} eingebaut.
+Hierzu wurde ein \emph{Fork}\urlnote{https://help.github.com/articles/fork-a-repo/} der \emph{Library} erstellt und anschließend eine Überprüfung des Geräteherstellers in den \emph{Quellcode} eingebaut.
 
 \section{Testing}
 Feedback zum Benutzererlebnis des vierten Prototyps gab es X Tage nach dem Rollout. \\
@@ -70,7 +81,7 @@ In dieser vierten Iteration des \hcdp{} sind keine weiteren Usability-Probleme i
 Der Prototyp ließe sich, so beide Testpersonen, effizient und einfach zum Erfassen der Aufmaße verwenden und würde auf langer Sicht viel Arbeit und Zeit sparen, da alle Informationen sofort digital und für alle Mitarbeiter zur Verfügung stehen.
 Mittlerweile ist der Prototyp unternehmensweit ausgerollt und im Zeitraum X bis Y wurden schon Z Bilder mit Aufmaßen versehen. 
 Ein abschließender Wunsch, der nicht direkt die Implementierung des Prototyps betrifft, bezieht sich auf das Hoch- und Runterladen annotierter Bilder inklusive Meta-Daten mit Hilfe der \emph{API}.
-Hierzu sollen auf Seiten der \emph{API} ein neuer Knotenpunkt eingeführt werden, der es ermöglicht, alle Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\footnote{erklären} an die \emph{API} zu senden.
+Hierzu sollen auf Seiten der \emph{API} ein neuer Knotenpunkt eingeführt werden, der es ermöglicht, alle Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\urlnote{https://www.json.org/json-de.html} an die \emph{API} zu senden.
 Zusätzlich zu den Meta-Daten soll das Originalbild und das annotierte Bild hochgeladen und mit den Meta-Daten verknüpft werden.
 Zukünftig soll die \emph{API} in der Lage sein, Meta-Daten und die zugehörigen Bilder an die App zurückzuliefern.
 Hierdurch soll es dem Benutzer möglich sein, annotierte Bilder zu einem späteren Zeitpunkt weiter bearbeiten zu können.
