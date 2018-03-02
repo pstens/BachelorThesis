@@ -92,6 +92,13 @@ Die Statusleiste wurde durch eine \emph{Bottom-Navigation Bar} am unteren Bildsc
 Diese besteht aus vier verschiedenen Icons, die nur dann auswählbar sind, wenn die entsprechende Aktion im aktuellen Systemzustand durchführbar ist.
 Das Pinsel- bzw. Text-Icon ganz links in der Leiste ermöglicht das Wechseln zwischen dem Zeichen- und Text-Modus (siehe \autoref{fig:mode2}). \\
 
+\begin{wrapfigure}{R}{0.4\textwidth}
+  \centering
+  \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype2/measure}
+  \caption{Gerüsttyp-Dialog des zweiten Prototyps}
+  \label{fig:dialog2}
+\end{wrapfigure}
+
 Im Zeichen-Modus (vgl. \autoref{fig:mode2}) kann per Klick auf das zweite Icon von links die gewünschte Form ausgewählt werden. 
 Das Icon passt sich beim Ändern der Form an, und gibt so jederzeit Auskunft über die aktuell ausgewählte Zeichenform.
 In \autoref{fig:mode2} ist bspw. zur Zeit die Linien-Form ausgewählt.
@@ -101,13 +108,6 @@ Auch dieses Icon passt sich dem Systemzustand an, und zeigt zu jeder Zeit die au
 So ist in \autoref{fig:mode2} bspw. aktuell die Farbe Weiß ausgewählt.
 Das vierte Icon (Mülleimer) ermöglicht im Zeichen- sowie im Text-Modus das Löschen der zuvor ausgewählten Form bzw. des markierten Textes. 
 Hierbei wird der Nutzer nicht nach einer Bestätigung des Löschvorgangs gefragt, da unabsichtlich gelöschte Formen über die Undo-Funktion wiederhergestellt werden können. \\
-
-\begin{wrapfigure}{R}{0.4\textwidth}
-  \centering
-  \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype2/measure}
-  \caption{Gerüsttyp-Dialog}
-  \label{fig:dialog2}
-\end{wrapfigure}
 
 Im Text-Modus kann beim Klick auf das zweite Icon von links (Plus-Zeichen) entweder eine ausgewählte Form mit einer Beschriftung versehen, oder mit einem Gerüsttyp verknüpft werden (siehe \autoref{fig:labelp2}).
 Beim Hinzufügen einer Beschriftung öffnet sich ein modaler Eingabedialog, in den der Benutzer den gewünschten Text eintragen kann.
@@ -124,36 +124,24 @@ Die genaue Umformung lautet dabei wie folgt:
   px =  dp \times (\frac{dpi}{160}),
 \]
 wobei $dp$ für ``dots per inch'' steht.
-Dies stellt sicher, dass alle Elemente unabhängig von der Bildschirmgröße gleich groß dargestellt werden.
+Dies stellt sicher, dass alle Elemente unabhängig von der Bildschirmgröße gleich groß dargestellt werden. \\
 
+Um die Lesbarkeit der eingetragenen Messwerte bei dunkleren Bildern zu verbessern, wurde die Textfarbe der Messwerte auf weiß geändert und zusätzlich wurden halbtransparente schwarze Rechtecke hinter den Text gelegt (siehe \autoref{fig:label2}).
+Hierdurch soll vermieden werden, dass der Text auf dunkleren Bildern, wie bspw. in \autoref{fig:label1}, nicht gut lesbar ist.
 \begin{figure}[h]
   \centering
   \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{hours_overview}
-    \caption{UI-Elemente beim ersten Protoyp}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{preplanning_board}
-    \caption{UI-Elemente beim zweiten Prototyp}
-  \end{subfigure}
-  \caption{Vorher-Nachher-Vergleich der UI-Elemente auf einem Tablet}
-  \label{fig:tablet}
-\end{figure}
-
-Messwerte wurden mit einem halbtransparenten schwarzen Rechteck hinterlegt, welches dafür sorgt, dass sich der weiße Text besser vom Hintergrund abhebt, und so auch bei dunkleren Bildern gut lesbar ist.
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{hours_overview}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype2/label1}
     \caption{Eingetragener Messwert beim ersten Protoyp}
+    \label{fig:label1}
   \end{subfigure}
   \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{preplanning_board}
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype2/label2}
     \caption{Eingetragener Messwert beim zweiten Prototyp}
+    \label{fig:label2}
   \end{subfigure}
-  \caption{Vorher-Nachher-Vergleich der Darstellung von eingetragenen Messwerten}
-  \label{fig:tablet}
+  \caption{Vorher-Nachher-Vergleich: Darstellung der eingetragenen Messwerten}
+  \label{fig:labels}
 \end{figure}
 
 Das Zuordnen von Gerüsttypen zu gezeichneten Formen wurde mit Hilfe eines modalen Dialogs umgesetzt, der neben dem Gerüsttyp auch noch Textfelder für die verschiedenen Dimensionen des Gerüsts besitzt.
@@ -164,13 +152,23 @@ Auf diese Weise soll der Benutzer die bereits verlinkten von den nicht-verlinkte
 Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}\urlnote{https://github.com/Yalantis/uCrop}, eine dedizierte Android-Library, in das Projekt eingebunden.
 \emph{uCrop} ist auf \emph{Github} als \emph{Open-Source} Projekt verfügbar und kann so den eigenen Bedürfnissen angepasst werden. 
 Zudem unterstützt \emph{uCrop} alle Android-Geräte unabhängig vom Gerätehersteller ab der Android-Version \emph{Ice Cream Sandwich}. 
-Dies entspricht laut der Verteilung der Android-Versionen auf allen Geräten mit Android OS im Zeitraum vom 5. bis 11. Dezember 2017 mehr als $99\%$ aller Geräte (vgl. \autoref{fig:chart}).
+Dies entspricht laut der Verteilung der Android-Versionen auf allen Geräten mit Android OS im Zeitraum vom 5. bis 11. Dezember 2017 mehr als $99\%$ aller Geräte (\todo{ref auf chart im Anhang}).
+Zusätzlich zum Zuschneiden und Rotieren des Bildes bietet \emph{uCrop} auch das Ändern des Bildformates an (siehe \autoref{fig:ucrop}).
+Hier kann der Nutzer auswählen, ob das Bild im originalen, ``1:1'', ``3:4'', ``3:2'' oder ``16:9'' Bildseitenverhältnis importiert werden soll.
+
 \begin{figure}[h]
   \centering
-  \includegraphics[keepaspectratio, width=\textwidth]{prototype2/androidchart}
-  \caption{Anteil der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum vom 5. bis 11. Dezember 2017}
-  \label{fig:chart}
+  \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype2/ucrop}
+  \caption{\emph{uCrop}-Library zum Zuschneiden des Bildes im zweiten Prototyp}
+  \label{fig:ucrop}
 \end{figure}
+
+% \begin{figure}[h]
+% \centering
+% \includegraphics[keepaspectratio, width=\textwidth]{prototype2/androidchart}
+% \caption{Anteil der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum vom 5. bis 11. Dezember 2017}
+% \label{fig:chart}
+% \end{figure}
 
 \section{Testing}\label{sec:test2}
 Der zweite Prototyp wurde sechs Tage, vom 3. bis zum 9. Januar 2018, von den beiden Testpersonen in ihren Arbeitsalltag integriert.
