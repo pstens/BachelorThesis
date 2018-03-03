@@ -1,4 +1,4 @@
-\chapter{Vierte Iteration}
+\chapter{Vierte Iteration - Übersichtlichkeit}
 Die während der dritten Iteration in \autoref{chap:pro3} identifizierten Usability-Probleme und Anwenderwünsche sollen in diesem Kapitel weiter evaluiert werden.
 Hierzu wird eine weitere Iteration des \hcdp{} ausgeführt.
 
@@ -32,7 +32,7 @@ Auffällig ist auch, dass die beschriebene Rotation des Bildes nur dann geschieh
 Dieses Verhalten lässt sich im \emph{Quellcode} der \emph{uCrop-Library} verifizieren.
 Hier wird vor dem Zuschneiden des Bildes geprüft, ob der Nutzer das Bild angepasst hat.
 Ist dies nicht der Fall, so wird das Originalbild ohne jegliche Modifikation in die Zieldatei geschrieben.
-Hierbei gehen auf \emph{Samsung}-Geräten anscheinend die \emph{Exif}-Daten\footnote{erklären} verloren.
+Hierbei gehen auf \emph{Samsung}-Geräten anscheinend die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057} verloren.
 (Nielsen~\autoref{itm:N5}) \\ 
 
 \section{Idea Generation}\label{sec:idea4}
@@ -45,7 +45,7 @@ Hierdurch lässt sich der Speicher-Dialog für die bestehende App einfach ausble
 
 Das ungewollte Rotieren von Bilder, die im Hochformat aufgenommen wurde, kann durch eine spezielle Überprüfung des Geräteherstellers verhindert werden.
 Diese Überprüfung soll das Bild, wenn es sich um ein Geräte von \emph{Samsung} handelt, auch dann zuschneiden, wenn der Nutzer keine Modifikation am Bild vorgenommen hat.
-Hierdurch soll sichergestellt werden, dass die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057} nicht verloren gehen und das Bild nicht ungewollt rotiert wird.
+Hierdurch soll sichergestellt werden, dass die \emph{Exif}-Daten nicht verloren gehen und das Bild nicht ungewollt rotiert wird.
 
 \section{Prototyping}
 Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{sec:idea4} genannten Lösungsideen umzusetzen. \\
