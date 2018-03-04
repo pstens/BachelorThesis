@@ -16,7 +16,7 @@ Dies ermöglicht bereits vor der eigentlichen Implementierung wichtige Begriffe 
 \end{figure}
 
 \noindent
-Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (eine vollständige Version des UML-Diagramms befindet sich im Anhang \todo{in Anhang packen}):
+Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (eine vollständige Version des UML-Diagramms befindet sich in \autoref{chap:uml}):
 In \autoref{fig:shape} ist die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} darstellt.
 \emph{MeasureShape} vererbt die abstrakten Attribute \emph{points} und \emph{edges} an ihre Unterklassen, die diese Attribute überschreiben müssen.
 Außerdem muss die öffentliche Methode \emph{drawShape(...)} von beiden Unterklassen implementiert werden.
@@ -24,7 +24,7 @@ Dies sorgt dafür, dass jede Unterklasse selber dafür ``verantwortlich'' ist, w
 \emph{MeasureShape} implementiert die drei \emph{Interfaces} \emph{Draggable, Resizable} und \emph{Editable}, welche Schnittstellen zum Verschieben, Vergrößern und Editieren von Formen bereit stellen. \\
 
 \noindent
-Eine weitere Klasse im \emph{Datenmodell} ist \emph{UserAction} (\todo{ref auf Anhang}).
+Eine weitere Klasse im \emph{Datenmodell} ist \emph{UserAction} (siehe \autoref{fig:model}).
 Diese ist eine versiegelte (\emph{sealed}) Oberklasse, welche die verschiedenen Benutzeraktionen darstellt.
 Versiegelt bedeutet in diesem Kontext, dass nur Klassen, welche im \emph{Scope} der Oberklasse liegen, von dieser erben können.
 Folgende sechs Benutzeraktionen können in der Implementierung des ersten Prototyps über die Undo/Redo-Funktion rückgängig gemacht oder wiederhergestellt werden:
