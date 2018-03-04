@@ -1,5 +1,5 @@
 \chapter{Evaluation vorhandener Lösungsalternativen}\label{chap:eval}
-Im folgenden Kapitel werden die Bewertungskriterien zur Evaluation zunächst vorgestellt, und anschließend iterativ auf ausgewählte Apps angewandt.
+Im folgenden Kapitel werden die Bewertungskriterien zur Evaluation zunächst vorgestellt und anschließend iterativ auf ausgewählte Apps angewandt.
 Hierzu werden drei Lösungsalternativen aus dem Google Play-Store zur Aufmaßerfassung vorgestellt und evaluiert.
 Dieses Kapitel schließt die \emph{Observation} Phase ab, welche in \autoref{chap:problem} begonnen wurde. 
 
@@ -25,7 +25,7 @@ Für die Evaluation der Apps werden anschließend nur Kriterien benutzt, die in 
 \end{enumerate} 
 
 \noindent
-Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass weitere Heuristiken, die speziell für mobile Geräte ausgelegt sind, hinzugezogen werden sollen.
+Zur Bewertung von Software auf mobilen Endgeräten reichen diese zehn Bewertungskriterien jedoch nicht vollständig aus, sodass weitere Heuristiken, die speziell für mobile Geräte ausgelegt sind, hinzugezogen werden.
 \citeauthor{MachadoNeto13} stellen hierzu in ihrem Artikel ``Heuristics for the assessment of interfaces of mobile devices'' weitere Kriterien vor, die zur Evaluation der Usability-Eigenschaften von Software auf mobilen Endgeräten genutzt werden können \citep[Seite 95]{MachadoNeto13}.
 Auch \citeauthor{Bertini09} führen in ihrem Artikel ``Appropriating heuristic evaluation for mobile computing'' weitere Usability-Heuristiken zur Evaluation mobiler Software-Lösungen an \citep[Seite 20--41]{Bertini09}.
 Die Heuristiken beider Artikel werden im Folgenden zu acht weiteren Bewertungskriterien zusammengefasst:
@@ -54,7 +54,7 @@ Zusätzlich zu den in \autoref{subsec:nielsen} vorgestellten Heuristiken werden 
 
 \begin{itemize}
     \di{Integration der App in eine vorhandene Systemarchitektur}{integration}{Die App sollte sich in eine bereits vorhandene Systemarchitektur leicht integrieren lassen}
-    \di{Export des annotierten Bildes und der Metadaten zur Weiterverarbeitung durch einen nachgelagerten Dienst (z.B. \emph{API})}{export}{Die App sollte die eingetragenen Meta-Daten, wie zum Beispiel die Längen einer Linie, zur Weiterverarbeitung exportierbar machen}
+    \di{Export des annotierten Bildes und der Metadaten zur Weiterverarbeitung durch einen nachgelagerten Dienst (z.B. \emph{API})}{export}{Die App sollte die eingetragenen Meta-Daten, wie zum Beispiel die Längen einer Linie, zur Weiterverarbeitung zur Verfügung stellen können}
 \end{itemize}
 
 \section{Vorstellung und Evaluation ausgewählter Apps}\label{sec:evaluation}
@@ -95,7 +95,7 @@ Die Bewertungskriterien werden in den nachfolgenden Unterkapiteln jeweils in der
 Wie sich in \autoref{sec:evaluation} gezeigt hat, hat jede der drei vorhandenen Lösungsalternativen verschiedene Vor-, aber auch Nachteile.
 Besonders auffällig hierbei ist die fehlerhafte Umsetzung der \emph{Pinch-Geste} zum Zoomen des Bildes in den beiden Apps \mm{} und \pm{}.
 Diese fehlerhafte Umsetzung der \emph{Pinch-Geste} führt dazu, dass der Nutzer Formen löschen muss, die unabsichtlich während des Zoomens gezeichnet wurden.
-Insbesondere bei der App \pm{} führt dieser Fehler zu einem enorm schlechten Anwendererlebnis, da es keine Undo-Funktion gibt, um die fehlerhaft eingezeichnete Form schnell rückgängig zu machen.
+Insbesondere bei der App \pm{} führt dieser Fehler zu einem schlechten Anwendererlebnis, da es keine Undo-Funktion gibt, um die fehlerhaft eingezeichnete Form schnell rückgängig zu machen.
 Hier muss die Form zuerst markiert, und anschließend über einen Klick auf das Mülleimer-Icon in der Statusleiste gelöscht werden, bevor der Nutzer mit der eigentlichen Arbeit fortfahren kann. \\
 
 Außerdem ist in \autoref{sec:evaluation} aufgefallen, dass alle drei Apps eine Zoom-Linse benutzen, um den Bereich, der von dem Finger beim Zeichnen einer Form bedeckt wird, vergrößert an einer anderen Stelle des Bildschirms darzustellen.
@@ -110,8 +110,8 @@ Dieses Deaktivieren bestimmter Icons wird bei den beiden Alternativen \mm{} und 
 Ein weiterer wichtiger Aspekt, der von keiner der evaluierten Apps erfüllt wurde, ist die Integration in eine bereits bestehende Systemarchitektur bzw. der Export der bearbeiteten Bilder ohne die eingetragenen Messwerte als Meta-Daten zu verlieren. 
 Hierbei hat die App \im{} im Vergleich zu den anderen beiden Alternativen besser abgeschnitten, da diese das Teilen von Bilder aus einer bestehenden App in sich selber zulässt.
 Die Integration bleibt jedoch bei allen drei Apps nur sehr mühsam möglich, da beim Export der bearbeiteten Bilder die Messwerte nicht mehr als Meta-Daten vorliegen.
-Durch den Export werden nämlich sämtliche eingetragene Messwerte und Formen in das Bild geschrieben, und müssten anschließend wieder aus dem Bild extrahiert werden.
+Durch den Export werden sämtliche eingetragene Messwerte und Formen in das Bild geschrieben, und müssten anschließend wieder aus dem Bild extrahiert werden.
 Da die nachgelagerte Verwendung ein wichtiges Kriterium ist, wurde entschieden selbst eine Android-App zu entwickeln.
 
 Alle Evaluationsergebnisse, die in diesem Kapitel gesammelt werden konnten, sollen im nächsten Kapitel auf die Konzeption einer eigenen Android-Applikation angewandt werden.
-Hierbei sollen Aspekte, die während der Evaluation als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen, und bereits identifizierte Usability-Probleme vermieden werden.
+Hierbei sollen Aspekte, die während der Evaluation als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen, nd bereits identifizierte Usability-Probleme vermieden werden.

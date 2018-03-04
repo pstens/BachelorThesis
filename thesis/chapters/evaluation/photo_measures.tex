@@ -12,7 +12,7 @@ Zu den in der App-Beschreibung aufgelisteten positiven Rezensionen von verschied
 
 \noindent
 Beim initialen Start der App wird ein \emph{Tooltip} über der Statusleiste angezeigt (siehe \autoref{fig:pmmenu}).
-Dieser \emph{Tooltip} zeigt auf ein Plus-Icon in der Statusleiste, und gibt zusätzlich noch einen kurzen erklärenden Text zu der Aktion, die sich hinter diesem Icon verbirgt.
+Dieser \emph{Tooltip} zeigt auf ein Plus-Icon in der Statusleiste und gibt zusätzlich noch einen kurzen erklärenden Text zu der Aktion, die sich hinter diesem Icon verbirgt.
 
 \begin{figure}[h]
   \centering
@@ -34,7 +34,7 @@ Durch einen Klick auf das beschriebene Plus-Icon öffnet sich ein Dialog, der de
 Hierzu kann der Benutzer direkt ein Bild aus der Galerie importieren, oder ein Neues mit der Kamera aufnehmen. \\
 
 Anschließend wechselt die App in eine andere Benutzeroberfläche.
-Hier werden die zuvor angezeigten Icons der Statusleiste durch vier neue Icons ersetzt, und das ausgewählte Bild angezeigt (siehe \autoref{fig:pmhelp}).
+Hier werden die zuvor angezeigten Icons der Statusleiste durch vier neue Icons ersetzt und das ausgewählte Bild angezeigt (siehe \autoref{fig:pmhelp}).
 Wenn der Benutzer diese Oberfläche zum ersten Mal öffnet, zeigt die App außerdem ein Hilfe-Overlay.
 Dieses stellt die drei möglichen Gesten zur Navigation in der Oberfläche jeweils mit Hilfe eines Icons und kurzen Satzes dar. 
 Sobald der Nutzer den Bildschirm berührt, wird das Hilfe-Overlay ausgeblendet. \\
@@ -48,10 +48,10 @@ Sobald der Nutzer den Bildschirm berührt, wird das Hilfe-Overlay ausgeblendet. 
 
 Die Statusleiste bietet dem Benutzer nur die Funktionen an, die im aktuellen Systemzustand ausführbar sind.
 Dies wird in dieser App so umgesetzt, dass eine weitere Statusleiste über die vorhandene geschoben wird, wenn eine Form markiert wird.
-Diese eingeschobene Statusleiste bietet nur Aktionen zur Bearbeitung der markierte Form an, und verdeckt somit gleichzeitig alle Aktionen, die im aktuellen Systemzustand nicht ausführbar seien sollen.
+Diese eingeschobene Statusleiste bietet nur Aktionen zur Bearbeitung der markierte Form an und verdeckt somit gleichzeitig alle Aktionen, die im aktuellen Systemzustand nicht ausführbar seien sollen.
 So hat der Nutzer, wenn keine Form markiert ist, die Möglichkeit zwischen drei verschiedenen Formen (Linie, Winkel, Freitext) zu wählen, die gewünschte Größe einzustellen, oder das Bild schrittweise um $90$ Grad im Uhrzeigersinn zu rotieren.
 Außerdem kann in diesem Zustand über das Fragezeichen-Icon jederzeit ein \emph{Quick-Start Guide} aufgerufen werden (siehe \autoref{fig:pmqs}).
-Wenn eine Form markiert ist, kann diese über die eingeschobene Statusleiste (siehe \autoref{fig:pmbar}) im Nachhinein beschriftet, in ihrer Zeichenart verändert, gefärbt, oder gelöscht werden.
+Wenn eine Form markiert ist, kann diese über die eingeschobene Statusleiste (siehe \autoref{fig:pmbar}) im Nachhinein beschriftet, in ihrer Zeichenart verändert, gefärbt oder gelöscht werden.
 Sobald der Nutzer die Markierung aufhebt, wird die Statusleiste wieder ausgeblendet. \\
 
 Auch in dieser App lassen sich bearbeitete Bilder speichern, und zu einem späteren Zeitpunkt weiter bearbeiten.
@@ -89,11 +89,11 @@ Dieser muss sich alle ausgeführten Bearbeitungsschritte für den Fall einer feh
 
 Besonders auffällig wird die fehlende Benutzerkontrolle in Kombination mit der fehlerhaften \emph{Pinch-Geste} zum Zoomen des Bildes.
 Hierbei zeichnet der Nutzer beim Ausführen der \emph{Pinch-Geste} ungewollt eine Form auf das Bild (Nielsen \autoref{itm:N16}).
-Da die App keinerlei Möglichkeit bietet, unabsichtlich ausgeführte Aktionen rückgängig zu machen, muss der Nutzer nach jeder Zoom-Aktion die eingezeichnete Form löschen, und kann erst danach mit der eigentlichen Bearbeitung der App fortfahren.
+Da die App keinerlei Möglichkeit bietet, unabsichtlich ausgeführte Aktionen rückgängig zu machen, muss der Nutzer nach jeder Zoom-Aktion die eingezeichnete Form löschen und kann erst danach mit der eigentlichen Bearbeitung der App fortfahren.
 Gerade bei der Bearbeitung von Bilder mit vielen Details ist die Navigation im Bild und insbesondere das Zoomen unausweichlich. \\
 
 Ein positiver Aspekt dagegen liegt in der Unterstützung der verschiedenen Bildschirmausrichtungen, sowie dem adäquaten Umgang mit Unterbrechungen.
-Der Nutzer kann die App jederzeit drehen, ohne dass Informationen in der App verloren gehen, oder der Benutzer durch eine unerwartete Neuausrichtung des Bildes verwirrt wird (Nielsen \autoref{itm:N11} \& \autoref{itm:N15}). \\
+Der Nutzer kann die App jederzeit drehen, ohne dass Informationen in der App verloren gehen oder der Benutzer durch eine unerwartete Neuausrichtung des Bildes verwirrt wird (Nielsen \autoref{itm:N11} \& \autoref{itm:N15}). \\
 
 \begin{wrapfigure}{R}{0.4\textwidth}
   \centering
@@ -107,7 +107,7 @@ Zudem benutzt auch diese App eine Zoom-Linse, um den Bereich, der beim Zeichnen 
 Dies beugt Fehlern beim Zeichnen der Formen vor und erhöht außerdem die Effizienz, da der Nutzer nicht jedes Mal erst den Finger vom Bildschirm nehmen muss, um zu sehen, bis wohin er die Form schon gezeichnet hat. \\
 
 Eingetragene Messwerte stehen nach dem Exportieren der bearbeiteten Bilder nicht mehr als Meta-Daten zur Verfügung.
-Hierdurch können die in der App annotierte Bilder nicht für die Weiterverarbeitung in einem nachgeschalteten Dienst wie einer \emph{API} genutzt werden (\autoref{itm:export}).
+Hierdurch können die in der App annotierte Bilder nicht für die Weiterverarbeitung in einem nachgeschalteten Dienst genutzt werden (\autoref{itm:export}).
 Außerdem lassen sich Bilder aus einer bestehenden App nicht in \pm{} teilen, sodass eine Integration in eine bestehende Systemarchitektur nur sehr mühsam möglich wäre (\autoref{itm:integration}). \\
 
 Zusammenfassend kann also festgehalten werden, dass die App \pm{} von \emph{Big Blue Pixel} die Usability-Heuristiken nach Nielsen nur bedingt gut umsetzt, da besonders die Kombination der fehlerhaften \emph{Pinch-Geste} beim Zoomen mit der fehlenden Undo- bzw. Redo-Funktionalität zu einem negativen Anwendungserlebnis führen.

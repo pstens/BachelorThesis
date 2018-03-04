@@ -1,13 +1,21 @@
 \chapter{Implementation und Test des ersten Prototyps}
 
-Die in \autoref{chap:concept} gesammelten Ideen sollen im Folgenden dazu genutzt werden, einen ersten Prototyp zu entwickeln.
-Hiezu bietet es sich an den Prototyp als \emph{Android Library} zu implementieren, da dies sowohl schnellere Kompilierzeiten mit sich bringt, als auch die Einbindung in eine bestehende Android-Applikation deutlich vereinfacht.
+Die in \autoref{chap:concept} generierten Ideen sollen im Folgenden dazu genutzt werden, einen ersten Prototyp zu entwickeln.
+Hierzu bietet es sich an den Prototyp als \emph{Android Library} zu implementieren, da dies sowohl schnellere Kompilierzeiten mit sich bringt, als auch die Einbindung in eine bestehende Android-Applikation deutlich vereinfacht.
 Als Programmiersprache soll die von \emph{JetBrains} entwickelte Sprache \emph{Koltin}\urlnote{https://kotlinlang.org/docs/reference/android-overview.html} verwendet werden, welche 2017 als offiziell unterstützte Android-Sprache vorgestellt wurde.
 Die Sprache bietet im Vergleich zu \emph{Java} einen besonders guten Umgang bezüglich der \emph{Null-Safety} von Variablen.
 Außerdem ermöglicht \emph{Kotlin} die Verwendung funktionaler Sprachkonstrukte. \\
 
-Als Architekturmuster soll das \emph{Model-View-Controller-Konzept} (kurz \emph{MVC}) verwendet werden. 
-Dies erlaubt eine saubere Entkopplung von Logik und User-Interface, was das Projekt auch bei einer wachsenden Anzahl von Codezeilen übersichtlich und verwaltbar gestaltet. \\
+Bei der Implementierung soll das Entwurfsmuster des \emph{Model-View-Controllers} (kurz \emph{MVC}) eingesetzt werden, welche den Quellcode in drei verschiedene Komponente unterteilt (siehe \autoref{fig:mvc}). 
+So gibt es einerseits das \emph{Datenmodell (model)}, die \emph{Präsentationskomponente (view)} und die \emph{Programmsteuerung (controller)}.
+Ziel des \emph{MVC} ist es, eine flexible Architektur zu schaffen, die bei Bedarf leicht erweitert bzw. wiederverwendet werden kann. \\
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio, width=0.5\textwidth]{mvc}
+  \caption{Interaktion innerhalb des Model-View-Controller Prinzips}
+  \label{fig:mvc}
+\end{figure}
 
 Dieses Kapitel entspricht der dritten Phase des \hcdp{} und verfolgt das Ziel, einen ersten benutzbaren Prototyp zu schaffen, der die in \autoref{chap:problem} beschriebenen Probleme möglichst gut löst. 
 Anschließend soll die \emph{Android-Library}, welche bei der Entwicklung des Prototyps entsteht, in die vorhandene App integriert werden.

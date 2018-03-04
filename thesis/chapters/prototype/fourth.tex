@@ -13,7 +13,7 @@ Um die in \autoref{sec:test3} beschriebenen Probleme hinsichtlich ihrer Entstehu
 
 \noindent
 Beide Testpersonen berichten in \autoref{sec:test3} von einer Unübersichtlichkeit bei der Verwendung von mehreren Text-Formen.
-Dies hängt wahrscheinlich damit zusammen, dass die Schriftgröße des Textes dem aktuellen Zoom-Level der App angepasst wird.
+Dies hängt damit zusammen, dass die Schriftgröße des Textes dem aktuellen Zoom-Level der App angepasst wird.
 So verkleinert sich der Text, wenn der Nutzer in das Bild hereinzoomt, und vergrößert sich wieder, sobald dieser herauszoomt.
 Auf diese Weise soll sichergestellt werden, dass der Text unabhängig vom Zoom-Level jederzeit leicht lesbar ist.
 Im herausgezoomten Zustand wird die Schriftgröße jedoch so stark vergrößert, dass die gesamte Freitext-Form zu viel Platz auf dem Bildschirm einnimmt.
@@ -23,7 +23,7 @@ Dies ist besonders auffällig, wenn der Nutzer mehrere Freitext-Formen erstellt,
 Außerdem zeigen die Testergebnisse, dass es beim Speichern des bearbeiteten Bildes zu einer doppelten Eingabe des Titels kommt.
 So muss der Benutzer einmal beim Speichern des Bildes innerhalb der \emph{Library} eine Beschreibung eingeben, und anschließend ein zweites Mal beim Hochladen des Bildes in der bestehenden App.
 Diese doppelte Eingabe der exakt gleichen Beschreibung ist für den Benutzer nicht nachvollziehbar und sorgt darüber hinaus für unnötige Verwirrung.
-(Nielsen~\autoref{itm:N1} \& \autoref{itm:N17}) 
+(Nielsen~\autoref{itm:N1} \& \autoref{itm:N17}) \\
 
 Zudem berichten beide Tester, dass sich im Hochformat aufgenommene Bilder ohne jegliche Interaktion beim Importieren in die App ins Querformat drehen.
 Dieser Punkt ist beim lokalen Testen während der Implementierung des Prototyps auf keinem der benutzten Geräten aufgefallen.
@@ -32,7 +32,7 @@ Auffällig ist auch, dass die beschriebene Rotation des Bildes nur dann geschieh
 Dieses Verhalten lässt sich im \emph{Quellcode} der \emph{uCrop-Library} verifizieren.
 Hier wird vor dem Zuschneiden des Bildes geprüft, ob der Nutzer das Bild angepasst hat.
 Ist dies nicht der Fall, so wird das Originalbild ohne jegliche Modifikation in die Zieldatei geschrieben.
-Hierbei gehen auf \emph{Samsung}-Geräten anscheinend die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057} verloren.
+Hierbei gehen auf \emph{Samsung}-Geräten die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057} verloren.
 (Nielsen~\autoref{itm:N5}) \\ 
 
 \section{Idea Generation}\label{sec:idea4}
@@ -72,7 +72,7 @@ Der Speicher-Dialog wurde durch das Hinzufügen eines weiteren Start-Parameters 
 Hier wird das Bild direkt auf dem Gerät gespeichert und anschließend in der bestehenden App nach einem Bildtitel gefragt. \\
 
 Die ungewollte Rotation der Bilder auf \emph{Samsung}-Geräten wurde durch die Modifikation der \emph{uCrop-Library} umgesetzt.
-Hierzu wurde ein \emph{Fork}\urlnote{https://help.github.com/articles/fork-a-repo/} der \emph{Library} erstellt und anschließend eine Überprüfung des Geräteherstellers in den \emph{Quellcode} eingebaut.
+Hierzu wurde ein \emph{Fork}\urlnote{https://help.github.com/articles/fork-a-repo/} der \emph{Library} erstellt und anschließend eine Überprüfung des Geräteherstellers im \emph{Quellcode} hinzugefügt.
 
 \section{Testing}
 Feedback zum Benutzererlebnis des vierten Prototyps gab es X Tage nach dem Rollout. \\

@@ -1,20 +1,8 @@
 \section{Implementation}\label{sec:pro1}
-\todo{Perfekt oder Präsens?}
 In \autoref{chap:concept} wurden Umsetzungsmöglichkeiten für die verschiedenen Bewertungskriterien aus \autoref{sec:criteria} ausgearbeitet.
-Diese sollen in die Implementierung des ersten Prototyps einfließen, und so einen Grundstein für eine positive Benutzererfahrung der App legen. \\
+Diese sollen in die Implementierung des ersten Prototyps einfließen und so einen Grundstein für eine positive Benutzererfahrung der App legen. \\
 
 Der erste Prototyp wurde am 16. Dezember 2017 fertiggestellt und in die bestehende Android-App eingebunden. \\
-
-Bei der Implementierung wurde das Entwurfsmuster des \emph{Model-View-Controllers} eingesetzt, welches den Quellcode in drei verschiedene Komponente unterteilt (siehe \autoref{fig:mvc}).
-So gibt es einerseits das \emph{Datenmodell (model)}, die \emph{Präsentationskomponente (view)} und die \emph{Programmsteuerung (controller)}.
-Ziel des Entwurfsmusters ist es, eine flexible Architektur zu schaffen, die bei Bedarf leicht erweitert bzw. wiederverwendet werden kann.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[keepaspectratio, width=0.5\textwidth]{mvc}
-  \caption{Interaktion innerhalb des Model-View-Controller Prinzips}
-  \label{fig:mvc}
-\end{figure}
 
 \noindent
 Zusätzlich wurde der Aufbau des Projekts in der \emph{Unified Modelling Language}, kurz \emph{UML}, modelliert.
@@ -30,10 +18,10 @@ Dies ermöglicht bereits vor der eigentlichen Implementierung wichtige Begriffe 
 \noindent
 Die Komponente des \emph{Datenmodells} sah dabei wie folgt aus (eine vollständige Version des UML-Diagramms befindet sich im Anhang \todo{in Anhang packen}):
 In \autoref{fig:shape} ist die abstrakte Klasse \emph{MeasureShape} zu erkennen, welche die Oberklasse der beiden Formen \emph{Line} und \emph{Rectangle} darstellt.
-\emph{MeasureShape} vererbt die abstrakten Attribute \emph{points} und \emph{edges} an ihre Unterklassen, die diese Attribute in überschreiben müssen.
+\emph{MeasureShape} vererbt die abstrakten Attribute \emph{points} und \emph{edges} an ihre Unterklassen, die diese Attribute überschreiben müssen.
 Außerdem muss die öffentliche Methode \emph{drawShape(...)} von beiden Unterklassen implementiert werden.
 Dies sorgt dafür, dass jede Unterklasse selber dafür ``verantwortlich'' ist, wie und wohin ihre Form gezeichnet wird.
-\emph{MeasureShape} selber implementiert die drei verschiedene \emph{Interfaces} \emph{Draggable, Resizable und Editable}, welche Schnittstellen zum Verschieben, Vergrößern und Editieren von Formen bereit stellen. \\
+\emph{MeasureShape} implementiert die drei \emph{Interfaces} \emph{Draggable, Resizable} und \emph{Editable}, welche Schnittstellen zum Verschieben, Vergrößern und Editieren von Formen bereit stellen. \\
 
 \noindent
 Eine weitere Klasse im \emph{Datenmodell} ist \emph{UserAction} (\todo{ref auf Anhang}).
@@ -51,7 +39,7 @@ Folgende sechs Benutzeraktionen können in der Implementierung des ersten Protot
 \end{itemize}
 
 \noindent
-Funktional beschränkt sich die Implementierung des ersten Prototyps zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften dieser, um Messwerte einzutragen.
+Funktional beschränkt sich die Implementierung des ersten Prototyps zunächst auf das Zeichnen von einfachen Linien und Vierecken, sowie das anschließende Beschriften um Messwerte einzutragen.
 Zum schnellen und präzisen Zeichnen der Formen wird eine Zoom-Linse (siehe \autoref{fig:draw1}), wie sie in allen drei Apps aus \autoref{chap:eval} umgesetzt wurde, verwendet.
 Der Prototyp verfügt über zwei verschiedene Modi, den Zeichen- und Text-Modus, zwischen denen mit Hilfe des \emph{Floating Action Buttons} im unteren rechten Bildschirmbereich umgeschaltet werden kann (siehe \autoref{fig:all1}).
 Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im unteren linken Bildschirmbereich jederzeit ein neues Bild aufnehmen, oder ein bereits vorhandenen in die App importieren.
@@ -106,9 +94,9 @@ Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante 
 % \end{figure}
 
 \section{Test}\label{sec:test1}
-Zum Testen des Prototyps wurde dieser in die App der beiden Geschäftsführer der Fa. \vr{} (siehe \autoref{table:testers}) eingebunden.
-Testperson 1, André Vermeulen, repräsentiert hierbei den ``Poweruser'' der App, wohingegen Testperson 2, Sebastian Wiesbrock, die App eher selten nutzt.
-Beiden Testern wurde zur Nutzung des Prototyps weder eine verbale noch schriftliche Hilfestellung zur Verfügung gestellt.
+Zum Testen des Prototyps wurde dieser in die App der beiden Geschäftsführer von \vr{} (siehe \autoref{table:testers}) eingebunden.
+Testperson 1, André Vermeulen, repräsentiert hierbei den ``Poweruser'' der App, wohingegen Testperson 2, Sebastian Wiesbrock, die App gelegentlich nutzt.
+Beiden Testern wurde zur Nutzung des Prototyps weder eine verbale noch schriftliche Hilfestellung zur Verfügung gestellt. \\
 
 \begin{table}[h]
   \centering
@@ -120,16 +108,16 @@ Beiden Testern wurde zur Nutzung des Prototyps weder eine verbale noch schriftli
     \hline
     \textbf{Rolle} & Geschäftsleitung & Geschäftsleitung \\
     \hline
-    \textbf{Alter} & ? & ? \\
+    \textbf{Alter} & 45 &  ?? \\
     \hline
-    \textbf{Nutzungsgrad der App} & hoch & niedrig \\
+    \textbf{Nutzungsgrad der App} & hoch & mittel \\
     \hline
   \end{tabular}
   \caption{Demografische Daten der Testpersonen}
   \label{table:testers}
 \end{table}
 
-Nachdem die beiden Tester den Prototyp zwei Tage in ihren Arbeitsalltag integriert haben, wurden am 18. Dezember die Testergebnisse gesammelt. \\
+Nachdem die beiden Tester den Prototyp zwei Tage in ihren Arbeitsalltag integriert haben, wurden am 18. Dezember die Testergebnisse gesammelt:
 
 Nach Aussage beider Testpersonen, haben die \emph{Floating Action Buttons} sich bei der Benutzung der App als großes Hindernis herausgestellt.
 So sei nicht intuitiv klar, dass die App über zwei verschiedene Modi, nämlich den Zeichen- und Text-Modus, verfügt.
@@ -142,7 +130,7 @@ Darüber hinaus schilderten beide Testpersonen, dass eingetragene Messwerte auf 
 Hier setze sich die Textfarbe zu schlecht vom Hintergrund ab. \\
 
 Zusätzlich zu den identifizierten Usability-Problemen kam bei beiden Testern der Wunsch nach neuen Funktionen auf, die sie sich als nützliche Erweiterungen hinsichtlich ihres Arbeitsalltags vorstellen konnten.
-So wünschten sich beide Testpersonen einerseits die Möglichkeit, Formen mit bereits vorhandenen Gerüsttypen wie zum Beispiel ``Hängegerüst'' oder ``Standgerüst'' zu verbinden, und in den Meta-Daten des Bildes zu speichern.
+So wünschten sich beide Testpersonen einerseits die Möglichkeit, Formen mit bereits vorhandenen Gerüsttypen zu verbinden und in den Meta-Daten des Bildes zu speichern.
 Andererseits wurde angemerkt, dass es sinnvoll sei, Bilder vor dem Bearbeiten über eine weitere Oberfläche zunächst in die gewünschte Größe und Form schneiden zu können, da es oftmals auf der Baustelle vorkomme, dass die aufgenommenen Bilder nicht nur das gewünschte Gerüst, sondern auch andere Objekte, die für das Bild nicht relevant sind, beinhalten. \\
 
 Die Ursachen und mögliche Lösungsideen der Probleme, die während dieser Testphase identifiziert wurden, sollen im nächsten Abschnitt in einer weiteren Iteration des \hcdp{} ausgewertet und mit Hilfe eines zweiten Prototyps gelöst werden.

@@ -4,7 +4,7 @@ Diese sollen bei der Entwicklung eines zweiten Prototyps in diesem Abschnitt ber
 Hierzu werden die vier Phasen des \hcdp{} ein weiteres Mal durchlaufen.
 
 \section{Observation}
-Um einen Überblick über die Test-Ergebnisse aus \autoref{sec:test1} herzustellen, werden diese im Nachfolgenden zunächst noch einmal aufgelistet und anschließend weiter evaluiert:
+Um einen Überblick über die Test-Ergebnisse aus \autoref{sec:test1} herzustellen, werden diese im Nachfolgenden zunächst aufgelistet und anschließend weiter evaluiert:
 
 \begin{itemize}
   \item Bedienung der App über \emph{FAB} nicht intuitiv
@@ -39,7 +39,7 @@ Zum Anderen soll die Möglichkeit bestehen, Bilder beim Import in die App in die
 \section{Idea Generation}\label{sec:idea2}
 Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art Statusleiste am unteren Bildschirmrand zu verankern.
 Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten.
-Die \mg{} suggerieren hierfür die Nutzung einer sogenannten ``Bottom navigation''\urlnote{https://material.io/guidelines/components/bottom-navigation.html}.
+Die \mg{} suggerieren hierfür die Nutzung einer sogenannten \emph{Bottom navigation}\urlnote{https://material.io/guidelines/components/bottom-navigation.html}.
 Diese kann, so die \mg{}, dazu eingesetzt werden, um die Erkundung von Apps einfach zu gestalten und den Wechsel zwischen den Ansichten auf der obersten Ebene einer App zu beschleunigen \citep{BN18}. \\
 
 Für eine bessere und einfachere Benutzung der App auf Tablet-Geräten kann eine zweite Benutzeroberfläche, die nur auf Tablet-Geräten angezeigt wird, in die App eingebunden werden. 
@@ -57,18 +57,20 @@ Zudem führe die Benutzung von weißem Text auf einem halbtransparenten schwarze
 
 Um Formen direkt den passenden Gerüsttypen zuzuordnen, bietet sich die Verwendung eines modalen Dialogs an.
 Dieser könnte zum Beispiel bei einem langen Klick auf die gewünschte Form angezeigt werden, und in einem \emph{Dropdown} vorhandene Gerüsttypen zur Auswahl anbieten.
-Falls ein langer Klick auf die Form bei der ersten Benutzung zu kontraintuitiv ist, würde sich ein \emph{Button} anbieten, der nur dann auswählbar ist, wenn zuvor eine Form markiert wurde.
-Zudem sollte an der Form erkenntlich werden, dass sie bereits mit einem Gerüsttyp verlinkt ist. \\
+Falls ein langer Klick auf die Form bei der ersten Benutzung zu un-intuitiv ist, würde sich ein \emph{Button} anbieten, der nur dann auswählbar ist, wenn zuvor eine Form markiert wurde.
+Zudem sollte an der Form erkenntlich werden, dass sie bereits mit einem Gerüsttyp verknüpft ist. \\
 
 Das Schneiden und Rotieren von Bildern kann einerseits durch die Benutzung der im Android-System vorhandenen \emph{Crop-Activity} realisiert werden, andererseits würde sich auch die Benutzung einer \emph{Open-Source Android-Library} für das Schneiden von Bildern anbieten.
 Die Verfügbarkeit der von Android bereitgestellten \emph{Crop-Activity} ist jedoch vom Gerätehersteller und der verwendeten Android-Version abhängig.
 Hierdurch kann nicht sichergestellt werden, dass die Funktion auf allen Geräten funktioniert.
-Deshalb bietet sich die Verwendung einer \emph{Open-Source Android-Library} an.
 In einem Blog-Eintrag der Seite ``The CommonsBlog'' mit dem Titel ``No, Android Does *Not* Have a Crop Intent'' steht hierzu folgendes \citep{Commonsware13}:
 \begin{quote}
   ``Many developers are calling startActivity() on an Intent with an action of com.android.camera.action.CROP.
   [...] Devices lacking this app will not respond to this undocumented Intent action, and your app will crash.'' 
 \end{quote}
+
+\noindent
+Deshalb bietet sich die Verwendung einer \emph{Open-Source Android-Library} an.
 
 \section{Prototyping}
 Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Implementierung der in \autoref{sec:idea2} gesammelten Ideen. \\
@@ -81,7 +83,7 @@ Die Statusleiste wurde durch eine \emph{Bottom-Navigation Bar} am unteren Bildsc
     \label{fig:mode2}
   \end{subfigure}
   \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=\textwidth]{prototype2/label_popup}
+    \includegraphics[keepaspectratio, width=0.9\textwidth]{prototype2/label_popup}
     \caption{Statusleiste im Text-Modus mit Popup-Dialog zur Beschriftung der ausgewählten Form}
     \label{fig:labelp2}
   \end{subfigure}
@@ -146,8 +148,8 @@ Hierdurch soll vermieden werden, dass der Text auf dunkleren Bildern, wie bspw. 
 
 Das Zuordnen von Gerüsttypen zu gezeichneten Formen wurde mit Hilfe eines modalen Dialogs umgesetzt, der neben dem Gerüsttyp auch noch Textfelder für die verschiedenen Dimensionen des Gerüsts besitzt.
 Hierdurch kann der Benutzer nicht nur den Gerüsttyp, sondern auch Maße des Gerüsts, welche im Bild aufgrund des Aufnahmewinkels eventuell nicht zu sehen sind, eintragen und in den Meta-Daten speichern.
-Verknüpfte Formen zeigen mittels eines Indikators (siehe fig), ob und mit wie vielen Gerüsttypen sie verbunden sind.
-Auf diese Weise soll der Benutzer die bereits verlinkten von den nicht-verlinkten Formen unterscheiden können. \\
+Verknüpfte Formen zeigen mittels eines Indikators, ob und mit wie vielen Gerüsttypen sie verbunden sind.
+Auf diese Weise soll der Benutzer die bereits verknüpften von den nicht-verknüpften Formen unterscheiden können. \\
 
 Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}\urlnote{https://github.com/Yalantis/uCrop}, eine dedizierte Android-Library, in das Projekt eingebunden.
 \emph{uCrop} ist auf \emph{Github} als \emph{Open-Source} Projekt verfügbar und kann so den eigenen Bedürfnissen angepasst werden. 
