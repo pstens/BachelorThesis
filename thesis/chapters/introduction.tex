@@ -2,13 +2,13 @@
 \section{Motivation}\label{subsec:motivation}
 ``Digitalisierung des Handwerks'' - Das ist der Titel einer im Jahr 2017 ausgeführten Studie vom Branchenverband \textit{Bitkom}. 
 Diese Studie besagt, dass 69\% der 509 befragten Handwerksbetriebe die Digitalisierung als Chance für einen positiven Umschwung der Betriebe sehen. 
-Dabei ergibt sich aus Sicht der Handwerker die Vorteile von ``optimaler Lagerung und Logistik'' (91\%), ``Zeitersparnis'' (81\%) und ``flexibler Arbeitsorganisation'' (78\%) im Vordergrund \citep{Bitkom17}. \\
+Dabei ergeben sich aus Sicht der Handwerker die Vorteile von ``optimaler Lagerung und Logistik'' (91\%), ``Zeitersparnis'' (81\%) und ``flexibler Arbeitsorganisation'' (78\%) \citep{Bitkom17}. \\
 
 Im November 2017 wurde in Hannover vom Güterschutzverband Stahlgerüstbau e.V. zum Thema ``Digitalisierung des Handwerks'' ein zweitägiges Groß-Seminar unter dem Titel ``Gerüstbau 4.0: Was bedeutet der digitale Wandel für den eigenen Betrieb?'' veranstaltet. 
 Mit Vorträgen zu Themen wie ``Geschäftsprozesse im Gerüstbau-Handwerk'', ``Virtuelle Projekträume und Cloudlösungen'' und ``Mobile Datenverwaltung'' wurden die Teilnehmenden über den digitalen Wandel informiert \citep{GSV17}. \\
 
 Der Gerüstbau-Dienstleister \emph{VERO Scaffolding EOOD Niederlassung Deutschland} aus Paderborn (nachfolgend: \vr{}) kann nach der Einführung und Benutzung einer selbst entwickelten Android-Applikation im Mai 2014 die genannten Vorteile der \textit{Bitkom}-Studie teilweise verzeichnen.
-Die entwickelte App wird einerseits von den Monteuren zur Arbeitszeiterfassung, Einsicht von Auftragsinformationen, und der Baustellendokumentation mit Fotos und Text genutzt.
+Die entwickelte App wird einerseits von den Monteuren zur Arbeitszeiterfassung, Einsicht von Auftragsinformationen und der Baustellendokumentation mit Fotos und Text genutzt.
 Andererseits nutzt die Geschäfts- und Bauleitung die administrativen Funktionen der App, wie die Verwaltung und Pflege von Kunden-, Projekt-, und Arbeitsauftragsinformationen (siehe~\autoref{fig:app14}). \\
 
 Zu diesen administrativen Aufgaben gehört auch die Aufmaßerfassung.
@@ -36,7 +36,7 @@ Meistens werden die Maße jedoch abgeschätzt und später im Büro erfasst und s
 
 \section{Umfeld}
 Nach der Handwerkszählung vom statistischen Bundesamt im Jahr 2015 sind 13\% (75 264) aller Handwerksunternehmen dem Bauhauptgewerbe zuzuordnen.
-Zu diesem Gewerbe zählt auch die Gerüstbaubranche, welche laut der Statistik im überwiegend von kleinen Unternehmen dominiert wird (88,03\% der Unternehmen mit bis zu 20 Angestellten). 
+Zu diesem Gewerbe zählt auch die Gerüstbaubranche, welche laut der Statistik überwiegend von kleinen Unternehmen dominiert wird (88,03\% der Unternehmen mit bis zu 20 Angestellten). 
 9,28\% der Unternehmen verzeichnen zwischen 21 und 50 Beschäftigte und nur 2,69\% der Unternehmen verzeichnen über 50 Beschäftigte \cite{HZ17}.
 Mit 14 Beschäftigten gehört die \emph{Fa.} \vr{} zu einem der kleineren Unternehmen in der Gerüstbaubranche.
 Im Folgenden soll das Unternehmen und die selbst entwickelte Android-App vorgestellt werden.
@@ -45,14 +45,14 @@ Im Folgenden soll das Unternehmen und die selbst entwickelte Android-App vorgest
 \vr{} geht aus der im Jahr $1999$ in Paderborn gegründeten \emph{VERO Gerüstbau GmbH} hervor. 
 Seit 2013 ist die \emph{VERO Gerüstbau GmbH} die deutsche Niederlassung der bulgarischen \emph{VERO Scaffolding EOOD}, ansässig in Stara Zagora, Bulgarien.
 Der Standort in Bulgarien fokussiert sich hauptsächlich auf mehrjährige Großprojekte in der Industrie (Kraftwerke, Raffinerien).
-Der Fokus in der deutschen Niederlassung in Paderborn liegt auf kleineren Projekten für Kommunen, Automobilzulieferer, aber auch private Haushalte.
+Der Fokus der deutschen Niederlassung in Paderborn liegt auf kleineren Projekten für Kommunen, Automobilzulieferer, aber auch private Haushalte.
 Die Belegschaft am Standort Paderborn besteht aus zehn Monteuren, einem Auszubildenden, einer Bürofachkraft und zwei Geschäftsführern.
 Die Monteure sind zwischen 19 und 55 Jahren alt und erledigen in zwei bis vier Kolonnen bis zu vier Arbeitsaufträge am Tag.
 
 \subsection{Android-App und Systemarchitektur}
 Im Oktober 2013 begann die Entwicklung einer Android-Applikation (nachfolgend: App) als mobile Software-Lösung für administrative Aufgaben der Monteure wie das Erfassen von Arbeitszeiten, Ansehen von Arbeitsaufträgen und das Verfassen von schriftlichen Baudokumentationen.
 Die App kommuniziert zur Synchronisation der gesammelten Daten mit einer Server-Schnittstelle (\emph{API}\urlnote{https://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api}), welche auch von \vr{} entwickelt wurde.
-Diese \emph{API} ist wiederum an eine SQL-Datenbank, ein Dateisystem und externe Dienste, wie einem E-Mail-Dienst, gekoppelt. \\
+Diese \emph{API} ist wiederum an eine SQL-Datenbank, ein Dateisystem und externe Dienste, wie einen E-Mail-Dienst, gekoppelt. \\
 
 Im Vergleich zur anfänglichen Entwicklung aus dem Jahr 2013 verfügt die App zum jetzigen Stand (Januar 2018) über eine Vielzahl neuer Funktionen, die dem Nutzer den Arbeitsalltag erleichtern sollen (siehe \autoref{fig:app18}).
 Hierzu zählt zum Beispiel eine monatliche Stundenübersicht für die Mitarbeiter, die mobile Verwaltung von Stammdaten (wie etwa von Mitarbeitern und Fahrzeugen), sowie eine Vorplanungstafel, um Termine und Arbeitsaufträge übersichtlich zu planen. 
