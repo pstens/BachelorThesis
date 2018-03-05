@@ -1,19 +1,39 @@
-\chapter{Probleme und Grenzen}
-\todo{Section ausformulieren}
-Während der gesamten Entwicklung des Prototyps haben sich verschiedene Usability-Probleme gezeigt, die in den einzelnen Zyklen des \hcdp{} so gut wie möglich gelöst werden sollten.
-Nicht alle Probleme, die während der \emph{Testing}-Phasen identifiziert wurden, konnten mit Hilfe der Android-App gelöst werden.
+\chapter{Bewertung des Prototyps}
+In diesem Kapitel wird der entwickelte Prototyp zunächst mit dem traditionellen, analogen Prozess der Aufmaßerfassung zgl. der Effizienz vergleichen.
+Anschließend werden Probleme und Grenzen aufgezeigt, die sich während des Entwicklungsprozesses identifizieren lassen haben.
+
+\section{Vergleich mit analoger Aufmaßerfassung}
+Zum Zeitpunkt dieses Vergleiches (5. März 2018) ist der finale Prototyp bereits seit Ende Januar unternehmensweit in die vorhandene Android-App eingebunden.
+Da die Bilder, welche über den Prototyp aufgenommen und hochgeladen werden, mit einer bestimmten Kategorie markiert werden, kann genau nachvollzogen werden, wie viele Bilder von welchen Nutzern mit Hilfe des Prototyps aufgenommen wurden. \\
+
+Am Standort in Bulgarien wurden im Zeitraum vom 31. Januar bis 2. März insgesamt zwölf Bilder von zwei verschiedenen Benutzern über den eingebundenen Prototyp hochgeladen.
+Sieben dieser Bild stammen von einer der Testpersonen und die restlichen fünf von einem bulgarischen Mitarbeiter.
+Dieser Mitarbeiter hat es geschafft, ohne jegliche externe Hilfestellung die Funktion zur Aufmaßerfassung innerhalb der bestehenden App zu finden, ein Bild zu importieren, dieses zu bearbeiten und anschließend das bearbeitete Bild hochzuladen. 
+\todo{hier annotiertes Bild von Galin?} \\
+
+Am Standort Paderborn wurde der eingebundene Prototyp fast doppelt so häufig genutzt wie in Bulgarien.
+Hier wurden in der Zeitspanne vom 25. Januar bis 27. Februar insgesamt 20 annotierte Bilder von fünf verschiedenen Mitarbeitern aufgenommen und hochgeladen.
+Diese fünf Mitarbeiter setzen sich aus den beiden Testpersonen und drei weiteren Monteuren zusammen.
+Die drei weiteren Monteure sind ohne jegliche Aufforderung oder Hilfestellung auf die Funktion des Prototyps aufmerksam geworden und haben diesen nur mit den im Prototyp vorhandenen Hilfe-Overlays bedient.
+
+Auch zu dem Fassadengerüst aus \autoref{chap:prob} wurde mit Hilfe des Prototyps ein Aufmaß erstellt.
+
+\section{Probleme und Grenzen}
+Während des Entwicklungsprozesses der App haben sich verschiedene Usability-Probleme gezeigt, die in den einzelnen Zyklen des \hcdp{} gelöst wurden.
+Jedoch gab es auch Probleme, die mit Hilfe einer Android-App nicht gelöst werden konnten.
 In diesem Kapitel werden die Probleme und Grenzen der mobilen Bildbearbeitung zur Aufmaßerfassung im Gerüstbau näher beleuchtet.
 
-\section{Hindernisse vor dem zu beaufmaßenden Objekt}
-Während der Aufmaßerfassung des Gebäudes in \autoref{chap:prob} wurde dieses Problem besonders deutlich.
-Hier verdeckte ein Baum eine gesamte Seite des Hauses (siehe \autoref{fig:tree}), sodass die Aufmaßerfassung mit Hilfe eines Bildes schwer umsetzbar war.
+\subsection{Hindernisse vor dem zu beaufmaßenden Objekt}
+Während der Aufmaßerfassung des Gebäudes in \autoref{chap:prob} wurde dieses Problem besonders deutlich: \\
+Hier verdeckt ein Baum eine gesamte Seite des Hauses (Bild Haus Baum), sodass die mit Hilfe der App nur schwer ein verwendbares Bild aufgenommen werden kann.
+In diesem Fall konnte das Problem durch einen anderen Aufnahmewinkel gelöst werden, jedoch sollte bewusst sein, dass die Veränderung des Aufnahmewinkels nicht immer ohne Probleme möglich ist.
+Insbesondere bei Häusern, die nah zusammen stehen oder nur aus einem Winkel fotografiert werden können, ist dies ein Problem, welches durch die Nutzung einer App nicht gelöst werden kann.
 \todo{Bild von Andrè mit Baum vor Haus}
-\todo{Was schreib ich hierzu noch alles?}
 
-\section{Eingeschränkter Winkel zur Aufnahme des Bildes}
-
-\todo{Was schreib ich hierzu noch alles?}
-
-\section{Überladung des Bildes durch zu viele Formen und Texte}
--> Lösungsansatz durch Unterstützung verschiedener Ebenen
-\todo{Was schreib ich hierzu noch alles?}
+\subsection{Eingeschränkter Winkel zur Aufnahme des Bildes}
+Ein weiterer Punkt, der während der Aufmaßerfassung des Gebäudes in \autoref{chap:prob} aufgefallen ist, ist der eingeschränkte Aufnahmewinkel.
+Besonders bei Gebäuden, deren Fassaden bspw. zu einer Gasse hinzeigen, ist die Aufnahme der gesamten Fassade nur bedingt möglich.
+Hier ist nicht genug Platz, um weit genug nach hinten zu gehen, damit die gesamte Gebäudefassade auf das Bild passt.
+Um trotzdem ein Bild der Gebäudeseite aufzunehmen, muss das Bild aus einem spitzen Winkel aufgenommen werden.
+Hierdurch können eventuelle Verzerrungen des Bildes entstehen oder es sind nicht alle Details, die für die Aufmaßerfassung wichtig sind, auf dem Bild zu erkennen.
+\todo{Bild von Andre aus spitzem Winkel}
