@@ -78,12 +78,15 @@ Der zweite Prototyp wurde am 3. Januar 2018 fertiggestellt, und umfasst die Impl
 Die Statusleiste wurde durch eine \emph{Bottom-Navigation Bar} am unteren Bildschirmrand umgesetzt (siehe \autoref{fig:bar2}).
 \begin{figure}[ht]
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype2/expanded_mode}
     \caption{Statusleiste im Zeichen-Modus mit Popup-Dialog zur Auswahl des Modus}
     \label{fig:mode2}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.4\textwidth}
-    \includegraphics[keepaspectratio, width=0.9\textwidth]{prototype2/label_popup}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype2/label_popup}
     \caption{Statusleiste im Text-Modus mit Popup-Dialog zur Beschriftung der ausgewählten Form}
     \label{fig:labelp2}
   \end{subfigure}
@@ -131,17 +134,20 @@ Dies stellt sicher, dass alle Elemente unabhängig von der Bildschirmgröße gle
 Um die Lesbarkeit der eingetragenen Messwerte bei dunkleren Bildern zu verbessern, wurde die Textfarbe der Messwerte auf weiß geändert und zusätzlich wurden halbtransparente schwarze Rechtecke hinter den Text gelegt (siehe \autoref{fig:label2}).
 Hierdurch soll vermieden werden, dass der Text auf dunkleren Bildern, wie bspw. in \autoref{fig:label1}, nicht gut lesbar ist.
 \begin{figure}[h]
-  \centering
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype2/label1}
     \caption{Eingetragener Messwert beim ersten Protoyp}
     \label{fig:label1}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype2/label2}
     \caption{Eingetragener Messwert beim zweiten Prototyp}
     \label{fig:label2}
   \end{subfigure}
+  \centering
   \caption{Vorher-Nachher-Vergleich: Darstellung der eingetragenen Messwerten}
   \label{fig:labels}
 \end{figure}
@@ -159,8 +165,18 @@ Zusätzlich zum Zuschneiden und Rotieren des Bildes bietet \emph{uCrop} auch das
 Hier kann der Nutzer auswählen, ob das Bild im originalen, ``1:1'', ``3:4'', ``3:2'' oder ``16:9'' Bildseitenverhältnis importiert werden soll.
 
 \begin{figure}[h]
+  \begin{subfigure}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype2/ucrop}
+    \caption{Rotation und Verkleinerung des Bildbereichs}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype2/ucrop2}
+    \caption{Änderung des Bildseitenverhältnis auf ``16:9''}
+  \end{subfigure}
   \centering
-  \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype2/ucrop}
   \caption{\emph{uCrop}-Library zum Zuschneiden des Bildes im zweiten Prototyp}
   \label{fig:ucrop}
 \end{figure}

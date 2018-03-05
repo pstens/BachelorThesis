@@ -46,11 +46,14 @@ Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im un
 
 \begin{figure}[h]
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype1/all}
     \caption{Erster Prototyp mit bereits eingezeichneter Linie}
     \label{fig:all1}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype1/rect}
     \caption{Zoom-Linse beim Zeichnen eines Vierecks}
     \label{fig:draw1}
@@ -62,36 +65,32 @@ Zudem kann der Benutzer über einen weiteren \emph{Floating Action Button} im un
 Undo- sowie Redo-Funktion befinden auf dedizierten \emph{Buttons} in der Menüleiste der App (siehe \autoref{fig:all1}).
 Hier gibt es außerdem jeweils einen Button, um ausgewählte Formen zu löschen, die Zeichenfarbe zu ändern, oder eine andere Form zum Zeichnen auszuwählen. \\
 
-Beim Auswählen des Farb-Icons in der Menüleiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, die gewünschte Farbe auszuwählen (siehe \autoref{fig:color1}).
+Beim Auswählen des Farb-Icons in der Menüleiste öffnet sich ein modaler Dialog, der es dem Benutzer ermöglicht, die gewünschte Farbe auszuwählen (siehe \autoref{fig:colorpicker}).
 Diese Farbe wird als Standardfarbe für alle neuen Formen genutzt.
 Falls vor dem Öffnen des Dialogs eine Form markiert wurde, wird diese ebenfalls mit der ausgewählten Farbe eingefärbt. \\
 
 \begin{figure}[h]
+  \begin{subfigure}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/color}
+    \caption{Geöffneter Farbauswahl-Dialog}
+    \label{fig:colorpicker}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/labeling}
+    \caption{Geöffneter Messwert-Dialog}
+    \label{fig:labeling}
+  \end{subfigure}
   \centering
-  \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype1/color}
-  \caption{Geöffneter Farbauswahl-Dialog}
-  \label{fig:color1}
+  \caption{Erster Prototyp mit geöffnetem Farbauswahl- und Messwert-Dialog}
 \end{figure}
 
 Graue Indikatoren an den Eckpunkten der aktuell ausgewählte Form (siehe \autoref{fig:draw1}) sollen dem Nutzer verdeutlichen, dass diese mit Hilfe der Indikatoren in ihrer Größe und Position bearbeitet werden kann.
-Um Formen zu beschriften bietet sich dem Benutzer im Text-Modus die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu annotieren.
+Um Formen zu beschriften bietet sich dem Benutzer im Text-Modus die Möglichkeit, Kanten mittels eines Eingabe-Dialogs zu annotieren (siehe \autoref{fig:labeling}).
 Hierzu öffnet sich durch einen langen Klick auf die Kante einer Form im Text-Modus ein modaler Dialog, welcher die Messwerte des Nutzers entgegennimmt.
 Eingetragene Messwerte werden anschließend neben der zuvor ausgewählten Kante im Bild dargestellt. 
-
-% \begin{figure}[h]
-% \begin{subfigure}[t]{0.4\textwidth}
-% \includegraphics[keepaspectratio, width=\textwidth]{prototype1/labeling}
-% \caption{Dialog zum Eintragen von Messwerten}
-% \label{fig:labeling1}
-% \end{subfigure}
-% \begin{subfigure}[t]{0.4\textwidth}
-% \includegraphics[keepaspectratio, width=\textwidth]{prototype1/label}
-% \caption{Linie mit eingetragenem Messwert}
-% \label{fig:label1}
-% \end{subfigure}
-% \centering
-% \caption{Eintragen und Anzeigen von Messwerten im ersten Prototyp}
-% \end{figure}
 
 \section{Test}\label{sec:test1}
 Zum Testen des Prototyps wurde dieser in die App der beiden Geschäftsführer der \emph{Fa.} \vr{} (siehe \autoref{table:testers}) eingebunden.

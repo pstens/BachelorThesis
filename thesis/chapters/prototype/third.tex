@@ -48,22 +48,27 @@ Um dem Benutzer beim Start der App einen Überblick über die beiden Modi und de
 Die \mg{} suggerieren zur Umsetzung eines solchen ``Onboarding''-Prozesses\urlnote{https://material.io/guidelines/growth-communications/onboarding.html\#onboarding-onboarding-models} drei verschiedene Ansätze (vgl. \autoref{fig:onboarding}). \\
 
 \begin{figure}[h]
-  \centering
   \begin{subfigure}[t]{0.3\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/selfselect}
     \caption{Selft-Select}
     \label{fig:selfselect}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.3\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/quickstart}
     \caption{Quickstart}
     \label{fig:quickstart}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.3\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/userbenefits}
     \caption{Top User Benefits}
     \label{fig:benefits}
   \end{subfigure}
+  \centering
   \caption{Die drei verschiedenen ``Onboarding''-Ansätze nach den \mg{}}
   \label{fig:onboarding}
 \end{figure}
@@ -103,35 +108,51 @@ Die anderen beiden \emph{Tap targets} werden jeweils beim ersten Wechsel in den 
 Die erklärenden Texte und auch die Position der einzelnen \emph{Tap targets} wurde so gewählt, dass der Nutzer die wichtigsten UI-Elemente der App fokussiert und über einen kurzen, aber präzisen Text alle wichtigen Informationen zur Benutzung dieser erhält. \\
 
 \begin{figure}[h]
-  \centering
   \begin{subfigure}[t]{0.3\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/help_mode}
     \caption{\emph{Tap-Target} beim initialen Start der App}
     \label{fig:helpmode}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.3\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/help_draw}
     \caption{\emph{Tap-Target} beim initialen Wechsel in den Zeichen-Modus}
     \label{fig:helpdraw}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.3\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/help_text}
     \caption{\emph{Tap-Target} beim initialen Wechsel in den Text-Modus}
     \label{fig:helptext}
   \end{subfigure}
+  \centering
   \caption{Die drei verwendeten \emph{Tap-Targets} des dritten Prototyps}
   \label{fig:taptargets}
 \end{figure}
 
-Die verwendete \emph{Android-Library} für den Farbdialog\urlnote{https://github.com/jaredrummler/ColorPicker} verfügt bereits über einen ``Preset-Mode'', welcher es ermöglicht, anstatt des gesamten Farbkreises nur eine Farbpalette mit den häufigst genutzten Farben anzuzeigen.
+Die verwendete \emph{Android-Library} für den Farbauswahl-Dialog\urlnote{https://github.com/jaredrummler/ColorPicker} verfügt bereits über einen ``Preset-Mode'', welcher es ermöglicht, anstatt des gesamten Farbkreises nur eine Farbpalette mit den häufigst genutzten Farben anzuzeigen.
 Dieser ``Preset-Mode'' wurde als Standard ausgewählt, und wird beim Öffnen dies Dialogs angezeigt (siehe \autoref{fig:color3}).
 Zusätzlich bietet sich dem Benutzer die Möglichkeit über den ``Custom''-Button unten links in die fortgeschrittene Ansicht (siehe \autoref{fig:color1}) zu wechseln. \\
 
 \begin{figure}[h]
+  \begin{subfigure}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype1/color}
+    \caption{Farbauswahl-Dialog des ersten Prototyps}
+    \label{fig:color1}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[keepaspectratio, width=\textwidth]{prototype3/color}
+    \caption{Vereinfachter Farbauswahl-Dialog des dritten Prototyps}
+    \label{fig:color3}
+  \end{subfigure}
   \centering
-  \includegraphics[keepaspectratio, width=0.4\textwidth]{prototype3/color}
-  \caption{Vereinfachter Farbdialog des dritten Prototyps}
-  \label{fig:color3}
+  \caption{Vorher-Nachher-Vergleich: Farbauswahl-Dialog}
 \end{figure}
 
 Um mit einem Gerüsttyp verlinkte Formen deutlicher zu kennzeichnen, wurde ein Lineal-Icon hinter die Indikator-Zahl gehangen (siehe \autoref{fig:indicator2}).
@@ -140,18 +161,21 @@ Zudem wurde in diesem Prototyp die Position des Indikators so verändert, dass d
 Dies soll verhindern, dass der Indikator einer falschen Form zugeordnet wird, falls Formen auf dem Bild nah nebeneinander liegen. \\
 
 \begin{figure}[h]
-  \centering
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/indicator1}
-    \caption{Gerüsttyp-Indikator im zweiten Prototyp}
+    \caption{Gerüsttyp-Indikator des zweiten Prototyps}
     \label{fig:indicator1}
   \end{subfigure}
+  ~
   \begin{subfigure}[t]{0.4\textwidth}
+    \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype3/indicator2}
-    \caption{Gerüsttyp-Indikator im dritten Prototyp}
+    \caption{Gerüsttyp-Indikator des dritten Prototyps}
     \label{fig:indicator2}
   \end{subfigure}
-  \caption{Vorher-Nachher-Vergleich des Gerüsttyp-Indikators}
+  \centering
+  \caption{Vorher-Nachher-Vergleich: Gerüsttyp-Indikators}
   \label{fig:indicators}
 \end{figure}
 
