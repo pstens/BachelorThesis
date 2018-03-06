@@ -1,31 +1,46 @@
-\chapter{Fazit}
-Das Ziel dieser Bachelorarbeit war es, eine effiziente und intuitive Software-Lösung in Form einer Android-App für die Aufmaßerfassung im Gerüstbau zu entwickeln.
+\chapter{Fazit und Ausblick}
+\section{Fazit}
+Das Ziel dieser Bachelorarbeit war es, die mobile Bildbearbeitung als effizienten Ansatz zur Aufmaßerfassung im Gerüstbau zu untersuchen.
 Hierzu wurde eingangs die Problematik der bisherigen, analogen Aufmaßerfassung am Beispiel der \emph{Fa.} \vr{} veranschaulicht und anschließend ein optimierter, digitaler Prozess vorgestellt.
 Potentielle Fehlerquellen des analogen Prozesses ließen sich vor allem auf zu grobe Schätzungen, Medienbrüche und der hohen kognitiven Belastung der Monteure zurückführen.
-Um genau diese Fehlerquellen zu vermeiden, sollte eine Android-App entwickelt werden, die von den Monteuren bei der Aufmaßerfassung im Gerüstbau eingesetzt werden kann. \\
+Um genau diese Fehlerquellen zu vermeiden, sollte eine Android-App zur mobilen Aufmaßerfassung in die bestehende Systemarchitektur integriert werden. \\
 
-Hierzu wurden drei Apps aus dem Google-Play Store als mögliche Lösungsalternativen mit Hilfe verschiedener Bewertungskriterien bzgl. ihrer Usability, und Integration in eine bestehende Systemarchitektur evaluiert.
+Hierzu wurden zunächst drei Apps aus dem Google-Play Store als mögliche Lösungsalternativen mit Hilfe verschiedener Bewertungskriterien bzgl. ihrer Usability, und Integration in eine bestehende Systemarchitektur evaluiert.
 Zur Evaluation der Usability-Eigenschaften wurde eine erweiterte Version der Nielsen-Heuristiken angewandt, welche die Benutzung mobiler Endgeräte berücksichtigt.
 Die Integrationsfähigkeit der Apps wurde mit Hilfe zweier selbst-aufgestellter Kriterien zum Export der Meta-Daten und deren späteren Weiterverarbeitung evaluiert.
-Am Ende dieser Evaluation ließ sich festhalten, dass keine der drei Apps die Bewertungskriterien vollständig umsetzen konnte.
-Die beiden Apps \mm{} und \pm{} schnitten im Vergleich zu \im{} bzgl. der Usability-Heuristiken unterdurchschnittlich schlecht ab.
-Bei beiden Apps fiel insbesondere die fehlerhafte Umsetzung der Gesten-Unterstützung zum Zoomen des Bildes auf.
+Am Ende der Evaluation ließ sich festhalten, dass keine der drei Apps die Bewertungskriterien vollständig umsetzen konnte.
+Die beiden Apps \mm{} und \pm{} schnitten im Vergleich zu \im{} bzgl. der Usability-Heuristiken schlechter ab.
+Bei beiden Apps fiel besonders die fehlerhafte Umsetzung der Gesten-Unterstützung zum Zoomen des Bildes auf.
 Im Gegensatz dazu hat die App \im{} die erweiterten Nielsen-Heuristiken relativ gut umgesetzt.
-Hier fehlte jedoch eine Hilfestellung zur Benutzung der Zeichen-Funktion beim initialen Start der App, wodurch der Nutzer die eigentliche Zeichen-Oberfläche verlassen muss, um in einer Liste vordefinierter Fragen, die richtige Antwort zu finden.
-Keiner der drei evaluierten Apps ließ sich in eine bestehende Systemarchitektur integrieren.
+Hier fehlte jedoch eine Hilfestellung zur Benutzung der Zeichen-Funktion beim initialen Start der App.
+Keine der drei evaluierten Apps ließ sich in eine bestehende Systemarchitektur integrieren.
 Hierbei scheiterten alle drei Apps beim Export des Bildes ohne die eingetragenen Messwerte als Meta-Daten zu verlieren.
-Aufgrund dieser Evaluationsergebnisse wurde entschieden, eine eigene Android-App zu konzipieren. \\
+Aufgrund dieses Evaluationsergebnisses wurde entschieden, eine eigene Android-App zu konzipieren. \\
 
-Zur Konzeption der eigenen App wurde die Forschungsmethode des \hcdp{} nach \citet{Norman13} angewandt.
-In insgesamt vier Iterationen des \hcdp{} wurde die App bzgl. ihrer Funktionalität und Usability so weit verbessert, dass es beim gemeinsamen Testen mit ausgewählten Testpersonen aus der \emph{Fa.} \vr{} keine neuen Usability-Probleme oder Anwenderwünsche mehr gab. \\
+Um die Entwicklung dieser App möglichst nah am Anwender durchführen zu können, wurde die Forschungsmethode des \hcdp{} nach \citet{Norman13} angewandt.
+In insgesamt vier Iterationen des \hcdp{} wurde die App bzgl. ihrer Funktionalität und Usability so weit verbessert, bis es beim gemeinsamen Testen mit ausgewählten Testpersonen aus der \emph{Fa.} \vr{} keine neuen Usability-Probleme oder Anwenderwünsche an die App mehr gab. \\
 
 Schlüsselveränderungen zwischen dem Prototyp aus der ersten und vierten Iteration liegen vor allem in einer vereinfachten und intuitiveren Bedienoberfläche der App.
-Hier wurde eine Statusleiste eingeführt, die den Nutzer jederzeit über den aktuellen Systemzustand der App informiert und einen schnellen Zugriff zu den wichtigsten Funktionen der App gibt.
+Hier wurde eine Statusleiste eingeführt, die den Nutzer jederzeit über den aktuellen Systemzustand der App informiert und einen schnellen Zugriff zu den wichtigsten Funktionen der App bereit stellt.
 Außerdem wurden insgesamt drei Hilfe-Overlays eingeführt, die dem Benutzer beim initialen Start der App und dem jeweiligen Wechsel in den Zeichen- bzw. Text-Modus kurz und präzise alle wichtigen Informationen zur Benutzung der App zeigen.
-Funktional wurde die App im Laufe des \hcdp{} um eine \emph{Crop-Library} erweitert, welche es dem Benutzer ermöglicht, bereits beim Importieren Bilder in die gewünschte Form und Größe zu bringen. \\
+Funktional wurde die App im Laufe der Iterationen um eine \emph{Crop-Library} erweitert, welche es dem Benutzer ermöglicht, bereits beim Importieren Bilder in die gewünschte Form und Größe zu schneiden. \\
 
 Während des gesamten Entwicklungsprozesses der eigenen Android-App hat sich der \hcdp{} als gute Wahl für die Forschungsmethodik ausgezeichnet.
-Die Aufteilung des gesamten Entwicklungsprozesses in kleine Iterationen hat positiv dazu beigetragen, dass nahe am Endanwender entwickelt und getestet werden konnte.
-Auf diese Weise konnten Usability-Probleme oder Anwenderwünsche bereits früh identifiziert werden.
+Die Aufteilung des gesamten Entwicklungsprozesses in kleine Iterationen hat dazu beigetragen, dass nah am Endanwender entwickelt und getestet werden konnte.
+Auf diese Weise konnten Usability-Probleme und Anwenderwünsche bereits früh identifiziert und gelöst werden. \\
 
-\todo{Forschungsfrage beantworten -> Ist mobile Aufmaßerfassung effizienter?}
+Um abschließend noch einmal auf die Forschungsfrage dieser Arbeit einzugehen, kann festgehalten werden, dass sich die mobile Bildbearbeitung im Verlauf dieser Arbeit als effizienter Ansatz zur Aufmaßerfassung herausgestellt hat.
+Zwar ist das Anfertigen der Aufmaße mit Hilfe der Android-App zeitaufwändiger als eine handschriftliche Skizze, bringt jedoch den Vorteil mit sich, dass alle Informationen sofort digital im System vorliegen.
+Hierdurch können Mitarbeiter direkt auf die Informationen zugreifen, ohne dass zuerst zurück ins Büro gefahren werden muss, um die Messwerte ins System einzutragen.
+Insbesondere die Weiterverarbeitung der gesammelten Daten wird durch den digitalen Ansatz erleichtert, da während des Prozesses der Aufmaßerfassung keine Medienbrüche mehr stattfinden. 
+
+\section{Ausblick}
+Die entwickelte Android-App ermöglicht es dem Anwender, Bilder aufzunehmen, diese mit Hilfe von Formen zu bearbeiten und anschließend Messwerte einzutragen.
+Dieses manuelle Eintragen der Messwerte könnte in Zukunft durch die Benutzung von \emph{Augmented Reality} (nachfolgend: \emph{AR}) automatisiert werden.
+Hierbei könnte \emph{AR} dazu eingesetzt werden, um mit Hilfe der Smartphone-Kamera bereits beim Aufnehmen des Bildes Maße einzuzeichnen.
+\emph{Google} hat dazu passend auf dem \emph{GSMA Mobile World Congress 2018} die \emph{AR}-Plattform \emph{ARCore} offiziell gestartet.
+Auf der vom 26. Februar bis 1. März stattfindenden Messe für Mobilfunk wurde die bisherige ``Preview''-Version, die nur mit \emph{Pixel-} und \emph{Galaxy-S8}-Smartphones funktionierte, nun als \emph{ARCore} in der Version \emph{1.0} vorgestellt.
+Diese soll im Gegensatz zu der ``Preview''-Version von 13 verschiedenen Android-Geräten unterstützt werden und ab der Android-Version \emph{Android O} verfügbar sein \citep{heise18}.
+Einen guten Ausblick auf das, was mit \emph{ARCore 1.0} bereits möglich ist, bietet die App \emph{AirMeasure}\urlnote{http://armeasure.com/#features}. 
+Diese App ist als \emph{Beta-Version} im Google Play-Store kostenlos erhältlich und ermöglicht unter anderem das Messen von Distanzen mit Hilfe von \emph{AR}.
+Wie genau sich diese Thematik weiterentwickelt, und ob \emph{ARCore} in naher Zukunft so weit fortgeschritten sein wird, dass damit auch bei nicht-optimalem Aufnahmeverhältnissen konsistent gute Ergebnisse erzielt werden können, bleibt ein spannendes Thema, welches sicherlich eine spannende Weiterführung zu dieser Arbeit wäre.
