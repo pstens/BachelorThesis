@@ -62,16 +62,10 @@ Ein weiterer Vorteil bei der Benutzung von \emph{Content-Descriptions} liegt in 
 \section{Adäquater Umgang mit Unterbrechungen}
 Die App soll bei Unterbrechung der derzeitigen Aktivität, wie der Navigation zu einer anderen App, oder dem Wechsel auf den Start-Bildschirm, alle Informationen speichern, und beim Zurückkehren in die pausierte App wieder vollständig herstellen.
 Dies kann durch die Implementierung eines \emph{Saved States}\urlnote{https://developer.android.com/topic/libraries/architecture/saving-states.html} umgesetzt werden.
-\emph{Saved States} werden eingesetzt, um Informationen während des \emph{Activity Lifecycles} (siehe \autoref{fig:lifecycle}) zu speichern.
+\emph{Saved States} werden eingesetzt, um Informationen während des \emph{Activity Lifecycles} (vgl. \autoref{fig:lifecycle}) zu speichern.
 Der \emph{Activity Lifecycle} ist eine Besonderheit unter Android und stellt der \emph{Activity}\urlnote{https://developer.android.com/reference/android/app/Activity.html} eine Reihe verschiedener Methoden zur Verfügung.
-Diese sollten ggfs. von der \emph{Activity} überschrieben werden, um eine reibungslose Navigation des Benutzer in der App und zwischen verschiedenen Apps zu ermöglichen.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[keepaspectratio, height=0.5\textheight]{concept/lifecycle}
-  \caption{\emph{Activity Lifecycle}}
-  \label{fig:lifecycle}
-\end{figure}
+Diese sollten von der \emph{Activity} überschrieben werden, um eine reibungslose Navigation des Benutzer in der App und zwischen verschiedenen Apps zu ermöglichen.
+Auch wird hierdurch ein möglicher Datenverlust verhindert, der entstehen kann, wenn eine App mit einer höheren Priorität den Speicherbereich zugeordnet bekommt, der zuvor von der eigenen App benutzt wurde \citep{alifecycle}.
 
 \section{Fokussieren der Informationen}
 Ein weiterer Aspekt liegt beim Hervorheben wichtiger Informationen auf dem Bildschirm.
