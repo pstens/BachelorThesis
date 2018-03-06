@@ -48,7 +48,7 @@ Diese Überprüfung soll das Bild, wenn es sich um ein Geräte von \emph{Samsung
 Hierdurch soll sichergestellt werden, dass die \emph{Exif}-Daten nicht verloren gehen und das Bild nicht ungewollt rotiert wird.
 
 \section{Prototyping}
-Der vierte Prototyp wurde am \todo{Release date nachschauen} ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{sec:idea4} genannten Lösungsideen umzusetzen. \\
+Der vierte Prototyp wurde am 10. Februar 2018 ausgerollt und in die bestehende Android-App eingebunden, um die in \autoref{sec:idea4} genannten Lösungsideen umzusetzen. \\
 
 Für eine bessere Übersichtlichkeit bei der Verwendung von mehreren Freitext-Formen gleichzeitig, wurde die Funktion hinzugefügt, dass Freitext-Formen über einen Doppelklick ein- bzw. aufgeklappt werden könne.
 So werden diese im ``ausgeklappten'' Modus wie zuvor als Text mit Hintergrund angezeigt, beim Doppelklick transformiert sich diese Form jedoch zu einem kleinen Icon, welches keinerlei Text anzeigt, und so nur suggeriert , dass sich hinter dem Icon eine Freitext-Form befindet. 
@@ -58,16 +58,16 @@ Dies soll dem Benutzer die Möglichkeit geben, selber zu entscheiden, welcher Te
   \begin{subfigure}[t]{0.4\textwidth}
     \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype4/text1}
-    \caption{Anzeige zweier Freitext-Formen im dritten Prototyp}
+    \caption{Zwei Freitext-Formen im dritten Prototyp}
   \end{subfigure}
   ~
   \begin{subfigure}[t]{0.4\textwidth}
     \centering
     \includegraphics[keepaspectratio, width=\textwidth]{prototype4/text2}
-    \caption{Anzeigen zweier Freitext-Formen im vierten Prototyp (eine minimiert)}
+    \caption{Zwei Freitext-Formen im vierten Prototyp (eine minimiert)}
   \end{subfigure}
   \centering
-  \caption{Vorher-Nachher-Vergleich: Anezige zweier Freitext-Formen im dritten und vierten Prototyp}
+  \caption{Vorher-Nachher-Vergleich: Anzeige zweier Freitext-Formen im dritten und vierten Prototyp}
   \label{fig:texts}
 \end{figure}
 
@@ -78,13 +78,13 @@ Die ungewollte Rotation der Bilder auf \emph{Samsung}-Geräten wurde durch die M
 Hierzu wurde ein \emph{Fork}\urlnote{https://help.github.com/articles/fork-a-repo/} der \emph{Library} erstellt und anschließend eine Überprüfung des Geräteherstellers im \emph{Quellcode} hinzugefügt.
 
 \section{Testing}
-Feedback zum Benutzererlebnis des vierten Prototyps gab es X Tage nach dem Rollout. \\
+Feedback zum Benutzererlebnis des vierten Prototyps gab es 7 Tage nach dem Roll-Out, am 17. Februar. \\
 
 In dieser vierten Iteration des \hcdp{} sind keine weiteren Usability-Probleme identifiziert worden.
-Der Prototyp ließe sich, so beide Testpersonen, effizient und einfach zum Erfassen der Aufmaße verwenden und würde auf langer Sicht viel Arbeit und Zeit sparen, da alle Informationen sofort digital und für alle Mitarbeiter zur Verfügung stehen.
-Mittlerweile ist der Prototyp unternehmensweit ausgerollt und im Zeitraum X bis Y wurden schon Z Bilder mit Aufmaßen versehen. 
-Ein abschließender Wunsch, der nicht direkt die Implementierung des Prototyps betrifft, bezieht sich auf das Hoch- und Runterladen annotierter Bilder inklusive Meta-Daten mit Hilfe der \emph{API}.
-Hierzu sollen auf Seiten der \emph{API} ein neuer Knotenpunkt eingeführt werden, der es ermöglicht, alle Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\urlnote{https://www.json.org/json-de.html} an die \emph{API} zu senden.
-Zusätzlich zu den Meta-Daten soll das Originalbild und das annotierte Bild hochgeladen und mit den Meta-Daten verknüpft werden.
-Zukünftig soll die \emph{API} in der Lage sein, Meta-Daten und die zugehörigen Bilder an die App zurückzuliefern.
-Hierdurch soll es dem Benutzer möglich sein, annotierte Bilder zu einem späteren Zeitpunkt weiter bearbeiten zu können.
+Der Prototyp ließe sich, so beide Testpersonen, effizient und einfach zum Erfassen der Aufmaße verwenden und würde auf langer Sicht viel Arbeit und Zeit sparen, da alle Informationen sofort digital und für alle Mitarbeiter zur Verfügung stehen. \\
+
+Ein abschließender Anwenderwunsch bezieht sich auf das  Herunterladen bereits annotierter Bilder zum Bearbeiten auf einem anderen Gerät.
+Da dieser Anwenderwunsch von der Android-App alleine nicht umgesetzt werden kann, wurde eine solche Funktionalität von der bestehenden \emph{API} am 17. Februar angefordert.
+Genauer soll hier ein weiterer Endpunkt auf Seiten der \emph{API} definiert werden, welcher die hochgeladenen Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\urlnote{https://www.json.org/json-de.html} entgegennimmt.
+Zusätzlich soll ein Endpunkt zum Bereitstellen des annotierten Bildes inklusive Meta-Daten implementiert werden. 
+Auf diese Weise soll es dem Benutzer möglich sein, annotierte Bilder zu einem späteren Zeitpunkt auf dem gleichen oder einem anderen Gerät bearbeiten zu können.
