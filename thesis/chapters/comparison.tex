@@ -5,10 +5,10 @@ Hierzu wurde eingangs die Problematik der bisherigen, analogen Aufmaßerfassung 
 Potentielle Fehlerquellen des analogen Prozesses ließen sich vor allem auf zu grobe Schätzungen, Medienbrüche und der hohen kognitiven Belastung der Monteure zurückführen.
 Um genau diese Fehlerquellen zu vermeiden, sollte eine Android-App zur mobilen Aufmaßerfassung in die bestehende Systemarchitektur integriert werden. \\
 
-Hierzu wurden zunächst drei Apps aus dem Google-Play Store als mögliche Lösungsalternativen mit Hilfe verschiedener Bewertungskriterien bzgl. ihrer Usability, und Integration in eine bestehende Systemarchitektur evaluiert.
-Zur Evaluation der Usability-Eigenschaften wurde eine erweiterte Version der Nielsen-Heuristiken angewandt, welche die Benutzung mobiler Endgeräte berücksichtigt.
-Die Integrationsfähigkeit der Apps wurde mit Hilfe zweier selbst-aufgestellter Kriterien zum Export der Meta-Daten und deren späteren Weiterverarbeitung evaluiert.
-Am Ende der Evaluation ließ sich festhalten, dass keine der drei Apps die Bewertungskriterien vollständig umsetzen konnte.
+Hierzu wurden zunächst drei Apps aus dem Google Play-Store als mögliche Lösungsalternativen vorgestellt und anschließend bzgl. der Usability und Integrationsfähigkeit in eine bestehende Systemarchitektur bewertet.
+Zur Evaluation der Usability wurde eine erweiterte Version der Nielsen-Heuristiken angewandt, welche die Benutzung mobiler Endgeräte berücksichtigt.
+Die Integrationsfähigkeit der Apps wurde mit Hilfe zweier selbst aufgestellter Kriterien zum Export der Meta-Daten und deren späteren Weiterverarbeitung evaluiert.
+Am Ende der Betrachtung ließ sich festhalten, dass keine der drei Apps die Bewertungskriterien vollständig umsetzen konnte.
 Die beiden Apps \mm{} und \pm{} schnitten im Vergleich zu \im{} bzgl. der Usability-Heuristiken schlechter ab.
 Bei beiden Apps fiel besonders die fehlerhafte Umsetzung der Gesten-Unterstützung zum Zoomen des Bildes auf.
 Im Gegensatz dazu hat die App \im{} die erweiterten Nielsen-Heuristiken relativ gut umgesetzt.
@@ -18,18 +18,18 @@ Hierbei scheiterten alle drei Apps beim Export des Bildes ohne die eingetragenen
 Aufgrund dieses Evaluationsergebnisses wurde entschieden, eine eigene Android-App zu konzipieren. \\
 
 Um die Entwicklung dieser App möglichst nah am Anwender durchführen zu können, wurde die Forschungsmethode des \hcdp{} nach \citet{Norman13} angewandt.
-In insgesamt vier Iterationen des \hcdp{} wurde die App bzgl. ihrer Funktionalität und Usability so weit verbessert, bis es beim gemeinsamen Testen mit ausgewählten Testpersonen aus der \emph{Fa.} \vr{} keine neuen Usability-Probleme oder Anwenderwünsche an die App mehr gab. \\
+In insgesamt vier Iterationen des Prozesses wurde die App bzgl. ihrer Funktionalität und Usability so weit verbessert, bis es beim gemeinsamen Testen mit ausgewählten Testpersonen aus der \emph{Fa.} \vr{} keine neuen Usability-Probleme oder Anwenderwünsche an die App mehr gab. \\
 
 Schlüsselveränderungen zwischen dem Prototyp aus der ersten und vierten Iteration liegen vor allem in einer vereinfachten und intuitiveren Bedienoberfläche der App.
 Hier wurde eine Statusleiste eingeführt, die den Nutzer jederzeit über den aktuellen Systemzustand der App informiert und einen schnellen Zugriff zu den wichtigsten Funktionen der App bereit stellt.
-Außerdem wurden insgesamt drei Hilfe-Overlays eingeführt, die dem Benutzer beim initialen Start der App und dem jeweiligen Wechsel in den Zeichen- bzw. Text-Modus kurz und präzise alle wichtigen Informationen zur Benutzung der App zeigen.
+Außerdem wurden insgesamt drei Hilfe-Overlays eingeführt, die dem Benutzer beim initialen Start und dem jeweiligen Wechsel in den Zeichen- bzw. Text-Modus kurz und präzise alle wichtigen Informationen zur Benutzung zeigen.
 Funktional wurde die App im Laufe der Iterationen um eine \emph{Crop-Library} erweitert, welche es dem Benutzer ermöglicht, bereits beim Importieren Bilder in die gewünschte Form und Größe zu schneiden. \\
 
 Während des gesamten Entwicklungsprozesses der eigenen Android-App hat sich der \hcdp{} als gute Wahl für die Forschungsmethodik ausgezeichnet.
-Die Aufteilung des gesamten Entwicklungsprozesses in kleine Iterationen hat dazu beigetragen, dass nah am Endanwender entwickelt und getestet werden konnte.
+Die Aufteilung der Entwicklung in kleine Iterationen hat dazu beigetragen, dass nah am Endanwender entwickelt und getestet werden konnte.
 Auf diese Weise konnten Usability-Probleme und Anwenderwünsche bereits früh identifiziert und gelöst werden. \\
 
-Um abschließend noch einmal auf die Forschungsfrage dieser Arbeit einzugehen, kann festgehalten werden, dass sich die mobile Bildbearbeitung im Verlauf dieser Arbeit als effizienter Ansatz zur Aufmaßerfassung herausgestellt hat.
+Bezüglich der Forschungsfrage kann festgehalten werden, dass sich die mobile Bildbearbeitung im Verlauf dieser Arbeit als effizienter Ansatz zur Aufmaßerfassung herausgestellt hat.
 Zwar ist das Anfertigen der Aufmaße mit Hilfe der Android-App zeitaufwändiger als eine handschriftliche Skizze, bringt jedoch den Vorteil mit sich, dass alle Informationen sofort digital im System vorliegen.
 Hierdurch können Mitarbeiter direkt auf die Informationen zugreifen, ohne dass zuerst zurück ins Büro gefahren werden muss, um die Messwerte ins System einzutragen.
 Insbesondere die Weiterverarbeitung der gesammelten Daten wird durch den digitalen Ansatz erleichtert, da während des Prozesses der Aufmaßerfassung keine Medienbrüche mehr stattfinden. 
