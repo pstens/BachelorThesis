@@ -39,11 +39,11 @@ Zum Anderen soll die Möglichkeit bestehen, Bilder beim Import in die App in die
 \section{Idea Generation}\label{sec:idea2}
 Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art Statusleiste am unteren Bildschirmrand zu verankern.
 Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten.
-Die \mg{} suggerieren hierfür die Nutzung einer sogenannten \emph{Bottom navigation}\urlnote{https://material.io/guidelines/components/bottom-navigation.html}.
+Die \mg{} suggerieren hierfür die Nutzung einer sogenannten \emph{Bottom navigation}\urlnote{https://material.io/guidelines/components/bottom-navigation.html}{02.01.2018}.
 Diese kann, so die \mg{}, dazu eingesetzt werden, um die Erkundung von Apps einfach zu gestalten und den Wechsel zwischen den Ansichten auf der obersten Ebene einer App zu beschleunigen \citep{BN18}. \\
 
 Für eine bessere und einfachere Benutzung der App auf Tablet-Geräten kann eine zweite Benutzeroberfläche, die nur auf Tablet-Geräten angezeigt wird, in die App eingebunden werden. 
-Hierzu heißt es in  den ``Developer Guides'' von Android zur Unterstützung von verschiedenen Bildschirmgrößen\urlnote{https://developer.android.com/guide/practices/screens_support.html} im Abschnitt ``Supporting Multiple Screens'', dass Entwickler verschiedene Konfigurationskriterien festlegen können, die zur Laufzeit der App ausgewertet werden, und in der Benutzung verschiedener Ressourcen wie zum Beispiel der angezeigten Oberfläche resultieren \citep[How to Support Multiple Screens]{SS18}.
+Hierzu heißt es in  den ``Developer Guides'' von Android zur Unterstützung von verschiedenen Bildschirmgrößen\urlnote{https://developer.android.com/guide/practices/screens_support.html}{02.01.2018} im Abschnitt ``Supporting Multiple Screens'', dass Entwickler verschiedene Konfigurationskriterien festlegen können, die zur Laufzeit der App ausgewertet werden, und in der Benutzung verschiedener Ressourcen wie zum Beispiel der angezeigten Oberfläche resultieren \citep[How to Support Multiple Screens]{SS18}.
 So gibt beispielsweise das Kriterium \emph{sw720dp} an, dass alle Geräte, die eine Bildschirmbreite von mindestens $720dp$ besitzen, die Ressourcen benutzen, welche mit \emph{sw720dp} gekennzeichnet sind.
 Dies kann dazu genutzt werden, um eine dedizierte Benutzeroberfläche mit größeren Icons und Texten für Tablet-Geräte bereit zu stellen.
 Alternativ besteht die Möglichkeit, eine Oberfläche für alle Geräte zu nutzen, aber die Größe diverser Text- und Formelemente mit der Bildschirmgröße zu skalieren.
@@ -157,7 +157,7 @@ Hierdurch kann der Benutzer nicht nur den Gerüsttyp, sondern auch Maße des Ger
 Verknüpfte Formen zeigen mittels eines Indikators, ob und mit wie vielen Gerüsttypen sie verbunden sind.
 Auf diese Weise soll der Benutzer die bereits verknüpften von den nicht-verknüpften Formen unterscheiden können. \\
 
-Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}\urlnote{https://github.com/Yalantis/uCrop}, eine dedizierte Android-Library, in das Projekt eingebunden.
+Für das Schneiden und Rotieren von Bildern vor dem Annotieren wurde \emph{uCrop}\urlnote{https://github.com/Yalantis/uCrop}{03.01.2018}, eine dedizierte Android-Library, in das Projekt eingebunden.
 \emph{uCrop} ist auf \emph{Github} als \emph{Open-Source} Projekt verfügbar und kann so den eigenen Bedürfnissen angepasst werden. 
 Zudem unterstützt \emph{uCrop} alle Android-Geräte unabhängig vom Gerätehersteller ab der Android-Version \emph{Ice Cream Sandwich}. 
 Dies entspricht laut der Verteilung der Android-Versionen auf allen Geräten mit Android OS im Zeitraum vom 5. bis 11. Dezember 2017 mehr als $99\%$ aller Geräte (vgl. \autoref{fig:versionchart}).

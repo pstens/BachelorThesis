@@ -45,7 +45,7 @@ Durch die Pfeil-Form sollen Längen, die sich mit Hilfe der Linien-Form nicht gu
 
 \section{Idea Generation}\label{sec:idea3}
 Um dem Benutzer beim Start der App einen Überblick über die beiden Modi und den darin enthaltenen Funktionen zu geben, soll eine Hilfestellung beim initialen Start der App angezeigt werden.
-Die \mg{} suggerieren zur Umsetzung eines solchen ``Onboarding''-Prozesses\urlnote{https://material.io/guidelines/growth-communications/onboarding.html\#onboarding-onboarding-models} drei verschiedene Ansätze (vgl. \autoref{fig:onboarding}). \\
+Die \mg{} suggerieren zur Umsetzung eines solchen ``Onboarding''-Prozesses\urlnote{https://material.io/guidelines/growth-communications/onboarding.html\#onboarding-onboarding-models}{15.01.2018} drei verschiedene Ansätze (vgl. \autoref{fig:onboarding}). \\
 
 \begin{figure}[h]
 	\begin{subfigure}[t]{0.3\textwidth}
@@ -102,7 +102,7 @@ Der dritte Prototyp wurde am 16. Januar 2018 in die bestehende Android-App einge
 Bei der Implementierung dieses Prototyps wurde versucht alle in \autoref{sec:idea3} genannten Ideen zur Lösung der in \autoref{sec:obs3} identifizierten Probleme umzusetzen. \\
 
 So wurde von den drei verschiedenen Ansatzmöglichkeiten zur Umsetzung des ``Onboarding''-Prozesses die Variante des \emph{Quickstarts} gewählt, da der ``Use-Case'' dieser am besten auf den Prototyp zutrifft.
-Umgesetzt wurde die \emph{Quickstart} Variante mit Hilfe sogenannter \emph{Tap targets}\urlnote{https://material.io/guidelines/growth-communications/feature-discovery.html\#feature-discovery-design}.
+Umgesetzt wurde die \emph{Quickstart} Variante mit Hilfe sogenannter \emph{Tap targets}\urlnote{https://material.io/guidelines/growth-communications/feature-discovery.html\#feature-discovery-design}{16.01.2018}.
 Hiervon wurden insgesamt drei in den Prototyp integriert, welche jeweils an einer anderen Stelle dem Nutzer angezeigt werden (siehe \autoref{fig:taptargets}).
 Ein \emph{Tap target} wird beim initialen Start der App angezeigt, und gibt dem Nutzer eine kurze Hilfestellung zu der \emph{Bottom bar} und dem damit verbundenen Zeichen- und Text-Modus (siehe \autoref{fig:helpmode}).
 Die anderen beiden \emph{Tap targets} werden jeweils beim ersten Wechsel in den Text- bzw. Zeichen-Modus angezeigt, und beschreiben, welche Aktionen in dem jeweiligen Modus durchführbar sind (vgl. \autoref{fig:helpdraw} \& \autoref{fig:helptext}).
@@ -134,7 +134,7 @@ Die erklärenden Texte und auch die Position der einzelnen \emph{Tap targets} wu
 	\label{fig:taptargets}
 \end{figure}
 
-Die verwendete \emph{Android-Library} für den Farbauswahl-Dialog\urlnote{https://github.com/jaredrummler/ColorPicker} verfügt bereits über einen ``Preset-Mode'', welcher es ermöglicht, anstatt des gesamten Farbkreises nur eine Farbpalette mit den häufigst genutzten Farben anzuzeigen.
+Die verwendete \emph{Android-Library} für den Farbauswahl-Dialog\urlnote{https://github.com/jaredrummler/ColorPicker}{16.01.2018} verfügt bereits über einen ``Preset-Mode'', welcher es ermöglicht, anstatt des gesamten Farbkreises nur eine Farbpalette mit den häufigst genutzten Farben anzuzeigen.
 Dieser ``Preset-Mode'' wurde als Standard ausgewählt, und wird beim Öffnen dies Dialogs angezeigt (siehe \autoref{fig:color3}).
 Zusätzlich bietet sich dem Benutzer die Möglichkeit über den ``Custom''-Button unten links in die fortgeschrittene Ansicht (siehe \autoref{fig:color1}) zu wechseln. \\
 
@@ -180,7 +180,7 @@ Dies soll verhindern, dass der Indikator einer falschen Form zugeordnet wird, fa
 	\label{fig:indicators}
 \end{figure}
 
-Im Gerüsttyp-Dialog wurden \emph{AutoCompleteTextField}-Elemente\urlnote{https://developer.android.com/reference/android/widget/AutoCompleteTextView.html} benutzt, welche die eingetragenen Messwerte der Form beim Tippen vorschlagen.
+Im Gerüsttyp-Dialog wurden \emph{AutoCompleteTextField}-Elemente\urlnote{https://developer.android.com/reference/android/widget/AutoCompleteTextView.html}{17.01.2018} benutzt, welche die eingetragenen Messwerte der Form beim Tippen vorschlagen.
 So hat der Nutzer direkt eine Übersicht über die zuvor eingetragenen Messwerte, und muss nicht zwischen Dialog und Bild wechseln. \\
 
 Beide neuen Formen (vgl. \autoref{fig:indicator2}) sind durch Unterklassen, welche von der abstrakten Oberklasse \emph{MeasureShape} erben, modelliert und umgesetzt worden.

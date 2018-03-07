@@ -32,7 +32,7 @@ Auffällig ist auch, dass die beschriebene Rotation des Bildes nur dann geschieh
 Dieses Verhalten lässt sich im \emph{Quellcode} der \emph{uCrop-Library} verifizieren.
 Hier wird vor dem Zuschneiden des Bildes geprüft, ob der Nutzer das Bild angepasst hat.
 Ist dies nicht der Fall, so wird das Originalbild ohne jegliche Modifikation in die Zieldatei geschrieben.
-Hierbei gehen auf \emph{Samsung}-Geräten die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057} verloren.
+Hierbei gehen auf \emph{Samsung}-Geräten die \emph{Exif}-Daten\urlnote{https://www.prophoto-online.de/digitalfotografie/exif-daten-10010057}{09.02.2018} verloren.
 (Nielsen~\autoref{itm:N5}) \\ 
 
 \section{Idea Generation}\label{sec:idea4}
@@ -75,7 +75,7 @@ Der Speicher-Dialog wurde durch das Hinzufügen eines weiteren Start-Parameters 
 Hier wird das Bild direkt auf dem Gerät gespeichert und anschließend in der bestehenden App nach einem Bildtitel gefragt. \\
 
 Die ungewollte Rotation der Bilder auf \emph{Samsung}-Geräten wurde durch die Modifikation der \emph{uCrop-Library} umgesetzt.
-Hierzu wurde ein \emph{Fork}\urlnote{https://help.github.com/articles/fork-a-repo/} der \emph{Library} erstellt und anschließend eine Überprüfung des Geräteherstellers im \emph{Quellcode} hinzugefügt.
+Hierzu wurde ein \emph{Fork}\urlnote{https://help.github.com/articles/fork-a-repo/}{10.02.2018} der \emph{Library} erstellt und anschließend eine Überprüfung des Geräteherstellers im \emph{Quellcode} hinzugefügt.
 
 \section{Testing}
 Feedback zum Benutzererlebnis des vierten Prototyps gab es 7 Tage nach dem Roll-Out, am 17. Februar. \\
@@ -85,6 +85,6 @@ Der Prototyp ließe sich, so beide Testpersonen, intuitiv und einfach zum Erfass
 
 Ein abschließender Anwenderwunsch bezieht sich auf das  Herunterladen bereits annotierter Bilder zum Bearbeiten auf einem anderen Gerät.
 Da dieser Anwenderwunsch von der Android-App alleine nicht umgesetzt werden kann, wurde eine solche Funktionalität von der bestehenden \emph{API} am 17. Februar angefordert.
-Genauer soll hier ein weiterer Endpunkt auf Seiten der \emph{API} definiert werden, welcher die hochgeladenen Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\urlnote{https://www.json.org/json-de.html} entgegennimmt.
+Genauer soll hier ein weiterer Endpunkt auf Seiten der \emph{API} definiert werden, welcher die hochgeladenen Meta-Daten des bearbeiteten Bildes formatiert als \emph{JSON}\urlnote{https://www.json.org/json-de.html}{10.02.2018} entgegennimmt.
 Zusätzlich soll ein Endpunkt zum Bereitstellen des annotierten Bildes inklusive Meta-Daten implementiert werden. 
 Auf diese Weise soll es dem Benutzer möglich sein, annotierte Bilder zu einem späteren Zeitpunkt auf dem gleichen oder einem anderen Gerät bearbeiten zu können.

@@ -28,7 +28,7 @@ Dies soll potentielle Verwirrung wie in \autoref{subsec:imeva} bei der App \im{}
 
 \section{Konsistenz und Standards}
 Um eine positive Benutzererfahrung zu generieren, und die Benutzung von nicht-intuitiven Icons zu vermeiden, werden bei der Implementierung die Design-Richtlinien von \emph{Google} befolgt.
-Diese sogenannten \mg{}\urlnote{https://material.io/guidelines/} bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.
+Diese sogenannten \mg{}\urlnote{https://material.io/guidelines/}{06.12.2017} bieten sowohl Konzepte zur Umsetzung verschiedener UI-Elemente, als auch eine Vielzahl konsistent gestalteter Icons an.
 
 \section{Fehlervorbeugung}
 Situationen, in denen Fehler auftreten können, sollen in der App präventiv vermieden werden.
@@ -55,16 +55,16 @@ Diese soll den Nutzer über den Fehler informieren und präzise aber verständli
 Zu keiner Zeit sollte der Benutzer in eine Schleife von Fehlerzuständen gelangen können, welche er nur durch das Beenden oder die Deinstallation der App unterbrechen kann. 
 
 \section{Hilfe und Dokumentation}
-Zur Hilfe und Dokumentation sollen sogenannte \emph{Content-Descriptions}\urlnote{https://developer.android.com/guide/topics/ui/accessibility/apps.html} eingesetzt werden.
+Zur Hilfe und Dokumentation sollen sogenannte \emph{Content-Descriptions}\urlnote{https://developer.android.com/guide/topics/ui/accessibility/apps.html}{07.12.2017} eingesetzt werden.
 Diese ermöglichen es dem Benutzer, bei einem langen Klick auf ein Icon eine Beschreibung zur Funktion zu bekommen, die sich hinter dem Symbol verbirgt.
 Hierdurch soll sichergestellt werden, dass der Nutzer nicht erst auf das Icon klicken und die Aktion ausführen muss, um zu sehen, mit welcher Funktion das Icon verknüpft ist.
 Ein weiterer Vorteil bei der Benutzung von \emph{Content-Descriptions} liegt in der Unterstützung von Screen-Readern und der Navigation per Tastatur.
 
 \section{Adäquater Umgang mit Unterbrechungen}
 Die App soll bei Unterbrechung der derzeitigen Aktivität, wie der Navigation zu einer anderen App, oder dem Wechsel auf den Start-Bildschirm, alle Informationen speichern, und beim Zurückkehren in die pausierte App wieder vollständig herstellen.
-Dies kann durch die Implementierung eines \emph{Saved States}\urlnote{https://developer.android.com/topic/libraries/architecture/saving-states.html} umgesetzt werden.
+Dies kann durch die Implementierung eines \emph{Saved States}\urlnote{https://developer.android.com/topic/libraries/architecture/saving-states.html}{07.12.2017} umgesetzt werden.
 \emph{Saved States} werden eingesetzt, um Informationen während des \emph{Activity Lifecycles} (vgl. \autoref{fig:lifecycle}) zu speichern.
-Der \emph{Activity Lifecycle} ist eine Besonderheit unter Android und stellt der \emph{Activity}\urlnote{https://developer.android.com/reference/android/app/Activity.html} eine Reihe verschiedener Methoden zur Verfügung.
+Der \emph{Activity Lifecycle} ist eine Besonderheit unter Android und stellt der \emph{Activity}\urlnote{https://developer.android.com/reference/android/app/Activity.html}{07.12.2017} eine Reihe verschiedener Methoden zur Verfügung.
 Diese sollten von der \emph{Activity} überschrieben werden, um eine reibungslose Navigation des Benutzer in der App und zwischen verschiedenen Apps zu ermöglichen.
 Auch wird hierdurch ein möglicher Datenverlust verhindert, der entstehen kann, wenn eine App mit einer höheren Priorität den Speicherbereich zugeordnet bekommt, der zuvor von der eigenen App benutzt wurde \citep{alifecycle}.
 
