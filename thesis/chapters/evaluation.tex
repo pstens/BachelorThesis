@@ -41,7 +41,7 @@ Die Heuristiken beider Artikel werden im Folgenden zu acht weiteren Bewertungskr
     \di{Unterstützung verschiedener Bildschirmausrichtungen (R)}{N15}{Keine Verwirrung bei verschiedenen Ausrichtungen des Bildschirms}
     \di{Ergonomische Gestaltung der physischen Interatkion (R)}{N16}{Kein unabsichtliches Auslösen von Funktionen}
     \di{Einfache Eingabe, Lesbarkeit und Übersichtlichkeit (R)}{N17}{Einfache Navigations- und Eingabetechniken bei einhändiger Benutzung}
-    \di{Stelle Privatheit sicher (I)}{N18}{Vermeide den Verlust/Diebstahl von privaten Daten z.b.\ durch Passwörter}
+    \di{Stelle Privatheit sicher (I)}{N18}{Vermeide den Verlust/Diebstahl von privaten Daten z.B.\ durch Authentifizierung}
 \end{enumerate}
 
 \noindent
@@ -93,7 +93,7 @@ Die Bewertungskriterien werden in den nachfolgenden Unterkapiteln jeweils in der
 \section{Auswertung der Evaluationsergebnisse}
 \input{chapters/evaluation/table}
 
-Wie sich in \autoref{sec:evaluation} gezeigt hat, hat jede der drei vorhandenen Lösungsalternativen verschiedene Vor-, aber auch Nachteile.
+Jede der drei vorhandenen Lösungsalternativen hat verschiedene Vor-, aber auch Nachteile.
 Besonders auffällig hierbei ist die fehlerhafte Umsetzung der \emph{Pinch-Geste} zum Zoomen des Bildes in den beiden Apps \mm{} und \pm{}.
 Diese fehlerhafte Umsetzung der \emph{Pinch-Geste} führt dazu, dass der Nutzer Formen löschen muss, die unabsichtlich während des Zoomens gezeichnet wurden.
 Insbesondere bei der App \pm{} führt dieser Fehler zu einem schlechten Anwendererlebnis, da es keine Undo-Funktion gibt, um die fehlerhaft eingezeichnete Form schnell rückgängig zu machen.
@@ -102,7 +102,7 @@ Hier muss die Form zuerst markiert, und anschließend über einen Klick auf das 
 Außerdem ist in \autoref{sec:evaluation} aufgefallen, dass alle drei Apps eine Zoom-Linse benutzen, um den Bereich, der von dem Finger beim Zeichnen einer Form bedeckt wird, vergrößert an einer anderen Stelle des Bildschirms darzustellen.
 Hierdurch kann der Nutzer schnell und präzise Formen in das Bild zeichnen, ohne jedes Mal den Finger hochnehmen zu müssen, um zu sehen, bis wohin die Form schon gezeichnet wurde.
 Die Umsetzung dieser Zoom-Linse ist in den beiden Apps \mm{} und \pm{} besser gelöst als in \im{}.
-Hier ist die Position der Zoom-Linse statisch in der oberen linke Ecke des Bildschirms fixiert, und bewegt sich auch bei der Kollision mit der gezeichneten Form nicht. \\
+Hier ist die Position der Zoom-Linse statisch in der oberen linke Ecke des Bildschirms fixiert und bewegt sich auch bei der Kollision mit der gezeichneten Form nicht. \\
 
 Alle drei Apps benutzen Icons, um den Systemzustand und die darin ausführbaren Aktionen darzustellen.
 Zusätzlich deaktivieren alle drei Apps die Aktionen, welche im aktuellen Systemzustand nicht ausführbar sind bzw. zu Fehlern führen würden.
@@ -115,4 +115,4 @@ Durch den Export werden sämtliche eingetragene Messwerte und Formen in das Bild
 Da die nachgelagerte Verwendung ein wichtiges Kriterium ist, wurde entschieden selbst eine Android-App zu entwickeln.
 
 Alle Evaluationsergebnisse, die in diesem Kapitel gesammelt werden konnten, sollen im nächsten Kapitel auf die Konzeption einer eigenen Android-Applikation angewandt werden.
-Hierbei sollen Aspekte, die während der Evaluation als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen, nd bereits identifizierte Usability-Probleme vermieden werden.
+Hierbei sollen Aspekte, die während der Evaluation als besonders positiv aufgefallen sind, in die Konzeption der eigenen App einfließen und bereits identifizierte Usability-Probleme somit vermieden werden.

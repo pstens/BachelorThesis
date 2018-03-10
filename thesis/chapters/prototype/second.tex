@@ -16,20 +16,20 @@ Um einen Überblick über die Test-Ergebnisse aus \autoref{sec:test1} herzustell
 
 \noindent
 Zunächst auffällig ist, dass beide Testpersonen in \autoref{sec:test1} die \emph{Floating Action Buttons} als Hindernis bei der Bedienung der App beschreiben.
-Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{FAB} angeklickt wird, und sonst nur ein einzelnes Icon angezeigt wird, wird dem Nutzer keine angemessene Rückmeldung über den aktuellen Systemzustand gegeben.
-Außerdem wird hierdurch keine ausreichende Hilfestellung zu den vorhandenen Funktionen, und wie diese zu benutzen sind gegeben.
+Da alle möglichen Aktionen erst dann sichtbar werden, wenn der \emph{FAB} angeklickt wird und sonst nur ein einzelnes Icon angezeigt wird, wird dem Nutzer keine angemessene Rückmeldung über den aktuellen Systemzustand gegeben.
+Außerdem wird hierdurch keine ausreichende Hilfestellung zu den vorhandenen Funktionen und wie diese zu benutzen sind gegeben.
 (Nielsen~\autoref{itm:N1} \& \autoref{itm:N10}) \\
 
 Ein weiterer Punkt, der in \autoref{sec:test1} während der \emph{Testing}-Phase negativ aufgefallen ist, ist die Benutzung der App auf Tablet-Geräten.
 Damit Endgeräte mit einer großen Bildschirmdiagonale trotzdem über eine scharfe Auflösung verfügen, besitzen diese mehr Pixel pro Zentimeter bzw. eine höhere Pixeldichte.
 Da die UI-Elemente im ersten Prototyp mit Hilfe von \emph{Pixeln}, welche von Android zur Laufzeit nicht für die entsprechenden Bildschirmgrößen optimiert werden, modelliert worden sind, werden UI-Elemente auf Tablet-Geräten kleiner dargestellt, als auf normalen Smartphones.
-Dies erschwert die Benutzung der App auf Tablets, da Texte nur mühsam zu lesen, und Formen schwierig auszuwählen sind.
+Dies erschwert die Benutzung der App auf Tablets, da Texte nur mühsam zu lesen und Formen schwierig auszuwählen sind.
 So werden hier einerseits potentielle Fehlerquellen generiert, andererseits wird das Nutzungserlebnis auf Tablet-Geräten negativ beeinflusst.
 (Nielsen~\autoref{itm:N5} \& \autoref{itm:N13}) \\
 
 Darüber hinaus zeigen die Testergebnisse, dass die Testpersonen Probleme beim Erkennen von eingetragenen Messwerten auf dunklen Bildern haben.
 Die schlechte Lesbarkeit der Messwerte resultiert wahrscheinlich aus der grauen Textfarbe, welche unabhängig vom Farbraum des Bildes festgelegt ist.
-Zudem fehlt ein Hintergrund, der unter dem Text liegt, und diesen so vom eigentlichen Bild abhebt.
+Zudem fehlt ein Hintergrund, der unter dem Text liegt und diesen so vom eigentlichen Bild abhebt.
 (Nielsen~\autoref{itm:N12}). \\
 
 Zusätzlich zu den Problemen, die während der Testphase des ersten Prototyps identifiziert worden sind, haben sich bei den Testpersonen Wünsche für Funktionen, die nicht in der Implementierung des ersten Prototyps zu finden sind, aber im Alltag regelmäßig benötigt werden, herauskristallisiert. 
@@ -37,8 +37,8 @@ So soll der Prototyp zum Einen um eine Funktionen erweitert werden, die es ermö
 Zum Anderen soll die Möglichkeit bestehen, Bilder beim Import in die App in die gewünschte Größe und Form schneiden zu können.
 
 \section{Idea Generation}\label{sec:idea2}
-Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Art Statusleiste am unteren Bildschirmrand zu verankern.
-Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus informieren, und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten.
+Um dem Benutzer jederzeit eine klare und einfache Rückmeldung über den aktuellen Systemzustand und die darin ausführbaren Aktionen zu geben, bietet es sich an, eine Statusleiste am unteren Bildschirmrand zu verankern.
+Diese soll mit Hilfe von unterscheidbaren, aber intuitiv verständlichen Icons, über den aktuellen Modus informieren und zugleich nicht-benutzbare Aktionen nicht-auswählbar gestalten.
 Die \mg{} suggerieren hierfür die Nutzung einer sogenannten \emph{Bottom navigation}\urlnote{https://material.io/guidelines/components/bottom-navigation.html}{02.01.2018}.
 Diese kann, so die \mg{}, dazu eingesetzt werden, um die Erkundung von Apps einfach zu gestalten und den Wechsel zwischen den Ansichten auf der obersten Ebene einer App zu beschleunigen \citep{BN18}. \\
 
@@ -117,10 +117,10 @@ Hierbei wird der Nutzer nicht nach einer Bestätigung des Löschvorgangs gefragt
 
 Im Text-Modus kann beim Klick auf das zweite Icon von links (Plus-Zeichen) entweder eine ausgewählte Form mit einer Beschriftung versehen, oder mit einem Gerüsttyp verknüpft werden (siehe \autoref{fig:labelp2}).
 Beim Hinzufügen einer Beschriftung öffnet sich ein modaler Eingabedialog, in den der Benutzer den gewünschten Text eintragen kann.
-Entscheidet sich der Nutzer die ausgewählte Form mit einem Gerüsttyp zu verknüpfen, so öffnet sich der Gerüsttyp-Dialog (siehe \autoref{fig:dialog2}), der dem Nutzer über ein ``Dropdown'' alle möglichen Gerüsttypen zur Verfügung stellt.
+Entscheidet sich der Nutzer die ausgewählte Form mit einem Gerüsttyp zu verknüpfen, so öffnet sich der Gerüsttyp-Dialog (siehe \autoref{fig:dialog2}), der dem Nutzer über ein \emph{Dropdown} alle möglichen Gerüsttypen aus einem Leistungsverzeichnis zur Verfügung stellt.
 Das dritte Icon von links (Stift) ermöglicht das Bearbeiten von bereits eingetragenen Messwerten und verknüpften Gerüsttypen.
 Auch in diesem Modus sind die Icons nur dann auswählbar, wenn der aktuelle Systemzustand dies zulässt. 
-So ist bspw. in \autoref{fig:mode2} keine Form ausgewählt, und deshalb das Mülleimer-Icon nicht auswählbar. 
+So ist bspw. in \autoref{fig:mode2} keine Form ausgewählt und deshalb das Mülleimer-Icon nicht auswählbar. 
 In \autoref{fig:labelp2} dagegen kann die ausgewählte Linie ohne Probleme gelöscht werden. \\
 
 Für eine einfachere und nicht so fehleranfällige Benutzung auf Tablet-Geräten wurden sämtliche Größen mit Hilfe von dichteunabhängigen Pixeln modelliert, wie sie in den ``Android Developer Guides'' suggeriert werden.
@@ -153,7 +153,7 @@ Hierdurch soll vermieden werden, dass der Text auf dunkleren Bildern, wie bspw. 
   \label{fig:labels}
 \end{figure}
 
-Das Zuordnen von Gerüsttypen zu gezeichneten Formen wurde mit Hilfe eines modalen Dialogs umgesetzt, der neben dem Gerüsttyp auch noch Textfelder für die verschiedenen Dimensionen des Gerüsts besitzt.
+Das Zuordnen von Gerüsttypen zu gezeichneten Formen (vgl. \autoref{fig:dialog2}) wurde mit Hilfe eines modalen Dialogs umgesetzt, der neben dem Gerüsttyp auch noch Textfelder für die verschiedenen Dimensionen des Gerüsts besitzt.
 Hierdurch kann der Benutzer nicht nur den Gerüsttyp, sondern auch Maße des Gerüsts, welche im Bild aufgrund des Aufnahmewinkels eventuell nicht zu sehen sind, eintragen und in den Meta-Daten speichern.
 Verknüpfte Formen zeigen mittels eines Indikators, ob und mit wie vielen Gerüsttypen sie verbunden sind.
 Auf diese Weise soll der Benutzer die bereits verknüpften von den nicht-verknüpften Formen unterscheiden können. \\
