@@ -4,17 +4,17 @@
 Diese Studie besagt, dass 69\% der 509 befragten Handwerksbetriebe die Digitalisierung als Chance für einen positiven Umschwung der Betriebe sehen. 
 Dabei ergeben sich aus Sicht der Handwerker die Vorteile von ``optimaler Lagerung und Logistik'' (91\%), ``Zeitersparnis'' (81\%) und ``flexibler Arbeitsorganisation'' (78\%) \citep{Bitkom17}. \\
 
-Im November 2017 wurde in Hannover vom Güterschutzverband Stahlgerüstbau e.V. zum Thema ``Digitalisierung des Handwerks'' ein zweitägiges Groß-Seminar unter dem Titel ``Gerüstbau 4.0: Was bedeutet der digitale Wandel für den eigenen Betrieb?'' veranstaltet. 
+Im November 2017 wurde in Hannover vom Güteschutzverband Stahlgerüstbau e.V. zum Thema ``Digitalisierung des Handwerks'' ein zweitägiges Groß-Seminar unter dem Titel ``Gerüstbau 4.0: Was bedeutet der digitale Wandel für den eigenen Betrieb?'' veranstaltet. 
 Mit Vorträgen zu Themen wie ``Geschäftsprozesse im Gerüstbau-Handwerk'', ``Virtuelle Projekträume und Cloudlösungen'' und ``Mobile Datenverwaltung'' wurden die Teilnehmenden über den digitalen Wandel informiert \citep{GSV17}. \\
 
-Der Gerüstbau-Dienstleister \emph{VERO Scaffolding EOOD Niederlassung Deutschland} aus Paderborn (nachfolgend: \vr{}) kann nach der Einführung und Benutzung einer selbst entwickelten Android-Applikation im Mai 2014 die genannten Vorteile der \textit{Bitkom}-Studie teilweise verzeichnen.
-Die entwickelte App wird einerseits von den Monteuren zur Arbeitszeiterfassung, Einsicht von Auftragsinformationen und der Baustellendokumentation mit Fotos und Text genutzt.
+Der Gerüstbau-Dienstleister \emph{VERO Scaffolding EOOD Niederlassung Deutschland} aus Paderborn (nachfolgend: \vr{}) kann nach der Einführung und Benutzung einer selbst entwickelten Android-Applikation (nachfolgend: App) im Mai 2014 die genannten Vorteile der \textit{Bitkom}-Studie teilweise verzeichnen.
+Die entwickelte App wird einerseits von den Monteuren zur Arbeitszeiterfassung, der Einsicht von Auftragsinformationen und der Baustellendokumentation mit Fotos und Text genutzt.
 Andererseits nutzt die Geschäfts- und Bauleitung die administrativen Funktionen der App, wie die Verwaltung und Pflege von Kunden-, Projekt- und Arbeitsauftragsinformationen (siehe~\autoref{fig:app14}). \\
 
 Zu diesen administrativen Aufgaben gehört auch die Aufmaßerfassung.
 Die Aufmaßerfassung ist im Handwerk ein wichtiger Bestandteil als Vorbereitung zur Rechnungslegung.
 Insbesondere im Gerüstbau, werden die Maße (Länge, Breite und Höhe) der bereitgestellten Gerüste abgemessen.
-Meistens werden die Maße jedoch abgeschätzt und später im Büro erfasst und schließlich mit einer Preisliste nach Gerüsttyp (Fassadengerüst, Raumgerüst, Hängegerüst, etc.) abgerechnet.
+Meistens werden die Maße jedoch abgeschätzt, später im Büro erfasst und schließlich mit einer Preisliste nach Gerüsttyp (Fassadengerüst, Raumgerüst, Hängegerüst, etc.) abgerechnet.
 
 \begin{figure}[h]
   \begin{subfigure}[t]{0.3\textwidth}
@@ -55,7 +55,7 @@ Die Belegschaft am Standort Paderborn besteht aus zehn Monteuren, einem Auszubil
 Die Monteure sind zwischen 19 und 55 Jahren alt und erledigen in zwei bis vier Kolonnen bis zu vier Arbeitsaufträge am Tag.
 
 \subsection{Android-App und Systemarchitektur}
-Im Oktober 2013 begann die Entwicklung einer Android-Applikation (nachfolgend: App) als mobile Software-Lösung für administrative Aufgaben der Monteure wie das Erfassen von Arbeitszeiten, Ansehen von Arbeitsaufträgen und das Verfassen von schriftlichen Baudokumentationen.
+Im Oktober 2013 begann die Entwicklung einer Android-Applikation als mobile Software-Lösung für administrative Aufgaben der Monteure wie das Erfassen von Arbeitszeiten, Ansehen von Arbeitsaufträgen und das Verfassen von schriftlichen Baudokumentationen.
 Die App kommuniziert zur Synchronisation der gesammelten Daten mit einer Server-Schnittstelle (\emph{API}\urlnote{https://www.gruenderszene.de/lexikon/begriffe/application-programming-interface-api}{22.11.2017}), welche auch von \vr{} entwickelt wurde.
 Diese \emph{API} ist wiederum an eine SQL-Datenbank, ein Dateisystem und externe Dienste, wie einen E-Mail-Dienst, gekoppelt. \\
 
@@ -74,14 +74,13 @@ Hierzu zählt zum Beispiel eine monatliche Stundenübersicht für die Mitarbeite
     \caption{Vorplanungstafel}
   \end{subfigure}
   \centering
-  \caption{Screenshots zweier neuen Funktionen der App (2018)}
+  \caption{Screenshots zweier neuen Funktionen der App (2017)}
   \label{fig:app18}
 \end{figure}
 
 \section{Ziel der Arbeit}
 Im Rahmen dieser Arbeit soll die mobile Bildbearbeitung als effizienter Ansatz zur Aufmaßerfassung im Gerüstbau untersucht werden.
-Ein Teilziel dieser Arbeit umfasst die Entwicklung einer App, welche in die bestehende Systemarchitektur der \emph{Fa.} \vr{} eingebunden werden soll.
-Weiterhin soll die App es den Monteuren ermöglichen, auf der Baustelle Aufmaße digital zu erfassen.
+Ein Teilziel dieser Arbeit umfasst die Integration einer Android-App zur mobilen Aufmaßerfassung in die bestehende Systemarchitektur der \emph{Fa.} \vr{}.
 Hierbei soll insbesondere die intuitive Benutzung und positive Benutzererfahrung der App im Vordergrund stehen.
 Wünschenswert wäre es zudem, am Ende dieser Arbeit eine gesteigerte Effizienz im Vergleich zum bisherigen analogen Prozess der Aufmaßerfassung verzeichnen zu können.
 
@@ -105,6 +104,7 @@ Im Anschluss daran wird gemeinsam mit den Testpersonen der Prototyp evaluiert. \
 Basierend auf der Evaluation aus Kapitel 6 werden in den nachfolgenden Kapiteln 7, 8 und 9 drei weitere Iterationen des \hcdp{} durchgeführt.
 Hier soll der Prototyp so weit verbessert werden, bis sich keine weiteren Usability-Probleme identifizieren lassen. \\
 
-In Kapitel 10 werden eventuelle Probleme und Grenzen aufgezeigt und bewertet, die während den Iterationen des \hcdp{} aufgefallen sind. \\
+In Kapitel 10 wird der Prototyp hinsichtlich seiner Effizienz mit dem analogen Prozess der Aufmaßerfassung verglichen.
+Außerdem werden eventuelle Probleme und Grenzen aufgezeigt und bewertet, die während den Iterationen des \hcdp{} aufgefallen sind.\\
 
-Abschließend wird in Kapitel 11 ausgewertet, ob es eine Verbesserung im Hinblick auf die Effizienz bei der Benutzung der Android-App zur Aufmaßerfassung im Vergleich zum traditionellen, analogen Prozess gibt.
+Abschließend wird in Kapitel 11 ein Fazit zur Forschungsfrage dieser Arbeit gezogen und ein Ausblick auf eine mögliche Weiterführung dieser Arbeit gegeben.
